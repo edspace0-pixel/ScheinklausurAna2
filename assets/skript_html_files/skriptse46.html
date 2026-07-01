@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptse46.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:20 GMT -->
+<head><title>Zur Integration rationaler Funktionen</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 8258--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptse47.html" >next</a>] [<a 
+href="skriptse45.html" >prev</a>] [<a 
+href="skriptse45.html#tailskriptse45.html" >prev-tail</a>] [<a 
+href="#tailskriptse46.html">tail</a>] [<a 
+href="skriptch4.html#skriptse46.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">4.4</span>&#x00A0;&#x00A0;<a 
+ id="x216-2150004.4"></a>Zur Integration rationaler Funktionen</h3>
+<!--l. 8260--><p class="noindent" >In diesem Kapitel bestimmen wir die Stammfunktion für rationale Funktionen<table class="equation"><tr><td> <a 
+ id="x216-215001r21"></a>
+<!--l. 8260--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                       <mi 
+>R</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><msub><mrow 
+><mi 
+>P</mi></mrow><mrow 
+><mi 
+>m</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow> 
+<mrow 
+><msub><mrow 
+><mi 
+>Q</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></mfrac> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mi 
+>m</mi></mrow></msub 
+><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>m</mi></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <mo 
+class="MathClass-op">&hellip;</mo> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+>
+<mn>1</mn></mrow></msub 
+><mi 
+>x</mi> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow> 
+ <mrow 
+><msub><mrow 
+><mi 
+>b</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <mo 
+class="MathClass-op">&hellip;</mo> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>b</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mi 
+>x</mi> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>b</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfrac>  <mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(4.21)</td></tr></table>
+<!--l. 8262--><p class="noindent" >Dabei seien <!--l. 8262--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></math>
+für <!--l. 8262--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>k</mi> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>m</mi></math> und
+<!--l. 8262--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>b</mi></mrow><mrow 
+><mi 
+>l</mi></mrow></msub 
+></math> für
+<!--l. 8262--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>l</mi> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi></math> komplexe Koeffizienten,
+ausserdem sei <!--l. 8263--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mi 
+>m</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn></math>
+und <!--l. 8263--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>b</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn></math>.
+<!--l. 8265--><p class="noindent" >Im Spezialfall <!--l. 8265--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>Q</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&equiv;</mo> <mn>1</mn></math>
+führt das gestellte Problem zur Integration des Polynomes
+<!--l. 8266--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>P</mi></mrow><mrow 
+><mi 
+>m</mi></mrow></msub 
+></math>,
+welche offensichtlich durch<table class="equation"><tr><td> <a 
+ id="x216-215002r22"></a>
+<!--l. 8266--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+            <mo 
+class="MathClass-op">&int;
+ <!--nolimits--></mo><!--nolimits--><msub><mrow 
+><mi 
+>P</mi></mrow><mrow 
+><mi 
+>m</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mi 
+>d</mi><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>m</mi> <mo 
+class="MathClass-bin">+</mo> <mn>1</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+>
+<mi 
+>m</mi></mrow></msub 
+><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>m</mi><mo 
+class="MathClass-bin">+</mo><mn>1</mn></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <msup><mrow 
+><mi 
+>m</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+>
+<mi 
+>m</mi><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msub 
+><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>m</mi></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <mo 
+class="MathClass-rel">&#x22EF;</mo> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+>
+<mn>0</mn></mrow></msub 
+><mi 
+>x</mi> <mo 
+class="MathClass-bin">+</mo> <mi 
+>C</mi>
+</math></td><td class="eq-no">(4.22)</td></tr></table>
+                                                                                     
+                                                                                     
+<!--l. 8268--><p class="noindent" >gelöst wird. Die Verifikation dieser Formel erfolgt durch Differentiation.
+<!--l. 8270--><p class="noindent" >Für den Spezialfall <!--l. 8270--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>P</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&equiv;</mo> <mn>1</mn></math>
+kann man ebenfalls durch Differentiation sofort folgende zwei Formen für unbestimmte Integrale
+bestätigen
+<!--tex4ht:inline--><!--l. 8271--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1"> <mo 
+class="MathClass-op">&int;
+ <!--nolimits--></mo><!--nolimits-->  <mfrac><mrow 
+><mi 
+>d</mi><mi 
+>x</mi></mrow> 
+<mrow 
+><msup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>a</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></mrow></mfrac></mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">   <mfrac><mrow 
+><msup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>a</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mn>1</mn><mo 
+class="MathClass-bin">&minus;</mo><mi 
+>n</mi></mrow></msup 
+></mrow>
+
+    <mrow 
+><mn>1</mn> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>n</mi></mrow></mfrac>   <mo 
+class="MathClass-bin">+</mo> <mi 
+>C</mi><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>n</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi><mo 
+class="MathClass-punc">,</mo><mspace width="0.3em" class="thinspace"/><mi 
+>n</mi><mo 
+class="MathClass-rel">&ne;</mo><mn>1</mn><mo 
+class="MathClass-punc">,</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray">(4.23)</mtext><mtext 
+   id="x216-215003r4.23"  class="label" ></mtext><mtext 
+class="endlabel"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1">   <mo 
+class="MathClass-op">&int;
+ <!--nolimits--></mo><!--nolimits--> <mfrac><mrow 
+><mi 
+>d</mi><mi 
+>x</mi></mrow> 
+<mrow 
+><mi 
+>x</mi> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>a</mi></mrow></mfrac></mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">  <mo class="qopname">ln</mo><!--nolimits--> <mo 
+class="MathClass-rel">|</mo><mi 
+>x</mi> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>a</mi><mo 
+class="MathClass-rel">|</mo> <mo 
+class="MathClass-bin">+</mo> <mi 
+>C</mi><mo 
+class="MathClass-punc">.</mo>              </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray">(4.24)</mtext><mtext 
+   id="x216-215003r4.24"  class="label" ></mtext><mtext 
+class="endlabel"></mtext></mtd>                                       </mtr></mtable>
+</math>
+<!--l. 8273--><p class="nopar" >
+<!--l. 8276--><p class="noindent" >Wir werden nun schrittweise die Bestimmung der Stammfunktion einer allgemeinen rationalen
+Funktion (<a 
+href="#x216-215001r21">4.21<!--tex4ht:ref: eq:raffunkrpq --></a>) auf die unbestimmten Integrale (<a 
+href="#x216-215002r22">4.22<!--tex4ht:ref: eq:intpolynomr1 --></a>) - (<a 
+href="#x216-215003r4.24">4.24<!--tex4ht:ref: eq:intpolynomr3 --></a>) zurückführen.
+<!--l. 8281--><p class="noindent" >
+<div class="subsectionTOCS">
+&#x00A0;&#x00A0;<span class="subsectionToc" >4.4.1&#x00A0;&#x00A0;<a 
+href="skriptsu164.html#x217-2160004.4.1">Die Division von Polynomen mit Rest.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.4.2&#x00A0;&#x00A0;<a 
+href="skriptsu165.html#x218-2170004.4.2">Schriftliches Dividieren von Polynomen. </a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.4.3&#x00A0;&#x00A0;<a 
+href="skriptsu166.html#x219-2180004.4.3">Die Zerlegung des Restterms.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.4.4&#x00A0;&#x00A0;<a 
+href="skriptsu167.html#x220-2190004.4.4">Zur              Berechnung              der              Koeffizienten
+<!--l. 220--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>j</mi><mi 
+>k</mi></mrow></msub 
+></math>.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.4.5&#x00A0;&#x00A0;<a 
+href="skriptsu168.html#x221-2200004.4.5">Die Formel von Ostrogradskij.</a></span>
+                                                                                     
+                                                                                     
+</div>
+
+
+
+
+                                                                                     
+                                                                                     
+<div class="footnotes"></div> <!--l. 8489--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptse47.html" >next</a>] [<a 
+href="skriptse45.html" >prev</a>] [<a 
+href="skriptse45.html#tailskriptse45.html" >prev-tail</a>] [<a 
+href="skriptse46.html" >front</a>] [<a 
+href="skriptch4.html#skriptse46.html" >up</a>] </p></div>
+<!--l. 8489--><p class="noindent" ><a 
+ id="tailskriptse46.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptse46.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:20 GMT -->
+</html> 

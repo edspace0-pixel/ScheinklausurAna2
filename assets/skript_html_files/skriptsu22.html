@@ -1,0 +1,557 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu22.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:15 GMT -->
+<head><title>Die reellen Zahlen.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 1131--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu21.html" >prev</a>] [<a 
+href="skriptsu21.html#tailskriptsu21.html" >prev-tail</a>] [<a 
+href="#tailskriptsu22.html">tail</a>] [<a 
+href="skriptse7.html#skriptsu22.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">1.7.5</span>&#x00A0;&#x00A0;<a 
+ id="x32-310001.7.5"></a>Die reellen Zahlen.</h4>
+<!--l. 1133--><p class="noindent" >Es gibt demnach rationale Fundamentalfolgen, welche keinen rationalen Grenzwert besitzen.
+Bildlich gesprochen verdichten sich die Glieder dieser Folgen zu einem Punkt hin, der
+potenzielle Grenzwert liegt aber nicht mehr in den rationalen Zahlen, diese besitzen dort &#8220;ein
+Fehlstelle&#8221;.<span class="footnote-mark"><a 
+href="#fn4x1" id="fn4x1-bk"><sup class="textsuperscript">4</sup></a></span><a 
+ id="x32-31001f4"></a>
+<!--l. 1142--><p class="noindent" >Die reellen Zahlen werden eingeführt, um diesem Problem Abhilfe zu schaffen. Dabei werden neue
+Objekte eingeführt, welche zum einen die rationalen Zahlen selbst als auch die genannten &#8220;Fehlstellen&#8221;
+beschreiben. Ein naheliegende Idee besteht darin, die rationalen Cauchy-Folgen selbst als solche Objekte
+zu betrachten.<span class="footnote-mark"><a 
+href="#fn5x1" id="fn5x1-bk"><sup class="textsuperscript">5</sup></a></span><a 
+ id="x32-31002f5"></a>
+Allerdings tritt dann das Problem auf, dass verschiedene rationale Cauchy-Folgen gegen ein und
+dieselbe rationale Zahl konvergieren, diese aber nur als eine reelle Zahl verstanden werden
+soll.<span class="footnote-mark"><a 
+href="#fn6x1" id="fn6x1-bk"><sup class="textsuperscript">6</sup></a></span><a 
+ id="x32-31003f6"></a>
+Wir müssen deshalb solche Fundamentalfolgen miteinander indentifizieren. Dazu dient die folgende
+Konstruktion:
+<!--l. 1157--><p class="noindent" >Es sei <!--l. 1157--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="mbox"><mtext  >CF</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x211A;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+die Menge aller rationalen Fundamentalfolgen. Wir führen auf
+<!--l. 1158--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="mbox"><mtext  >CF</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x211A;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+folgende Relation ein:<table class="equation"><tr><td> <a 
+ id="x32-31004r30"></a>
+<!--l. 1158--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                     <msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>r</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&sim;</mo><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>s</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+><mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">&hArr;</mo></mrow><mrow 
+><mrow><mstyle 
+class="mbox"><mtext  >def</mtext></mstyle></mrow></mrow></mover><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></munder 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>r</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-bin">&minus;</mo> <msub><mrow 
+><mi 
+>s</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(1.30)</td></tr></table>
+<div class="newtheorem">
+<!--l. 1162--><p class="noindent" ><span class="head">
+<a 
+ id="x32-31005r12"></a>
+                                                                                     
+                                                                                     
+<span 
+class="ptmb8t-x-x-120">Problem 1.7.12.</span>  </span>Zeigen                    Sie,                    da                    die                    Relation
+<!--l. 1163--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mspace width="0.3em" class="thinspace"/> <mo 
+class="MathClass-rel">&sim;</mo><mspace width="0.3em" class="thinspace"/></math>
+eine                                                     Äquivalenzrelation                                                     auf
+<!--l. 1164--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="mbox"><mtext  >CF</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x211A;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+darstellt!           Zeigen           Sie,           dass           eine           rationale           Cauchy-Folge
+<!--l. 1165--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>r</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+genau                                                             dann                                                             gegen
+<!--l. 1165--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>q</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211A;</mi></math>
+konvergiert, falls
+<div class="math-display"><!--l. 1166--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                                 <msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>r</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&sim;</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>q</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>q</mi><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mspace width="0.3em" class="thinspace"/></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 1167--><p class="nopar" >
+</div>
+<div class="newtheorem">
+<!--l. 1170--><p class="noindent" ><span class="head">
+<a 
+ id="x32-31006r13"></a>
+<span 
+class="ptmb8t-x-x-120">Definition 1.7.13.</span>  </span>Die reellen Zahlen sind wie folgt definiert:
+<div class="math-display"><!--l. 1171--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                                   <mi 
+>&#x211D;</mi> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="mbox"><mtext  >CF</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x211A;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-bin">&#x2215;</mo> <mo 
+class="MathClass-rel">&sim;</mo><mspace width="0.3em" class="thinspace"/><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+                                                                                     
+                                                                                     
+<!--l. 1172--><p class="nopar" >
+</div>
+<!--l. 1175--><p class="noindent" >Jeder rationalen Cauchy-Folge entspricht nun eine entsprechende reelle Zahl - die dieser Folge
+zugehörige Äquivalenzklasse. Nach der oben formulierten Aufgaben lassen sich die rationalen
+Zahlen <!--l. 1177--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x211A;</mi> <mo 
+class="MathClass-rel">&ni;</mo> <mi 
+>q</mi></math>
+bijektiv auf die Äquivalenzklassen der konstanten rationalen Folgen
+<!--l. 1179--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>q</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>q</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>q</mi><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mspace width="0.3em" class="thinspace"/></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mo 
+class="MathClass-close">]</mo></mrow></mrow><mrow 
+><mo 
+class="MathClass-rel">&sim;</mo></mrow></msub 
+></math> abbilden und damit
+als Teilmenge von <!--l. 1180--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x211D;</mi></math>
+verstehen.
+<!--l. 1182--><p class="noindent" >Der Leser ist sicherlich mit der verbreiteten Beschreibung reeller Zahlen als unendliche
+Dezimalbruch<table class="equation"><tr><td> <a 
+ id="x32-31007r31"></a>
+<!--l. 1183--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                                     <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+><mo 
+class="MathClass-op">&hellip;</mo>
+</math></td><td class="eq-no">(1.31)</td></tr></table>
+<div class="par-math-display"><!--l. 1185--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                      <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2124;</mi><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mn>0</mn><mo 
+class="MathClass-punc">,</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo> <mn>2</mn><mo 
+class="MathClass-punc">,</mo> <mn>3</mn><mo 
+class="MathClass-punc">,</mo> <mn>4</mn><mo 
+class="MathClass-punc">,</mo> <mn>5</mn><mo 
+class="MathClass-punc">,</mo> <mn>6</mn><mo 
+class="MathClass-punc">,</mo> <mn>7</mn><mo 
+class="MathClass-punc">,</mo> <mn>8</mn><mo 
+class="MathClass-punc">,</mo> <mn>9</mn></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>k</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi><mo 
+class="MathClass-punc">,</mo>
+</mrow></math></div>
+<!--l. 1186--><p class="nopar" > vertraut. Wenn man
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 1187--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                              <msub><mrow 
+><mi 
+>r</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo><munderover accentunder="false" accent="false"><mrow  
+><mo mathsize="big" 
+> &sum;</mo>
+  </mrow><mrow 
+><mi 
+>j</mi><mo 
+class="MathClass-rel">=</mo><mi 
+>k</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></munderover 
+><mn>1</mn><msup><mrow 
+><mn>0</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mi 
+>k</mi></mrow></msup 
+><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+>
+<mi 
+>k</mi></mrow></msub 
+>
+</mrow></math></div>
+<!--l. 1188--><p class="nopar" > setzt, so ist leicht zu sehen, dass <!--l. 1189--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>r</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+eine Fundamentalfolge rationaler Zahlen darstellt. Die Notation (<a 
+href="#x32-31007r31">1.31<!--tex4ht:ref: a0a1a2a3 --></a>) ist dann als die zu dieser
+Folge zugehörige reelle Zahl zu verstehen.
+<div class="newtheorem">
+<!--l. 1193--><p class="noindent" ><span class="head">
+<a 
+ id="x32-31008r14"></a>
+<span 
+class="ptmb8t-x-x-120">Problem 1.7.14.</span>  </span>In der Notation (<a 
+href="#x32-31007r31">1.31<!--tex4ht:ref: a0a1a2a3 --></a>) sei <!--l. 1194--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mn>9</mn></math>
+für alle <!--l. 1194--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>k</mi> <mo 
+class="MathClass-rel">&ge;</mo> <mi 
+>n</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi></math>
+aber <!--l. 1195--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&ne;</mo><mn>9</mn></math>,
+d.h. ab der <!--l. 1195--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi></math>-ten
+Nachkommastelle         ist         die         Dezimalbruchzerlegung         periodisch         gleich
+<!--l. 1196--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>9</mn></math>.
+Zeigen sie, dass dann
+<div class="math-display"><!--l. 1196--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                    <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+><mo 
+class="MathClass-op">&hellip;</mo><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mn>9</mn><mn>9</mn><mn>9</mn><mn>9</mn><mo 
+class="MathClass-rel">&#x22EF;</mo> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+><mo 
+class="MathClass-op">&hellip;</mo><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <mn>1</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mo 
+class="MathClass-op">&hellip;</mo>
+</mrow></math></div>
+<!--l. 1197--><p class="nopar" > gilt: Die formal unterschiedlichen Zifferdarstellungen entsprechen ein und derselben reellen
+Zahl.
+</div>
+                                                                                     
+                                                                                     
+<div class="footnotes"><!--l. 1140--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn4x1-bk" id="fn4x1">
+<sup class="textsuperscript">4</sup></a></span><span 
+class="ptmr8t-">Mit anderen Worten: Die rationalen Zahlen </span><!--l. 1140--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x211A;</mi></math>
+   <span 
+class="ptmr8t-">sind nicht vollst</span><span 
+class="ptmr8t-">ä</span><span 
+class="ptmr8t-">ndig.</span>
+<!--l. 1149--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn5x1-bk" id="fn5x1">
+<sup class="textsuperscript">5</sup></a></span><span 
+class="ptmr8t-">Dabei kann man eine rationale Zahl </span><!--l. 1149--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>q</mi></math>
+   <span 
+class="ptmr8t-">z.B. mit der Folge </span><!--l. 1149--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>q</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>q</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>q</mi><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mspace width="0.3em" class="thinspace"/></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>
+   <span 
+class="ptmr8t-">identifizieren.</span>
+<!--l. 1154--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn6x1-bk" id="fn6x1">
+<sup class="textsuperscript">6</sup></a></span><span 
+class="ptmr8t-">So konvergieren z.B. beide Folgen </span><!--l. 1154--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msup><mrow 
+><mi 
+>n</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+   <span 
+class="ptmr8t-">und </span><!--l. 1154--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msup><mrow 
+><mi 
+>n</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>2</mn></mrow></msup 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+   <span 
+class="ptmr8t-">gegen </span><!--l. 1154--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>0</mn></math><span 
+class="ptmr8t-">.</span></div><!--l. 1202--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu21.html" >prev</a>]
+[<a 
+href="skriptsu21.html#tailskriptsu21.html" >prev-tail</a>] [<a 
+href="skriptsu22.html" >front</a>] [<a 
+href="skriptse7.html#skriptsu22.html" >up</a>] </p></div>
+<!--l. 1202--><p class="noindent" ><a 
+ id="tailskriptsu22.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu22.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:15 GMT -->
+</html> 

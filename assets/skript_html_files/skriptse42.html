@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptse42.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:20 GMT -->
+<head><title>Nullstellenberechnung</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 7451--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptse41.html" >prev</a>] [<a 
+href="skriptse41.html#tailskriptse41.html" >prev-tail</a>] [<a 
+href="#tailskriptse42.html">tail</a>] [<a 
+href="skriptch3.html#skriptse42.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">3.15</span>&#x00A0;&#x00A0;<a 
+ id="x197-1960003.15"></a>Nullstellenberechnung</h3>
+<!--l. 7453--><p class="noindent" >In  diesem  Punkt  setzen  wir  immer  voraus,  dass
+<!--l. 7453--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>C</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow><mo 
+class="MathClass-punc">,</mo> <mi 
+>&#x211D;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&cap;</mo> <msup><mrow 
+><mi 
+>C</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow><mo 
+class="MathClass-punc">,</mo> <mi 
+>&#x211D;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math><span class="footnote-mark"><a 
+href="#fn14x3" id="fn14x3-bk"><sup class="textsuperscript">14</sup></a></span><a 
+ id="x197-196001f14"></a>
+sowie <!--l. 7457--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn></math> und
+<!--l. 7457--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>&prime;</mi><mi 
+>&prime;</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn></math> für
+beliebiges <!--l. 7458--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow></math>.
+Damit erhält die erste Ableitung ein und dasselbe Vorzeichen im gesamten Intervall; folglich ist
+<!--l. 7459--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math> auf
+<!--l. 7459--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow></math> streng monoton.
+Gilt zudem <!--l. 7460--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>a</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&sdot;</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x003C;</mo> <mn>0</mn></math>,
+so existiert nach dem Satz von Bolzano-Cauchy eine Lösung
+<!--l. 7461--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&xi;</mi> <mo 
+class="MathClass-rel">&isin;</mo></mrow><mo 
+class="MathClass-close">]</mo></mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi><mrow ><mo 
+class="MathClass-open">[</mo><mrow></math> der
+Gleichung <!--l. 7461--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&xi;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn></math>,
+welche aufgrund der strikten Monotonie eindeutig bestimmt ist. Wir wollen nun zwei
+Näherungsverfahren diskutieren, mit deren Hilfe man Nullstellen berechnen kann.
+<!--l. 7467--><p class="noindent" >
+<div class="subsectionTOCS">
+&#x00A0;&#x00A0;<span class="subsectionToc" >3.15.1&#x00A0;&#x00A0;<a 
+href="skriptsu150.html#x198-1970003.15.1">Die Regula falsi.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.15.2&#x00A0;&#x00A0;<a 
+href="skriptsu151.html#x199-1980003.15.2">Das Newtonsche Verfahren. </a></span>
+</div>
+
+                                                                                     
+                                                                                     
+<div class="footnotes"><!--l. 7457--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn14x3-bk" id="fn14x3">
+<sup class="textsuperscript">14</sup></a></span><span 
+class="ptmr8t-">Die Funktionen </span><!--l. 7457--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+></math>
+   <span 
+class="ptmr8t-">und </span><!--l. 7457--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>&prime;</mi><mi 
+>&prime;</mi></mrow></msup 
+></math> <span 
+class="ptmr8t-">seien stetig auf</span>
+   <!--l. 7457--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow></math> <span 
+class="ptmr8t-">fortsetzbar und damit als</span>
+   <span 
+class="ptmr8t-">stetige Funktionen von </span><!--l. 7457--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow></math>
+   <span 
+class="ptmr8t-">nach </span><!--l. 7457--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x211D;</mi></math>
+   <span 
+class="ptmr8t-">gegeben.</span>                                                                            </div> <!--l. 7581--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptse41.html" >prev</a>]
+[<a 
+href="skriptse41.html#tailskriptse41.html" >prev-tail</a>] [<a 
+href="skriptse42.html" >front</a>] [<a 
+href="skriptch3.html#skriptse42.html" >up</a>] </p></div>
+<!--l. 7581--><p class="noindent" ><a 
+ id="tailskriptse42.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptse42.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:20 GMT -->
+</html> 

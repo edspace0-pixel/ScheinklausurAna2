@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptch4.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:20 GMT -->
+<head><title>4 Zur Integralrechnung in einer Variablen</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 7581--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptli3.html" >next</a>] [<a 
+href="skriptch3.html" >prev</a>] [<a 
+href="skriptch3.html#tailskriptch3.html" >prev-tail</a>] [<a 
+href="#tailskriptch4.html">tail</a>] [<a 
+href="skript.html#skriptch4.html" >up</a>] </p></div>
+<h2 class="chapterHead"><span class="titlemark">4</span>&#x00A0;&#x00A0;<a 
+ id="x200-1990004"></a>Zur Integralrechnung in einer Variablen</h2>
+<div class="sectionTOCS">
+&#x00A0;<span class="sectionToc" >4.1&#x00A0;&#x00A0;<a 
+href="skriptse43.html#x201-2000004.1">Die Definition des Riemannschen Integralbegriffs. Integrierbare Funktionen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.1.1&#x00A0;&#x00A0;<a 
+href="skriptsu152.html#x202-2010004.1.1">Grundlegende Definitionen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.1.2&#x00A0;&#x00A0;<a 
+href="skriptsu153.html#x203-2020004.1.2">Das Stetigkeitsmodul und Riemann-Integrierbarkeit.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.1.3&#x00A0;&#x00A0;<a 
+href="skriptsu154.html#x204-2030004.1.3">Die Integrierbarkeit stetiger und monotoner Funktionen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.1.4&#x00A0;&#x00A0;<a 
+href="skriptsu155.html#x205-2040004.1.4">Obere und untere Darboux-Summen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.1.5&#x00A0;&#x00A0;<a 
+href="skriptsu156.html#x206-2050004.1.5">Zur                  Struktur                  des                  Raumes
+<!--l. 206--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>R</mi><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow></math>. </a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.1.6&#x00A0;&#x00A0;<a 
+href="skriptsu157.html#x207-2060004.1.6">Das Lebesgue-Kriterium der Riemann-Integrierbarkeit einer Funktion.</a></span>
+<br />&#x00A0;<span class="sectionToc" >4.2&#x00A0;&#x00A0;<a 
+href="skriptse44.html#x208-2070004.2">Die Linearität, Additivität und Monotonie des Riemann-Integrals</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.2.1&#x00A0;&#x00A0;<a 
+href="skriptsu158.html#x209-2080004.2.1">Die Linearität des Riemann-Integrals.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.2.2&#x00A0;&#x00A0;<a 
+href="skriptsu159.html#x210-2090004.2.2">Die  Additivität  des  Riemann-Integrals  bezüglich  des
+Integrationsbereiches.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.2.3&#x00A0;&#x00A0;<a 
+href="skriptsu160.html#x211-2100004.2.3">Die Monotonie des Riemann-Integrals.</a></span>
+<br />&#x00A0;<span class="sectionToc" >4.3&#x00A0;&#x00A0;<a 
+href="skriptse45.html#x212-2110004.3">Die Formel von Newton und Leibniz. Partielle Integration. Stammfunktionen</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.3.1&#x00A0;&#x00A0;<a 
+href="skriptsu161.html#x213-2120004.3.1">Die Formel von Newton und Leibniz.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.3.2&#x00A0;&#x00A0;<a 
+href="skriptsu162.html#x214-2130004.3.2">Die Stammfunktion und der Hauptsatz der Differential- und
+Integralrechnung.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.3.3&#x00A0;&#x00A0;<a 
+href="skriptsu163.html#x215-2140004.3.3">Zur Existenz von Stammfunktionen.</a></span>
+<br />&#x00A0;<span class="sectionToc" >4.4&#x00A0;&#x00A0;<a 
+href="skriptse46.html#x216-2150004.4">Zur Integration rationaler Funktionen</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.4.1&#x00A0;&#x00A0;<a 
+href="skriptsu164.html#x217-2160004.4.1">Die Division von Polynomen mit Rest.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.4.2&#x00A0;&#x00A0;<a 
+href="skriptsu165.html#x218-2170004.4.2">Schriftliches Dividieren von Polynomen. </a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.4.3&#x00A0;&#x00A0;<a 
+href="skriptsu166.html#x219-2180004.4.3">Die Zerlegung des Restterms.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.4.4&#x00A0;&#x00A0;<a 
+href="skriptsu167.html#x220-2190004.4.4">Zur              Berechnung              der              Koeffizienten
+<!--l. 220--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>j</mi><mi 
+>k</mi></mrow></msub 
+></math>.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.4.5&#x00A0;&#x00A0;<a 
+href="skriptsu168.html#x221-2200004.4.5">Die Formel von Ostrogradskij.</a></span>
+<br />&#x00A0;<span class="sectionToc" >4.5&#x00A0;&#x00A0;<a 
+href="skriptse47.html#x222-2210004.5">Die Mittelwertsätze der Integralrechnung. </a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.5.1&#x00A0;&#x00A0;<a 
+href="skriptsu169.html#x223-2220004.5.1">Zum ersten Mittelwertsatz.</a></span>
+                                                                                     
+                                                                                     
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.5.2&#x00A0;&#x00A0;<a 
+href="skriptsu170.html#x224-2230004.5.2">Zum zweiten Mittelwertsatz.</a></span>
+<br />&#x00A0;<span class="sectionToc" >4.6&#x00A0;&#x00A0;<a 
+href="skriptse48.html#x225-2240004.6">Partielle Integration. Substitution der Integrationsvariablen</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.6.1&#x00A0;&#x00A0;<a 
+href="skriptsu171.html#x226-2250004.6.1">Die partielle Integration.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.6.2&#x00A0;&#x00A0;<a 
+href="skriptsu172.html#x227-2260004.6.2">Die Substitution der Integrationsvariablen. </a></span>
+<br />&#x00A0;<span class="sectionToc" >4.7&#x00A0;&#x00A0;<a 
+href="skriptse49.html#x228-2270004.7">Das Restglied in der Taylorschen Formel</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.7.1&#x00A0;&#x00A0;<a 
+href="skriptsu173.html#x229-2280004.7.1">Formulierung und Beweis.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.7.2&#x00A0;&#x00A0;<a 
+href="skriptsu174.html#x230-2290004.7.2">Modifikationen der Restgliedformel.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.7.3&#x00A0;&#x00A0;<a 
+href="skriptsu175.html#x231-2300004.7.3">Eine Anwendung.</a></span>
+<br />&#x00A0;<span class="sectionToc" >4.8&#x00A0;&#x00A0;<a 
+href="skriptse50.html#x232-2310004.8">Die Lagrangesche Interpolationsformel und Verfahren der numerischen
+Integration</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.8.1&#x00A0;&#x00A0;<a 
+href="skriptsu176.html#x233-2320004.8.1">Die Lagrangesche Interpolationsformel.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.8.2&#x00A0;&#x00A0;<a 
+href="skriptsu177.html#x234-2330004.8.2">Die  Rechteckformel:  Stückweise  Approximation  mit
+<!--l. 234--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>P</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.8.3&#x00A0;&#x00A0;<a 
+href="skriptsu178.html#x235-2340004.8.3">Die   Trapezformel:   Stückweise   Approximation   mit
+<!--l. 235--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>P</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math>.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.8.4&#x00A0;&#x00A0;<a 
+href="skriptsu179.html#x236-2350004.8.4">Die Simpsonsche Regel: Stückweise Approximation mit
+<!--l. 236--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>P</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math>.</a></span>
+<br />&#x00A0;<span class="sectionToc" >4.9&#x00A0;&#x00A0;<a 
+href="skriptse51.html#x237-2360004.9">Einige Anwendungen der Differential- und Integralrechnung.<br 
+class="newline" />Teil I: Länge und Krümmung einer Kurve.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.9.1&#x00A0;&#x00A0;<a 
+href="skriptsu180.html#x238-2370004.9.1">Der Begriff der Jordanschen Kurve.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.9.2&#x00A0;&#x00A0;<a 
+href="skriptsu181.html#x239-2380004.9.2">Die Bogenlänge einer Jordanschen Kurve.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.9.3&#x00A0;&#x00A0;<a 
+href="skriptsu182.html#x240-2390004.9.3">Die Parametrisierung einer Kurve durch ihre Bogenlänge.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.9.4&#x00A0;&#x00A0;<a 
+href="skriptsu183.html#x241-2400004.9.4">Der Tangential- und der Krümmungsvektor.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.9.5&#x00A0;&#x00A0;<a 
+href="skriptsu184.html#x242-2410004.9.5">Zur Berechnung des Krümmungsvektors.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.9.6&#x00A0;&#x00A0;<a 
+href="skriptsu185.html#x243-2420004.9.6">Die           Krümmung           einer           Kurve           in
+<!--l. 243--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>&#x211D;</mi></mrow><mrow 
+><mn>3</mn></mrow></msup 
+></math> und
+<!--l. 243--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>&#x211D;</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></math>.</a></span>
+<br />&#x00A0;<span class="sectionToc" >4.10&#x00A0;&#x00A0;<a 
+href="skriptse52.html#x244-2430004.10">Einige Anwendung der Differential- und Integralrechnung.<br 
+class="newline" />Teil II: Flächeninhalt, Volumen, Oberflächeninhalt und Schwerpunkt.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.10.1&#x00A0;&#x00A0;<a 
+href="skriptsu186.html#x245-2440004.10.1">Der Flächeninhalt ebener Figuren.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.10.2&#x00A0;&#x00A0;<a 
+href="skriptsu187.html#x246-2450004.10.2">Das Volumen rotationssymmetrischer Körper</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.10.3&#x00A0;&#x00A0;<a 
+href="skriptsu188.html#x247-2460004.10.3">Der Oberflächeninhalt rotationssymmetrischer Körper.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.10.4&#x00A0;&#x00A0;<a 
+href="skriptsu189.html#x248-2470004.10.4">Der Schwerpunkt einer Kurve.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.10.5&#x00A0;&#x00A0;<a 
+href="skriptsu190.html#x249-2480004.10.5">Der Schwerpunkt einer Fläche.</a></span>
+                                                                                     
+                                                                                     
+<br />&#x00A0;<span class="sectionToc" >4.11&#x00A0;&#x00A0;<a 
+href="skriptse53.html#x250-2490004.11">Ein analytischer Beweis des Hauptsatzes der Algebra</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.11.1&#x00A0;&#x00A0;<a 
+href="skriptsu191.html#x251-2500004.11.1">Der Beweis des Hauptsatzes der Algebra.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.11.2&#x00A0;&#x00A0;<a 
+href="skriptsu192.html#x252-2510004.11.2">Der Beweis von Lemma 4.11.1.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.11.3&#x00A0;&#x00A0;<a 
+href="skriptsu193.html#x253-2520004.11.3">Der Beweis von Lemma 4.11.2.</a></span>
+</div>
+
+
+
+
+
+
+
+
+
+
+                                                                                     
+                                                                                     
+<!--l. 9904--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptli3.html" >next</a>] [<a 
+href="skriptch3.html" >prev</a>] [<a 
+href="skriptch3.html#tailskriptch3.html" >prev-tail</a>] [<a 
+href="skriptch4.html" >front</a>] [<a 
+href="skript.html#skriptch4.html" >up</a>] </p></div>
+<!--l. 9904--><p class="noindent" ><a 
+ id="tailskriptch4.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptch4.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:20 GMT -->
+</html> 
