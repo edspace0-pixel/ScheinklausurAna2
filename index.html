@@ -209,6 +209,7 @@ svg.map.grabbing{cursor:grabbing}
 .reftile.i11{background:linear-gradient(135deg,#2dd4bf,#0d9488)}
 .reftile.i12{background:linear-gradient(135deg,#38bdf8,#0369a1)}
 .reftile.i13{background:linear-gradient(135deg,#c084fc,#9333ea)}
+.reftile.i14{background:linear-gradient(135deg,#818cf8,#4338ca)}
 .example{margin:8px 0;border:1px solid var(--line);border-radius:10px;background:var(--bg);overflow:hidden}
 .example>summary{cursor:pointer;padding:8px 12px;font-size:13px;font-weight:600;color:var(--accent);list-style:none;user-select:none}
 .example>summary::-webkit-details-marker{display:none}
@@ -1075,6 +1076,73 @@ function kurvenHtml(){ return String.raw`
     ${exBox(String.raw`<p>Parabel \(y=x^{2}\): \(f'=2x,\ f''=2\).</p>\[\kappa(x)=\frac{2}{(1+4x^{2})^{3/2}};\qquad \kappa(0)=2,\ \rho(0)=\tfrac12.\]<p>Im Scheitel am stärksten gekrümmt, außen zunehmend flacher.</p>`)}
   </div>`; }
 
+function diffHtml(){ return String.raw`
+  <p class="sub">Differentialrechnung mehrerer Variablen: Ableitungen, Matrizen, der \(\nabla\)-Operator. Bei den anspruchsvolleren Dingen (ab der Leibniz-Regel) je ein Beispiel.</p>
+  <div class="twocol">
+    <div class="refblock">
+      <h3>Partielle Ableitung & Gradient</h3>
+      <table class="reftable">
+        <tr><td><b>Partiell:</b> \(\displaystyle \frac{\partial f}{\partial x_i}=\lim_{h\to0}\frac{f(\dots,x_i+h,\dots)-f}{h}\) — alle anderen Variablen fest halten.</td></tr>
+        <tr><td><b>Gradient:</b> \(\displaystyle \nabla f=\Big(\frac{\partial f}{\partial x_1},\dots,\frac{\partial f}{\partial x_n}\Big)^{\!\top}\)</td><td class="cond">steilster Anstieg, \(\perp\) Niveaumengen</td></tr>
+        <tr><td><b>Richtungsableitung:</b> \(\displaystyle \partial_{\mathbf v}f=\nabla f\cdot\mathbf v\) mit \(\|\mathbf v\|=1\)</td></tr>
+        <tr><td><b>Totales Differential:</b> \(\displaystyle df=\sum_i\frac{\partial f}{\partial x_i}\,dx_i=\nabla f\cdot d\mathbf x\)</td></tr>
+        <tr><td><b>Satz von Schwarz:</b> \(f\in C^2\Rightarrow \dfrac{\partial^2 f}{\partial x_i\partial x_j}=\dfrac{\partial^2 f}{\partial x_j\partial x_i}\)</td></tr>
+      </table>
+      ${exBox(String.raw`<p>\(f(x,y)=x^2+y^2\): \(\nabla f=(2x,2y)=2(x,y)\).</p><p>Zeigt radial nach außen (steilster Anstieg) und steht \(\perp\) auf den Kreisen \(x^2+y^2=c\) (Niveaulinien).</p>`)}
+    </div>
+    <div class="refblock">
+      <h3>Jacobi- & Hesse-Matrix</h3>
+      <table class="reftable">
+        <tr><td><b>Jacobi</b> \(f:\mathbb R^{n}\to\mathbb R^{m}\): \(\displaystyle (Df)_{ij}=\frac{\partial f_i}{\partial x_j}\) (\(m\times n\)). Für \(m=1\): Zeile \(=\nabla f^{\top}\).</td></tr>
+        <tr><td><b>Hesse</b> \(f:\mathbb R^{n}\to\mathbb R\): \(\displaystyle (Hf)_{ij}=\frac{\partial^2 f}{\partial x_i\partial x_j}\) (\(n\times n\), symmetrisch).</td></tr>
+        <tr><td><b>Extrema</b> in \(\nabla f=0\): \(Hf\) pos. definit \(\Rightarrow\) Min, neg. definit \(\Rightarrow\) Max, indefinit \(\Rightarrow\) Sattel.</td></tr>
+      </table>
+      ${exBox(String.raw`<p><b>Jacobi</b> der Polarkoordinaten \(g(r,\varphi)=(r\cos\varphi,\ r\sin\varphi)\):</p>\[Dg=\begin{pmatrix}\cos\varphi & -r\sin\varphi\\ \sin\varphi & r\cos\varphi\end{pmatrix},\qquad \det Dg=r.\]<p>Genau das \(r\) in \(dx\,dy=r\,dr\,d\varphi\).</p>`)}
+      ${exBox(String.raw`<p><b>Hesse</b> & Extremum für \(f(x,y)=x^2+xy+y^2\): \(\nabla f=(2x+y,\ x+2y)=0\Rightarrow(0,0)\).</p>\[Hf=\begin{pmatrix}2&1\\1&2\end{pmatrix},\quad \det=3>0,\ \operatorname{Spur}=4>0\ \Rightarrow\ \text{pos. definit}\]<p>\(\Rightarrow\) lokales <b>Minimum</b> in \((0,0)\).</p>`)}
+    </div>
+  </div>
+  <div class="refblock">
+    <h3>Der Nabla-Operator \(\nabla\)</h3>
+    <p class="sub">\(\displaystyle \nabla=\Big(\frac{\partial}{\partial x_1},\dots,\frac{\partial}{\partial x_n}\Big)\) — ein <b>formaler</b> Vektor-Operator, der auf das wirkt, was rechts von ihm steht.</p>
+    <div class="twocol">
+      <div class="refblock">
+        <table class="reftable">
+          <tr><td><b>Gradient</b> (Skalar\(\to\)Vektor): \(\nabla f=\operatorname{grad}f\)</td></tr>
+          <tr><td><b>Divergenz</b> (Vektor\(\to\)Skalar): \(\displaystyle \nabla\cdot\mathbf F=\operatorname{div}\mathbf F=\sum_i\frac{\partial F_i}{\partial x_i}\)</td></tr>
+          <tr><td><b>Rotation</b> (Vektor\(\to\)Vektor, \(\mathbb R^3\)): \(\nabla\times\mathbf F=\operatorname{rot}\mathbf F\)</td></tr>
+          <tr><td><b>Laplace:</b> \(\displaystyle \Delta f=\nabla\cdot\nabla f=\sum_i\frac{\partial^2 f}{\partial x_i^2}\)</td></tr>
+        </table>
+      </div>
+      <div class="refblock">
+        <p class="sub" style="margin-top:0"><b>Worauf achten:</b></p>
+        <table class="reftable">
+          <tr><td>\(\nabla\) ist <i>kein</i> echter Vektor — die Reihenfolge zählt: \(\nabla f\neq f\nabla\) (Letzteres bleibt ein Operator).</td></tr>
+          <tr><td>Die Ergebnisse sind verschiedene Objekte: \(\operatorname{grad},\operatorname{rot}\) liefern Vektoren, \(\operatorname{div}\) einen Skalar.</td></tr>
+          <tr><td>Nützliche Identitäten: \(\nabla\times(\nabla f)=\mathbf 0\) und \(\nabla\cdot(\nabla\times\mathbf F)=0\).</td></tr>
+        </table>
+      </div>
+    </div>
+    ${exBox(String.raw`<p>\(\mathbf F(x,y,z)=(-y,\ x,\ 0)\):</p>\[\operatorname{div}\mathbf F=\frac{\partial(-y)}{\partial x}+\frac{\partial x}{\partial y}+0=0,\qquad \operatorname{rot}\mathbf F=\nabla\times\mathbf F=(0,\,0,\,2).\]<p>Divergenzfrei, aber es „rotiert" — ein Wirbel um die \(z\)-Achse.</p>`)}
+  </div>
+  <div class="refblock">
+    <h3>Fréchet-Ableitung</h3>
+    <p class="sub">Verallgemeinert die Ableitung auf normierte Räume \(f:X\to Y\) — die Ableitung ist eine <b>lineare Abbildung</b>.</p>
+    <table class="reftable">
+      <tr><td>\(f\) ist in \(x\) <b>Fréchet-differenzierbar</b>, wenn es eine stetige lineare Abbildung \(A=f'(x)\) gibt mit \(\displaystyle \frac{\|f(x+h)-f(x)-Ah\|}{\|h\|}\xrightarrow[h\to0]{}0\).</td></tr>
+      <tr><td>Im \(\mathbb R^n\): \(A=\) Jacobi-Matrix \(Df(x)\).</td></tr>
+      <tr><td><b>Gâteaux</b> (alle Richtungsableitungen existieren) ist schwächer als Fréchet.</td></tr>
+    </table>
+    ${exBox(String.raw`<p>\(f(x)=\|x\|^2=x^{\top}x\) auf \(\mathbb R^n\):</p>\[f(x+h)-f(x)=2x^{\top}h+\|h\|^2.\]<p>Der lineare Teil ist \(Ah=2x^{\top}h\), der Rest \(\|h\|^2=o(\|h\|)\). Also \(f'(x)=2x^{\top}\), d. h. \(\nabla f=2x\).</p>`)}
+  </div>
+  <div class="refblock">
+    <h3>Leibniz-Regel (Ableiten unter dem Integral)</h3>
+    <table class="reftable">
+      <tr><td>Feste Grenzen: \(\displaystyle \frac{d}{dt}\int_a^b f(x,t)\,dx=\int_a^b \frac{\partial f}{\partial t}(x,t)\,dx\)</td><td class="cond">\(f,\ \partial_t f\) stetig</td></tr>
+      <tr><td>Variable Grenzen: \(\displaystyle \frac{d}{dt}\int_{a(t)}^{b(t)} f(x,t)\,dx=f(b,t)\,b'(t)-f(a,t)\,a'(t)+\int_{a(t)}^{b(t)}\frac{\partial f}{\partial t}\,dx\)</td></tr>
+    </table>
+    ${exBox(String.raw`<p>\(\displaystyle F(t)=\int_0^{t}(x^2+t)\,dx\) (variable obere Grenze):</p>\[F'(t)=\underbrace{(t^2+t)}_{f(t,t)\cdot 1}+\int_0^{t}\underbrace{1}_{\partial_t(x^2+t)}\,dx=t^2+t+t=t^2+2t.\]<p>Check direkt: \(F(t)=\tfrac{t^3}{3}+t^2\Rightarrow F'(t)=t^2+2t\). ✓</p>`)}
+  </div>`; }
+
 const REF = {
  integrale: { title:"Standardintegrale", icon:"∫", color:"var(--ch4)",
    note:"Die wichtigsten Grundintegrale. Integrationskonstante + C nicht vergessen.", html: intHtml() },
@@ -1098,6 +1166,8 @@ const REF = {
    note:"Punktweise vs. gleichmäßige Konvergenz — wann darf man Grenzwerte/Integrale/Ableitungen tauschen?", html: vertauschenHtml() },
  kurven: { title:"Kurven · Länge · Krümmung", icon:"κ", color:"#9333ea",
    note:"Bogenlänge und Krümmung in kartesischen, parametrischen und Polarkoordinaten.", html: kurvenHtml() },
+ diffrechnung: { title:"Differentialrechnung (mehrere Variablen)", icon:"∇", color:"#4338ca",
+   note:"Partielle Ableitung, Gradient, Jacobi-/Hesse-Matrix, Nabla-Operator, Fréchet-Ableitung, Leibniz-Regel.", html: diffHtml() },
  uebungen: { title:"Übungsblätter & Vortragsübungen", icon:"📝", color:"#d97706",
    note:"Alle Übungs- und Vortragsübungsblätter mit Lösungen (sofern vorhanden).", html: uebHtml() }
 };
@@ -1229,6 +1299,7 @@ function renderHome(){
       <a class="reftile i11" href="#/ref/entwickeln"><span class="ti">Tₙ</span><span>Funktionen entwickeln<small>Taylor · Restglied · Interpolation</small></span></a>
       <a class="reftile i12" href="#/ref/vertauschen"><span class="ti">⇄</span><span>Grenzwerte vertauschen<small>punktweise vs. gleichmäßig</small></span></a>
       <a class="reftile i13" href="#/ref/kurven"><span class="ti">κ</span><span>Kurven · Länge · Krümmung<small>kartesisch & polar</small></span></a>
+      <a class="reftile i14" href="#/ref/diffrechnung"><span class="ti">∇</span><span>Differentialrechnung<small>partiell · Jacobi/Hesse · ∇ · Fréchet</small></span></a>
     </div>
 
     <h2 class="grp">📦 Übungen</h2>
