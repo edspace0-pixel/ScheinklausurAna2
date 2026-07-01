@@ -1,0 +1,1639 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu85.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:17 GMT -->
+<head><title>Die &#x03B5;-&delta;-Definition und die Folgendefinition des Grenzwertes einer Funktion.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 4082--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu86.html" >next</a>] [<a 
+href="#tailskriptsu85.html">tail</a>] [<a 
+href="skriptse22.html#skriptsu85.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">2.10.1</span>&#x00A0;&#x00A0;<a 
+ id="x111-1100002.10.1"></a>Die
+<!--l. 4082--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi></math>-<!--l. 4082--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&delta;</mi></math>-Definition
+und die Folgendefinition des Grenzwertes einer Funktion.</h4>
+<!--l. 4084--><p class="noindent" >Im Weiteren seien <!--l. 4084--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+und <!--l. 4084--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> metrische
+Räume, <!--l. 4085--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-rel">&sub;</mo> <msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math> sowie
+<!--l. 4085--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math> eine Funktion
+<!--l. 4085--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi> <mo 
+class="MathClass-punc">:</mo> <mi 
+>X</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <mi 
+>Y</mi> </math>. Desweiteren
+gelte <!--l. 4086--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo><mstyle 
+class="mbox"><mtext  >acc</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+sowie <!--l. 4086--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math>.
+<div class="newtheorem">
+<!--l. 4088--><p class="noindent" ><span class="head">
+<a 
+ id="x111-110001r1"></a>
+                                                                                     
+                                                                                     
+<span 
+class="ptmb8t-x-x-120">Definition 2.10.1.</span>  </span>Man sagt, dass <!--l. 4089--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>
+der Grenzwert von <!--l. 4089--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+für <!--l. 4089--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math> ist
+und schreibt <!--l. 4090--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&rarr;</mo><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></munder 
+><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>,
+genau dann wenn folgende Aussage wahr ist<table class="equation"><tr><td> <a 
+ id="x111-110002r55"></a>
+<!--l. 4091--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                      <msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>&#x03B5;</mi><mo 
+class="MathClass-rel">&#x003E;</mo><mn>0</mn></mrow></msub 
+><msub><mrow 
+><mo 
+class="MathClass-op">&exist;</mo></mrow><mrow 
+><msub><mrow 
+><mi 
+>&delta;</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x003E;</mo><mn>0</mn></mrow></msub 
+><msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>&delta;</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-bin">&cap;</mo><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi><mo 
+class="MathClass-bin">\</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(2.55)</td></tr></table>
+</div>
+<!--l. 4095--><p class="noindent" >Beachten Sie, dass der Punkt <!--l. 4095--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>
+selbst bei der Berechnung des Grenzwertes aus der Betrachtung
+ausgeschlossen wird! Die oben angegebene Definition wird häufig als die
+<!--l. 4097--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi></math><span 
+class="ptmri8t-x-x-120">-</span><!--l. 4097--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&delta;</mi></math><span 
+class="ptmri8t-x-x-120">-Definition</span>
+des Grenzwertes von Funktionen bezeichnet.
+<div class="newtheorem">
+<!--l. 4100--><p class="noindent" ><span class="head">
+<a 
+ id="x111-110003r2"></a>
+<span 
+class="ptmb8t-x-x-120">Example 2.10.2.</span>  </span>Es sei <!--l. 4101--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi> <mo 
+class="MathClass-punc">:</mo> <mi 
+>&#x211D;</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <mi 
+>&#x211D;</mi></math>
+mit <!--l. 4101--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>x</mi></math>
+für <!--l. 4101--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn></math>
+sowie <!--l. 4102--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>0</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn></math>.
+Dann gilt <!--l. 4102--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&rarr;</mo><mn>0</mn></mrow></munder 
+><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-rel">&ne;</mo><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>0</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+</div>
+<div class="newtheorem">
+<!--l. 4104--><p class="noindent" ><span class="head">
+<a 
+ id="x111-110004r3"></a>
+                                                                                     
+                                                                                     
+<span 
+class="ptmb8t-x-x-120">Problem 2.10.3.</span>  </span>Beweisen Sie, dass der Grenzwert <!--l. 4105--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>
+von <!--l. 4105--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+für <!--l. 4105--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>,
+sofern er existiert, immer eindeutig bestimmt ist.
+</div>
+<!--l. 4108--><p class="noindent" >&#x00A0;
+<div class="newtheorem">
+<!--l. 4110--><p class="noindent" ><span class="head">
+<a 
+ id="x111-110005r4"></a>
+<span 
+class="ptmb8t-x-x-120">Problem 2.10.4.</span>  </span>Die          Existenz          und          der          Wert          des          Grenzwertes
+einer        Funktion        sind        unabhängig        vom        Verhalten        der        Funktion
+<!--l. 4112--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math>
+ausserhalb der Umgebung <!--l. 4113--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&delta;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+für ein beliebig gewähltes <!--l. 4113--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&delta;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>.
+</div>
+<!--l. 4115--><p class="noindent" >&#x00A0;
+<div class="newtheorem">
+<!--l. 4117--><p class="noindent" ><span class="head">
+<a 
+ id="x111-110006r5"></a>
+<span 
+class="ptmb8t-x-x-120">Problem 2.10.5.</span>  </span>Es sei <!--l. 4118--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>
+der Grenzwert von <!--l. 4118--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+für <!--l. 4118--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>.
+Dann existiert ein <!--l. 4119--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&delta;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>,
+so dass <!--l. 4119--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math>
+auf <!--l. 4119--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&delta;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&cap;</mo> <mi 
+>X</mi></math>
+beschränkt          ist,          d.h.           es          gibt          eine          endliche          Konstante
+<!--l. 4120--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>C</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi></math>
+und ein <!--l. 4121--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&delta;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>,
+so dass <!--l. 4121--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&le;</mo> <mi 
+>C</mi></math>
+für alle <!--l. 4122--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&delta;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&cap;</mo> <mi 
+>X</mi></math>.
+</div>
+<!--l. 4124--><p class="noindent" >&#x00A0;
+<div class="newtheorem">
+<!--l. 4126--><p class="noindent" ><span class="head">
+<a 
+ id="x111-110007r6"></a>
+                                                                                     
+                                                                                     
+<span 
+class="ptmb8t-x-x-120">Problem 2.10.6.</span>  </span>Es sei <!--l. 4127--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>
+der Grenzwert von <!--l. 4127--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+für <!--l. 4127--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>.
+Ist <!--l. 4128--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>X</mi></mrow><mo 
+class="MathClass-op">&#x0303;</mo></mover></math>
+eine Teilmenge von <!--l. 4128--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+und <!--l. 4128--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo><mstyle 
+class="mbox"><mtext  >acc</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>,
+so erhält man
+<div class="math-display"><!--l. 4129--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                                <msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&rarr;</mo><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></munder 
+><mi 
+>f</mi><msub><mrow 
+><mo 
+class="MathClass-rel">|</mo></mrow><mrow 
+><mover 
+accent="true"><mrow 
+><mi 
+>X</mi></mrow><mo class="qopname">&#x0303;</mo></mover></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 4130--><p class="nopar" >
+</div>
+<!--l. 4133--><p class="noindent" >Im nächsten Satz formulieren wir eine wichtige äquivalente Charakterisierung de
+Grenzwertbegriffes für Funktionen, welche man manchmal auch als die <span 
+class="ptmri8t-x-x-120">Folgendefinition</span>
+bezeichnet:
+<div class="newtheorem">
+<!--l. 4137--><p class="noindent" ><span class="head">
+<a 
+ id="x111-110008r7"></a>
+<span 
+class="ptmb8t-x-x-120">Theorem 2.10.7.</span>  </span><span 
+class="ptmri8t-x-x-120">Der Wert </span><!--l. 4138--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>
+<span 
+class="ptmri8t-x-x-120">ist der Grenzwert von </span><!--l. 4139--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+<span 
+class="ptmri8t-x-x-120">f</span><span 
+class="ptmri8t-x-x-120">ü</span><span 
+class="ptmri8t-x-x-120">r </span><!--l. 4139--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>
+<span 
+class="ptmri8t-x-x-120">genau dann wenn f</span><span 
+class="ptmri8t-x-x-120">ü</span><span 
+class="ptmri8t-x-x-120">r jede Folge </span><!--l. 4139--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>&infin;</mi></mrow></msubsup 
+></math>
+<span 
+class="ptmri8t-x-x-120">mit Gliedern </span><!--l. 4140--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi> <mo 
+class="MathClass-bin">\</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></math><span 
+class="ptmri8t-x-x-120">,</span>
+<span 
+class="ptmri8t-x-x-120">welche gegen </span><!--l. 4140--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>
+<span 
+class="ptmri8t-x-x-120">konvergiert, die Folge der Funktionswerte </span><!--l. 4141--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+<span 
+class="ptmri8t-x-x-120">stets gegen </span><!--l. 4142--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>
+<span 
+class="ptmri8t-x-x-120">konvergiert, d.h.</span>
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 4142--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+     <msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&rarr;</mo><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></munder 
+><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&hArr;</mo><msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+>
+<mi 
+>k</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>X</mi><mo 
+class="MathClass-bin">\</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><munder class="msub"><mrow 
+><mo class="qopname">lim</mo> </mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&rArr;</mo><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></munder 
+><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 4143--><p class="nopar" >
+</div>
+<!--l. 4146--><p class="noindent" >
+<div class="proof">
+<!--l. 4147--><p class="noindent" ><span class="head">
+<span 
+class="ptmri8t-x-x-120">Beweis.</span> </span>Zum Beweis der Implikation <!--l. 4147--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mo 
+class="MathClass-rel">&rArr;</mo></math>
+betrachten wir eine Folge von Gliedern <!--l. 4148--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi></math>,
+<!--l. 4148--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&ne;</mo><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>
+mit <!--l. 4148--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></math>.
+Für diese Folge gibt es zu jedem <!--l. 4149--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&delta;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>
+ein <!--l. 4149--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>&delta;</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi></math>
+mit der Eigenschaft, dass <!--l. 4150--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&delta;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+für alle <!--l. 4151--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>k</mi> <mo 
+class="MathClass-rel">&ge;</mo> <msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>&delta;</mi></mrow></msub 
+></math>.
+Man wähle nun ein beliebiges <!--l. 4151--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>.
+Dann existiert nach (<a 
+href="#x111-110002r55">2.55<!--tex4ht:ref: eq:defedeltagrwfunk --></a>) ein <!--l. 4152--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&delta;</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>,
+so dass <!--l. 4153--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+für alle <!--l. 4153--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>&delta;</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&cap;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi> <mo 
+class="MathClass-bin">\</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+Da insbesondere <!--l. 4154--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>&delta;</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&cap;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi> <mo 
+class="MathClass-bin">\</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+für alle <!--l. 4155--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>k</mi> <mo 
+class="MathClass-rel">&ge;</mo> <msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>&delta;</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+></mrow></msub 
+></math>,
+so gilt <!--l. 4155--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+für alle <!--l. 4156--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>k</mi> <mo 
+class="MathClass-rel">&ge;</mo> <msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>&delta;</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+></mrow></msub 
+></math>
+und damit <!--l. 4156--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></math>.
+<!--l. 4158--><p class="noindent" >Die                                                                                                                                 Richtung
+<!--l. 4158--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mo 
+class="MathClass-rel">&lArr;</mo></math>
+beweisen wir indirekt ausgehend von der Gegenannahme
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 4159--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+               <msub><mrow 
+><mo 
+class="MathClass-op">&exist;</mo></mrow><mrow 
+><msub><mrow 
+><mi 
+>&#x03B5;</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><mo 
+class="MathClass-rel">&#x003E;</mo><mn>0</mn></mrow></msub 
+><msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>&delta;</mi><mo 
+class="MathClass-rel">&#x003E;</mo><mn>0</mn></mrow></msub 
+><msub><mrow 
+><mo 
+class="MathClass-op">&exist;</mo></mrow><mrow 
+><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>&delta;</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&isin;</mo><msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&delta;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-bin">&cap;</mo><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi><mo 
+class="MathClass-bin">\</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><munder class="msub"><mrow 
+><munder accentunder="false"><mrow> <mi 
+>d</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>&delta;</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&ge;</mo> <msub><mrow 
+><mi 
+>&#x03B5;</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo>&#xFE38;</mo></munder> </mrow><mrow 
+><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>&delta;</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">&ne;</mo><msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>&#x03B5;</mi></mrow><mrow 
+>
+<mn>0</mn></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></munder 
+><mspace width="0.3em" class="thinspace"/><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 4160--><p class="nopar" > Wir betrachten nun <!--l. 4161--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&delta;</mi> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>&delta;</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+></math>,
+<!--l. 4161--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>k</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi></math>.
+Dann gibt es Elemente <!--l. 4162--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><msup><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&cap;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi> <mo 
+class="MathClass-bin">\</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+mit der Eigenschaft <!--l. 4163--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">&notin;</mo><msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>&#x03B5;</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+Die Folge <!--l. 4164--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>&infin;</mi></mrow></msubsup 
+></math>
+konvergiert offensichtlich gegen <!--l. 4165--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>
+für <!--l. 4165--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>k</mi> <mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></math>
+während <!--l. 4165--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>d</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&ge;</mo> <msub><mrow 
+><mi 
+>&#x03B5;</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>,
+d.h. <!--l. 4166--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&rarr;&#x0338;</mo><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>.
+Dies widerspricht aber der Voraussetzung <!--l. 4167--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&rArr;</mo><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></munder 
+><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>.
+                                                                                    &#x25A1;
+</div>
+<!--l. 4169--><p class="noindent" >Wir  betonen  nochmals,  dass  in  der  Folgendefinition
+<!--l. 4169--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> nicht nur immer
+konvergiert falls <!--l. 4170--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&rarr;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>, sonder
+dass <!--l. 4171--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></math> immer gegen <span 
+class="ptmri8t-x-x-120">ein</span>
+<span 
+class="ptmri8t-x-x-120">und denselben </span>Grenzwert <!--l. 4171--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>
+konvergiert, <span 
+class="ptmri8t-x-x-120">unabh</span><span 
+class="ptmri8t-x-x-120">ä</span><span 
+class="ptmri8t-x-x-120">ngig </span>von der konkreten Wahl der Argumentenfolge
+<!--l. 4173--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&rarr;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>. In
+diesem Zusammenhang wird die Folgendefinition häufig angewendet, um die Existenz eines
+Grenzwertes zu <span 
+class="ptmri8t-x-x-120">widerlege</span>n, wie das nächste Beispiel zeigt:
+<div class="newtheorem">
+<!--l. 4177--><p class="noindent" ><span class="head">
+<a 
+ id="x111-110009r8"></a>
+<span 
+class="ptmb8t-x-x-120">Example 2.10.8.</span>  </span>Es                                                                                                                sei
+<!--l. 4178--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>&#x211D;</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+> <mo 
+class="MathClass-bin">\</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mn>0</mn></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>
+und
+<!--l. 4178--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi> <mo 
+class="MathClass-punc">:</mo> <mi 
+>X</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <mi 
+>&#x211D;</mi></math>
+                                                                                     
+                                                                                     
+ist gegeben durch
+<div class="math-display"><!--l. 4179--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                         <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><msubsup><mrow 
+><mi 
+>&xi;</mi></mrow><mrow 
+><mn>1</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+> <mo 
+class="MathClass-bin">&minus;</mo> <msubsup><mrow 
+><mi 
+>&xi;</mi></mrow><mrow 
+>
+<mn>2</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+></mrow> 
+<mrow 
+><msubsup><mrow 
+><mi 
+>&xi;</mi></mrow><mrow 
+><mn>1</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+> <mo 
+class="MathClass-bin">+</mo> <msubsup><mrow 
+><mi 
+>&xi;</mi></mrow><mrow 
+><mn>2</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+></mrow></mfrac><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&xi;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>&xi;</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&isin;</mo> <msup><mrow 
+><mi 
+>&#x211D;</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 4180--><p class="nopar" > Diese Funktion besitzt <span 
+class="ptmri8t-x-x-120">keinen </span>Grenzwert für <!--l. 4181--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>0</mn><mo 
+class="MathClass-punc">,</mo> <mn>0</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+Tatsächlich,        wir        betrachten        zunächst        die        Folge        der        Argumente
+<!--l. 4182--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+><mo 
+class="MathClass-punc">,</mo><msup><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&rarr;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>0</mn><mo 
+class="MathClass-punc">,</mo> <mn>0</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+Da wir für <!--l. 4183--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&xi;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>&xi;</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+></math>
+den Funktionswert <!--l. 4183--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn></math>
+erhalten, so gilt <!--l. 4184--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&rarr;</mo> <mn>0</mn></math>.
+Wählen wir jedoch <!--l. 4184--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msubsup 
+> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+><mo 
+class="MathClass-punc">,</mo> <mn>0</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&rarr;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>0</mn><mo 
+class="MathClass-punc">,</mo> <mn>0</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>,
+so gilt <!--l. 4185--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msubsup 
+> <mo 
+class="MathClass-rel">=</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msubsup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+>
+<mi 
+>k</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msubsup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mo 
+class="MathClass-rel">&rarr;&#x0338;</mo><mn>0</mn></math>.
+</div>
+                                                                                     
+                                                                                     
+<!--l. 4188--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu86.html" >next</a>] [<a 
+href="skriptsu85.html" >front</a>] [<a 
+href="skriptse22.html#skriptsu85.html" >up</a>] </p></div>
+<!--l. 4188--><p class="noindent" ><a 
+ id="tailskriptsu85.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu85.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:17 GMT -->
+</html> 

@@ -1,0 +1,607 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu79.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:17 GMT -->
+<head><title>Offene und abgeschlossene Mengen.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 3710--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu80.html" >next</a>] [<a 
+href="skriptsu78.html" >prev</a>] [<a 
+href="skriptsu78.html#tailskriptsu78.html" >prev-tail</a>] [<a 
+href="#tailskriptsu79.html">tail</a>] [<a 
+href="skriptse21.html#skriptsu79.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">2.9.3</span>&#x00A0;&#x00A0;<a 
+ id="x104-1030002.9.3"></a>Offene und abgeschlossene Mengen.</h4>
+<!--l. 3712--><p class="noindent" >Es sei <!--l. 3712--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>M</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> ein metrischer
+Raum und <!--l. 3712--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math> eine
+Teilmenge von <!--l. 3712--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math>.
+<div class="newtheorem">
+<!--l. 3714--><p class="noindent" ><span class="head">
+<a 
+ id="x104-103001r18"></a>
+<span 
+class="ptmb8t-x-x-120">Definition 2.9.18.</span>  </span>Die Menge <!--l. 3715--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>M</mi></math> heißt
+<span id="textcolor139"><span 
+class="ptmri8t-x-x-120">offen</span></span> genau dann wenn alle Punkte von <!--l. 3716--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+auch innere Punkte von <!--l. 3716--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+sind, d.h.<table class="equation"><tr><td> <a 
+ id="x104-103002r47"></a>
+<!--l. 3716--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                                     <mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="mbox"><mtext  >int</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(2.47)</td></tr></table>
+</div>
+<!--l. 3720--><p class="noindent" >Aus (<a 
+href="#x104-103002r47">2.47<!--tex4ht:ref: eq:defoffen --></a>) und der ersten Identität in (<a 
+href="skriptsu78.html#x103-102004r44">2.44<!--tex4ht:ref: eq:intdextd --></a>) sieht man sofort, dass die Menge
+<!--l. 3721--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>M</mi></math>
+genau dann offen ist wenn sie <span 
+class="ptmri8t-x-x-120">keinen </span>ihrer Randpunkte enthält, also
+<!--l. 3722--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-bin">&cap;</mo> <mi 
+>&part;</mi><mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&empty;</mi></math>
+gilt.
+<div class="newtheorem">
+<!--l. 3725--><p class="noindent" ><span class="head">
+<a 
+ id="x104-103003r19"></a>
+                                                                                     
+                                                                                     
+<span 
+class="ptmb8t-x-x-120">Definition 2.9.19.</span>  </span>Die Menge <!--l. 3726--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>M</mi></math>
+heisst <span id="textcolor140"><span 
+class="ptmri8t-x-x-120">abgeschlossen</span></span> genau dann wenn alle Randpunkte von
+<!--l. 3727--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math> auch Elemente
+von <!--l. 3727--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+sind, d.h.<table class="equation"><tr><td> <a 
+ id="x104-103004r48"></a>
+<!--l. 3728--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                                      <mi 
+>&part;</mi><mi 
+>X</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>X</mi><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(2.48)</td></tr></table>
+</div>
+<!--l. 3732--><p class="noindent" >Die Menge <!--l. 3732--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math> ist damit
+abgeschlossen genau dann wenn <!--l. 3732--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>X</mi> <mo 
+class="MathClass-bin">&cup;</mo> <mi 
+>&part;</mi><mi 
+>X</mi></math>
+und nach (<a 
+href="skriptsu78.html#x103-102007r46">2.46<!--tex4ht:ref: eq:xaccint --></a>) ist dies äquivalent zu<table class="equation"><tr><td> <a 
+ id="x104-103005r49"></a>
+<!--l. 3733--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                                  <mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>X</mi> <mo 
+class="MathClass-bin">&cup;</mo><mstyle 
+class="mbox"><mtext  >acc</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(2.49)</td></tr></table>
+<!--l. 3735--><p class="noindent" >Letzteres bedeutet, dass die Menge <!--l. 3735--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+alle ihre Häufungspunkte enthält.<span class="footnote-mark"><a 
+href="#fn14x2" id="fn14x2-bk"><sup class="textsuperscript">14</sup></a></span><a 
+ id="x104-103006f14"></a>
+<div class="newtheorem">
+<!--l. 3742--><p class="noindent" ><span class="head">
+<a 
+ id="x104-103007r20"></a>
+<span 
+class="ptmb8t-x-x-120">Theorem 2.9.20.</span>  </span><span 
+class="ptmri8t-x-x-120">Eine                                                                                                      Menge</span>
+<!--l. 3743--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+<span 
+class="ptmri8t-x-x-120">ist              offen              genau              dann              wenn              ihr              Komplement</span>
+                                                                                     
+                                                                                     
+<!--l. 3744--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mi 
+>X</mi></mrow><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+></math>
+<span 
+class="ptmri8t-x-x-120">abgeschlossen                                  ist.                                   Eine                                  Menge</span>
+<!--l. 3744--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+<span 
+class="ptmri8t-x-x-120">ist            abgeschlossen            genau            dann            wenn            ihr            Komplement</span>
+<!--l. 3745--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mi 
+>X</mi></mrow><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+></math>
+<span 
+class="ptmri8t-x-x-120">offen ist.</span>
+</div>
+<!--l. 3747--><p class="noindent" >
+<div class="proof">
+<!--l. 3748--><p class="noindent" ><span class="head">
+<span 
+class="ptmri8t-x-x-120">Beweis.</span> </span>Die Menge <!--l. 3748--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+ist genau dann offen wenn <!--l. 3748--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-bin">&cap;</mo> <mi 
+>&part;</mi><mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&empty;</mi></math>,
+was wiederum äquivalent zu <!--l. 3749--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&part;</mi><mi 
+>X</mi> <mo 
+class="MathClass-rel">&sub;</mo> <msubsup><mrow 
+><mi 
+>X</mi></mrow><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+></math>
+ist. Wegen (<a 
+href="skriptsu77.html#x102-101015r41">2.41<!--tex4ht:ref: eq:partpartcm --></a>) gilt dies genau dann wenn <!--l. 3750--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&part;</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msubsup><mrow 
+><mi 
+>X</mi></mrow><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&sub;</mo> <msubsup><mrow 
+><mi 
+>X</mi></mrow><mrow 
+>
+<mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+></math>,
+d.h. nach (<a 
+href="#x104-103004r48">2.48<!--tex4ht:ref: eq:defclosed --></a>) genau dann wenn <!--l. 3751--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mi 
+>X</mi></mrow><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+></math>
+abgeschlossen ist. Nach dem gleichen Argument ist <!--l. 3752--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mi 
+>X</mi></mrow><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+></math>
+genau dann offen wenn <!--l. 3753--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msubsup><mrow 
+><mi 
+>X</mi></mrow><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+>
+<mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+> <mo 
+class="MathClass-rel">=</mo> <mi 
+>X</mi></math>
+abgeschlossen ist.                                                                                                                       &#x25A1;
+</div>
+<div class="newtheorem">
+<!--l. 3755--><p class="noindent" ><span class="head">
+<a 
+ id="x104-103008r21"></a>
+<span 
+class="ptmb8t-x-x-120">Example 2.9.21.</span>  </span>Die                                                                                                      Mengen
+<!--l. 3756--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math>
+und
+<!--l. 3756--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&empty;</mi></math>
+sind sowohl offen als auch abgeschlossen.
+</div>
+<!--l. 3758--><p class="noindent" >&#x00A0;
+<div class="newtheorem">
+<!--l. 3760--><p class="noindent" ><span class="head">
+<a 
+ id="x104-103009r22"></a>
+                                                                                     
+                                                                                     
+<span 
+class="ptmb8t-x-x-120">Example 2.9.22.</span>  </span>Es sei <!--l. 3761--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>M</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x211D;</mi><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-bin">&sdot;</mo><mo 
+class="MathClass-rel">|</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+und <!--l. 3761--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi></math>
+mit <!--l. 3762--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>a</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>b</mi></math>.
+Dann ist <!--l. 3762--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo></mrow><mo 
+class="MathClass-close">]</mo></mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi><mrow ><mo 
+class="MathClass-open">[</mo><mrow></math>
+offen, da <!--l. 3762--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&part;</mi><mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>
+und folglich <!--l. 3763--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-bin">&cap;</mo> <mi 
+>&part;</mi><mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&empty;</mi></math>.
+Dem entgegen ist <!--l. 3763--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow></math>
+abgeschlossen, da <!--l. 3764--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&part;</mi><mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-rel">&sub;</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow></math>.
+Die Intervalle <!--l. 3765--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ></mrow><mo 
+class="MathClass-close">]</mo></mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow></math>
+und <!--l. 3765--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi><mrow ><mo 
+class="MathClass-open">[</mo><mrow></math>
+sind weder offen noch abgeschlossen.
+</div>
+<div class="newtheorem">
+<!--l. 3767--><p class="noindent" ><span class="head">
+<a 
+ id="x104-103010r23"></a>
+<span 
+class="ptmb8t-x-x-120">Problem 2.9.23.</span>  </span>Es sei <!--l. 3768--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>K</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&#x211D;</mi></math>
+oder <!--l. 3768--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>K</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&#x2102;</mi></math>
+sowie <!--l. 3769--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>M</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+>
+<mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-bin">&sdot;</mo><mo 
+class="MathClass-rel">&#x2225;</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+Zeigen Sie, dass die <!--l. 3770--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi></math>-Umgebung
+<!--l. 3770--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>y</mi> <mo 
+class="MathClass-rel">&isin;</mo> <msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>x</mi> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>y</mi> <mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>&#x03B5;</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>
+für beliebiges <!--l. 3771--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>
+und <!--l. 3771--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></math>
+offen ist und dass andererseits die Menge <!--l. 3772--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>B</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>y</mi> <mo 
+class="MathClass-rel">&isin;</mo> <msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>x</mi> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>y</mi> <mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-rel">&le;</mo> <mi 
+>&#x03B5;</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>
+für beliebiges <!--l. 3773--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>
+abgeschlossen ist.
+</div>
+                                                                                     
+                                                                                     
+<div class="footnotes"><!--l. 3740--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn14x2-bk" id="fn14x2">
+<sup class="textsuperscript">14</sup></a></span><span 
+class="ptmr8t-">Die hier eingef</span><span 
+class="ptmr8t-">ü</span><span 
+class="ptmr8t-">hrten Begriffe von offenen und abgeschlossenen Mengen h</span><span 
+class="ptmr8t-">ä</span><span 
+class="ptmr8t-">ngen wesentlich von der Wahl des zugrundeliegenden</span>
+   <span 
+class="ptmr8t-">metrischen Raumes </span><!--l. 3740--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>M</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+   <span 
+class="ptmr8t-">ab!</span>                                                                                </div> <!--l. 3776--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu80.html" >next</a>]
+[<a 
+href="skriptsu78.html" >prev</a>] [<a 
+href="skriptsu78.html#tailskriptsu78.html" >prev-tail</a>] [<a 
+href="skriptsu79.html" >front</a>] [<a 
+href="skriptse21.html#skriptsu79.html" >up</a>] </p></div>
+<!--l. 3776--><p class="noindent" ><a 
+ id="tailskriptsu79.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu79.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:17 GMT -->
+</html> 

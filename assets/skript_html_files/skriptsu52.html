@@ -1,0 +1,640 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu52.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:16 GMT -->
+<head><title>Der Ubergang zum Grenzwert in Ungleichungen.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 2395--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu53.html" >next</a>] [<a 
+href="skriptsu51.html" >prev</a>] [<a 
+href="skriptsu51.html#tailskriptsu51.html" >prev-tail</a>] [<a 
+href="#tailskriptsu52.html">tail</a>] [<a 
+href="skriptse13.html#skriptsu52.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">2.1.5</span>&#x00A0;&#x00A0;<a 
+ id="x69-680002.1.5"></a>Der Übergang zum Grenzwert in Ungleichungen.</h4>
+<div class="newtheorem">
+<!--l. 2397--><p class="noindent" ><span class="head">
+<a 
+ id="x69-68001r11"></a>
+<span 
+class="ptmb8t-x-x-120">Theorem 2.1.11.</span>  </span><span 
+class="ptmri8t-x-x-120">Es seien </span><!--l. 2398--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+<span 
+class="ptmri8t-x-x-120">und </span><!--l. 2399--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+<span 
+class="ptmri8t-x-x-120">reelle Folgen und es gelte </span><!--l. 2399--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">&rarr;</mo></mrow><mrow 
+><mrow><mi 
+>n</mi> <mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></mrow></mover><mi 
+>a</mi></math>
+<span 
+class="ptmri8t-x-x-120">und </span><!--l. 2400--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">&rarr;</mo></mrow><mrow 
+><mrow><mi 
+>n</mi> <mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></mrow></mover><mi 
+>b</mi></math>
+<span 
+class="ptmri8t-x-x-120">mit </span><!--l. 2401--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi></math><span 
+class="ptmri8t-x-x-120">.</span>
+<span 
+class="ptmri8t-x-x-120">Dann folgt aus </span><!--l. 2401--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&le;</mo> <msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></math>
+<span 
+class="ptmri8t-x-x-120">f</span><span 
+class="ptmri8t-x-x-120">ü</span><span 
+class="ptmri8t-x-x-120">r alle </span><!--l. 2401--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&ge;</mo> <msub><mrow 
+><mi 
+>n</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>
+<span 
+class="ptmri8t-x-x-120">die Ungleichung </span><!--l. 2402--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>a</mi> <mo 
+class="MathClass-rel">&le;</mo> <mi 
+>b</mi></math><span 
+class="ptmri8t-x-x-120">.</span>
+</div>
+<!--l. 2404--><p class="noindent" >
+<div class="proof">
+<!--l. 2405--><p class="noindent" ><span class="head">
+<span 
+class="ptmri8t-x-x-120">Beweis.</span> </span>Gegenannahme: Es sei <!--l. 2405--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>a</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mi 
+>b</mi></math>.
+Wir setzen <!--l. 2405--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mn>3</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>a</mi> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>b</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>.
+Wegen der Konvergenz der Folgen gilt <!--l. 2406--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>a</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+und <!--l. 2407--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+für genügend grosse <!--l. 2407--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&ge;</mo> <mi 
+>N</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x03B5;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo><mo class="qopname"> max</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><munderover accentunder="false" accent="false"><mrow  
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>a</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></munderover 
+><mo 
+class="MathClass-punc">,</mo><msubsup><mrow 
+><mi 
+>N</mi></mrow><mrow 
+>
+<mi 
+>&#x03B5;</mi></mrow><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></msubsup 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>.
+Daraus folgt
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 2408--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                               <msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>b</mi> <mo 
+class="MathClass-bin">+</mo> <mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>a</mi> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+>
+</mrow></math></div>
+<!--l. 2409--><p class="nopar" > und damit <!--l. 2410--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x003C;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></math>
+für alle <!--l. 2410--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&ge;</mo> <mi 
+>N</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x03B5;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>,
+was im Widerspruch zu den Annahmen des Satzes steht.                                                         &#x25A1;
+</div>
+<!--l. 2413--><p class="noindent" >Es  sei  betont,  dass  aus  der  <span 
+class="ptmri8t-x-x-120">strikten  </span>Ungleichung
+<!--l. 2413--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x003C;</mo> <msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></math> für alle
+<!--l. 2414--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&ge;</mo> <msub><mrow 
+><mi 
+>n</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math> nicht notwendigerweise die
+<span 
+class="ptmri8t-x-x-120">strikte </span>Ungleichung <!--l. 2415--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>a</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>b</mi></math> folgt,
+wie sich leicht am Beispiel <!--l. 2415--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-bin">&minus;</mo><msup><mrow 
+><mi 
+>n</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+> <mo 
+class="MathClass-rel">&rarr;</mo> <mn>0</mn> <mo 
+class="MathClass-rel">=</mo> <mi 
+>a</mi></math>
+und <!--l. 2416--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>n</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+> <mo 
+class="MathClass-rel">&rarr;</mo> <mn>0</mn> <mo 
+class="MathClass-rel">=</mo> <mi 
+>b</mi></math>
+sehen lässt.
+<!--l. 2418--><p class="noindent" >Das folgende Konvergenzkriterium ist auch als das &#8220;<span 
+class="ptmri8t-x-x-120">Prinzip der zwei Polizisten</span>&#8221; bekannt: Lässt sich
+eine Folge zwischen zwei konvergente Folgen einschachteln, so führen diese &#8220;Polizisten&#8221;-Folgen
+die mittlere Folge unweigerlich zum gemeinsamen Grenzwert.
+<div class="newtheorem">
+<!--l. 2423--><p class="noindent" ><span class="head">
+<a 
+ id="x69-68002r12"></a>
+<span 
+class="ptmb8t-x-x-120">Theorem 2.1.12.</span>  </span><span 
+class="ptmri8t-x-x-120">Es seien </span><!--l. 2424--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math><span 
+class="ptmri8t-x-x-120">,</span>
+<!--l. 2424--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+<span 
+class="ptmri8t-x-x-120">und </span><!--l. 2425--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+<span 
+class="ptmri8t-x-x-120">reelle Folgen und es gelte </span><!--l. 2425--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">&rarr;</mo></mrow><mrow 
+><mrow><mi 
+>n</mi> <mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></mrow></mover><mi 
+>a</mi></math>
+<span 
+class="ptmri8t-x-x-120">sowie </span><!--l. 2426--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">&rarr;</mo></mrow><mrow 
+><mrow><mi 
+>n</mi> <mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></mrow></mover><mi 
+>a</mi></math>
+<span 
+class="ptmri8t-x-x-120">mit </span><!--l. 2427--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>a</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi></math><span 
+class="ptmri8t-x-x-120">.</span>
+<span 
+class="ptmri8t-x-x-120">Gilt dann </span><!--l. 2427--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&le;</mo> <msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&le;</mo> <msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></math>
+<span 
+class="ptmri8t-x-x-120">f</span><span 
+class="ptmri8t-x-x-120">ü</span><span 
+class="ptmri8t-x-x-120">r alle </span><!--l. 2428--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&ge;</mo> <msub><mrow 
+><mi 
+>n</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>
+<span 
+class="ptmri8t-x-x-120">f</span><span 
+class="ptmri8t-x-x-120">ü</span><span 
+class="ptmri8t-x-x-120">r ein gewisses </span><!--l. 2428--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>n</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi></math><span 
+class="ptmri8t-x-x-120">,</span>
+<span 
+class="ptmri8t-x-x-120">so folgt die Konvergenz </span><!--l. 2429--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">&rarr;</mo></mrow><mrow 
+><mrow><mi 
+>n</mi> <mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></mrow></mover><mi 
+>a</mi></math><span 
+class="ptmri8t-x-x-120">.</span>
+                                                                                     
+                                                                                     
+</div>
+<!--l. 2431--><p class="noindent" >
+<div class="proof">
+<!--l. 2432--><p class="noindent" ><span class="head">
+<span 
+class="ptmri8t-x-x-120">Beweis.</span> </span>Es sei <!--l. 2432--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>.
+Aus der Konvergenz von <!--l. 2432--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+und <!--l. 2433--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+folgt
+<div class="math-display"><!--l. 2433--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                            <mi 
+>a</mi> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&le;</mo> <msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&le;</mo> <msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>a</mi> <mo 
+class="MathClass-bin">+</mo> <mi 
+>&#x03B5;</mi>
+</mrow></math></div>
+<!--l. 2434--><p class="nopar" > für genügend grosse <!--l. 2435--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&ge;</mo> <mi 
+>N</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x03B5;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+Damit konvergiert <!--l. 2435--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+gegen <!--l. 2436--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>a</mi></math>.
+                                                                                    &#x25A1;
+</div>
+                                                                                     
+                                                                                     
+<!--l. 2439--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu53.html" >next</a>] [<a 
+href="skriptsu51.html" >prev</a>] [<a 
+href="skriptsu51.html#tailskriptsu51.html" >prev-tail</a>] [<a 
+href="skriptsu52.html" >front</a>] [<a 
+href="skriptse13.html#skriptsu52.html" >up</a>] </p></div>
+<!--l. 2439--><p class="noindent" ><a 
+ id="tailskriptsu52.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu52.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:16 GMT -->
+</html> 

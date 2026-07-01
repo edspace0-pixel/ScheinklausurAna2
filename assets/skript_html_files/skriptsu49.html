@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu49.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:16 GMT -->
+<head><title>Grenzwerte reeller Folgen.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 2230--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu50.html" >next</a>] [<a 
+href="skriptsu48.html" >prev</a>] [<a 
+href="skriptsu48.html#tailskriptsu48.html" >prev-tail</a>] [<a 
+href="#tailskriptsu49.html">tail</a>] [<a 
+href="skriptse13.html#skriptsu49.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">2.1.2</span>&#x00A0;&#x00A0;<a 
+ id="x66-650002.1.2"></a>Grenzwerte reeller Folgen.</h4>
+<!--l. 2232--><p class="noindent" >Wir betrachten nun eine Folge <!--l. 2232--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+reeller Zahlen <!--l. 2233--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi></math> und definieren
+den Begriff des <span id="textcolor102"><span 
+class="ptmri8t-x-x-120">Grenzwertes</span></span> in <!--l. 2234--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x211D;</mi></math>:
+<div class="newtheorem">
+<!--l. 2236--><p class="noindent" ><span class="head">
+<a 
+ id="x66-65001r1"></a>
+<span 
+class="ptmb8t-x-x-120">Definition 2.1.1.</span>  </span>Die Folge <!--l. 2237--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+<span id="textcolor103"><span 
+class="ptmri8t-x-x-120">konvergiert</span></span> für <!--l. 2238--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></math>
+gegen den Grenzwert <!--l. 2238--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>a</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi></math>,
+genau dann wenn folgende Aussage wahr ist:
+<div class="math-display"><!--l. 2239--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                          <msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>&#x03B5;</mi><mo 
+class="MathClass-rel">&#x003E;</mo><mn>0</mn><mo 
+class="MathClass-punc">,</mo><mi 
+>&#x03B5;</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x211D;</mi></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><msub><mrow 
+><mo 
+class="MathClass-op">&exist;</mo></mrow><mrow 
+><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi><mo 
+class="MathClass-rel">&ge;</mo><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>a</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 2240--><p class="nopar" > Man schreibt dann<span class="footnote-mark"><a 
+href="#fn1x2" id="fn1x2-bk"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x66-65002f1"></a>
+<!--l. 2244--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mi 
+>a</mi></math>
+bzw. <!--l. 2244--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">&rarr;</mo></mrow><mrow 
+><mrow><mi 
+>n</mi> <mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></mrow></mover><mi 
+>a</mi></math>.
+</div>
+<div class="newtheorem">
+<!--l. 2246--><p class="noindent" ><span class="head">
+<a 
+ id="x66-65003r2"></a>
+                                                                                     
+                                                                                     
+<span 
+class="ptmri8t-x-x-120">Remark </span>2.1.2<span 
+class="ptmri8t-x-x-120">.</span>  </span>Für rationale Folgen <!--l. 2247--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211A;</mi></math>,
+<!--l. 2247--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi></math>
+und rationale Grenzwerte <!--l. 2248--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>a</mi></math>
+stimmt          diese          Definition          mit          jener          der          Konvergenz          in
+<!--l. 2249--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x211A;</mi></math>
+überein: Zu jedem <!--l. 2249--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn><mo 
+class="MathClass-punc">,</mo></math>
+<!--l. 2249--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi></math>
+existiert ja ein <!--l. 2250--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>&#x03B5;</mi></mrow><mo 
+class="MathClass-op">&#x0303;</mo></mover> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211A;</mi></math>
+mit <!--l. 2250--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>0</mn> <mo 
+class="MathClass-rel">&#x003C;</mo> <mover 
+accent="true"><mrow 
+><mi 
+>&#x03B5;</mi></mrow><mo 
+class="MathClass-op">&#x0303;</mo></mover> <mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <mn>2</mn><mover 
+accent="true"><mrow 
+><mi 
+>&#x03B5;</mi></mrow><mo 
+class="MathClass-op">&#x0303;</mo></mover></math>,
+damit sind die Definitionen <a 
+href="#x66-65001r1">2.1.1<!--tex4ht:ref: def:limr --></a> und <a 
+href="skriptsu20.html#x30-29001r3">1.7.3<!--tex4ht:ref: def:limq --></a> für eine solche Folge gleichzeitig erfüllt.
+</div>
+<!--l. 2254--><p class="noindent" >&#x00A0;
+<div class="newtheorem">
+<!--l. 2256--><p class="noindent" ><span class="head">
+<a 
+ id="x66-65004r3"></a>
+<span 
+class="ptmri8t-x-x-120">Remark </span>2.1.3<span 
+class="ptmri8t-x-x-120">.</span>  </span>Der  Grenzwert  einer  konvergenten  Folge  ist  eindeutig  bestimmt:  Man  kann
+leicht den Beweis von Satz <a 
+href="skriptsu20.html#x30-29003r5">1.7.5<!--tex4ht:ref: thm:eindgrwq --></a> für reelle Grenzwerte reeller Folgen verallgemeinern..
+</div>
+<div class="newtheorem">
+<!--l. 2261--><p class="noindent" ><span class="head">
+<a 
+ id="x66-65005r4"></a>
+<span 
+class="ptmb8t-x-x-120">Example 2.1.4.</span>  </span>Es sei <!--l. 2262--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>c</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+die konstante Folge. Dann gilt offensichtlich <!--l. 2263--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>c</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+für alle <!--l. 2264--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi></math>
+und <!--l. 2264--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>
+und damit <!--l. 2264--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>c</mi> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></munder 
+><mi 
+>c</mi></math>,
+die konstante Folge konvergiert also.
+</div>
+                                                                                     
+                                                                                     
+<div class="footnotes"><!--l. 2244--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn1x2-bk" id="fn1x2">
+<sup class="textsuperscript">1</sup></a></span><span 
+class="ptmr8t-">Wiederum beinhaltet diese Notation sowohl das Faktum der Konvergenz der Folge als auch den Wert des</span>
+   <span 
+class="ptmr8t-">Grenzwertes.</span>                                                                        </div> <!--l. 2268--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu50.html" >next</a>]
+[<a 
+href="skriptsu48.html" >prev</a>] [<a 
+href="skriptsu48.html#tailskriptsu48.html" >prev-tail</a>] [<a 
+href="skriptsu49.html" >front</a>] [<a 
+href="skriptse13.html#skriptsu49.html" >up</a>] </p></div>
+<!--l. 2268--><p class="noindent" ><a 
+ id="tailskriptsu49.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu49.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:16 GMT -->
+</html> 

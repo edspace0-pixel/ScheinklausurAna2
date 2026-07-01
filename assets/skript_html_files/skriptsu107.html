@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu107.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:18 GMT -->
+<head><title>C(X, K) als linearer Vektorraum.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 5354--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu108.html" >next</a>] [<a 
+href="#tailskriptsu107.html">tail</a>] [<a 
+href="skriptse27.html#skriptsu107.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">2.15.1</span>&#x00A0;&#x00A0;<a 
+ id="x138-1370002.15.1"></a><!--l. 5354--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>C</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi><mo 
+class="MathClass-punc">,</mo> <mi 
+>K</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+als linearer Vektorraum.</h4>
+<!--l. 5356--><p class="noindent" >Die im Punkt <a 
+href="skriptsu83.html#x108-1070002.9.7">2.9.7<!--tex4ht:ref: subsec:hierarchie --></a> diskutierten Strukturen haben wir als Eigenschaften von
+<!--l. 5357--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>&#x211D;</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></math> und
+<!--l. 5357--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>&#x2102;</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></math>
+kennengelernt. Punkte (Elemente, Vektoren) in diesen Räumen werden in den Anwendungen oft als
+geometrische Orte veranschaulicht. Dieselben Strukturen erweisen sich aber auch in wesentlich
+allgemeineren Situationen als äusserst nützlich, insbesondere im Fall von <span 
+class="ptmri8t-x-x-120">Funktionenr</span><span 
+class="ptmri8t-x-x-120">ä</span><span 
+class="ptmri8t-x-x-120">umen</span>.
+Punkte (Elemente, Vektoren) solcher Räume sind Funktionen und wir diskutieren nun das erste
+Beispiel eines solchen Objektes.
+                                                                                     
+                                                                                     
+<!--l. 5365--><p class="noindent" >Es seien <!--l. 5365--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> und
+<!--l. 5365--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> metrische Räume
+und <!--l. 5366--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math> sei eine
+Teilmenge von <!--l. 5366--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math>. Mit
+<!--l. 5366--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>C</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> bezeichnen wir die Menge
+der stetigen Funktionen <!--l. 5367--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi> <mo 
+class="MathClass-punc">:</mo> <mi 
+>X</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math>
+<!--l. 5369--><p class="noindent" >Im weiteren betrachten wir ausschliesslich den Spezialfall
+<!--l. 5369--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>K</mi><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-bin">&sdot;</mo><mo 
+class="MathClass-rel">&#x2225;</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> mit
+<!--l. 5370--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>K</mi> <mo 
+class="MathClass-rel">&isin;</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>&#x211D;</mi><mo 
+class="MathClass-punc">,</mo> <mi 
+>&#x2102;</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>. Dann lassen
+sich auf <!--l. 5371--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>C</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi><mo 
+class="MathClass-punc">,</mo> <mi 
+>K</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+die Operation der Addition sowie der Multiplikation mit einer Konstante definieren
+<!--tex4ht:inline--><!--l. 5372--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1"> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi> <mo 
+class="MathClass-bin">+</mo> <mi 
+>g</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">  <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">+</mo> <mi 
+>g</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>f</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>g</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>C</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi><mo 
+class="MathClass-punc">,</mo> <mi 
+>K</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo>  </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&alpha;</mi> <mo 
+class="MathClass-bin">&sdot;</mo> <mi 
+>f</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">  <mi 
+>&alpha;</mi><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mspace width="1em" class="quad"/><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>&alpha;</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>K</mi><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>f</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>g</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>C</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi><mo 
+class="MathClass-punc">,</mo> <mi 
+>K</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                </mtr></mtable>
+</math>
+<!--l. 5374--><p class="nopar" >
+Nach Satz <a 
+href="skriptsu97.html#x125-124001r7">2.12.7<!--tex4ht:ref: thm:stetigefunkkn --></a> sind <!--l. 5375--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi> <mo 
+class="MathClass-bin">+</mo> <mi 
+>g</mi></math>
+und <!--l. 5375--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&alpha;</mi> <mo 
+class="MathClass-bin">&sdot;</mo> <mi 
+>f</mi></math>
+stetig, die genannten Operationen wirken damit folgendermaßen
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 5376--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+           <mo 
+class="MathClass-bin">+</mo> <mo 
+class="MathClass-punc">:</mo> <mi 
+>C</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi><mo 
+class="MathClass-punc">,</mo> <mi 
+>K</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x00D7;</mo> <mi 
+>C</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi><mo 
+class="MathClass-punc">,</mo> <mi 
+>K</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&rarr;</mo> <mi 
+>C</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi><mo 
+class="MathClass-punc">,</mo> <mi 
+>K</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mo 
+class="MathClass-bin">&sdot;</mo> <mo 
+class="MathClass-punc">:</mo> <mi 
+>K</mi> <mo 
+class="MathClass-bin">&#x00D7;</mo> <mi 
+>C</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi><mo 
+class="MathClass-punc">,</mo> <mi 
+>K</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&rarr;</mo> <mi 
+>C</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi><mo 
+class="MathClass-punc">,</mo> <mi 
+>K</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 5377--><p class="nopar" > Man  kann  nun  punktweise  für  jedes  einzelne
+<!--l. 5378--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi></math> die Struktur des linearen
+Vektorraumes auf <!--l. 5379--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>K</mi></math>
+ausnutzen und damit die Axiomatik des reellen (für
+<!--l. 5380--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>K</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&#x211D;</mi></math>) bzw. des komplexen
+(für <!--l. 5381--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>K</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&#x2102;</mi></math>) linearen
+Vektorraumes für <!--l. 5381--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>C</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi><mo 
+class="MathClass-punc">,</mo> <mi 
+>K</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+verifizieren. Jede stetige Funktion wird dabei als ein einzelner Punkt dieses
+Raumes aufgefasst, das neutrale Element der Addition ist die Nullfunktion
+<!--l. 5384--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>0</mn><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn></math> für
+alle <!--l. 5384--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi></math>.
+                                                                                     
+                                                                                     
+<!--l. 5387--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu108.html" >next</a>] [<a 
+href="skriptsu107.html" >front</a>] [<a 
+href="skriptse27.html#skriptsu107.html" >up</a>] </p></div>
+<!--l. 5387--><p class="noindent" ><a 
+ id="tailskriptsu107.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu107.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:18 GMT -->
+</html> 

@@ -1,0 +1,537 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu108.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:18 GMT -->
+<head><title>C(X, K) als normierter Raum.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 5387--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu109.html" >next</a>] [<a 
+href="skriptsu107.html" >prev</a>] [<a 
+href="skriptsu107.html#tailskriptsu107.html" >prev-tail</a>] [<a 
+href="#tailskriptsu108.html">tail</a>] [<a 
+href="skriptse27.html#skriptsu108.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">2.15.2</span>&#x00A0;&#x00A0;<a 
+ id="x139-1380002.15.2"></a><!--l. 5387--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>C</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi><mo 
+class="MathClass-punc">,</mo> <mi 
+>K</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+als normierter Raum.</h4>
+<!--l. 5389--><p class="noindent" >Wir setzen jetzt zusätzlich voraus, dass <!--l. 5389--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+eine <span 
+class="ptmri8t-x-x-120">kompakte </span>Menge in <!--l. 5390--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math> ist. Als
+Komposition stetiger Funktionen ist <!--l. 5390--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-rel">|</mo><mi 
+>f</mi><mo 
+class="MathClass-rel">|</mo></math>
+stetig für <!--l. 5391--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>C</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>K</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>. Nach dem
+Satz von Weierstrass ist <!--l. 5391--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-rel">|</mo><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo></math>
+beschränkt auf <!--l. 5392--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+und nimmt zudem das Maximum an. Deshalb ist die Abbildung
+<div class="math-display"><!--l. 5393--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                <mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-bin">&sdot;</mo><msub><mrow 
+><mo 
+class="MathClass-rel">&#x2225;</mo></mrow><mrow 
+><mi 
+>C</mi></mrow></msub 
+> <mo 
+class="MathClass-punc">:</mo> <mi 
+>C</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi><mo 
+class="MathClass-punc">.</mo><mi 
+>K</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&rarr;</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><mn>0</mn><mo 
+class="MathClass-punc">,</mo> <mo 
+class="MathClass-bin">+</mo><mi 
+>&infin;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/> <mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>f</mi> <msub><mrow 
+><mo 
+class="MathClass-rel">&#x2225;</mo></mrow><mrow 
+><mi 
+>C</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> max</mo> </mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>X</mi></mrow></munder 
+><mo 
+class="MathClass-rel">|</mo><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-punc">,</mo>
+</mrow></math></div>
+<!--l. 5394--><p class="nopar" > korrekt definiert.
+<div class="newtheorem">
+<!--l. 5397--><p class="noindent" ><span class="head">
+<a 
+ id="x139-138001r1"></a>
+<span 
+class="ptmb8t-x-x-120">Theorem 2.15.1.</span>  </span><span 
+class="ptmri8t-x-x-120">Die Abbildung </span><!--l. 5398--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-bin">&sdot;</mo><msub><mrow 
+><mo 
+class="MathClass-rel">&#x2225;</mo></mrow><mrow 
+><mi 
+>C</mi></mrow></msub 
+></math>
+<span 
+class="ptmri8t-x-x-120">definiert eine Norm auf </span><!--l. 5399--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>C</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi><mo 
+class="MathClass-punc">,</mo> <mi 
+>K</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math><span 
+class="ptmri8t-x-x-120">.</span>
+</div>
+<!--l. 5401--><p class="noindent" >
+<div class="proof">
+                                                                                     
+                                                                                     
+<!--l. 5402--><p class="noindent" ><span class="head">
+<span 
+class="ptmri8t-x-x-120">Beweis.</span> </span>Wir müssen die Axiome <a 
+href="skriptsu68.html#x90-89001r25">2.25<!--tex4ht:ref: eq:reellnorm --></a> überprüfen.
+<!--l. 5404--><p class="noindent" >Aus <!--l. 5404--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-rel">|</mo><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-rel">&ge;</mo> <mn>0</mn></math>
+folgt <!--l. 5404--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>f</mi> <msub><mrow 
+><mo 
+class="MathClass-rel">&#x2225;</mo></mrow><mrow 
+><mi 
+>C</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> max</mo> </mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>X</mi></mrow></munder 
+><mo 
+class="MathClass-rel">|</mo><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-rel">&ge;</mo> <mn>0</mn></math>.
+Falls <!--l. 5405--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>f</mi> <msub><mrow 
+><mo 
+class="MathClass-rel">&#x2225;</mo></mrow><mrow 
+><mi 
+>C</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn></math>
+so ist <!--l. 5405--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><munder class="msub"><mrow 
+><mo class="qopname"> max</mo> </mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>X</mi></mrow></munder 
+><mo 
+class="MathClass-rel">|</mo><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn></math>
+und damit auch <!--l. 5406--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn></math>
+für alle <!--l. 5406--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi></math>,
+d.h. <!--l. 5406--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math>
+ist das neutrale Element bezüglich der Addition.
+<!--l. 5409--><p class="noindent" >Für beliebiges <!--l. 5409--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&alpha;</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>K</mi></math>
+gilt zudem
+<!--tex4ht:inline--><!--l. 5409--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1"> <mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>&alpha;</mi><mi 
+>f</mi> <msub><mrow 
+><mo 
+class="MathClass-rel">&#x2225;</mo></mrow><mrow 
+><mi 
+>C</mi></mrow></msub 
+></mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> max</mo> </mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>X</mi></mrow></munder 
+><mo 
+class="MathClass-rel">|</mo><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&alpha;</mi><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo></mtd><mtd 
+class="eqnarray-3">  <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> max</mo> </mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>X</mi></mrow></munder 
+><mo 
+class="MathClass-rel">|</mo><mi 
+>&alpha;</mi><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> max</mo> </mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>X</mi></mrow></munder 
+><mo 
+class="MathClass-rel">|</mo><mi 
+>&alpha;</mi><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-rel">|</mo><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1">         </mtd><mtd 
+class="eqnarray-2">                      </mtd><mtd 
+class="eqnarray-3">  <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-rel">|</mo><mi 
+>&alpha;</mi><mo 
+class="MathClass-rel">|</mo><munder class="msub"><mrow 
+><mo class="qopname"> max</mo> </mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>X</mi></mrow></munder 
+><mo 
+class="MathClass-rel">|</mo><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-rel">|</mo><mi 
+>&alpha;</mi><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>f</mi> <msub><mrow 
+><mo 
+class="MathClass-rel">&#x2225;</mo></mrow><mrow 
+><mi 
+>C</mi></mrow></msub 
+><mo 
+class="MathClass-punc">.</mo>    </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>               </mtr></mtable>
+</math>
+<!--l. 5411--><p class="nopar" >
+<!--l. 5414--><p class="noindent" >Zur Überprüfung der Dreiecksungleichung stellen wir fest, dass das Maximum
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 5415--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                  <mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>f</mi> <mo 
+class="MathClass-bin">+</mo> <mi 
+>g</mi> <msub><mrow 
+><mo 
+class="MathClass-rel">&#x2225;</mo></mrow><mrow 
+><mi 
+>C</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> max</mo> </mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>X</mi></mrow></munder 
+><mo 
+class="MathClass-rel">|</mo><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi> <mo 
+class="MathClass-bin">+</mo> <mi 
+>g</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-rel">|</mo><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi> <mo 
+class="MathClass-bin">+</mo> <mi 
+>g</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">+</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo>
+</mrow></math></div>
+<!--l. 5416--><p class="nopar" > in einem Punkt <!--l. 5417--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">+</mo></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi></math>
+angenommen wird. Damit gilt nach der Dreiecksungleichung in
+<!--l. 5418--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>K</mi></math>
+<!--tex4ht:inline--><!--l. 5418--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1"> <mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>f</mi> <mo 
+class="MathClass-bin">+</mo> <mi 
+>g</mi> <msub><mrow 
+><mo 
+class="MathClass-rel">&#x2225;</mo></mrow><mrow 
+><mi 
+>C</mi></mrow></msub 
+></mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">  <mo 
+class="MathClass-rel">|</mo><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">+</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">+</mo> <mi 
+>g</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">+</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-rel">&le;</mo><mo 
+class="MathClass-rel">|</mo><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">+</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo> <mo 
+class="MathClass-bin">+</mo> <mo 
+class="MathClass-rel">|</mo><mi 
+>g</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">+</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo>              </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1">           </mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-rel">&le;</mo></mtd><mtd 
+class="eqnarray-3">  <munder class="msub"><mrow 
+><mo class="qopname">max</mo> </mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>X</mi></mrow></munder 
+><mo 
+class="MathClass-rel">|</mo><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo> <mo 
+class="MathClass-bin">+</mo><munder class="msub"><mrow 
+><mo class="qopname"> max</mo> </mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>X</mi></mrow></munder 
+><mo 
+class="MathClass-rel">|</mo><mi 
+>g</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo> <mo 
+class="MathClass-rel">=</mo><mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>f</mi> <msub><mrow 
+><mo 
+class="MathClass-rel">&#x2225;</mo></mrow><mrow 
+><mi 
+>C</mi></mrow></msub 
+><mo 
+class="MathClass-bin">+</mo> <mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>g</mi> <msub><mrow 
+><mo 
+class="MathClass-rel">&#x2225;</mo></mrow><mrow 
+><mi 
+>C</mi></mrow></msub 
+><mo 
+class="MathClass-punc">.</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                  </mtr></mtable>
+</math>
+<!--l. 5420--><p class="nopar" >
+                                                                                    &#x25A1;
+</div>
+                                                                                     
+                                                                                     
+<!--l. 5424--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu109.html" >next</a>] [<a 
+href="skriptsu107.html" >prev</a>] [<a 
+href="skriptsu107.html#tailskriptsu107.html" >prev-tail</a>] [<a 
+href="skriptsu108.html" >front</a>] [<a 
+href="skriptse27.html#skriptsu108.html" >up</a>] </p></div>
+<!--l. 5424--><p class="noindent" ><a 
+ id="tailskriptsu108.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu108.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:18 GMT -->
+</html> 

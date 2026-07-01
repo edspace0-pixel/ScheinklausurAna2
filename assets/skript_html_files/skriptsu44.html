@@ -1,0 +1,906 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu44.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:16 GMT -->
+<head><title>Einige elementare Funktionen einer komplexen Veranderlichen.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 1983--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu43.html" >prev</a>] [<a 
+href="skriptsu43.html#tailskriptsu43.html" >prev-tail</a>] [<a 
+href="#tailskriptsu44.html">tail</a>] [<a 
+href="skriptse11.html#skriptsu44.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">1.11.5</span>&#x00A0;&#x00A0;<a 
+ id="x58-570001.11.5"></a>Einige elementare Funktionen einer komplexen Veränderlichen.</h4>
+<!--l. 1985--><p class="noindent" >Wir definieren die <span 
+class="ptmri8t-x-x-120">Exponentialfunktion </span>einer komplexen Veränderlichen wie folgt:<table class="equation"><tr><td> <a 
+ id="x58-57001r43"></a>
+<!--l. 1986--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                           <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>z</mi></mrow></msup 
+> <mo 
+class="MathClass-punc">:</mo><mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mstyle 
+class="mbox"><mtext  >Re</mtext></mstyle>
+    <mspace width="0.3em" class="thinspace"/>
+    <mi 
+>z</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mo class="qopname">cos</mo><!--nolimits--><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="mbox"><mtext  >Im</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">+</mo> <mi 
+>i</mi><mo class="qopname"> sin</mo><!--nolimits--><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="mbox"><mtext  >Im</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(1.43)</td></tr></table>
+<!--l. 1988--><p class="noindent" >Für reelle Argumente <!--l. 1988--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>x</mi></math>
+stimmt  diese  Definition  mit  der  Exponentialfunktion
+<!--l. 1989--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>x</mi></mrow></msup 
+></math> einer reellen Variablen
+überein; für imaginäre <!--l. 1989--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>i</mi><mi 
+>y</mi></math>
+erhalten wir (<a 
+href="skriptsu42.html#x56-55005r40">1.40<!--tex4ht:ref: eq:expiy --></a>). Zudem ist diese Definition durch die gewünschte Eigenschaft<table class="equation"><tr><td> <a 
+ id="x58-57002r44"></a>
+<!--l. 1991--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                             <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+>
+    </mrow></msup 
+> <mo 
+class="MathClass-bin">&sdot;</mo> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+>
+    </mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-bin">+</mo><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+>
+          </mrow></msup 
+><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2102;</mi><mo 
+class="MathClass-punc">,</mo>
+</math></td><td class="eq-no">(1.44)</td></tr></table>
+<!--l. 1993--><p class="noindent" >und damit
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 1993--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                       <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>z</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-bin">+</mo><mi 
+>i</mi><mi 
+>y</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>x</mi></mrow></msup 
+> <mo 
+class="MathClass-bin">&sdot;</mo> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>i</mi><mi 
+>y</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>x</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mo class="qopname">cos</mo><!--nolimits--> <mi 
+>y</mi> <mo 
+class="MathClass-bin">+</mo> <mi 
+>i</mi><mo class="qopname"> sin</mo><!--nolimits--> <mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</mrow></math></div>
+<!--l. 1994--><p class="nopar" > motiviert. Umgekehrt folgt (<a 
+href="#x58-57002r44">1.44<!--tex4ht:ref: eq:multipl --></a>) tatschlich aus (<a 
+href="#x58-57001r43">1.43<!--tex4ht:ref: eq:ez --></a>) und (<a 
+href="skriptsu43.html#x57-56003r1.41">1.41<!--tex4ht:ref: eq:multipl1 --></a>), (<a 
+href="skriptsu43.html#x57-56003r1.42">1.42<!--tex4ht:ref: eq:multipl2 --></a>).
+<!--l. 1998--><p class="noindent" >Aus
+<!--tex4ht:inline--><!--l. 1998--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1">  <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>i</mi><mi 
+>y</mi></mrow></msup 
+></mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">  <mo class="qopname">cos</mo><!--nolimits--> <mi 
+>y</mi> <mo 
+class="MathClass-bin">+</mo> <mi 
+>i</mi><mo class="qopname"> sin</mo><!--nolimits--> <mi 
+>y</mi><mo 
+class="MathClass-punc">,</mo>      </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mi 
+>i</mi><mi 
+>y</mi></mrow></msup 
+></mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">  <mo class="qopname">cos</mo><!--nolimits--><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mo 
+class="MathClass-bin">&minus;</mo><mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">+</mo> <mi 
+>i</mi><mo class="qopname"> sin</mo><!--nolimits--><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mo 
+class="MathClass-bin">&minus;</mo><mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1">    </mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">  <mo class="qopname">cos</mo><!--nolimits--> <mi 
+>y</mi> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>i</mi><mo class="qopname"> sin</mo><!--nolimits--> <mi 
+>y</mi>      </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                                       </mtr></mtable>
+</math>
+<!--l. 2001--><p class="nopar" >
+für <!--l. 2002--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi></math>
+erhält man die Darstellungen
+                                                                                     
+                                                                                     
+<!--tex4ht:inline--><!--l. 2002--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1"> <mo class="qopname">cos</mo><!--nolimits--> <mi 
+>y</mi></mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">   <mfrac><mrow 
+><msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>i</mi><mi 
+>y</mi></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mi 
+>i</mi><mi 
+>y</mi></mrow></msup 
+></mrow>
+
+      <mrow 
+><mn>2</mn></mrow></mfrac>    <mo 
+class="MathClass-punc">,</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mo class="qopname">sin</mo><!--nolimits--> <mi 
+>y</mi></mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">   <mfrac><mrow 
+><msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>i</mi><mi 
+>y</mi></mrow></msup 
+> <mo 
+class="MathClass-bin">&minus;</mo> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mi 
+>i</mi><mi 
+>y</mi></mrow></msup 
+></mrow>
+
+      <mrow 
+><mn>2</mn><mi 
+>i</mi></mrow></mfrac>    <mo 
+class="MathClass-punc">.</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                                              </mtr></mtable>
+</math>
+<!--l. 2004--><p class="nopar" >
+Dies motiviert die folgenden Definitionen der <span 
+class="ptmri8t-x-x-120">Winkelfunktionen </span>für komplexe Argumente
+<div class="math-display"><!--l. 2006--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                     <mo class="qopname">cos</mo><!--nolimits--> <mi 
+>z</mi> <mo 
+class="MathClass-punc">:</mo><mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>i</mi><mi 
+>z</mi></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mi 
+>i</mi><mi 
+>z</mi></mrow></msup 
+></mrow> 
+      <mrow 
+><mn>2</mn></mrow></mfrac>      <mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mo class="qopname"> sin</mo><!--nolimits--> <mi 
+>z</mi> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>i</mi><mi 
+>z</mi></mrow></msup 
+> <mo 
+class="MathClass-bin">&minus;</mo> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mi 
+>i</mi><mi 
+>z</mi></mrow></msup 
+></mrow> 
+      <mrow 
+><mn>2</mn><mi 
+>i</mi></mrow></mfrac>    <mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>z</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2102;</mi><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 2007--><p class="nopar" >
+<div class="newtheorem">
+<!--l. 2010--><p class="noindent" ><span class="head">
+<a 
+ id="x58-57005r5"></a>
+<span 
+class="ptmb8t-x-x-120">Problem 1.11.5.</span>  </span>Berechnen Sie <!--l. 2011--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo class="qopname"> cos</mo><!--nolimits--> <mi 
+>i</mi></math>
+und <!--l. 2011--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo class="qopname"> sin</mo><!--nolimits--> <mi 
+>i</mi></math>!
+</div>
+<!--l. 2013--><p class="noindent" >Für <!--l. 2013--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi></math> definieren wir
+die <span 
+class="ptmri8t-x-x-120">Wurzel</span>l <!--l. 2013--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mroot><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></mroot></math> des
+komplexen Argumentes <!--l. 2014--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi></math>
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 2014--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                             <mi 
+>w</mi> <msup><mrow 
+><mo 
+class="MathClass-rel">=</mo> </mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+><msqrt><mrow><mi 
+>z</mi></mrow></msqrt><mspace width="1em" class="quad"/><mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">&hArr;</mo></mrow><mrow 
+><mrow><mstyle 
+class="mbox"><mtext  >
+def</mtext></mstyle></mrow></mrow></mover><mspace width="1em" class="quad"/><msup><mrow 
+><mi 
+>w</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <mi 
+>z</mi><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>w</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2102;</mi><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 2015--><p class="nopar" > Für <!--l. 2016--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>r</mi><msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>i</mi><mi 
+>&#x03D5;</mi></mrow></msup 
+></math>
+und <!--l. 2016--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>w</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>R</mi><msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>i</mi><mi 
+>&psi;</mi></mrow></msup 
+></math>
+bedeutet dies
+<div class="math-display"><!--l. 2016--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+               <msup><mrow 
+><mi 
+>w</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+><msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>i</mi><mi 
+>n</mi><mi 
+>&psi;</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mo class="qopname">cos</mo><!--nolimits--> <mi 
+>n</mi><mi 
+>&psi;</mi> <mo 
+class="MathClass-bin">+</mo> <mi 
+>i</mi><mo class="qopname"> sin</mo><!--nolimits--> <mi 
+>n</mi><mi 
+>&psi;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>r</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mo class="qopname">cos</mo><!--nolimits--> <mi 
+>&#x03D5;</mi> <mo 
+class="MathClass-bin">+</mo> <mi 
+>i</mi><mo class="qopname"> sin</mo><!--nolimits--> <mi 
+>&#x03D5;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</mrow></math></div>
+<!--l. 2017--><p class="nopar" > und damit auch <!--l. 2018--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mn>2</mn><mi 
+>n</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <mover accent="false" 
+class="mml-overline"><mrow><msup><mrow 
+><mi 
+>w</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></mrow><mo 
+accent="true">¯</mo></mover><msup><mrow 
+><mi 
+>w</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <mover accent="false" 
+class="mml-overline"><mrow><mi 
+>z</mi></mrow><mo 
+accent="true">¯</mo></mover><mi 
+>z</mi> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>r</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></math> also
+<!--l. 2019--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>R</mi> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>r</mi></mrow><mrow 
+><mn>1</mn><mo 
+class="MathClass-bin">&#x2215;</mo><mi 
+>n</mi></mrow></msup 
+></math>. Der Vergleich der Argumente
+führt zur Identität <!--l. 2020--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi><mi 
+>&psi;</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&#x03D5;</mi><mspace width="0.3em"/><mo 
+class="MathClass-op">mod</mo><mspace width="0.3em"/> <mn>2</mn><mi 
+>&pi;</mi></math>,
+welche die unabhängigen Lösungen
+<div class="math-display"><!--l. 2020--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                          <msub><mrow 
+><mi 
+>&psi;</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>&#x03D5;</mi> <mo 
+class="MathClass-bin">+</mo> <mn>2</mn><mi 
+>k</mi><mi 
+>&pi;</mi></mrow> 
+    <mrow 
+><mi 
+>n</mi></mrow></mfrac>    <mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>k</mi> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-punc">,</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo> <mn>2</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi> <mo 
+class="MathClass-bin">&minus;</mo> <mn>1</mn>
+</mrow></math></div>
+<!--l. 2021--><p class="nopar" > besitzt. Also gilt
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 2022--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                <mi 
+>w</mi> <msup><mrow 
+><mo 
+class="MathClass-rel">=</mo> </mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+><msqrt><mrow><mi 
+>z</mi></mrow></msqrt><mspace width="1em" class="quad"/> <mo 
+class="MathClass-rel">&hArr;</mo><mspace width="1em" class="quad"/><mi 
+>w</mi> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>w</mi></mrow><mrow 
+>
+<mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-rel">|</mo><mi 
+>z</mi><msup><mrow 
+><mo 
+class="MathClass-rel">|</mo></mrow><mrow 
+><mn>1</mn><mo 
+class="MathClass-bin">&#x2215;</mo><mi 
+>n</mi></mrow></msup 
+><msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>i</mi><mfrac><mrow 
+><mi 
+>&#x03D5;</mi><mo 
+class="MathClass-bin">+</mo><mn>2</mn><mi 
+>k</mi><mi 
+>&pi;</mi></mrow>
+   <mrow 
+><mi 
+>n</mi></mrow></mfrac>   </mrow></msup 
+><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>k</mi> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-punc">,</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo> <mn>2</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi> <mo 
+class="MathClass-bin">&minus;</mo> <mn>1</mn><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 2023--><p class="nopar" >
+<!--l. 2026--><p class="noindent" >Den <span 
+class="ptmri8t-x-x-120">komplexe Logarithmus </span>führen wir ein durch
+<div class="math-display"><!--l. 2026--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                            <mi 
+>w</mi> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="mbox"><mtext  >Ln</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>z</mi><mspace width="1em" class="quad"/><mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">&hArr;</mo></mrow><mrow 
+><mrow><mstyle 
+class="mbox"><mtext  >def</mtext></mstyle></mrow></mrow></mover><mspace width="1em" class="quad"/><mi 
+>z</mi> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>w</mi></mrow></msup 
+><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>z</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>w</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2102;</mi><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 2027--><p class="nopar" > Damit gilt
+<div class="math-display"><!--l. 2028--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                            <mi 
+>z</mi> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-rel">|</mo><mi 
+>z</mi><mo 
+class="MathClass-rel">|</mo><msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>i</mi><mo class="qopname"> arg</mo><!--nolimits--> <mi 
+>z</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>w</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mstyle 
+class="mbox"><mtext  >Re</mtext></mstyle>
+    <mspace width="0.3em" class="thinspace"/>
+    <mi 
+>w</mi></mrow></msup 
+><msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>i</mi><mstyle 
+class="mbox"><mtext  >Im</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>w</mi></mrow></msup 
+><mo 
+class="MathClass-punc">,</mo>
+</mrow></math></div>
+<!--l. 2029--><p class="nopar" > also
+                                                                                     
+                                                                                     
+<!--tex4ht:inline--><!--l. 2030--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1"> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mstyle 
+class="mbox"><mtext  >Re</mtext></mstyle>
+    <mspace width="0.3em" class="thinspace"/>
+    <mi 
+>w</mi></mrow></msup 
+></mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">  <mo 
+class="MathClass-rel">|</mo><mi 
+>z</mi><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-punc">,</mo>          </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mstyle 
+class="mbox"><mtext  >Im</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>w</mi></mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">  <mo class="qopname">arg</mo><!--nolimits--> <mi 
+>z</mi><mspace width="1em" class="quad"/><mspace width="0.3em"/><mo class="qopname">mod</mo><mspace width="0.3em"/> <mn>2</mn><mi 
+>&pi;</mi><mo 
+class="MathClass-punc">.</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                                             </mtr></mtable>
+</math>
+<!--l. 2032--><p class="nopar" >
+Diese Gleichungen sind lösbar für <!--l. 2033--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn></math>
+durch
+<!--tex4ht:inline--><!--l. 2033--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1"> <mi 
+>w</mi> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="mbox"><mtext  >Ln</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>z</mi></mtd><mtd 
+class="eqnarray-2">  <mspace width="1em" class="quad"/> <mo 
+class="MathClass-rel">&hArr;</mo><mspace width="1em" class="quad"/></mtd><mtd 
+class="eqnarray-3">  <mi 
+>w</mi> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>w</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo>                       </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1">         </mtd><mtd 
+class="eqnarray-2">      </mtd><mtd 
+class="eqnarray-3">  <mstyle 
+class="mbox"><mtext  >Re</mtext></mstyle><mspace width="0.3em" class="thinspace"/><msub><mrow 
+><mi 
+>w</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo><mo class="qopname"> ln</mo><!--nolimits--> <mo 
+class="MathClass-rel">|</mo><mi 
+>z</mi><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-punc">,</mo>                  </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1">         </mtd><mtd 
+class="eqnarray-2">      </mtd><mtd 
+class="eqnarray-3">  <mstyle 
+class="mbox"><mtext  >Im</mtext></mstyle><mspace width="0.3em" class="thinspace"/><msub><mrow 
+><mi 
+>w</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo><mo class="qopname"> arg</mo><!--nolimits--> <mi 
+>z</mi> <mo 
+class="MathClass-bin">+</mo> <mn>2</mn><mi 
+>k</mi><mi 
+>&pi;</mi><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>k</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2124;</mi><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>z</mi><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn><mo 
+class="MathClass-punc">.</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                    </mtr></mtable>
+</math>
+<!--l. 2036--><p class="nopar" >
+Damit ist der komplexe Logarithmus als mehrwertige Abbildung einer komplexen Variablen zu
+verstehen.
+<!--l. 2040--><p class="noindent" >Schliesslich definieren wir für <!--l. 2040--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2102;</mi><mo 
+class="MathClass-bin">\</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mn>0</mn></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>
+und <!--l. 2041--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>w</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2102;</mi></math>
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 2041--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                                 <mi 
+>v</mi> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>w</mi></mrow></msup 
+><mspace width="1em" class="quad"/><mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">&hArr;</mo></mrow><mrow 
+><mrow><mstyle 
+class="mbox"><mtext  >
+def</mtext></mstyle></mrow></mrow></mover><mspace width="1em" class="quad"/><mi 
+>v</mi> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>w</mi><mstyle 
+class="mbox"><mtext  >Ln</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>z</mi></mrow></msup 
+><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 2042--><p class="nopar" > Dies ist im allgemeinen Fall wieder eine mehrwertige Abbildung.
+<div class="newtheorem">
+<!--l. 2045--><p class="noindent" ><span class="head">
+<a 
+ id="x58-57008r6"></a>
+<span 
+class="ptmb8t-x-x-120">Problem 1.11.6.</span>  </span>Berechnen                                                                                                   Sie
+<!--l. 2046--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msup 
+><mo 
+class="MathClass-punc">!</mo></math>
+</div>
+                                                                                     
+                                                                                     
+<!--l. 2049--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu43.html" >prev</a>] [<a 
+href="skriptsu43.html#tailskriptsu43.html" >prev-tail</a>] [<a 
+href="skriptsu44.html" >front</a>] [<a 
+href="skriptse11.html#skriptsu44.html" >up</a>] </p></div>
+<!--l. 2049--><p class="noindent" ><a 
+ id="tailskriptsu44.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu44.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:16 GMT -->
+</html> 

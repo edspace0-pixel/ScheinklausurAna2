@@ -1,0 +1,1360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu75.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:17 GMT -->
+<head><title>Konvergenz in Kn und Konvergenz der Komponenten.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 3408--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu76.html" >next</a>] [<a 
+href="skriptsu74.html" >prev</a>] [<a 
+href="skriptsu74.html#tailskriptsu74.html" >prev-tail</a>] [<a 
+href="#tailskriptsu75.html">tail</a>] [<a 
+href="skriptse20.html#skriptsu75.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">2.8.3</span>&#x00A0;&#x00A0;<a 
+ id="x99-980002.8.3"></a>Konvergenz in <!--l. 3408--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></math>
+und Konvergenz der Komponenten.</h4>
+<!--l. 3410--><p class="noindent" >Um im weiteren klar zwischen dem <!--l. 3410--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>k</mi></math> -ten
+Folgenglied einer Vektorfolge und der <!--l. 3411--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>j</mi></math>
+-ten Komponente eines Vektors zu unterscheiden, werden wir Folgenglieder überwiegend mit
+lateinischen Buchstaben und die Komponenten eines Vektors mit griechischen Buchstaben
+bezeichnen. Es sei also
+<div class="math-display"><!--l. 3414--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                    <mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&xi;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>&xi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>&xi;</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&isin;</mo> <msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><msub><mrow 
+><mi 
+>&xi;</mi></mrow><mrow 
+>
+<mi 
+>j</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>K</mi><mspace width="1em" class="quad"/><mstyle 
+class="mbox"><mtext  >für</mtext></mstyle><mspace width="1em" class="quad"/><mi 
+>j</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mspace width="0.3em" class="thinspace"/><mi 
+>n</mi><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 3415--><p class="nopar" > Dann bezeichne <!--l. 3416--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+> <mo 
+class="MathClass-punc">:</mo> <msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">&rarr;</mo> <mi 
+>K</mi></math> die
+Projektion auf die <!--l. 3417--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>j</mi></math>-te
+Komponente, d.h.
+<div class="math-display"><!--l. 3417--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                                <msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>&xi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>j</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mspace width="0.3em" class="thinspace"/><mi 
+>n</mi><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+                                                                                     
+                                                                                     
+<!--l. 3418--><p class="nopar" > Führt man die orthonormierten<span class="footnote-mark"><a 
+href="#fn12x2" id="fn12x2-bk"><sup class="textsuperscript">12</sup></a></span><a 
+ id="x99-98001f12"></a>
+Basisvektoren
+<div class="math-display"><!--l. 3422--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                        <msub><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>0</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo> <mn>0</mn><mo 
+class="MathClass-punc">,</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo> <mn>0</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo> <mn>0</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&isin;</mo> <msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>j</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi>
+</mrow></math></div>
+<!--l. 3423--><p class="nopar" > ein, wobei alle Komponenten von <!--l. 3424--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></math>
+verschwinden bis auf die <!--l. 3425--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>j</mi></math>-te,
+welche gleich <!--l. 3425--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>1</mn></math>
+ist, so gilt
+<div class="math-display"><!--l. 3425--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                                <mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo><munderover accentunder="false" accent="false"><mrow  
+><mo mathsize="big" 
+> &sum;</mo>
+  </mrow><mrow 
+><mi 
+>j</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>n</mi></mrow></munderover 
+><msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+>
+<mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&sdot;</mo> <msub><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 3426--><p class="nopar" > Aus der Dreiecksungleichung erhält man sofort<table class="equation"><tr><td> <a 
+ id="x99-98002r36"></a>
+<!--l. 3427--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                     <mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>x</mi> <mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-rel">&le;</mo><munderover accentunder="false" accent="false"><mrow  
+><mo mathsize="big" 
+>&sum;</mo>
+  </mrow><mrow 
+><mi 
+>j</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>n</mi></mrow></munderover 
+> <mo 
+class="MathClass-rel">&#x2225;</mo> <msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+>
+<mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><msub><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-rel">=</mo><munderover accentunder="false" accent="false"><mrow  
+><mo mathsize="big" 
+> &sum;</mo>
+</mrow><mrow 
+><mi 
+>j</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>n</mi></mrow></munderover 
+><mo 
+class="MathClass-rel">|</mo><msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+>
+<mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo><mspace width="0.3em" class="thinspace"/><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(2.36)</td></tr></table>
+<!--l. 3429--><p class="noindent" >Umgekehrt gilt natürlich nach der Definition (<a 
+href="skriptsu68.html#x90-89003r26">2.26<!--tex4ht:ref: eq:abstandR --></a>) bzw. (<a 
+href="skriptsu71.html#x94-93002r30">2.30<!--tex4ht:ref: eq:abstandC --></a>) in
+<!--l. 3430--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></math><table class="equation"><tr><td>
+                                                                                     
+                                                                                     
+<a 
+ id="x99-98003r37"></a>
+<!--l. 3430--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                              <mo 
+class="MathClass-rel">|</mo><msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-rel">&le;</mo><mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>x</mi> <mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>j</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(2.37)</td></tr></table>
+<!--l. 3432--><p class="noindent" >Offensichtlich sind Projektoren lineare Abbildungen, d.h.
+<div class="math-display"><!--l. 3432--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                  <msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>&alpha;</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+><mo 
+class="MathClass-bin">&sdot;</mo> <msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <msup><mrow 
+><mi 
+>&alpha;</mi></mrow><mrow 
+><mo 
+class="MathClass-op">&Prime;</mo></mrow></msup 
+> <mo 
+class="MathClass-bin">&sdot;</mo> <msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-op">&Prime;</mo></mrow></msup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>&alpha;</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+><msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+>
+<mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">+</mo> <msup><mrow 
+><mi 
+>&alpha;</mi></mrow><mrow 
+><mo 
+class="MathClass-op">&Prime;</mo></mrow></msup 
+><msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+>
+<mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-op">&Prime;</mo></mrow></msup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>j</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi><mo 
+class="MathClass-punc">,</mo>
+</mrow></math></div>
+<!--l. 3433--><p class="nopar" > für beliebige <!--l. 3434--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+><mo 
+class="MathClass-punc">,</mo><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-op">&Prime;</mo></mrow></msup 
+> <mo 
+class="MathClass-rel">&isin;</mo> <msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></math>
+und <!--l. 3434--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>&alpha;</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+><mo 
+class="MathClass-punc">,</mo><msup><mrow 
+><mi 
+>&alpha;</mi></mrow><mrow 
+><mo 
+class="MathClass-op">&Prime;</mo></mrow></msup 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>K</mi></math>.
+<div class="newtheorem">
+<!--l. 3436--><p class="noindent" ><span class="head">
+<a 
+ id="x99-98004r5"></a>
+<span 
+class="ptmb8t-x-x-120">Theorem 2.8.5.</span>  </span><span 
+class="ptmri8t-x-x-120">Es sei </span><!--l. 3437--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+<span 
+class="ptmri8t-x-x-120">eine Folge von Gliedern </span><!--l. 3438--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></math><span 
+class="ptmri8t-x-x-120">.</span>
+<span 
+class="ptmri8t-x-x-120">Dann gilt</span>
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 3438--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+               <msub><mrow 
+><mo 
+class="MathClass-op">&exist;</mo></mrow><mrow 
+><mi 
+>y</mi><mo 
+class="MathClass-rel">&isin;</mo><msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></mrow></msub 
+><mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&hArr;</mo><msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>j</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn><mo 
+class="MathClass-punc">,</mo><mo class="qopname">&hellip;</mo><mspace width="0.3em" class="thinspace"/><mi 
+>n</mi></mrow></msub 
+><msub><mrow 
+><mo 
+class="MathClass-op">&exist;</mo></mrow><mrow 
+><msub><mrow 
+><mi 
+>&eta;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>K</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>&eta;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 3439--><p class="nopar" > <span 
+class="ptmri8t-x-x-120">Im Fall der Konvergenz gilt zudem die Gleichheit</span>
+<div class="math-display"><!--l. 3440--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                 <msub><mrow 
+><mi 
+>&eta;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>j</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo><mo class="qopname">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 3441--><p class="nopar" >
+</div>
+<!--l. 3444--><p class="noindent" >Mit anderen Worten: Eine Folge von Vektoren konvergiert genau dann, wenn alle Folgen der
+Komponenten konvergieren. Der Grenzwert der Vektorenfolge ergibt sich dabei als Vektor der
+Grenzwerte der Komponentenfolgen.
+<!--l. 3448--><p class="noindent" >
+<div class="proof">
+<!--l. 3449--><p class="noindent" ><span class="head">
+<span 
+class="ptmri8t-x-x-120">Beweis.</span> </span>Konvergiert
+<!--l. 3449--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+gegen
+<!--l. 3449--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi></math>
+so gilt nach (<a 
+href="#x99-98003r37">2.37<!--tex4ht:ref: eq:kompgrw2 --></a>)
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 3450--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                    <mo 
+class="MathClass-rel">|</mo><msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&minus;</mo> <msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-rel">|</mo><msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-rel">&le;</mo><mo 
+class="MathClass-rel">&#x2225;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>y</mi> <mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>&#x03B5;</mi>
+</mrow></math></div>
+<!--l. 3451--><p class="nopar" > für <!--l. 3452--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>k</mi> <mo 
+class="MathClass-rel">&ge;</mo> <msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+></math>,
+d.h. <!--l. 3452--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&rarr;</mo> <msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+in <!--l. 3453--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>K</mi><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-bin">&sdot;</mo><mo 
+class="MathClass-rel">|</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+für alle <!--l. 3453--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>j</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi></math>
+wenn <!--l. 3453--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>k</mi> <mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></math>.
+Umgekehrt, falls <!--l. 3454--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&rarr;</mo> <msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+für alle <!--l. 3454--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>j</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi></math>
+so gilt nach (<a 
+href="#x99-98002r36">2.36<!--tex4ht:ref: eq:kompgrw1 --></a>) auch
+<div class="math-display"><!--l. 3455--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+            <mo 
+class="MathClass-rel">&#x2225;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>y</mi> <mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-rel">&le;</mo><munderover accentunder="false" accent="false"><mrow  
+><mo mathsize="big" 
+>&sum;</mo>
+  </mrow><mrow 
+><mi 
+>j</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>n</mi></mrow></munderover 
+><mo 
+class="MathClass-rel">|</mo><msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+>
+<mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo> <mo 
+class="MathClass-rel">=</mo><munderover accentunder="false" accent="false"><mrow  
+><mo mathsize="big" 
+> &sum;</mo>
+  </mrow><mrow 
+><mi 
+>j</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>n</mi></mrow></munderover 
+><mo 
+class="MathClass-rel">|</mo><msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+>
+<mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&minus;</mo> <msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo> <mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>&#x03B5;</mi>
+</mrow></math></div>
+<!--l. 3456--><p class="nopar" > für genügend grosses <!--l. 3457--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>k</mi> <mo 
+class="MathClass-rel">&ge;</mo><mo class="qopname"> max</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><munderover accentunder="false" accent="false"><mrow  
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi><mo 
+class="MathClass-bin">&#x2215;</mo><mi 
+>n</mi></mrow><mrow 
+><mi 
+>j</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow></munderover 
+><mo 
+class="MathClass-punc">,</mo><mo class="qopname">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><msubsup><mrow 
+><mi 
+>N</mi></mrow><mrow 
+>
+<mi 
+>&#x03B5;</mi><mo 
+class="MathClass-bin">&#x2215;</mo><mi 
+>n</mi></mrow><mrow 
+><mi 
+>j</mi><mo 
+class="MathClass-rel">=</mo><mi 
+>n</mi></mrow></msubsup 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>,
+und damit <!--l. 3458--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&rarr;</mo> <mi 
+>y</mi></math>
+in <!--l. 3458--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+>
+<mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-bin">&sdot;</mo><mo 
+class="MathClass-rel">&#x2225;</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+                                                                                    &#x25A1;
+</div>
+<!--l. 3460--><p class="noindent" >Analog beweist man auch folgenden Satz:
+<div class="newtheorem">
+<!--l. 3462--><p class="noindent" ><span class="head">
+<a 
+ id="x99-98005r6"></a>
+                                                                                     
+                                                                                     
+<span 
+class="ptmb8t-x-x-120">Theorem 2.8.6.</span>  </span><span 
+class="ptmri8t-x-x-120">Es sei </span><!--l. 3463--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+<span 
+class="ptmri8t-x-x-120">eine Folge von Gliedern </span><!--l. 3463--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></math><span 
+class="ptmri8t-x-x-120">.</span>
+<span 
+class="ptmri8t-x-x-120">Dann gilt</span><table class="equation"><tr><td> <a 
+ id="x99-98006r38"></a>
+<!--l. 3464--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+             <msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>C</mi><mi 
+>F</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+>
+<mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-bin">&sdot;</mo><mo 
+class="MathClass-rel">&#x2225;</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&hArr;</mo><msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>j</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi></mrow></msub 
+><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>&pi;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><msub><mrow 
+></mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></mrow></msub 
+>  <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>C</mi><mi 
+>F</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>K</mi><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-bin">&sdot;</mo><mo 
+class="MathClass-rel">|</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(2.38)</td></tr></table>
+</div>
+<div class="newtheorem">
+<!--l. 3468--><p class="noindent" ><span class="head">
+<a 
+ id="x99-98007r7"></a>
+<span 
+class="ptmb8t-x-x-120">Problem 2.8.7.</span>  </span>Es sei <!--l. 3469--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-bin">&sdot;</mo><mo 
+class="MathClass-rel">&#x2225;</mo></math>
+die Norm auf <!--l. 3470--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></math>.
+Beweisen Sie ausgehend von (<a 
+href="skriptsu68.html#x90-89001r25">2.25<!--tex4ht:ref: eq:reellnorm --></a>) zunächst die Ungleichung<table class="equation"><tr><td> <a 
+ id="x99-98008r39"></a>
+<!--l. 3471--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                        <mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>x</mi> <mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-bin">&minus;</mo><mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>y</mi> <mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-rel">&le;</mo><mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>x</mi> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>y</mi> <mo 
+class="MathClass-rel">&#x2225;</mo><mspace width="0.3em" class="thinspace"/><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>x</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>y</mi> <mo 
+class="MathClass-rel">&isin;</mo> <msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(2.39)</td></tr></table>
+</div>
+<!--l. 3475--><p class="noindent" >&#x00A0;
+<div class="newtheorem">
+<!--l. 3477--><p class="noindent" ><span class="head">
+<a 
+ id="x99-98009r8"></a>
+                                                                                     
+                                                                                     
+<span 
+class="ptmb8t-x-x-120">Problem 2.8.8.</span>  </span>Es sei <!--l. 3478--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>&infin;</mi></mrow></msubsup 
+></math>
+eine Folge in <!--l. 3479--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></math>
+und <!--l. 3479--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></math>.
+Zeigen Sie, dass dann auch <!--l. 3480--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>y</mi> <mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></munder 
+> <mo 
+class="MathClass-rel">&#x2225;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x2225;</mo></math>
+gilt!
+</div>
+<!--l. 3483--><p class="noindent" >&#x00A0;
+<div class="newtheorem">
+<!--l. 3485--><p class="noindent" ><span class="head">
+<a 
+ id="x99-98010r9"></a>
+<span 
+class="ptmb8t-x-x-120">Problem 2.8.9.</span>  </span>Beweisen                    Sie,                    dass                    eine                    Folge
+<!--l. 3486--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>&infin;</mi></mrow></msubsup 
+></math>
+von                                                             Elementen                                                             aus
+<!--l. 3487--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></math>
+genau                                                                dann                                                                in
+<!--l. 3487--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></math>
+gegen
+<!--l. 3488--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>0</mn></math>
+konvergiert,                                    wenn                                    die                                    Folge
+<!--l. 3488--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mo 
+class="MathClass-rel">&#x2225;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x2225;</mo></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>&infin;</mi></mrow></msubsup 
+></math>
+in
+<!--l. 3489--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x211D;</mi></math>
+gegen
+<!--l. 3489--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>0</mn></math>
+konvergiert!
+</div>
+                                                                                     
+                                                                                     
+<div class="footnotes"><!--l. 3422--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn12x2-bk" id="fn12x2">
+<sup class="textsuperscript">12</sup></a></span><span 
+class="ptmr8t-">Es gilt </span><!--l. 3422--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mo 
+class="MathClass-rel">&#x2225;</mo> <msub><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-rel">=</mo> <mn>1</mn></math>
+   <span 
+class="ptmr8t-">f</span><span 
+class="ptmr8t-">ü</span><span 
+class="ptmr8t-">r </span><!--l. 3422--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>j</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mspace width="0.3em" class="thinspace"/><mi 
+>n</mi></math>
+   <span 
+class="ptmr8t-">sowie </span><!--l. 3422--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mfenced separators="" 
+open="&#x003C;"  close="&#x003E;" ><mrow><msub><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow></mfenced> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn></math>
+   <span 
+class="ptmr8t-">f</span><span 
+class="ptmr8t-">ü</span><span 
+class="ptmr8t-">r </span><!--l. 3422--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>j</mi><mo 
+class="MathClass-rel">&ne;</mo><mi 
+>k</mi></math><span 
+class="ptmr8t-">.</span></div><!--l. 3492--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu76.html" >next</a>]
+[<a 
+href="skriptsu74.html" >prev</a>] [<a 
+href="skriptsu74.html#tailskriptsu74.html" >prev-tail</a>] [<a 
+href="skriptsu75.html" >front</a>] [<a 
+href="skriptse20.html#skriptsu75.html" >up</a>] </p></div>
+<!--l. 3492--><p class="noindent" ><a 
+ id="tailskriptsu75.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu75.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:17 GMT -->
+</html> 

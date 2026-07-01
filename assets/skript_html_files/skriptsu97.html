@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu97.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:18 GMT -->
+<head><title>Stetige Funktionen mit Werten in Kn.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 4722--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu98.html" >next</a>] [<a 
+href="skriptsu96.html" >prev</a>] [<a 
+href="skriptsu96.html#tailskriptsu96.html" >prev-tail</a>] [<a 
+href="#tailskriptsu97.html">tail</a>] [<a 
+href="skriptse24.html#skriptsu97.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">2.12.3</span>&#x00A0;&#x00A0;<a 
+ id="x125-1240002.12.3"></a>Stetige Funktionen mit Werten in <!--l. 4722--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></math>.</h4>
+<!--l. 4724--><p class="noindent" >Wir betrachten nun den Fall <!--l. 4724--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+>
+<mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-bin">&sdot;</mo><mo 
+class="MathClass-rel">&#x2225;</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+Weiterhin sei <!--l. 4725--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> ein
+metrischer Raum sowie <!--l. 4725--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-rel">&sub;</mo> <msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math>.
+<div class="newtheorem">
+<!--l. 4727--><p class="noindent" ><span class="head">
+<a 
+ id="x125-124001r7"></a>
+<span 
+class="ptmb8t-x-x-120">Theorem 2.12.7.</span>  </span><span 
+class="ptmri8t-x-x-120">Die Funktionen </span><!--l. 4728--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>g</mi> <mo 
+class="MathClass-punc">:</mo> <mi 
+>X</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <msup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></math>
+<span 
+class="ptmri8t-x-x-120">seien stetig im Punkt </span><!--l. 4729--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi></math>
+<span 
+class="ptmri8t-x-x-120">wobei </span><!--l. 4729--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>K</mi> <mo 
+class="MathClass-rel">&isin;</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>&#x211D;</mi><mo 
+class="MathClass-punc">,</mo> <mi 
+>&#x2102;</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow></math><span 
+class="ptmri8t-x-x-120">.</span>
+<span 
+class="ptmri8t-x-x-120">Ebenso sei </span><!--l. 4730--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&alpha;</mi> <mo 
+class="MathClass-punc">:</mo> <mi 
+>X</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <mi 
+>K</mi></math>
+<span 
+class="ptmri8t-x-x-120">stetig im Punkt </span><!--l. 4730--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math><span 
+class="ptmri8t-x-x-120">.</span>
+<span 
+class="ptmri8t-x-x-120">Dann sind die Funktionen </span><!--l. 4731--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi> <mo 
+class="MathClass-bin">+</mo> <mi 
+>g</mi></math><span 
+class="ptmri8t-x-x-120">,</span>
+<!--l. 4731--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&alpha;</mi><mi 
+>f</mi></math>
+<span 
+class="ptmri8t-x-x-120">sowie </span><!--l. 4731--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mfenced separators="" 
+open="&#x003C;"  close="&#x003E;" ><mrow><mi 
+>f</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>g</mi></mrow></mfenced></math>
+<span 
+class="ptmri8t-x-x-120">ebenfalls stetig in </span><!--l. 4732--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math><span 
+class="ptmri8t-x-x-120">.</span>
+<span 
+class="ptmri8t-x-x-120">Gilt zudem </span><!--l. 4732--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&alpha;</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn></math>
+<span 
+class="ptmri8t-x-x-120">f</span><span 
+class="ptmri8t-x-x-120">ü</span><span 
+class="ptmri8t-x-x-120">r </span><!--l. 4732--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi></math><span 
+class="ptmri8t-x-x-120">,</span>
+<span 
+class="ptmri8t-x-x-120">so ist </span><!--l. 4733--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&alpha;</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+></math>
+<span 
+class="ptmri8t-x-x-120">stetig in </span><!--l. 4733--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math><span 
+class="ptmri8t-x-x-120">.</span>
+<span 
+class="ptmri8t-x-x-120">Schliesslich sei </span><!--l. 4733--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>X</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>X</mi></math>
+<span 
+class="ptmri8t-x-x-120">und </span><!--l. 4734--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>X</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math><span 
+class="ptmri8t-x-x-120">.</span>
+<span 
+class="ptmri8t-x-x-120">Dann ist </span><!--l. 4734--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><msub><mrow 
+><mo 
+class="MathClass-rel">|</mo></mrow><mrow 
+><msub><mrow 
+><mi 
+>X</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></msub 
+></math>
+<span 
+class="ptmri8t-x-x-120">stetig in </span><!--l. 4734--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math><span 
+class="ptmri8t-x-x-120">.</span>
+</div>
+<div class="newtheorem">
+<!--l. 4736--><p class="noindent" ><span class="head">
+<a 
+ id="x125-124002r8"></a>
+<span 
+class="ptmb8t-x-x-120">Problem 2.12.8.</span>  </span>Dieser  Satz  folgt  direkt  aus  der  entsprechenden  Aussage  zu  Grenzwerten
+von Vektorfunktionen. Führen Sie den Beweis!
+                                                                                     
+                                                                                     
+</div>
+                                                                                     
+                                                                                     
+<!--l. 4741--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu98.html" >next</a>] [<a 
+href="skriptsu96.html" >prev</a>] [<a 
+href="skriptsu96.html#tailskriptsu96.html" >prev-tail</a>] [<a 
+href="skriptsu97.html" >front</a>] [<a 
+href="skriptse24.html#skriptsu97.html" >up</a>] </p></div>
+<!--l. 4741--><p class="noindent" ><a 
+ id="tailskriptsu97.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu97.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:18 GMT -->
+</html> 

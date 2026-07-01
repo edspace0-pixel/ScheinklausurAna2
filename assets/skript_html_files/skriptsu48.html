@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu48.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:16 GMT -->
+<head><title>Intervalle und &#x03B5;-Umgebungen.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 2212--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu49.html" >next</a>] [<a 
+href="#tailskriptsu48.html">tail</a>] [<a 
+href="skriptse13.html#skriptsu48.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">2.1.1</span>&#x00A0;&#x00A0;<a 
+ id="x65-640002.1.1"></a>Intervalle und <!--l. 2212--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi></math>-Umgebungen.</h4>
+<!--l. 2214--><p class="noindent" >Für zwei reelle Zahlen <!--l. 2214--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi></math>
+definieren wir das
+<!--tex4ht:inline--><!--l. 2214--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1">         <mstyle 
+class="mbox"><mtext  >offene</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mstyle 
+class="mbox"><mtext  >Intervall</mtext></mstyle><mspace width="1em" class="quad"/></mrow><mo 
+class="MathClass-close">]</mo></mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi><mrow ><mo 
+class="MathClass-open">[</mo><mrow></mtd><mtd 
+class="eqnarray-2">  <mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">=</mo></mrow><mrow 
+><mrow> <mstyle 
+class="mbox"><mtext  >def</mtext></mstyle></mrow></mrow></mover></mtd><mtd 
+class="eqnarray-3">  <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi><mo 
+class="MathClass-rel">|</mo><mi 
+>a</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>x</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>b</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">,</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1">     <mstyle 
+class="mbox"><mtext  >halboffene</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mstyle 
+class="mbox"><mtext  >Intervall</mtext></mstyle><mspace width="1em" class="quad"/></mrow><mo 
+class="MathClass-close">]</mo></mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow></mtd><mtd 
+class="eqnarray-2">  <mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">=</mo></mrow><mrow 
+><mrow> <mstyle 
+class="mbox"><mtext  >def</mtext></mstyle></mrow></mrow></mover></mtd><mtd 
+class="eqnarray-3">  <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi><mo 
+class="MathClass-rel">|</mo><mi 
+>a</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>x</mi> <mo 
+class="MathClass-rel">&le;</mo> <mi 
+>b</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">,</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1">     <mstyle 
+class="mbox"><mtext  >halboffene</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mstyle 
+class="mbox"><mtext  >Intervall</mtext></mstyle><mspace width="1em" class="quad"/><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi><mrow ><mo 
+class="MathClass-open">[</mo><mrow></mtd><mtd 
+class="eqnarray-2">  <mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">=</mo></mrow><mrow 
+><mrow> <mstyle 
+class="mbox"><mtext  >def</mtext></mstyle></mrow></mrow></mover></mtd><mtd 
+class="eqnarray-3">  <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi><mo 
+class="MathClass-rel">|</mo><mi 
+>a</mi> <mo 
+class="MathClass-rel">&le;</mo> <mi 
+>x</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>b</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">,</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mstyle 
+class="mbox"><mtext  >abgeschlossene</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mstyle 
+class="mbox"><mtext  >Intervall</mtext></mstyle><mspace width="1em" class="quad"/><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow></mtd><mtd 
+class="eqnarray-2">  <mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">=</mo></mrow><mrow 
+><mrow> <mstyle 
+class="mbox"><mtext  >def</mtext></mstyle></mrow></mrow></mover></mtd><mtd 
+class="eqnarray-3">  <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi><mo 
+class="MathClass-rel">|</mo><mi 
+>a</mi> <mo 
+class="MathClass-rel">&le;</mo> <mi 
+>x</mi> <mo 
+class="MathClass-rel">&le;</mo> <mi 
+>b</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">.</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                              </mtr></mtable>
+</math>
+<!--l. 2218--><p class="nopar" >
+Für <!--l. 2219--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>a</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mi 
+>b</mi></math>
+sind alle diese Mengen leer. Desweiteren definieren wir für gegebenes
+<!--l. 2220--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn><mo 
+class="MathClass-punc">,</mo></math>
+<!--l. 2220--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi></math> und
+<!--l. 2220--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi></math> die
+<span id="textcolor101"><!--l. 2221--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi></math><span 
+class="ptmri8t-x-x-120">-Umgebung</span>
+<span 
+class="ptmri8t-x-x-120">von </span><!--l. 2221--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi></math></span>
+als
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 2222--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                     <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-punc">:</mo><mo 
+class="MathClass-rel">=</mo></mrow><mo 
+class="MathClass-close">]</mo></mrow><mi 
+>x</mi> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>&#x03B5;</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>x</mi> <mo 
+class="MathClass-bin">+</mo> <mi 
+>&#x03B5;</mi><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>y</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi><mo 
+class="MathClass-rel">|</mo><mspace width="0.3em" class="thinspace"/><mo 
+class="MathClass-rel">|</mo><mi 
+>x</mi> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>y</mi><mo 
+class="MathClass-rel">|</mo> <mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>&#x03B5;</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 2223--><p class="nopar" > Diese  Umgebungen  wachsen  offensichtlich  mit
+<!--l. 2224--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi></math>, d.h. für
+gegebenes <!--l. 2225--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi></math>
+gilt
+<div class="math-display"><!--l. 2225--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                             <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>&#x03B5;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&sub;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>&#x03B5;</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mspace width="1em" class="quad"/><mstyle 
+class="mbox"><mtext  >für</mtext></mstyle><mspace width="1em" class="quad"/><msub><mrow 
+><mi 
+>&#x03B5;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&le;</mo> <msub><mrow 
+><mi 
+>&#x03B5;</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 2226--><p class="nopar" >
+                                                                                     
+                                                                                     
+<!--l. 2230--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu49.html" >next</a>] [<a 
+href="skriptsu48.html" >front</a>] [<a 
+href="skriptse13.html#skriptsu48.html" >up</a>] </p></div>
+<!--l. 2230--><p class="noindent" ><a 
+ id="tailskriptsu48.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu48.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:16 GMT -->
+</html> 

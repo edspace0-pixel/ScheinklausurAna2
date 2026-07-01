@@ -1,0 +1,880 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu106.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:18 GMT -->
+<head><title>Stetige Funktionen auf kompakten Mengen. Der Satz von Weierstrass.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 5223--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu105.html" >prev</a>] [<a 
+href="skriptsu105.html#tailskriptsu105.html" >prev-tail</a>] [<a 
+href="#tailskriptsu106.html">tail</a>] [<a 
+href="skriptse25.html#skriptsu106.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">2.13.3</span>&#x00A0;&#x00A0;<a 
+ id="x135-1340002.13.3"></a>Stetige Funktionen auf kompakten Mengen. Der Satz von Weierstrass.</h4>
+<!--l. 5225--><p class="noindent" >Es seien <!--l. 5225--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+und <!--l. 5225--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+metrische Räume.
+<div class="newtheorem">
+<!--l. 5227--><p class="noindent" ><span class="head">
+<a 
+ id="x135-134001r5"></a>
+<span 
+class="ptmb8t-x-x-120">Theorem 2.13.5.</span>  </span><span 
+class="ptmri8t-x-x-120">Es sei </span><!--l. 5228--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+<span 
+class="ptmri8t-x-x-120">eine kompakte Teilmenge von </span><!--l. 5228--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math>
+<span 
+class="ptmri8t-x-x-120">und die Funktion </span><!--l. 5229--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi> <mo 
+class="MathClass-punc">:</mo> <mi 
+>X</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math>
+<span 
+class="ptmri8t-x-x-120">sei stetig in </span><!--l. 5229--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math><span 
+class="ptmri8t-x-x-120">.</span>
+<span 
+class="ptmri8t-x-x-120">Dann ist das Bild </span><!--l. 5230--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+<span 
+class="ptmri8t-x-x-120">von </span><!--l. 5230--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math>
+<span 
+class="ptmri8t-x-x-120">eine kompakte Teilmenge von </span><!--l. 5230--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math><span 
+class="ptmri8t-x-x-120">.</span>
+</div>
+<!--l. 5232--><p class="noindent" >
+<div class="proof">
+<!--l. 5233--><p class="noindent" ><span class="head">
+<span 
+class="ptmri8t-x-x-120">Beweis.</span> </span>Es sei <!--l. 5233--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+eine beliebige Folge von Bildpunkten <!--l. 5234--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+Dann  gibt  es  eine  (nicht  notwendigerweise  eindeutig  bestimmte)  Folge  von  Argumenten
+<!--l. 5235--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>
+aus <!--l. 5236--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+mit <!--l. 5236--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></math>.
+Da <!--l. 5236--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+kompakt ist, so existiert eine Teilfolge <!--l. 5237--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>j</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>&infin;</mi></mrow></msubsup 
+></math>
+von <!--l. 5237--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>&infin;</mi></mrow></msubsup 
+></math>,
+                                                                                     
+                                                                                     
+welche gegen ein Element <!--l. 5238--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&lowast;</mo></mrow></msup 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi></math>
+konvergiert. Aus der Stetigkeit von <!--l. 5239--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math>
+folgt
+<div class="math-display"><!--l. 5239--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+               <munder class="msub"><mrow 
+><mo class="qopname">lim</mo> </mrow><mrow 
+><msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></munder 
+><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><munder class="msub"><mrow 
+><mo class="qopname">lim</mo> </mrow><mrow 
+><msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&rarr;</mo><mi 
+>&infin;</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&lowast;</mo></mrow></msup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo>
+</mrow></math></div>
+<!--l. 5240--><p class="nopar" > d.h. die zu <!--l. 5241--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>j</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>&infin;</mi></mrow></msubsup 
+></math>
+wegen <!--l. 5241--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+zugehörige Teilfolge <!--l. 5242--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>j</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>&infin;</mi></mrow></msubsup 
+></math>
+konvergiert gegen <!--l. 5243--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&lowast;</mo></mrow></msup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+Damit ist <!--l. 5243--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+kompakt.                                                                                                                                    &#x25A1;
+</div>
+<!--l. 5245--><p class="noindent" >Der folgende Satz von <span id="textcolor160">Weierstrass</span> spielt in der Theorie stetiger Funktionen auf kompakten Mengen
+eine zentrale Rolle:
+<div class="newtheorem">
+<!--l. 5248--><p class="noindent" ><span class="head">
+<a 
+ id="x135-134002r6"></a>
+<span 
+class="ptmb8t-x-x-120">Theorem 2.13.6.</span>  </span><span 
+class="ptmri8t-x-x-120">Es sei </span><!--l. 5249--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>M</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> <span 
+class="ptmri8t-x-x-120">ein</span>
+<span 
+class="ptmri8t-x-x-120">metrischer Raum und </span><!--l. 5249--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math> <span 
+class="ptmri8t-x-x-120">sei eine</span>
+<span 
+class="ptmri8t-x-x-120">kompakte Teilmenge von </span><!--l. 5250--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math><span 
+class="ptmri8t-x-x-120">.</span>
+<span 
+class="ptmri8t-x-x-120">Die Funktion </span><!--l. 5250--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi> <mo 
+class="MathClass-punc">:</mo> <mi 
+>X</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <mi 
+>&#x211D;</mi></math> <span 
+class="ptmri8t-x-x-120">sei stetig</span>
+<span 
+class="ptmri8t-x-x-120">in </span><!--l. 5250--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math><span 
+class="ptmri8t-x-x-120">. Dann ist das Bild</span>
+<!--l. 5251--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> <span 
+class="ptmri8t-x-x-120">beschr</span><span 
+class="ptmri8t-x-x-120">ä</span><span 
+class="ptmri8t-x-x-120">nkt und es</span>
+<span 
+class="ptmri8t-x-x-120">existieren Elemente </span><!--l. 5251--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">±</mo></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi></math><span 
+class="ptmri8t-x-x-120">,</span>
+<span 
+class="ptmri8t-x-x-120">so dass</span><table class="equation"><tr><td> <a 
+ id="x135-134003r78"></a>
+                                                                                     
+                                                                                     
+<!--l. 5252--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                     <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> min</mo> </mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>X</mi></mrow></munder 
+><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">+</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> max</mo> </mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>X</mi></mrow></munder 
+><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(2.78)</td></tr></table>
+</div>
+<!--l. 5256--><p class="noindent" >Mit anderen Worten: Eine auf einer kompakten Menge definierte stetige Funktion nimmt ihren
+größten und kleinsten Funktionswert an.
+<!--l. 5259--><p class="noindent" >
+<div class="proof">
+<!--l. 5260--><p class="noindent" ><span class="head">
+<span 
+class="ptmri8t-x-x-120">Beweis.</span> </span>Nach Satz <a 
+href="#x135-134001r5">2.13.5<!--tex4ht:ref: thm:fXkomp --></a> ist <!--l. 5260--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+eine kompakte Teilmenge von <!--l. 5261--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x211D;</mi></math>.
+Diese ist nach dem Satz von Bolzano beschränkt. Nach Satz <a 
+href="skriptsu105.html#x134-133002r4">2.13.4<!--tex4ht:ref: thm:XkompRmaxmin --></a> existieren zudem Werte
+<!--l. 5262--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">±</mo></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+mit der Eigenschaft
+<div class="math-display"><!--l. 5263--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                           <msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">+</mo></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo><mo class="qopname"> max</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo><mo class="qopname"> min</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 5264--><p class="nopar" > Da die Werte <!--l. 5265--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">±</mo></mrow></msub 
+></math>
+zum Bild von <!--l. 5265--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math>
+gehren, so gibt es Punkte <!--l. 5266--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">±</mo></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi></math>
+mit <!--l. 5266--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+und <!--l. 5266--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">+</mo></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">+</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+Diese erfüllen die Eigenschaft (<a 
+href="#x135-134003r78">2.78<!--tex4ht:ref: eq:thmweierstrass --></a>).                                                                                     &#x25A1;
+</div>
+<!--l. 5269--><p class="noindent" >Die folgende Aussage beschreibt eine typische Anwendung des Satzes von Weierstrass:
+                                                                                     
+                                                                                     
+<div class="newtheorem">
+<!--l. 5272--><p class="noindent" ><span class="head">
+<a 
+ id="x135-134004r7"></a>
+<span 
+class="ptmb8t-x-x-120">Theorem 2.13.7.</span>  </span><span 
+class="ptmri8t-x-x-120">Die Funktion </span><!--l. 5273--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi> <mo 
+class="MathClass-punc">:</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow> <mo 
+class="MathClass-rel">&rarr;</mo> <mi 
+>&#x211D;</mi></math>
+<span 
+class="ptmri8t-x-x-120">sei stetig in </span><!--l. 5274--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow></math>
+<span 
+class="ptmri8t-x-x-120">und       nehme       nur       positive       Funktionswerte       an.       Dann       existiert       ein</span>
+<!--l. 5275--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math><span 
+class="ptmri8t-x-x-120">,</span>
+<span 
+class="ptmri8t-x-x-120">so dass</span>
+<div class="math-display"><!--l. 5275--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                                 <msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&ge;</mo> <mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 5276--><p class="nopar" >
+</div>
+<!--l. 5279--><p class="noindent" >Man  kann  in  diesem  Fall  also  die  Ungleichung
+<!--l. 5279--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math> (Positivität)
+zu <!--l. 5280--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&ge;</mo> <mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>
+verschärfen! Die Funktionswerte einer stetigen, positiven Funktion auf einem kompakten Intervall sind
+vom Wert <!--l. 5282--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>0</mn></math>
+isoliert.
+<!--l. 5284--><p class="noindent" >
+<div class="proof">
+<!--l. 5285--><p class="noindent" ><span class="head">
+<span 
+class="ptmri8t-x-x-120">Beweis.</span> </span>Das abgeschlossene Intervall <!--l. 5285--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow></math>
+ist kompakt in <!--l. 5285--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x211D;</mi></math>.
+Nach         dem         Satz         von         Weierstrass         existiert         dann         ein         Punkt
+<!--l. 5286--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow></math>
+mit
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 5287--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                               <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> min</mo> </mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">]</mo></mrow></mrow></munder 
+><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mspace width="0.3em" class="thinspace"/><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 5288--><p class="nopar" > Nach Voraussetzung ist <!--l. 5289--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+positiv und wir wählen <!--l. 5289--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>.
+Dann gilt offensichtlich <!--l. 5290--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&ge;</mo><munder class="msub"><mrow 
+><mo class="qopname"> min</mo> </mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>X</mi></mrow></munder 
+><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&#x03B5;</mi></math>.
+                                                                                    &#x25A1;
+</div>
+<div class="newtheorem">
+<!--l. 5292--><p class="noindent" ><span class="head">
+<a 
+ id="x135-134005r8"></a>
+<span 
+class="ptmb8t-x-x-120">Problem 2.13.8.</span>  </span>Veranschaulichen Sie sich, dass letzterer Satz nicht gilt, wenn man entweder
+offene oder halboffene Intervalle als Definitionsbereich zulässt (Verletzung der Kompaktheit)
+bzw.                wenn                man                auf                die                Stetigkeit                von
+<!--l. 5296--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math>
+verzichtet. Finden Sie geeignete Gegenbeispiele!
+</div>
+                                                                                     
+                                                                                     
+<!--l. 5299--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu105.html" >prev</a>] [<a 
+href="skriptsu105.html#tailskriptsu105.html" >prev-tail</a>] [<a 
+href="skriptsu106.html" >front</a>] [<a 
+href="skriptse25.html#skriptsu106.html" >up</a>] </p></div>
+<!--l. 5299--><p class="noindent" ><a 
+ id="tailskriptsu106.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu106.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:18 GMT -->
+</html> 

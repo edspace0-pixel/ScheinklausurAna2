@@ -1,0 +1,529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu121.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:19 GMT -->
+<head><title>Polynome und negativ ganzzahlige Potenzen von z.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 6108--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu122.html" >next</a>] [<a 
+href="#tailskriptsu121.html">tail</a>] [<a 
+href="skriptse31.html#skriptsu121.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">3.4.1</span>&#x00A0;&#x00A0;<a 
+ id="x158-1570003.4.1"></a>Polynome und negativ ganzzahlige Potenzen von
+<!--l. 6108--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi></math>.</h4>
+<!--l. 6110--><p class="noindent" >Wir betrachten hier Ableitungen komplexwertiger Funktionen einer Variablen
+<!--l. 6111--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2102;</mi></math>. Für
+die konstante und die lineare Funktion haben wir in den Beispielen <a 
+href="skriptsu112.html#x145-144003r3">3.1.3<!--tex4ht:ref: example:constdiff --></a> und <a 
+href="skriptsu112.html#x145-144004r4">3.1.4<!--tex4ht:ref: example:xdiff --></a> bereits gezeigt,
+dass
+                                                                                     
+                                                                                     
+<!--tex4ht:inline--><!--l. 6113--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1"> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="mbox"><mtext  >const</mtext></mstyle></mtd><mtd 
+class="eqnarray-2">  <mspace width="1em" class="quad"/> <mo 
+class="MathClass-rel">&rArr;</mo><mspace width="1em" class="quad"/></mtd><mtd 
+class="eqnarray-3">  <msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-punc">,</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1">    <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>z</mi></mtd><mtd 
+class="eqnarray-2">  <mspace width="1em" class="quad"/> <mo 
+class="MathClass-rel">&rArr;</mo><mspace width="1em" class="quad"/></mtd><mtd 
+class="eqnarray-3">  <msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mo 
+class="MathClass-punc">.</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                                      </mtr></mtable>
+</math>
+<!--l. 6115--><p class="nopar" >
+Zur Berechnung der Ableitung des Monomes <!--l. 6116--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></math>,
+<!--l. 6116--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi></math> kann
+man den Differentenquotienten mit Hilfe des binomischen Satzes auswerten
+<div class="math-display"><!--l. 6118--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+      <mi 
+>&phi;</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+><mo 
+class="MathClass-punc">;</mo> <mi 
+>h</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>h</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi> <mo 
+class="MathClass-bin">+</mo> <mi 
+>h</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+> <mo 
+class="MathClass-bin">&minus;</mo> <msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo><munderover accentunder="false" accent="false"><mrow  
+><mo mathsize="big" 
+> &sum;</mo>
+  </mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">=</mo><mn>0</mn></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></munderover 
+><mfenced separators="" 
+open="(" close=")"><mfrac linethickness="0.0pt"><mrow><mi 
+>n</mi></mrow>
+<mrow><mi 
+>k</mi></mrow></mfrac></mfenced><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msup 
+><msup><mrow 
+><mi 
+>h</mi></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-bin">&minus;</mo><mi 
+>k</mi><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+><mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">&rarr;</mo></mrow><mrow 
+><mrow><mi 
+>h</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <mn>0</mn></mrow></mrow></mover><mfenced separators="" 
+open="(" close=")"><mfrac linethickness="0.0pt"><mrow>   <mi 
+>n</mi></mrow> 
+<mrow><mi 
+>n</mi> <mo 
+class="MathClass-bin">&minus;</mo> <mn>1</mn></mrow></mfrac></mfenced><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+><mo 
+class="MathClass-punc">,</mo>
+</mrow></math></div>
+<!--l. 6119--><p class="nopar" > und erhält damit
+<div class="math-display"><!--l. 6120--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                          <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+><mspace width="1em" class="quad"/> <mo 
+class="MathClass-rel">&rArr;</mo><mspace width="1em" class="quad"/><msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>n</mi><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>n</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+                                                                                     
+                                                                                     
+<!--l. 6121--><p class="nopar" > Die Linearität der Ableitung erlaubt nun die Differentiation von Polynomen
+<div class="math-display"><!--l. 6122--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo><munderover accentunder="false" accent="false"><mrow  
+><mo mathsize="big" 
+> &sum;</mo>
+  </mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">=</mo><mn>0</mn></mrow><mrow 
+><mi 
+>n</mi></mrow></munderover 
+><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+>
+<mi 
+>k</mi></mrow></msub 
+><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msup 
+><mspace width="1em" class="quad"/> <mo 
+class="MathClass-rel">&rArr;</mo><mspace width="1em" class="quad"/><msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo><munderover accentunder="false" accent="false"><mrow  
+><mo mathsize="big" 
+> &sum;</mo>
+  </mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">=</mo><mn>0</mn></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></munderover 
+><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+>
+<mi 
+>k</mi><mo 
+class="MathClass-bin">+</mo><mn>1</mn></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>k</mi> <mo 
+class="MathClass-bin">+</mo> <mn>1</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msup 
+><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 6123--><p class="nopar" > Insbesondere folgt daraus, dass ein Polynom vom Grad
+<!--l. 6124--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo> <mn>2</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mspace width="0.3em" class="thinspace"/></math> bei der Differentiation stets
+in ein Polynom vom Grad <!--l. 6125--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-bin">&minus;</mo> <mn>1</mn></math>
+übergeht.
+<!--l. 6127--><p class="noindent" >Für <!--l. 6127--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn></math> wurde die
+Ableitung der Funktion <!--l. 6127--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mfrac><mrow 
+><mn>1</mn></mrow>
+<mrow 
+><mi 
+>z</mi></mrow></mfrac></math>
+im Beispiel <a 
+href="skriptsu112.html#x145-144005r5">3.1.5<!--tex4ht:ref: ex:xmin1diff --></a> als
+<div class="math-display"><!--l. 6128--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                            <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mn>1</mn></mrow> 
+<mrow 
+><mi 
+>z</mi></mrow></mfrac><mspace width="1em" class="quad"/> <mo 
+class="MathClass-rel">&rArr;</mo><mspace width="1em" class="quad"/><msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-bin">&minus;</mo><mfrac><mrow 
+><mn>1</mn></mrow>
+<mrow 
+><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></mrow></mfrac><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>z</mi><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn><mo 
+class="MathClass-punc">,</mo>
+</mrow></math></div>
+<!--l. 6129--><p class="nopar" > berechnet. Die Anwendung der Kettenregel ergibt für
+<!--l. 6130--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn></math> und
+<!--l. 6131--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi></math>
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 6131--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                <msup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mi 
+>n</mi></mrow></msup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo><msup><mrow 
+> <mfenced separators="" 
+open="("  close=")" ><mrow><mfrac><mrow 
+><mn>1</mn></mrow>
+<mrow 
+><mi 
+>z</mi></mrow></mfrac> <mo 
+class="MathClass-bin">&#x2218;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></mfenced> </mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <mfenced separators="" 
+open="("  close=")" ><mrow><mo 
+class="MathClass-bin">&minus;</mo><mfrac><mrow 
+><mn>1</mn></mrow>
+<mrow 
+><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></mrow></mfrac> <mo 
+class="MathClass-bin">&#x2218;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></mfenced> <mo 
+class="MathClass-bin">&sdot;</mo> <msup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-bin">&minus;</mo> <mfrac><mrow 
+><mn>1</mn></mrow>
+<mrow 
+><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>2</mn><mi 
+>n</mi></mrow></msup 
+></mrow></mfrac> <mo 
+class="MathClass-bin">&sdot;</mo> <mi 
+>n</mi><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+>
+</mrow></math></div>
+<!--l. 6132--><p class="nopar" > und folglich
+<div class="math-display"><!--l. 6133--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                     <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mi 
+>n</mi></mrow></msup 
+><mspace width="1em" class="quad"/> <mo 
+class="MathClass-rel">&rArr;</mo><mspace width="1em" class="quad"/><msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-bin">&minus;</mo><mi 
+>n</mi><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>n</mi><mo 
+class="MathClass-bin">+</mo><mn>1</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></msup 
+><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>n</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>z</mi><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 6134--><p class="nopar" >
+                                                                                     
+                                                                                     
+<!--l. 6138--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu122.html" >next</a>] [<a 
+href="skriptsu121.html" >front</a>] [<a 
+href="skriptse31.html#skriptsu121.html" >up</a>] </p></div>
+<!--l. 6138--><p class="noindent" ><a 
+ id="tailskriptsu121.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu121.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:19 GMT -->
+</html> 

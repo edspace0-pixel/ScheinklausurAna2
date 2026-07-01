@@ -1,0 +1,669 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu123.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:19 GMT -->
+<head><title>Zur Ableitung der Logarithmusfunktion.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 6194--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu124.html" >next</a>] [<a 
+href="skriptsu122.html" >prev</a>] [<a 
+href="skriptsu122.html#tailskriptsu122.html" >prev-tail</a>] [<a 
+href="#tailskriptsu123.html">tail</a>] [<a 
+href="skriptse31.html#skriptsu123.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">3.4.3</span>&#x00A0;&#x00A0;<a 
+ id="x160-1590003.4.3"></a>Zur Ableitung der Logarithmusfunktion.</h4>
+<!--l. 6196--><p class="noindent" >Der komplexe Logarithmus einer komplexen Zahl ist nach Punkt <a 
+href="skriptsu44.html#x58-570001.11.5">1.11.5<!--tex4ht:ref: subsec:elfktkompl --></a> als mehrwertige Abbildung
+folgendermaßen definiert
+<div class="math-display"><!--l. 6197--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                       <mstyle 
+class="mbox"><mtext  >Ln</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>z</mi> <mo 
+class="MathClass-rel">=</mo><mo class="qopname"> ln</mo><!--nolimits--> <mo 
+class="MathClass-rel">|</mo><mi 
+>z</mi><mo 
+class="MathClass-rel">|</mo> <mo 
+class="MathClass-bin">+</mo> <mi 
+>i</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mo class="qopname">arg</mo><!--nolimits--> <mi 
+>z</mi> <mo 
+class="MathClass-bin">+</mo> <mn>2</mn><mi 
+>k</mi><mi 
+>&pi;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>k</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2124;</mi><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>z</mi><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 6198--><p class="nopar" > Dabei bezeichnet <!--l. 6199--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo class="qopname"> ln</mo><!--nolimits--> <mo 
+class="MathClass-punc">:</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>0</mn><mo 
+class="MathClass-punc">,</mo> <mo 
+class="MathClass-bin">+</mo><mi 
+>&infin;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&rarr;</mo> <mi 
+>&#x211D;</mi></math>
+die eindeutige Umkehrfunktion der reellen Exponentialfunktion
+<!--l. 6200--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>x</mi></mrow></msup 
+> <mo 
+class="MathClass-punc">:</mo> <mi 
+>&#x211D;</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>0</mn><mo 
+class="MathClass-punc">,</mo> <mo 
+class="MathClass-bin">+</mo><mi 
+>&infin;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>. Für die Beschreibung
+aller Werte von <!--l. 6201--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="mbox"><mtext  >Ln</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>z</mi></math>
+ist es unerheblich, ob man sich darauf einigt, das Argument der komplexen Zahl
+<!--l. 6202--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn></math> als Funktion
+<!--l. 6203--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="mbox"><mtext  >arg</mtext></mstyle> <mo 
+class="MathClass-punc">:</mo> <mi 
+>&#x2102;</mi> <mo 
+class="MathClass-bin">\</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mn>0</mn></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-rel">&rarr;</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><mn>0</mn><mo 
+class="MathClass-punc">,</mo> <mn>2</mn><mi 
+>&pi;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> oder aber
+<!--l. 6204--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="mbox"><mtext  >arg</mtext></mstyle> <mo 
+class="MathClass-punc">:</mo> <mi 
+>&#x2102;</mi> <mo 
+class="MathClass-bin">\</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mn>0</mn></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-rel">&rarr;</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><mo 
+class="MathClass-bin">&minus;</mo><mi 
+>&pi;</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>&pi;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> zu betrachten. Trifft man
+aber für gegebenes <!--l. 6205--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn></math>
+eine  geeignete  Auswahl  zwischen  diesen  beiden
+Möglichkeiten<span class="footnote-mark"><a 
+href="#fn7x3" id="fn7x3-bk"><sup class="textsuperscript">7</sup></a></span><a 
+ id="x160-159001f7"></a>, so erweist sich
+<!--l. 6210--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo class="qopname"> arg</mo><!--nolimits--> <mi 
+>z</mi></math> als stetig in einer genügend kleinen
+<!--l. 6210--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi></math>-Umgebung<span class="footnote-mark"><a 
+href="#fn8x3" id="fn8x3-bk"><sup class="textsuperscript">8</sup></a></span><a 
+ id="x160-159002f8"></a>
+des Punktes <!--l. 6214--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>. Damit ist nach
+zusätzlicher Fixierung der Zahl <!--l. 6215--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>k</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2124;</mi></math>
+                                                                                     
+                                                                                     
+der komplexe Logarithmus eine stetige <span 
+class="ptmri8t-x-x-120">Funktion </span>in dieser
+Umgebung<span class="footnote-mark"><a 
+href="#fn9x3" id="fn9x3-bk"><sup class="textsuperscript">9</sup></a></span><a 
+ id="x160-159003f9"></a>, welche
+<!--l. 6219--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> bijektiv auf das
+Bild <!--l. 6219--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>V</mi> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="mbox"><mtext  >Ln</mtext></mstyle><mspace width="0.3em" class="thinspace"/><msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> bei fixiertem
+<!--l. 6220--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>k</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2124;</mi></math> und geeigneter Wahl
+des Bildbereiches von <!--l. 6221--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo class="qopname"> arg</mo><!--nolimits--> <mi 
+>z</mi></math>
+abbildet.
+<!--l. 6223--><p class="noindent" >Man nennt diese Prozedur die Auswahl eines stetigen Blattes des komplexen Logarithmus. Die dabei
+entstehende stetige Funktion ist lokal die Umkehrfunktion der komplexen Exponentialfunktion
+<!--l. 6225--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>v</mi></mrow></msup 
+> <mo 
+class="MathClass-punc">:</mo> <mi 
+>V</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+>
+<mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+Damit lässt sich zur Berechnung der Ableitung Satz <a 
+href="skriptsu120.html#x156-155001r4">3.3.4<!--tex4ht:ref: thm:implf --></a> heranziehen. Danach gilt bei
+<!--l. 6227--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="mbox"><mtext  >Ln</mtext></mstyle><mspace width="0.3em" class="thinspace"/><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math> und
+entsprechend <!--l. 6228--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></msup 
+></math>
+<div class="math-display"><!--l. 6228--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+><msub><mrow 
+>
+                         <mfenced separators="" 
+open=""  close="|" ><mrow>  <mfrac><mrow 
+><mi 
+>d</mi></mrow>
+<mrow 
+><mi 
+>d</mi><mi 
+>z</mi></mrow></mfrac><mstyle 
+class="mbox"><mtext  >Ln</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>z</mi></mrow></mfenced></mrow><mrow 
+><mi 
+>z</mi><mo 
+class="MathClass-rel">=</mo><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo>       <mfrac><mrow 
+><mn>1</mn></mrow> 
+<mrow 
+><msub><mrow 
+> <mfenced separators="" 
+open=""  close="|" ><mrow> <mfrac><mrow 
+><mi 
+>d</mi></mrow>
+<mrow 
+><mi 
+>d</mi><mi 
+>v</mi></mrow></mfrac><msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>v</mi></mrow></msup 
+></mrow></mfenced> </mrow><mrow 
+><mi 
+>v</mi><mo 
+class="MathClass-rel">=</mo><msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+>
+<mn>0</mn></mrow></msub 
+></mrow></msub 
+></mrow></mfrac>  <mo 
+class="MathClass-rel">=</mo>  <mfrac><mrow 
+><mn>1</mn></mrow> 
+<mrow 
+><msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></msup 
+></mrow></mfrac>  <mo 
+class="MathClass-rel">=</mo>  <mfrac><mrow 
+><mn>1</mn></mrow> 
+<mrow 
+><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfrac><mo 
+class="MathClass-punc">,</mo>
+</mrow></math></div>
+<!--l. 6229--><p class="nopar" > die Ableitung hängt damit nicht von der konkreten Wahl von
+<!--l. 6230--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>k</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2124;</mi></math>
+ab.
+<!--l. 6233--><p class="noindent" >über die Logarithmusfunktion ist die allgemeine Potenzfunktion
+<div class="math-display"><!--l. 6233--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                            <msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>&alpha;</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>&alpha;</mi><mstyle 
+class="mbox"><mtext  >Ln</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>z</mi></mrow></msup 
+><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>&alpha;</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2102;</mi><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>z</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2102;</mi> <mo 
+class="MathClass-bin">\</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mn>0</mn></mrow><mo 
+class="MathClass-close">}</mo></mrow>
+</mrow></math></div>
+<!--l. 6234--><p class="nopar" > definiert. In Abhängigkeit von <!--l. 6235--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&alpha;</mi></math>
+                                                                                     
+                                                                                     
+bleibt hier gegebenenfalls die durch die komplexe Logarithmusfunktion
+entstehende Mehrwertigkeit erhalten. Nach Wahl eines lokal stetigen Blattes von
+<!--l. 6237--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="mbox"><mtext  >Ln</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>z</mi></math> erhält
+man aus der Kettenregel
+<div class="math-display"><!--l. 6238--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+              <msup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>&alpha;</mi></mrow></msup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo><msup><mrow 
+> <mfenced separators="" 
+open="("  close=")" ><mrow><msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>v</mi></mrow></msup 
+> <mo 
+class="MathClass-bin">&#x2218;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&alpha;</mi><mstyle 
+class="mbox"><mtext  >Ln</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></mfenced> </mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <mfenced separators="" 
+open="("  close=")" ><mrow><msup><mrow 
+><mi 
+>e</mi></mrow><mrow 
+><mi 
+>v</mi></mrow></msup 
+> <mo 
+class="MathClass-bin">&#x2218;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&alpha;</mi><mstyle 
+class="mbox"><mtext  >Ln</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></mfenced> <mo 
+class="MathClass-bin">&sdot;</mo> <msup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&alpha;</mi><mstyle 
+class="mbox"><mtext  >Ln</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>&alpha;</mi></mrow></msup 
+> <mo 
+class="MathClass-bin">&sdot;</mo><mfrac><mrow 
+><mi 
+>&alpha;</mi></mrow> 
+<mrow 
+><mi 
+>z</mi></mrow></mfrac><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>z</mi><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn><mo 
+class="MathClass-punc">;</mo>
+</mrow></math></div>
+<!--l. 6239--><p class="nopar" > dieser Wert ist wiederum unabhängig von der konkreten Auflösung der Mehrwertigkeit. Wir
+fassen diese beiden Ergebnisse deshalb in der Schreibweise
+<!--tex4ht:inline--><!--l. 6242--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1"> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="mbox"><mtext  >Ln</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>z</mi></mtd><mtd 
+class="eqnarray-2">  <mspace width="1em" class="quad"/> <mo 
+class="MathClass-rel">&rArr;</mo><mspace width="1em" class="quad"/></mtd><mtd 
+class="eqnarray-3">  <msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mn>1</mn></mrow> 
+<mrow 
+><mi 
+>z</mi></mrow></mfrac><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>z</mi><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn><mo 
+class="MathClass-punc">,</mo>           </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1">  <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>&alpha;</mi></mrow></msup 
+></mtd><mtd 
+class="eqnarray-2">  <mspace width="1em" class="quad"/> <mo 
+class="MathClass-rel">&rArr;</mo><mspace width="1em" class="quad"/></mtd><mtd 
+class="eqnarray-3">  <msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&alpha;</mi><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>&alpha;</mi><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>z</mi><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn><mo 
+class="MathClass-punc">,</mo><mspace width="0.3em" class="thinspace"/><mi 
+>&alpha;</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2102;</mi><mo 
+class="MathClass-punc">,</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                       </mtr></mtable>
+</math>
+<!--l. 6244--><p class="nopar" >
+zusammen. Schränkt man diese beiden Abbildungen auf die positive Halbachse als Definitionsbereich
+und die reelle Zahlen als Wertebereich ein, so ergeben sich die reellen Ableitungen durch die
+gleichen Ausdrücke eingeschränkt auf die reellen Zahlen.
+                                                                                     
+                                                                                     
+<div class="footnotes"><!--l. 6210--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn7x3-bk" id="fn7x3">
+<sup class="textsuperscript">7</sup></a></span><span 
+class="ptmr8t-">Der Wert </span><!--l. 6210--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo class="qopname"> arg</mo><!--nolimits--><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>
+   <span 
+class="ptmr8t-">muss im Inneren des gew</span><span 
+class="ptmr8t-">ä</span><span 
+class="ptmr8t-">hlten Bildbereiches liegen, damit die Argumentfunktion in der Umgebung keinen Sprung</span>
+   <span 
+class="ptmr8t-">um </span><!--l. 6210--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>2</mn><mi 
+>&pi;</mi></math>
+   <span 
+class="ptmr8t-">erleidet.</span>
+<!--l. 6214--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn8x3-bk" id="fn8x3">
+<sup class="textsuperscript">8</sup></a></span><span 
+class="ptmr8t-">Dabei ist </span><!--l. 6214--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math> <span 
+class="ptmr8t-">so</span>
+   <span 
+class="ptmr8t-">gew</span><span 
+class="ptmr8t-">ä</span><span 
+class="ptmr8t-">hlt, dass </span><!--l. 6214--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>0</mn><mo 
+class="MathClass-rel">&ne;</mo><msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> <span 
+class="ptmr8t-">sowie</span>
+   <span 
+class="ptmr8t-">dass alle Werte </span><!--l. 6214--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo class="qopname"> arg</mo><!--nolimits--><mi 
+>z</mi></math> <span 
+class="ptmr8t-">f</span><span 
+class="ptmr8t-">ü</span><span 
+class="ptmr8t-">r</span>
+   <!--l. 6214--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> <span 
+class="ptmr8t-">im Inneren des</span>
+   <span 
+class="ptmr8t-">Bildbereiches von </span><!--l. 6214--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo class="qopname"> arg</mo><!--nolimits--><mi 
+>z</mi></math>
+   <span 
+class="ptmr8t-">liegen.</span>
+<!--l. 6219--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn9x3-bk" id="fn9x3">
+<sup class="textsuperscript">9</sup></a></span><span 
+class="ptmr8t-">Verifizieren Sie die Stetigkeit von </span><!--l. 6219--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo class="qopname"> ln</mo><!--nolimits--><mo 
+class="MathClass-rel">|</mo><mi 
+>z</mi><mo 
+class="MathClass-rel">|</mo></math> <span 
+class="ptmr8t-">sowie</span>
+   <span 
+class="ptmr8t-">von der geeignet gew</span><span 
+class="ptmr8t-">ä</span><span 
+class="ptmr8t-">hlten Funktion </span><!--l. 6219--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo class="qopname"> arg</mo><!--nolimits--><mi 
+>z</mi></math>
+   <span 
+class="ptmr8t-">in </span><!--l. 6219--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math><span 
+class="ptmr8t-">!</span></div><!--l. 6251--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu124.html" >next</a>]
+[<a 
+href="skriptsu122.html" >prev</a>] [<a 
+href="skriptsu122.html#tailskriptsu122.html" >prev-tail</a>] [<a 
+href="skriptsu123.html" >front</a>] [<a 
+href="skriptse31.html#skriptsu123.html" >up</a>] </p></div>
+<!--l. 6251--><p class="noindent" ><a 
+ id="tailskriptsu123.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu123.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:19 GMT -->
+</html> 

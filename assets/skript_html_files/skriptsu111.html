@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu111.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:18 GMT -->
+<head><title>Die Ableitung einer Funktion.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 5578--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu112.html" >next</a>] [<a 
+href="#tailskriptsu111.html">tail</a>] [<a 
+href="skriptse28.html#skriptsu111.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">3.1.1</span>&#x00A0;&#x00A0;<a 
+ id="x144-1430003.1.1"></a>Die Ableitung einer Funktion.</h4>
+<!--l. 5580--><p class="noindent" >Es seien <!--l. 5580--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>&#x211D;</mi><mo 
+class="MathClass-punc">,</mo> <mi 
+>&#x2102;</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow></math> und
+<!--l. 5580--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>&#x211D;</mi><mo 
+class="MathClass-punc">,</mo> <mi 
+>&#x2102;</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>. Die Menge
+<!--l. 5581--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math> sei eine offene
+Teilmenge von <!--l. 5581--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math>. Wir
+betrachten Funktionen <!--l. 5582--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi> <mo 
+class="MathClass-punc">:</mo> <mi 
+>X</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <msubsup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mn>2</mn></mrow><mrow 
+><mi 
+>n</mi></mrow></msubsup 
+></math>,
+<!--l. 5582--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi></math>.<span class="footnote-mark"><a 
+href="#fn1x3" id="fn1x3-bk"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x144-143001f1"></a>
+<!--l. 5588--><p class="noindent" >Da <!--l. 5588--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+eine offene Menge ist, so gehört mit jedem ihrer Elemente
+<!--l. 5589--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi></math> auch
+<!--l. 5589--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <mi 
+>h</mi></math> zu
+<!--l. 5589--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>, wenn
+                                                                                     
+                                                                                     
+nur <!--l. 5589--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>h</mi> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>0</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>,
+<!--l. 5590--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>. Damit
+ist der Differenzenquotient
+<div class="math-display"><!--l. 5590--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                           <mi 
+>&phi;</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi><mo 
+class="MathClass-punc">;</mo> <mi 
+>h</mi><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-punc">:</mo><mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <mi 
+>h</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow> 
+           <mrow 
+><mi 
+>h</mi></mrow></mfrac>
+</mrow></math></div>
+<!--l. 5591--><p class="nopar" > für <!--l. 5592--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>h</mi> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>0</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+und <!--l. 5592--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi></math>
+definiert.
+<div class="newtheorem">
+<!--l. 5594--><p class="noindent" ><span class="head">
+<a 
+ id="x144-143002r1"></a>
+<span 
+class="ptmb8t-x-x-120">Definition 3.1.1.</span>  </span>Eine Funktion <!--l. 5595--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math>
+ist im Punkt <!--l. 5595--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi></math>
+<span id="textcolor166"><span 
+class="ptmri8t-x-x-120">differenzierbar</span></span>, genau dann wenn der Grenzwert<table class="equation"><tr><td> <a 
+ id="x144-143003r1"></a>
+<!--l. 5597--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                   <msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+>
+<mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msubsup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msubsup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+>
+<mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo><msub><mrow 
+> <mfenced separators="" 
+open=""  close="|" ><mrow> <mfrac><mrow 
+><mi 
+>d</mi><mi 
+>f</mi></mrow>
+<mrow 
+><mi 
+>d</mi><mi 
+>x</mi></mrow></mfrac></mrow></mfenced></mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">=</mo><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></msub 
+> <mo 
+class="MathClass-punc">:</mo><mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>h</mi><mo 
+class="MathClass-rel">&rarr;</mo><mn>0</mn></mrow></munder 
+><mi 
+>&phi;</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi><mo 
+class="MathClass-punc">;</mo> <mi 
+>h</mi><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</math></td><td class="eq-no">(3.1)</td></tr></table>
+<!--l. 5599--><p class="noindent" >existiert. Eine Funktion <!--l. 5599--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math>
+heisst <span id="textcolor167"><span 
+class="ptmri8t-x-x-120">differenzierbar in </span><!--l. 5600--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math></span>
+genau dann wenn <!--l. 5600--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math> in jedem
+Punkt <!--l. 5600--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi></math> differenzierbar ist.
+Die Funktion <!--l. 5601--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+></math> nennt man
+die <span id="textcolor168"><span 
+class="ptmri8t-x-x-120">Ableitung</span></span> der Funktion <!--l. 5602--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math>.
+                                                                                     
+                                                                                     
+</div>
+                                                                                     
+                                                                                     
+<div class="footnotes"><!--l. 5586--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn1x3-bk" id="fn1x3">
+<sup class="textsuperscript">1</sup></a></span><span 
+class="ptmr8t-">Dabei handelt es sich also um reell oder komplex vektorwertige Funktionen</span>
+   <span 
+class="ptmr8t-">(</span><!--l. 5586--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&isin;</mo> <msubsup><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mn>2</mn></mrow><mrow 
+><mi 
+>n</mi></mrow></msubsup 
+></math><span 
+class="ptmr8t-">) einer reellen oder</span>
+   <span 
+class="ptmr8t-">komplexen Variablen </span><!--l. 5586--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi> <mo 
+class="MathClass-rel">&sub;</mo> <msub><mrow 
+><mi 
+>K</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math><span 
+class="ptmr8t-">.</span></div><!--l. 5605--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu112.html" >next</a>]
+[<a 
+href="skriptsu111.html" >front</a>] [<a 
+href="skriptse28.html#skriptsu111.html" >up</a>] </p></div>
+<!--l. 5605--><p class="noindent" ><a 
+ id="tailskriptsu111.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu111.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:18 GMT -->
+</html> 

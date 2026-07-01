@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu59.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:16 GMT -->
+<head><title>Maximum und Minimum.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 2742--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu60.html" >next</a>] [<a 
+href="#tailskriptsu59.html">tail</a>] [<a 
+href="skriptse15.html#skriptsu59.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">2.3.1</span>&#x00A0;&#x00A0;<a 
+ id="x78-770002.3.1"></a>Maximum und Minimum.</h4>
+<div class="newtheorem">
+<!--l. 2744--><p class="noindent" ><span class="head">
+<a 
+ id="x78-77001r1"></a>
+<span 
+class="ptmb8t-x-x-120">Definition 2.3.1.</span>  </span>Es sei <!--l. 2745--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi><mo 
+class="MathClass-rel">&ne;</mo><mi 
+>&empty;</mi></math>
+eine Teilmenge aus <!--l. 2745--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x211D;</mi></math>.
+Wir sagen, dass <!--l. 2746--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>a</mi></math>
+das <span id="textcolor114"><span 
+class="ptmri8t-x-x-120">Maximum</span></span> der Menge <!--l. 2746--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math>
+ist, falls <!--l. 2747--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>a</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>M</mi></math>
+und <!--l. 2747--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>M</mi></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><mi 
+>a</mi> <mo 
+class="MathClass-rel">&ge;</mo> <mi 
+>x</mi></math>.
+Wir sagen, dass <!--l. 2748--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>a</mi></math>
+das <span id="textcolor115"><span 
+class="ptmri8t-x-x-120">Minimum</span></span> der Menge <!--l. 2748--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math>
+ist, falls <!--l. 2749--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>a</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>M</mi></math>
+und <!--l. 2749--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>M</mi></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><mi 
+>a</mi> <mo 
+class="MathClass-rel">&le;</mo> <mi 
+>x</mi></math>.<span class="footnote-mark"><a 
+href="#fn6x2" id="fn6x2-bk"><sup class="textsuperscript">6</sup></a></span><a 
+ id="x78-77002f6"></a>
+                                                                                     
+                                                                                     
+</div>
+<div class="newtheorem">
+<!--l. 2754--><p class="noindent" ><span class="head">
+<a 
+ id="x78-77003r2"></a>
+<span 
+class="ptmb8t-x-x-120">Problem 2.3.2.</span>  </span>Zeigen Sie, dass das maximale (bzw. minimale) Element einer Menge, soweit
+es existiert, eindeutig bestimmt ist.
+</div>
+<div class="newtheorem">
+<!--l. 2758--><p class="noindent" ><span class="head">
+<a 
+ id="x78-77004r3"></a>
+<span 
+class="ptmb8t-x-x-120">Example 2.3.3.</span>  </span>Es sei <!--l. 2759--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><mn>0</mn><mo 
+class="MathClass-punc">,</mo> <mn>1</mn></mrow><mo 
+class="MathClass-close">]</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi><mo 
+class="MathClass-rel">|</mo><mn>0</mn> <mo 
+class="MathClass-rel">&le;</mo> <mi 
+>x</mi> <mo 
+class="MathClass-rel">&le;</mo> <mn>1</mn></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>.
+Dann gilt offensichtlich <!--l. 2760--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>0</mn> <mo 
+class="MathClass-rel">=</mo><mo class="qopname"> min</mo> <mi 
+>M</mi></math>
+und <!--l. 2760--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>1</mn> <mo 
+class="MathClass-rel">=</mo><mo class="qopname"> max</mo> <mi 
+>M</mi></math>.
+</div>
+<!--l. 2762--><p class="noindent" >&#x00A0;
+<div class="newtheorem">
+<!--l. 2764--><p class="noindent" ><span class="head">
+<a 
+ id="x78-77005r4"></a>
+<span 
+class="ptmb8t-x-x-120">Example 2.3.4.</span>  </span>Für <!--l. 2765--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><mn>0</mn><mo 
+class="MathClass-punc">,</mo> <mn>1</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi><mo 
+class="MathClass-rel">|</mo><mn>0</mn> <mo 
+class="MathClass-rel">&le;</mo> <mi 
+>x</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <mn>1</mn></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>
+gilt <!--l. 2765--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>0</mn> <mo 
+class="MathClass-rel">=</mo><mo class="qopname"> min</mo> <mi 
+>M</mi></math>,
+allerdings kann <!--l. 2766--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>1</mn></math>
+nicht das Maximum von <!--l. 2766--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math>
+sein, da <!--l. 2766--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>1</mn><mo 
+class="MathClass-rel">&notin;</mo><mi 
+>M</mi></math>.
+Die gegebene Menge <!--l. 2767--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math>
+besitzt        auch        kein        anderes        Maximum:        Tatschlich,        für        beliebiges
+<!--l. 2768--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>M</mi></math>,
+d.h. <!--l. 2768--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>0</mn> <mo 
+class="MathClass-rel">&le;</mo> <mi 
+>y</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <mn>1</mn></math>
+finden wir ein <!--l. 2768--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x1EF9;</mi></math>
+mit <!--l. 2768--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>0</mn> <mo 
+class="MathClass-rel">&le;</mo> <mi 
+>y</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>&#x1EF9;</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo></math>
+d.h. <!--l. 2769--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x1EF9;</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>M</mi></math>
+aber <!--l. 2769--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>&#x1EF9;</mi></math>.
+</div>
+                                                                                     
+                                                                                     
+<!--l. 2771--><p class="noindent" >Somit besitzt nicht jede beschränkte Menge notwendigerweise ein Maximum respektive
+Minimum.
+<div class="newtheorem">
+<!--l. 2774--><p class="noindent" ><span class="head">
+<a 
+ id="x78-77006r5"></a>
+<span 
+class="ptmb8t-x-x-120">Definition 2.3.5.</span>  </span>Es sei <!--l. 2775--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math>
+eine Teilmenge aus <!--l. 2775--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x211D;</mi></math>.
+Wir nennen <!--l. 2775--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>C</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi></math>
+eine
+<!--tex4ht:inline--><!--l. 2776--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1"> <mstyle 
+class="mbox"><mtext  >obere&#x00A0;&#x00A0;Schranke</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mstyle 
+class="mbox"><mtext  >für</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>M</mi></mtd><mtd 
+class="eqnarray-2">  <mspace width="1em" class="quad"/><mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">&hArr;</mo></mrow><mrow 
+><mrow><mstyle 
+class="mbox"><mtext  >def</mtext></mstyle></mrow></mrow></mover><mspace width="1em" class="quad"/></mtd><mtd 
+class="eqnarray-3">  <msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>M</mi></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><mi 
+>x</mi> <mo 
+class="MathClass-rel">&le;</mo> <mi 
+>C</mi><mo 
+class="MathClass-punc">,</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray">(2.18)</mtext><mtext 
+   id="x78-77007r2.18"  class="label" ></mtext><mtext 
+class="endlabel"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mstyle 
+class="mbox"><mtext  >untere&#x00A0;&#x00A0;Schranke</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mstyle 
+class="mbox"><mtext  >für</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>M</mi></mtd><mtd 
+class="eqnarray-2">  <mspace width="1em" class="quad"/><mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">&hArr;</mo></mrow><mrow 
+><mrow><mstyle 
+class="mbox"><mtext  >def</mtext></mstyle></mrow></mrow></mover><mspace width="1em" class="quad"/></mtd><mtd 
+class="eqnarray-3">  <msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>M</mi></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><mi 
+>x</mi> <mo 
+class="MathClass-rel">&ge;</mo> <mi 
+>C</mi><mo 
+class="MathClass-punc">.</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray">(2.19)</mtext><mtext 
+   id="x78-77007r2.19"  class="label" ></mtext><mtext 
+class="endlabel"></mtext></mtd>                                          </mtr></mtable>
+</math>
+<!--l. 2778--><p class="nopar" >
+</div>
+<!--l. 2781--><p class="noindent" >Im weiteren sei <!--l. 2781--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">+</mo></mrow></msub 
+></math> die Menge der
+oberen Schranken und <!--l. 2781--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo></mrow></msub 
+></math> die Menge
+der unteren Schranken der Menge <!--l. 2782--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math>.
+Wir nennen die Menge <!--l. 2783--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>&#x211D;</mi></math>
+                                                                                     
+                                                                                     
+<!--tex4ht:inline--><!--l. 2783--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1"> <mstyle 
+class="mbox"><mtext  >beschränkt&#x00A0;&#x00A0;nach&#x00A0;&#x00A0;oben</mtext></mstyle></mtd><mtd 
+class="eqnarray-2">  <mspace width="1em" class="quad"/><mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">&hArr;</mo></mrow><mrow 
+><mrow><mstyle 
+class="mbox"><mtext  >def</mtext></mstyle></mrow></mrow></mover><mspace width="1em" class="quad"/></mtd><mtd 
+class="eqnarray-3">  <msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">+</mo></mrow></msub 
+><mo 
+class="MathClass-rel">&ne;</mo><mi 
+>&empty;</mi><mo 
+class="MathClass-punc">,</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mstyle 
+class="mbox"><mtext  >beschränkt&#x00A0;&#x00A0;nach&#x00A0;&#x00A0;unten</mtext></mstyle></mtd><mtd 
+class="eqnarray-2">  <mspace width="1em" class="quad"/><mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">&hArr;</mo></mrow><mrow 
+><mrow><mstyle 
+class="mbox"><mtext  >def</mtext></mstyle></mrow></mrow></mover><mspace width="1em" class="quad"/></mtd><mtd 
+class="eqnarray-3">  <msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo></mrow></msub 
+><mo 
+class="MathClass-rel">&ne;</mo><mi 
+>&empty;</mi><mo 
+class="MathClass-punc">.</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                             </mtr></mtable>
+</math>
+<!--l. 2785--><p class="nopar" >
+                                                                                     
+                                                                                     
+<div class="footnotes"><!--l. 2752--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn6x2-bk" id="fn6x2">
+<sup class="textsuperscript">6</sup></a></span><span 
+class="ptmr8t-">Man bezeichnet </span><!--l. 2752--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>a</mi></math>
+   <span 
+class="ptmr8t-">dann auch </span><span id="textcolor116"><span 
+class="ptmri8t-">maximales</span></span> <span 
+class="ptmr8t-">bzw. </span><span id="textcolor117"><span 
+class="ptmri8t-">minimales Element</span></span> <span 
+class="ptmr8t-">der Menge </span><!--l. 2752--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math><span 
+class="ptmr8t-">.</span></div><!--l. 2789--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu60.html" >next</a>]
+[<a 
+href="skriptsu59.html" >front</a>] [<a 
+href="skriptse15.html#skriptsu59.html" >up</a>] </p></div>
+<!--l. 2789--><p class="noindent" ><a 
+ id="tailskriptsu59.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu59.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:16 GMT -->
+</html> 

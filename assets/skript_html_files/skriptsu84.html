@@ -1,0 +1,1285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu84.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:17 GMT -->
+<head><title>Der Abschluss einer Menge.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 3951--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu83.html" >prev</a>] [<a 
+href="skriptsu83.html#tailskriptsu83.html" >prev-tail</a>] [<a 
+href="#tailskriptsu84.html">tail</a>] [<a 
+href="skriptse21.html#skriptsu84.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">2.9.8</span>&#x00A0;&#x00A0;<a 
+ id="x109-1080002.9.8"></a>Der Abschluss einer Menge.</h4>
+<!--l. 3953--><p class="noindent" >Es sei <!--l. 3953--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>M</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> ein metrischer
+Raum und <!--l. 3953--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math> eine
+Teilmenge von <!--l. 3953--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math>.
+<div class="newtheorem">
+<!--l. 3955--><p class="noindent" ><span class="head">
+<a 
+ id="x109-108001r30"></a>
+<span 
+class="ptmb8t-x-x-120">Definition 2.9.30.</span>  </span>Man nennt
+<div class="math-display"><!--l. 3956--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                             <mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mi 
+>X</mi> <mo 
+class="MathClass-bin">&cup;</mo> <mi 
+>&part;</mi><mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>X</mi> <mo 
+class="MathClass-bin">&cup;</mo><mstyle 
+class="mbox"><mtext  >acc</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</mrow></math></div>
+<!--l. 3957--><p class="nopar" > den Abschluss der Menge <!--l. 3958--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>.
+</div>
+<!--l. 3960--><p class="noindent" >Die Identität (<a 
+href="skriptsu78.html#x103-102007r46">2.46<!--tex4ht:ref: eq:xaccint --></a>) bezeugt, dass durch das Hinzufügen des Randes oder alternativ der Häufungspunkte
+von <!--l. 3961--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math> zu
+<!--l. 3961--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math> jeweils die
+gleiche Menge <!--l. 3962--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover></math>
+entsteht.
+<div class="newtheorem">
+<!--l. 3964--><p class="noindent" ><span class="head">
+<a 
+ id="x109-108002r31"></a>
+                                                                                     
+                                                                                     
+<span 
+class="ptmb8t-x-x-120">Theorem 2.9.31.</span>  </span><span 
+class="ptmri8t-x-x-120">Die                                                                                                        Menge</span>
+<!--l. 3965--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover></math>
+<span 
+class="ptmri8t-x-x-120">ist abgeschlossen.</span>
+</div>
+<!--l. 3967--><p class="noindent" >Wir benötigen dazu folgenden Hilfssatz:
+<div class="newtheorem">
+<!--l. 3969--><p class="noindent" ><span class="head">
+<a 
+ id="x109-108003r32"></a>
+<span 
+class="ptmb8t-x-x-120">Lemma 2.9.32.</span>  </span><span 
+class="ptmri8t-x-x-120">Die                                                                                                        Mengen</span>
+<!--l. 3970--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="mbox"><mtext  >int</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+<span 
+class="ptmri8t-x-x-120">und</span>
+<!--l. 3970--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="mbox"><mtext  >ext</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+<span 
+class="ptmri8t-x-x-120">sind offen.</span>
+</div>
+<!--l. 3973--><p class="noindent" >
+<div class="proof">
+<!--l. 3974--><p class="noindent" ><span class="head">
+<span 
+class="ptmri8t-x-x-120">Beweis.</span> </span>Ist <!--l. 3974--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="mbox"><mtext  >int</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+oder <!--l. 3974--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="mbox"><mtext  >ext</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+leer, so ist die Aussage für die entsprechende Menge trivial. Wir betrachten ein beliebiges
+Element <!--l. 3976--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo><mstyle 
+class="mbox"><mtext  >int</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+und zeigen dass <!--l. 3976--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo><mstyle 
+class="mbox"><mtext  >int</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="mbox"><mtext  >int</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+Nach Definition gilt <!--l. 3977--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>X</mi></math>
+für gewisses <!--l. 3978--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>.
+Für jedes <!--l. 3978--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi><mo 
+class="MathClass-bin">&#x2215;</mo><mn>2</mn></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+folgt nach Dreiecksungleichung <!--l. 3979--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi><mo 
+class="MathClass-bin">&#x2215;</mo><mn>2</mn></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&sub;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>X</mi></math>.
+Damit gilt <!--l. 3980--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">&isin;</mo><mstyle 
+class="mbox"><mtext  >int</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+und folglich <!--l. 3980--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi><mo 
+class="MathClass-bin">&#x2215;</mo><mn>2</mn></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&sub;</mo><mstyle 
+class="mbox"><mtext  >int</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+Damit ist ein jeder Punkt <!--l. 3981--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo><mstyle 
+class="mbox"><mtext  >int</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+immer auch ein innerer Punkt von <!--l. 3982--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="mbox"><mtext  >int</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+und damit ist <!--l. 3982--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="mbox"><mtext  >int</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+offen.
+                                                                                     
+                                                                                     
+<!--l. 3985--><p class="noindent" >Der                                                               Beweis                                                               für
+<!--l. 3985--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="mbox"><mtext  >ext</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+erfolgt analog.                                                                                                                            &#x25A1;
+</div>
+<!--l. 3987--><p class="noindent" >Wir beweisen nun Satz <a 
+href="#x109-108002r31">2.9.31<!--tex4ht:ref: thm:xabgclosed --></a>.
+<!--l. 3989--><p class="noindent" >
+<div class="proof">
+<!--l. 3990--><p class="noindent" ><span class="head">
+<span 
+class="ptmri8t-x-x-120">Beweis.</span> </span>Nach (<a 
+href="skriptsu78.html#x103-102007r46">2.46<!--tex4ht:ref: eq:xaccint --></a>) gilt
+<div class="math-display"><!--l. 3990--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                      <msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+> <mo 
+class="MathClass-rel">=</mo> <msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi> <mo 
+class="MathClass-bin">&cup;</mo> <mi 
+>&part;</mi><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+>
+<mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+> <mo 
+class="MathClass-rel">=</mo> <msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="mbox"><mtext  >int</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&cup;</mo> <mi 
+>&part;</mi><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+>
+<mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 3991--><p class="nopar" > Aufgrund der Zerlegung (<a 
+href="skriptsu78.html#x103-102002r43">2.43<!--tex4ht:ref: eq:mintdext --></a>) folgt <!--l. 3992--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="mbox"><mtext  >ext</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+Letztere         Menge         ist         nach         Lemma         <a 
+href="#x109-108003r32">2.9.32<!--tex4ht:ref: lm:intextoffen --></a>         offen,         damit         ist
+<!--l. 3994--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover></math>
+abgeschlossen.                                                                                                                           &#x25A1;
+</div>
+<div class="newtheorem">
+<!--l. 3996--><p class="noindent" ><span class="head">
+<a 
+ id="x109-108004r33"></a>
+<span 
+class="ptmb8t-x-x-120">Example 2.9.33.</span>  </span>Es sei <!--l. 3997--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>M</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x211D;</mi><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-bin">&sdot;</mo><mo 
+class="MathClass-rel">|</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+und <!--l. 3997--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo></mrow><mo 
+class="MathClass-close">]</mo></mrow> <mo 
+class="MathClass-bin">&minus;</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo> <mn>1</mn><mrow ><mo 
+class="MathClass-open">[</mo><mrow></math>.
+Dann ist <!--l. 3998--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&part;</mi><mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn><mo 
+class="MathClass-punc">,</mo> <mn>1</mn></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>
+und damit <!--l. 3998--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn><mo 
+class="MathClass-punc">,</mo> <mn>1</mn></mrow><mo 
+class="MathClass-close">]</mo></mrow></math>.
+                                                                                     
+                                                                                     
+</div>
+<!--l. 4000--><p class="noindent" >&#x00A0;
+<div class="newtheorem">
+<!--l. 4002--><p class="noindent" ><span class="head">
+<a 
+ id="x109-108005r34"></a>
+<span 
+class="ptmb8t-x-x-120">Example 2.9.34.</span>  </span>Es sei <!--l. 4003--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>M</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>&#x211D;</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+>
+<mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-bin">&sdot;</mo><mo 
+class="MathClass-rel">&#x2225;</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+und <!--l. 4003--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>,
+<!--l. 4004--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <msup><mrow 
+><mi 
+>&#x211D;</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></math>
+und <!--l. 4004--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>.
+Dann gilt <!--l. 4004--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&part;</mi><mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <msup><mrow 
+><mi 
+>&#x211D;</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>x</mi> <mo 
+class="MathClass-bin">&minus;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+>
+<mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-rel">=</mo> <mi 
+>&#x03B5;</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>
+und somit <!--l. 4005--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover accent="false" 
+class="mml-overline"><mrow><msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>0</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mo 
+accent="true">¯</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <msup><mrow 
+><mi 
+>&#x211D;</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-rel">&#x2225;</mo> <mi 
+>x</mi> <mo 
+class="MathClass-bin">&minus;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+>
+<mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-rel">&le;</mo> <mi 
+>&#x03B5;</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>.
+</div>
+<!--l. 4007--><p class="noindent" >&#x00A0;
+<div class="newtheorem">
+<!--l. 4009--><p class="noindent" ><span class="head">
+<a 
+ id="x109-108006r35"></a>
+<span 
+class="ptmb8t-x-x-120">Example 2.9.35.</span>  </span>Es sei <!--l. 4010--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>M</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x211D;</mi><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-bin">&sdot;</mo><mo 
+class="MathClass-rel">|</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+und <!--l. 4010--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&#x211A;</mi></math>.
+Dann ist <!--l. 4011--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&part;</mi><mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&#x211D;</mi></math>
+und damit <!--l. 4011--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&#x211D;</mi></math>.
+</div>
+<div class="newtheorem">
+<!--l. 4013--><p class="noindent" ><span class="head">
+<a 
+ id="x109-108007r36"></a>
+<span 
+class="ptmb8t-x-x-120">Theorem 2.9.36.</span>  </span><span 
+class="ptmri8t-x-x-120">Der Abschluss </span><!--l. 4014--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover></math>
+<span 
+class="ptmri8t-x-x-120">einer Menge </span><!--l. 4015--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math> <span 
+class="ptmri8t-x-x-120">ist die kleinste</span>
+<span 
+class="ptmri8t-x-x-120">abgeschlossene Menge </span><!--l. 4015--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>Y</mi> </math>
+<span 
+class="ptmri8t-x-x-120">mit der Eigenschaft </span><!--l. 4016--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>Y</mi> </math><span 
+class="ptmri8t-x-x-120">,</span>
+<span 
+class="ptmri8t-x-x-120">d.h.</span><table class="equation"><tr><td> <a 
+ id="x109-108008r53"></a>
+                                                                                     
+                                                                                     
+<!--l. 4016--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                            <mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo mathsize="big" 
+> &#x22C2;</mo>
+  </mrow><mrow 
+><mover 
+class="stackrel"><mrow 
+><mi 
+>Y</mi> <mspace width="0.3em" class="thinspace"/><mstyle 
+class="mbox"><mtext  >abgeschlossen</mtext></mstyle></mrow><mrow 
+><mrow> <mi 
+>Y</mi> <mo 
+class="MathClass-rel">&sub;</mo><mi 
+>M</mi><mspace width="0.3em" class="thinspace"/><mstyle 
+class="mbox"><mtext  >mit</mtext></mstyle><mspace width="0.3em" class="thinspace"/><mi 
+>X</mi><mo 
+class="MathClass-rel">&sub;</mo><mi 
+>Y</mi> <mspace width="0.3em" class="thinspace"/><mstyle 
+class="mbox"><mtext  >und</mtext></mstyle></mrow></mrow></mover></mrow></munder 
+><mi 
+>Y</mi><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(2.53)</td></tr></table>
+</div>
+<!--l. 4020--><p class="noindent" >
+<div class="proof">
+<!--l. 4021--><p class="noindent" ><span class="head">
+<span 
+class="ptmri8t-x-x-120">Beweis.</span> </span>Es sei <!--l. 4021--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>X</mi></mrow><mo 
+class="MathClass-op">&#x0303;</mo></mover></math>
+der Durchschnitt der abgeschlossenen Mengen <!--l. 4021--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>Y</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>M</mi></math>
+mit <!--l. 4022--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>Y</mi> </math>
+in (<a 
+href="#x109-108008r53">2.53<!--tex4ht:ref: eq:thmclose --></a>). Offensichtlich gilt <!--l. 4022--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>X</mi></mrow><mo 
+class="MathClass-op">&#x0303;</mo></mover> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>Y</mi> </math>
+für jede im Durschnitt vorkommende Menge <!--l. 4023--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>Y</mi> </math>.
+Da <!--l. 4023--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover></math>
+abgeschlossen ist und <!--l. 4024--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+enthält, so kann man u.a. <!--l. 4024--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>Y</mi> <mo 
+class="MathClass-rel">=</mo> <mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover></math>
+wählen, woraus sofort <!--l. 4025--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>X</mi></mrow><mo 
+class="MathClass-op">&#x0303;</mo></mover> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>Y</mi> <mo 
+class="MathClass-rel">=</mo> <mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover></math>
+folgt.
+<!--l. 4027--><p class="noindent" >Um die umgekehrte Inklusion zu zeigen, betrachten wir nun eine beliebige abgeschlossene
+Menge <!--l. 4028--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>Y</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>M</mi></math>
+mit <!--l. 4028--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>Y</mi> </math>.
+Nach Lemma <a 
+href="skriptsu77.html#x102-101005r4">2.9.4<!--tex4ht:ref: lm:x1x2acc --></a> folgt aus <!--l. 4029--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>Y</mi> </math>
+sofort <!--l. 4029--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="mbox"><mtext  >acc</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&sub;</mo><mstyle 
+class="mbox"><mtext  >Y</mtext></mstyle></math>
+und damit auch
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 4030--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                           <mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mi 
+>X</mi> <mo 
+class="MathClass-bin">&cup;</mo><mstyle 
+class="mbox"><mtext  >acc</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>Y</mi> <mo 
+class="MathClass-bin">&cup;</mo><mstyle 
+class="mbox"><mtext  >acc</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>Y</mi> </mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 4031--><p class="nopar" >                                                                                   Da
+<!--l. 4032--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>Y</mi> </math>
+abgeschlossen                         ist                         gilt                         nach                         (<a 
+href="skriptsu79.html#x104-103005r49">2.49<!--tex4ht:ref: eq:defclosedacc --></a>)
+<!--l. 4032--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="mbox"><mtext  >acc</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>Y</mi> </mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>Y</mi> </math>
+und damit
+<div class="math-display"><!--l. 4033--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                                <mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>Y</mi> <mo 
+class="MathClass-bin">&cup;</mo><mstyle 
+class="mbox"><mtext  >acc</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>Y</mi> </mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>Y</mi><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 4034--><p class="nopar" > Diese Inklusion gilt für jede Menge <!--l. 4035--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>Y</mi> </math>,
+über        welche        der        Durschnitt        in        (<a 
+href="#x109-108008r53">2.53<!--tex4ht:ref: eq:thmclose --></a>)        gebildet        wird,        woraus
+<!--l. 4036--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover> <mo 
+class="MathClass-rel">&sub;</mo><mover 
+accent="true"><mrow 
+><mi 
+>X</mi></mrow><mo 
+class="MathClass-op">&#x0303;</mo></mover></math>
+folgt.                                                                                                                                           &#x25A1;
+</div>
+<div class="newtheorem">
+<!--l. 4039--><p class="noindent" ><span class="head">
+<a 
+ id="x109-108009r37"></a>
+<span 
+class="ptmb8t-x-x-120">Corollary 2.9.37.</span>  </span><span 
+class="ptmri8t-x-x-120">Eine Menge </span><!--l. 4040--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="text"><mtext class="textrm" mathvariant="normal" >X</mtext></mstyle></math>
+<span 
+class="ptmri8t-x-x-120">ist genau dann abgeschlossen wenn</span><table class="equation"><tr><td> <a 
+ id="x109-108010r54"></a>
+                                                                                     
+                                                                                     
+<!--l. 4040--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                                       <mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo> <mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(2.54)</td></tr></table>
+</div>
+<!--l. 4044--><p class="noindent" >
+<div class="proof">
+<!--l. 4045--><p class="noindent" ><span class="head">
+<span 
+class="ptmri8t-x-x-120">Beweis.</span> </span>Aus (<a 
+href="#x109-108010r54">2.54<!--tex4ht:ref: eq:thmabggendwenn --></a>) folgt nach Satz <a 
+href="#x109-108002r31">2.9.31<!--tex4ht:ref: thm:xabgclosed --></a>, dass <!--l. 4046--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+abgeschlossen ist. Ist umgekehrt <!--l. 4046--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+abgeschlossen, so ist <!--l. 4047--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+selbst die kleinste abgeschlossene Menge welche <!--l. 4047--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+enthält, d.h. nach Satz <a 
+href="#x109-108007r36">2.9.36<!--tex4ht:ref: thm:kleinstclosed --></a> <!--l. 4048--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-rel">=</mo> <mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover></math>.
+                                                                                    &#x25A1;
+</div>
+<!--l. 4050--><p class="noindent" >Wir diskutieren nun eine alternative Beschreibung des Abschlusses einer Menge. Danach ist der
+Abschluss <!--l. 4051--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover></math>
+von <!--l. 4051--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>
+die Menge aller möglichen Grenzwerte von Folgen mit Elementen in
+<!--l. 4052--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>:
+<div class="newtheorem">
+<!--l. 4054--><p class="noindent" ><span class="head">
+<a 
+ id="x109-108011r38"></a>
+<span 
+class="ptmb8t-x-x-120">Theorem 2.9.38.</span>  </span>
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 4055--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                        <mi 
+>y</mi> <mo 
+class="MathClass-rel">&isin;</mo><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover><mspace width="1em" class="quad"/> <mo 
+class="MathClass-rel">&hArr;</mo><mspace width="1em" class="quad"/><msub><mrow 
+><mo 
+class="MathClass-op">&exist;</mo></mrow><mrow 
+><msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>&infin;</mi></mrow></msubsup 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>X</mi></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo class="qopname"> lim</mo> </mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">=</mo><mi 
+>&infin;</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 4056--><p class="nopar" >
+</div>
+<!--l. 4059--><p class="noindent" >
+<div class="proof">
+<!--l. 4060--><p class="noindent" ><span class="head">
+<span 
+class="ptmri8t-x-x-120">Beweis.</span> </span>Wir zeigen zunächst die Implikation <!--l. 4060--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mo 
+class="MathClass-rel">&lArr;</mo></math>.
+Angenommen <!--l. 4060--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi></math>
+sei der Grenzwert einer Folge von Elementen <!--l. 4061--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></math>
+aus <!--l. 4061--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi></math>.
+Ist dabei <!--l. 4062--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi></math>
+so folgt <!--l. 4062--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">&isin;</mo><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover></math>
+trivial. Es sei nun <!--l. 4062--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi><mo 
+class="MathClass-rel">&ne;</mo><mi 
+>X</mi></math>.
+Da es für jedes <!--l. 4063--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>
+ein <!--l. 4063--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>N</mi></math>
+existiert, so dass <!--l. 4063--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+für alle <!--l. 4064--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>k</mi> <mo 
+class="MathClass-rel">&ge;</mo> <mi 
+>N</mi></math>
+und <!--l. 4064--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi><mo 
+class="MathClass-rel">&ne;</mo><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi></math>,
+so ist der Durchschnitt <!--l. 4065--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&cap;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi> <mo 
+class="MathClass-bin">\</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>y</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+für beliebiges <!--l. 4065--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>
+nichtleer, d.h. <!--l. 4066--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">&isin;</mo><mstyle 
+class="mbox"><mtext  >acc</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+Aus <!--l. 4066--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="mbox"><mtext  >acc</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&sub;</mo><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover></math>
+folgt somit <!--l. 4067--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">&isin;</mo><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover></math>.
+<!--l. 4069--><p class="noindent" >Zum Nachweis der Implikation <!--l. 4069--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mo 
+class="MathClass-rel">&rArr;</mo></math>
+betrachten wir ein beliebiges Element <!--l. 4070--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">&isin;</mo><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover></math>.
+Gilt dabei <!--l. 4070--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi></math>,
+so erfüllt die konstante Folge <!--l. 4071--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mi 
+>y</mi></math>
+                                                                                     
+                                                                                     
+die Bedingungen des Satzes. Wegen <!--l. 4071--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>X</mi></mrow><mo 
+accent="true">¯</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mi 
+>X</mi> <mo 
+class="MathClass-bin">&cup;</mo><mstyle 
+class="mbox"><mtext  >acc</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+bleibt der Fall <!--l. 4072--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">&isin;</mo><mstyle 
+class="mbox"><mtext  >acc</mtext></mstyle><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>X</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+zu untersuchen. Dann ist für <!--l. 4073--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03B5;</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>k</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+></math>,
+<!--l. 4073--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>k</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi></math>,
+der Durchschnitt <!--l. 4073--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>X</mi> <mo 
+class="MathClass-bin">&cap;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>&#x03B5;</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+jeweils       nichtleer.       Wir       können       dann       eine       Folge       von       Elementen
+<!--l. 4074--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>X</mi> <mo 
+class="MathClass-bin">&cap;</mo> <msub><mrow 
+><mi 
+>U</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>&#x03B5;</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+wählen, welche offensichtlich gegen <!--l. 4075--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi></math>
+konvergiert.                                                                                                                                &#x25A1;
+</div>
+                                                                                     
+                                                                                     
+<!--l. 4078--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu83.html" >prev</a>] [<a 
+href="skriptsu83.html#tailskriptsu83.html" >prev-tail</a>] [<a 
+href="skriptsu84.html" >front</a>] [<a 
+href="skriptse21.html#skriptsu84.html" >up</a>] </p></div>
+<!--l. 4078--><p class="noindent" ><a 
+ id="tailskriptsu84.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu84.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:17 GMT -->
+</html> 

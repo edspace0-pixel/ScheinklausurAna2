@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu32.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:16 GMT -->
+<head><title>Die &#8220;Grosse&#8221; von Mengen.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 1470--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu33.html" >next</a>] [<a 
+href="#tailskriptsu32.html">tail</a>] [<a 
+href="skriptse10.html#skriptsu32.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">1.10.1</span>&#x00A0;&#x00A0;<a 
+ id="x45-440001.10.1"></a>Die &#8220;Grösse&#8221; von Mengen.</h4>
+<!--l. 1472--><p class="noindent" >Wir beschäftigen uns nun mit der Frage, wann zwei Mengen &#8220;gleich groß&#8221; sind, d.h. gleich viele
+Punkte enthalten. Schon das folgende Beispiel zeigt, dass diese anscheinend triviale Fragestellung
+eine eher subtiles Problem aufwirft:
+<div class="newtheorem">
+<!--l. 1477--><p class="noindent" ><span class="head">
+<a 
+ id="x45-44001r1"></a>
+                                                                                     
+                                                                                     
+<span 
+class="ptmb8t-x-x-120">Example 1.10.1.</span>  </span>Es sei <!--l. 1478--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi><mi 
+>B</mi><mi 
+>C</mi></math>
+ein Dreieck mit dem rechten Winkel bei <!--l. 1478--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>B</mi></math>.
+Jedem Punkt der Hypotenuse <!--l. 1479--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>A</mi><mi 
+>C</mi></mrow><mo 
+accent="true">¯</mo></mover></math>
+kann    durch    rechtwinklige    Projektion    eindeutig    einem    Punkt    auf    der    Kathete
+<!--l. 1480--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>A</mi><mi 
+>B</mi></mrow><mo 
+accent="true">¯</mo></mover></math>
+zugeordnet werden: Für jeden Punkt in <!--l. 1481--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>A</mi><mi 
+>C</mi></mrow><mo 
+accent="true">¯</mo></mover></math>
+gibt es genau einen entsprechenden Punkt in <!--l. 1482--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>A</mi><mi 
+>B</mi></mrow><mo 
+accent="true">¯</mo></mover></math>.
+Also      enthalten      Kathete      und      Hypotenuse      in      diesem      Sinne      gleichviel
+Punkte,    die    Mengen    sind    &#8220;gleich    groß&#8221;.    Andererseits    ist    (bei    nichttrivialem
+<!--l. 1484--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>B</mi><mi 
+>C</mi></mrow><mo 
+accent="true">¯</mo></mover></math>)
+die Hypotenuse stets länger als die Kathete.
+</div>
+<!--l. 1487--><p class="noindent" >Um den Begriff &#8220;gleich groß&#8221; zu konkretisieren, so diskutieren wir zunächst, was es bedeutet zu zählen.
+Wenn wir Objekte abzählen, so ordnen wir diesen (zumindest zeitweilig) eineindeutig die natürlichen Zahlen
+<!--l. 1490--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>1</mn><mo 
+class="MathClass-punc">,</mo> <mn>2</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi></math> zu. Wenn der Zählprozess
+bei <!--l. 1490--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi></math> abbricht, so sprechen
+wir von <!--l. 1491--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi></math> Objekten. Genauer
+gesagt: Eine Menge <!--l. 1491--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math>
+umfasst <!--l. 1492--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi></math> Elemente, wenn
+man die Menge <!--l. 1492--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math> bijektiv
+auf die Teilmenge <!--l. 1493--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mn>1</mn><mo 
+class="MathClass-punc">,</mo> <mn>2</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>
+der natürlichen Zahlen abbilden kann.
+<div class="newtheorem">
+<!--l. 1495--><p class="noindent" ><span class="head">
+<a 
+ id="x45-44002r2"></a>
+<span 
+class="ptmb8t-x-x-120">Problem 1.10.2.</span>  </span>Falls                                                eine                                                Menge
+<!--l. 1496--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math>
+bijektiv auf die Teilmenge
+<div class="math-display"><!--l. 1496--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                                   <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mn>1</mn><mo 
+class="MathClass-punc">,</mo> <mn>2</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>&#x2115;</mi>
+</mrow></math></div>
+                                                                                     
+                                                                                     
+<!--l. 1497--><p class="nopar" >                                                                                  mit
+<!--l. 1498--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi></math>
+abgebildet                          werden                          kann,                          so                          ist
+<!--l. 1498--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi></math>
+eindeutig bestimmt. Zeigen Sie dazu zunächst, dass es genau dann eine Bijektion zwischen
+den                                                                                                                                  Mengen
+<!--l. 1500--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mn>1</mn><mo 
+class="MathClass-punc">,</mo> <mn>2</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>
+und
+<!--l. 1500--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mn>1</mn><mo 
+class="MathClass-punc">,</mo> <mn>2</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>m</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>
+mit
+<!--l. 1501--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>m</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi></math>
+gibt,                                                                                                                                     wenn
+<!--l. 1501--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>m</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>n</mi></math>
+ist. Benutzen Sie dabei die Beweismethode der vollständigen Induktion.
+</div>
+<!--l. 1504--><p class="noindent" >Dieser Sachverhalt motiviert die folgende Definition:
+<div class="newtheorem">
+<!--l. 1506--><p class="noindent" ><span class="head">
+<a 
+ id="x45-44003r3"></a>
+<span 
+class="ptmb8t-x-x-120">Definition 1.10.3.</span>  </span>Zwei Mengen <!--l. 1507--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi></math>
+und <!--l. 1507--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>B</mi></math>
+heißen <span id="textcolor72"><span 
+class="ptmri8t-x-x-120">gleichm</span><span 
+class="ptmri8t-x-x-120">ä</span><span 
+class="ptmri8t-x-x-120">chtig</span></span> (auch <!--l. 1508--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi> <mo 
+class="MathClass-rel">&sim;</mo> <mi 
+>B</mi></math>),
+falls es eine bijektive Abbildung <!--l. 1508--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi> <mo 
+class="MathClass-punc">:</mo></math>
+<!--l. 1508--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <mi 
+>B</mi></math>
+gibt.
+</div>
+<!--l. 1511--><p class="noindent" >In unserem obigen Beispiel sind die Strecken <!--l. 1511--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>A</mi><mi 
+>B</mi></mrow><mo 
+accent="true">¯</mo></mover></math>
+und <!--l. 1512--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover accent="false" 
+class="mml-overline"><mrow><mi 
+>A</mi><mi 
+>C</mi></mrow><mo 
+accent="true">¯</mo></mover></math>
+gleichmächtig, aber nicht gleich lang.
+                                                                                     
+                                                                                     
+<!--l. 1515--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu33.html" >next</a>] [<a 
+href="skriptsu32.html" >front</a>] [<a 
+href="skriptse10.html#skriptsu32.html" >up</a>] </p></div>
+<!--l. 1515--><p class="noindent" ><a 
+ id="tailskriptsu32.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu32.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:16 GMT -->
+</html> 

@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu45.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:16 GMT -->
+<head><title>Polynome und der Hauptsatz der Algebra.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 2052--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu46.html" >next</a>] [<a 
+href="#tailskriptsu45.html">tail</a>] [<a 
+href="skriptse12.html#skriptsu45.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">1.12.1</span>&#x00A0;&#x00A0;<a 
+ id="x60-590001.12.1"></a>Polynome und der Hauptsatz der Algebra.</h4>
+<!--l. 2054--><p class="noindent" >Ein <span id="textcolor95"><span 
+class="ptmri8t-x-x-120">Polynom</span></span> über einem Körper <!--l. 2054--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>K</mi></math>
+ist eine Funktion <!--l. 2055--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>P</mi> <mo 
+class="MathClass-punc">:</mo> <mi 
+>K</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <mi 
+>K</mi></math>
+gegeben durch
+<div class="math-display"><!--l. 2055--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+          <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+>
+<mi 
+>n</mi><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msub 
+><msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <mo 
+class="MathClass-op">&hellip;</mo> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+>
+<mn>1</mn></mrow></msub 
+><mi 
+>z</mi> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>K</mi><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>z</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>K</mi><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>n</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi> <mo 
+class="MathClass-bin">&cup;</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mn>0</mn></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+                                                                                     
+                                                                                     
+<!--l. 2056--><p class="nopar" > Ist <!--l. 2057--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn></math> so
+ist <!--l. 2057--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>P</mi></math> vom
+<span id="textcolor96"><span 
+class="ptmri8t-x-x-120">Grad</span></span> <!--l. 2058--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi></math>, was
+wir durch <!--l. 2058--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo class="qopname"> deg</mo><!--nolimits--><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>P</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>n</mi></math>
+bezeichnen.
+<!--l. 2060--><p class="noindent" >Eine <span id="textcolor97"><span 
+class="ptmri8t-x-x-120">algebraische Gleichung</span></span> ist eine Gleichung vom Typ
+<div class="math-display"><!--l. 2061--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                                   <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>z</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>K</mi><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 2062--><p class="nopar" > Lösungen dieser Gleichungen heißen <span id="textcolor98"><span 
+class="ptmri8t-x-x-120">Nullstellen</span></span> von
+<!--l. 2064--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>P</mi><mo 
+class="MathClass-punc">.</mo></math> Polynome über
+dem Körper <!--l. 2064--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>K</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&#x211D;</mi></math>
+besitzen nicht notwendigerweise reelle Nullstellen, wie man leicht an der Gleichung
+<!--l. 2066--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <mn>1</mn> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn></math>,
+<!--l. 2066--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x211D;</mi></math>
+verifiziert. Der folgende Satz von Gauss, auch als <span 
+class="ptmri8t-x-x-120">Hauptsatz der Algebra </span>bekannt, gibt eine der
+grundsätzlichsten Motivationen zur Einführung der komplexen Zahlen:
+<div class="newtheorem">
+<!--l. 2070--><p class="noindent" ><span class="head">
+<a 
+ id="x60-59001r1"></a>
+<span 
+class="ptmb8t-x-x-120">Theorem 1.12.1.</span>  </span><span 
+class="ptmri8t-x-x-120">Jedes                           Polynom                           vom                           Grad</span>
+<!--l. 2071--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&ge;</mo> <mn>1</mn></math>
+<span 
+class="ptmri8t-x-x-120">ü</span><span 
+class="ptmri8t-x-x-120">ber                                                            dem                                                            K</span><span 
+class="ptmri8t-x-x-120">ö</span><span 
+class="ptmri8t-x-x-120">rper</span>
+<!--l. 2071--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>K</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&#x2102;</mi></math>
+<span 
+class="ptmri8t-x-x-120">der komplexen Zahlen besitzt mindestens eine komplexe Nullstelle.</span>
+</div>
+<!--l. 2074--><p class="noindent" >Der Beweis dieses Satzes wird später im Verlauf der Vorlesung geführt.
+<!--l. 2076--><p class="noindent" ><span id="textcolor99"><span 
+class="ptmri8t-x-x-120">Algebraische Zahlen</span></span> sind komplexe Nullstellen algebraischer Gleichungen mit ganzzahligen Koeffizienten
+<!--l. 2077--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2124;</mi></math>.
+                                                                                     
+                                                                                     
+Die Menge der algebraischen Zahlen besitzt die Mächtigkeit
+<!--l. 2078--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&alefsym;</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>.
+<span id="textcolor100"><span 
+class="ptmri8t-x-x-120">Transzendente Zahlen</span></span> sind reelle Zahlen, welche keine algebraische Zahlen
+sind.<span class="footnote-mark"><a 
+href="#fn13x1" id="fn13x1-bk"><sup class="textsuperscript">13</sup></a></span><a 
+ id="x60-59002f13"></a> Die transzendenten Zahlen
+besitzen die Mächtigkeit <!--l. 2082--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&alefsym;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math>.
+                                                                                     
+                                                                                     
+<div class="footnotes"><!--l. 2082--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn13x1-bk" id="fn13x1">
+<sup class="textsuperscript">13</sup></a></span><span 
+class="ptmr8t-">Beispiele f</span><span 
+class="ptmr8t-">ü</span><span 
+class="ptmr8t-">r transzendente Zahlen sind </span><!--l. 2082--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>e</mi></math>
+   <span 
+class="ptmr8t-">und </span><!--l. 2082--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&pi;</mi></math><span 
+class="ptmr8t-">.</span></div><!--l. 2085--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu46.html" >next</a>]
+[<a 
+href="skriptsu45.html" >front</a>] [<a 
+href="skriptse12.html#skriptsu45.html" >up</a>] </p></div>
+<!--l. 2085--><p class="noindent" ><a 
+ id="tailskriptsu45.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu45.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:16 GMT -->
+</html> 

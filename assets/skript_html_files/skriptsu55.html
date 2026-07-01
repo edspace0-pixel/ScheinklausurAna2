@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu55.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:16 GMT -->
+<head><title>Fundamentalfolgen und Vollstandigkeit.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 2517--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu56.html" >next</a>] [<a 
+href="skriptsu54.html" >prev</a>] [<a 
+href="skriptsu54.html#tailskriptsu54.html" >prev-tail</a>] [<a 
+href="#tailskriptsu55.html">tail</a>] [<a 
+href="skriptse14.html#skriptsu55.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">2.2.2</span>&#x00A0;&#x00A0;<a 
+ id="x73-720002.2.2"></a>Fundamentalfolgen und Vollständigkeit.</h4>
+<div class="newtheorem">
+<!--l. 2519--><p class="noindent" ><span class="head">
+<a 
+ id="x73-72001r6"></a>
+<span 
+class="ptmb8t-x-x-120">Definition 2.2.6.</span>  </span>In einem metrischen Raum <!--l. 2520--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>M</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+heißt eine Folge <!--l. 2520--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+></math>,
+<!--l. 2521--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>M</mi></math> für
+<!--l. 2521--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi></math>,
+<span id="textcolor111"><span 
+class="ptmri8t-x-x-120">Fundamentalfolge</span></span> oder <span id="textcolor112"><span 
+class="ptmri8t-x-x-120">Cauchy-Folge</span></span>, genau dann wenn folgende Aussage wahr ist:<table class="equation"><tr><td> <a 
+ id="x73-72002r10"></a>
+                                                                                     
+                                                                                     
+<!--l. 2523--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                       <msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>&#x03B5;</mi><mo 
+class="MathClass-rel">&#x003E;</mo><mn>0</mn><mo 
+class="MathClass-punc">,</mo><mi 
+>&#x03B5;</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x211D;</mi></mrow></msub 
+><msub><mrow 
+><mo 
+class="MathClass-op">&exist;</mo></mrow><mrow 
+><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+><msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>m</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi><mo 
+class="MathClass-rel">&ge;</mo><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mi 
+>m</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><mi 
+>d</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>m</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>&#x03B5;</mi><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(2.10)</td></tr></table>
+<!--l. 2525--><p class="noindent" >Wir schreiben in diesem Fall kurz <!--l. 2525--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>C</mi><mi 
+>F</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>M</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+.
+</div>
+<div class="newtheorem">
+<!--l. 2528--><p class="noindent" ><span class="head">
+<a 
+ id="x73-72003r7"></a>
+<span 
+class="ptmb8t-x-x-120">Theorem 2.2.7.</span>  </span><span 
+class="ptmri8t-x-x-120">In   einem   metrischen   Raum   ist   jede   konvergente   Folge   auch   eine</span>
+<span 
+class="ptmri8t-x-x-120">Fundamentalfolge.</span>
+</div>
+<!--l. 2531--><p class="noindent" >
+<div class="proof">
+<!--l. 2532--><p class="noindent" ><span class="head">
+<span 
+class="ptmri8t-x-x-120">Beweis.</span> </span>Aus <!--l. 2532--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mover 
+class="stackrel"><mrow 
+><mo 
+class="MathClass-rel">&rarr;</mo></mrow><mrow 
+><mrow> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>M</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></mrow></mover><mi 
+>y</mi></math>
+folgt für jedes <!--l. 2532--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B5;</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>
+die Existenz von <!--l. 2533--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi><mo 
+class="MathClass-bin">&#x2215;</mo><mn>2</mn></mrow></msub 
+></math>
+so dass <!--l. 2533--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>d</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x003C;</mo> <mfrac><mrow 
+><mi 
+>&#x03B5;</mi></mrow> 
+<mrow 
+><mn>2</mn></mrow></mfrac></math>
+für <!--l. 2534--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&ge;</mo> <msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi><mo 
+class="MathClass-bin">&#x2215;</mo><mn>2</mn></mrow></msub 
+></math>.
+Für beliebige <!--l. 2534--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>m</mi> <mo 
+class="MathClass-rel">&ge;</mo> <msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>&#x03B5;</mi><mo 
+class="MathClass-bin">&#x2215;</mo><mn>2</mn></mrow></msub 
+></math>
+gilt damit nach der Dreiecksungleichung (<a 
+href="skriptsu54.html#x72-71002r2.9">2.9<!--tex4ht:ref: def:metrR3 --></a>)
+<div class="math-display"><!--l. 2535--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+               <mi 
+>d</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>m</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&le;</mo> <mi 
+>d</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">+</mo> <mi 
+>d</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>y</mi><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>m</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>d</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">+</mo> <mi 
+>d</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>m</mi></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>&#x03B5;</mi><mo 
+class="MathClass-punc">,</mo>
+</mrow></math></div>
+                                                                                     
+                                                                                     
+<!--l. 2536--><p class="nopar" > also <!--l. 2537--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2115;</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>C</mi><mi 
+>F</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>M</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+                                                                                    &#x25A1;
+</div>
+<div class="newtheorem">
+<!--l. 2539--><p class="noindent" ><span class="head">
+<a 
+ id="x73-72004r8"></a>
+<span 
+class="ptmb8t-x-x-120">Definition 2.2.8.</span>  </span>Ein                                            metrischer                                            Raum
+<!--l. 2540--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>M</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+heißt                vollständig,                falls                jede                Cauchy-Folge                in
+<!--l. 2541--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>M</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+gegen                                    einen                                    Grenzwert                                    aus
+<!--l. 2541--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math>
+konvergiert.
+</div>
+<div class="newtheorem">
+<!--l. 2543--><p class="noindent" ><span class="head">
+<a 
+ id="x73-72005r9"></a>
+<span 
+class="ptmb8t-x-x-120">Example 2.2.9.</span>  </span>Der                                              metrische                                              Raum
+<!--l. 2544--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>Q</mi><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-bin">&sdot;</mo><mo 
+class="MathClass-rel">|</mo></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+ist nicht vollständig, betrachten Sie dazu das Beispiel aus Problem <a 
+href="skriptsu21.html#x31-30003r11">1.7.11<!--tex4ht:ref: prob:babwur --></a>.
+</div>
+<!--l. 2547--><p class="noindent" >Folgender Satz von <span id="textcolor113"><span 
+class="ptmri8t-x-x-120">Cauchy</span></span> spielt eine tragende Rolle in der Theorie der reellen Zahlen.
+<div class="newtheorem">
+<!--l. 2550--><p class="noindent" ><span class="head">
+<a 
+ id="x73-72006r10"></a>
+<span 
+class="ptmb8t-x-x-120">Theorem 2.2.10.</span>  </span><span 
+class="ptmri8t-x-x-120">Der                                             metrische                                             Raum</span>
+<!--l. 2551--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x211D;</mi><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-bin">&sdot;</mo><mo 
+class="MathClass-rel">|</mo></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+<span 
+class="ptmri8t-x-x-120">mit                               der                               euklidschen                               Abstandsfunktion</span>
+<!--l. 2552--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-bin">&sdot;</mo><mo 
+class="MathClass-rel">|</mo></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>y</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-rel">|</mo><mi 
+>x</mi> <mo 
+class="MathClass-bin">&minus;</mo> <mi 
+>y</mi><mo 
+class="MathClass-rel">|</mo></math>
+<span 
+class="ptmri8t-x-x-120">ist ein vollst</span><span 
+class="ptmri8t-x-x-120">ä</span><span 
+class="ptmri8t-x-x-120">ndiger metrischer Raum.</span>
+</div>
+<!--l. 2555--><p class="noindent" >Im verbleibenden Teil dieses Paragraphen widmen wir uns zunächst dem Beweis dieses
+Satzes.
+                                                                                     
+                                                                                     
+<!--l. 2559--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu56.html" >next</a>] [<a 
+href="skriptsu54.html" >prev</a>] [<a 
+href="skriptsu54.html#tailskriptsu54.html" >prev-tail</a>] [<a 
+href="skriptsu55.html" >front</a>] [<a 
+href="skriptse14.html#skriptsu55.html" >up</a>] </p></div>
+<!--l. 2559--><p class="noindent" ><a 
+ id="tailskriptsu55.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu55.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:16 GMT -->
+</html> 
