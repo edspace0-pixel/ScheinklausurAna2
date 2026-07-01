@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptse53.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:21 GMT -->
+<head><title>Ein analytischer Beweis des Hauptsatzes der Algebra</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 9785--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptse52.html" >prev</a>] [<a 
+href="skriptse52.html#tailskriptse52.html" >prev-tail</a>] [<a 
+href="#tailskriptse53.html">tail</a>] [<a 
+href="skriptch4.html#skriptse53.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">4.11</span>&#x00A0;&#x00A0;<a 
+ id="x250-2490004.11"></a>Ein analytischer Beweis des Hauptsatzes der Algebra</h3>
+<!--l. 9787--><p class="noindent" >Wir beweisen hier den im Punkt <a 
+href="skriptsu45.html#x60-590001.12.1">1.12.1<!--tex4ht:ref: subsec:hauptsatzalg --></a> formulierten Hauptsatz der Algebra:
+<div class="newtheorem">
+<!--l. 9790--><p class="noindent" ><span class="head">
+<span 
+class="ptmb8t-x-x-120">Theorem.</span>  </span><span 
+class="ptmri8t-x-x-120">Jedes                               Polynom                               vom                               Grad</span>
+<!--l. 9791--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&ge;</mo> <mn>1</mn></math>
+<span 
+class="ptmri8t-x-x-120">ü</span><span 
+class="ptmri8t-x-x-120">ber                                                            dem                                                            K</span><span 
+class="ptmri8t-x-x-120">ö</span><span 
+class="ptmri8t-x-x-120">rper</span>
+<!--l. 9791--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>K</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&#x2102;</mi></math>
+<span 
+class="ptmri8t-x-x-120">der komplexen Zahlen besitzt mindestens eine komplexe Nullstelle.</span>
+</div>
+<!--l. 9794--><p class="noindent" >Es sei
+<div class="math-display"><!--l. 9794--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+               <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <mo 
+class="MathClass-op">&hellip;</mo> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+>
+<mn>1</mn></mrow></msub 
+><mi 
+>x</mi> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2102;</mi><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2102;</mi><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>n</mi> <mo 
+class="MathClass-rel">&ge;</mo> <mn>1</mn><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 9795--><p class="nopar" > Wir müssen die Existenz eines Punktes <!--l. 9796--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2102;</mi></math>
+nachweisen, für welchen <!--l. 9797--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn></math>
+gilt. Dazu benötigen wir die folgenden zwei Hilfssätze.
+<div class="newtheorem">
+<!--l. 9800--><p class="noindent" ><span class="head">
+<a 
+ id="x250-249001r1"></a>
+                                                                                     
+                                                                                     
+<span 
+class="ptmb8t-x-x-120">Lemma 4.11.1.</span>  </span>
+<div class="math-display"><!--l. 9801--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                           <msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>M</mi><mo 
+class="MathClass-rel">&#x003E;</mo><mn>0</mn></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><msub><mrow 
+><mo 
+class="MathClass-op">&exist;</mo></mrow><mrow 
+><mi 
+>N</mi><mo 
+class="MathClass-rel">&#x003E;</mo><mn>0</mn></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>x</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2102;</mi><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-rel">|</mo><mi 
+>x</mi><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-rel">&#x003E;</mo><mi 
+>N</mi></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><mo 
+class="MathClass-rel">|</mo><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-rel">&ge;</mo> <mi 
+>M</mi><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 9802--><p class="nopar" >
+</div>
+<!--l. 9805--><p class="noindent" >&#x00A0;
+<div class="newtheorem">
+<!--l. 9807--><p class="noindent" ><span class="head">
+<a 
+ id="x250-249002r2"></a>
+<span 
+class="ptmb8t-x-x-120">Lemma 4.11.2.</span>  </span>
+<div class="math-display"><!--l. 9808--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                        <msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&lowast;</mo></mrow></msup 
+><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2102;</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&lowast;</mo></mrow></msup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">&ne;</mo><mn>0</mn></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><msub><mrow 
+><mo 
+class="MathClass-op">&exist;</mo></mrow><mrow 
+><mi 
+>h</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>&#x2102;</mi></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><mo 
+class="MathClass-rel">|</mo><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&lowast;</mo></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <mi 
+>h</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo> <mo 
+class="MathClass-rel">&#x003C;</mo> <mo 
+class="MathClass-rel">|</mo><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&lowast;</mo></mrow></msup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-rel">|</mo><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 9809--><p class="nopar" >
+</div>
+                                                                                     
+                                                                                     
+<!--l. 9813--><p class="noindent" >
+<div class="subsectionTOCS">
+&#x00A0;&#x00A0;<span class="subsectionToc" >4.11.1&#x00A0;&#x00A0;<a 
+href="skriptsu191.html#x251-2500004.11.1">Der Beweis des Hauptsatzes der Algebra.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.11.2&#x00A0;&#x00A0;<a 
+href="skriptsu192.html#x252-2510004.11.2">Der Beweis von Lemma 4.11.1.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >4.11.3&#x00A0;&#x00A0;<a 
+href="skriptsu193.html#x253-2520004.11.3">Der Beweis von Lemma 4.11.2.</a></span>
+</div>
+
+
+                                                                                     
+                                                                                     
+<div class="footnotes"></div> <!--l. 9904--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptse52.html" >prev</a>] [<a 
+href="skriptse52.html#tailskriptse52.html" >prev-tail</a>] [<a 
+href="skriptse53.html" >front</a>] [<a 
+href="skriptch4.html#skriptse53.html" >up</a>] </p></div>
+<!--l. 9904--><p class="noindent" ><a 
+ id="tailskriptse53.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptse53.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:21 GMT -->
+</html> 

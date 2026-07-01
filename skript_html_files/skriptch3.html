@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptch3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:18 GMT -->
+<head><title>3 Die Differentialrechnung von Funktionen einer Variablen</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 5572--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptch4.html" >next</a>] [<a 
+href="skriptch2.html" >prev</a>] [<a 
+href="skriptch2.html#tailskriptch2.html" >prev-tail</a>] [<a 
+href="#tailskriptch3.html">tail</a>] [<a 
+href="skript.html#skriptch3.html" >up</a>] </p></div>
+<h2 class="chapterHead"><span class="titlemark">3</span>&#x00A0;&#x00A0;<a 
+ id="x142-1410003"></a>Die Differentialrechnung von Funktionen einer Variablen</h2>
+<div class="sectionTOCS">
+&#x00A0;<span class="sectionToc" >3.1&#x00A0;&#x00A0;<a 
+href="skriptse28.html#x143-1420003.1">Zur Definition der Ableitung</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.1.1&#x00A0;&#x00A0;<a 
+href="skriptsu111.html#x144-1430003.1.1">Die Ableitung einer Funktion.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.1.2&#x00A0;&#x00A0;<a 
+href="skriptsu112.html#x145-1440003.1.2">Ableitungen in reellen und komplexen Variablen</a></span>
+<br />&#x00A0;&#x00A0;<span class="likesubsectionToc" ><a 
+href="skriptli2.html#x146-1450003.1.2">Diskussion der reellen und der komplexen Abbleitung.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.1.3&#x00A0;&#x00A0;<a 
+href="skriptsu113.html#x147-1460003.1.3">Eine geometrische Interpretation der Ableitung.</a></span>
+<br />&#x00A0;<span class="sectionToc" >3.2&#x00A0;&#x00A0;<a 
+href="skriptse29.html#x148-1470003.2">Die Landau-Symbole o und O. </a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.2.1&#x00A0;&#x00A0;<a 
+href="skriptsu114.html#x149-1480003.2.1">Die Definition der Landau-Symbole.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.2.2&#x00A0;&#x00A0;<a 
+href="skriptsu115.html#x150-1490003.2.2">Grundlegende Eigenschaften der Landau-Symbole.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.2.3&#x00A0;&#x00A0;<a 
+href="skriptsu116.html#x151-1500003.2.3">Einige          Beispiele          für          die          Symbole
+<!--l. 151--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>o</mi></math> und
+<!--l. 151--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>O</mi></math>.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.2.4&#x00A0;&#x00A0;<a 
+href="skriptsu117.html#x152-1510003.2.4">Einige Anwendungen der Landau-Symbolik.</a></span>
+<br />&#x00A0;<span class="sectionToc" >3.3&#x00A0;&#x00A0;<a 
+href="skriptse30.html#x153-1520003.3">Das Rechnen mit Ableitungen </a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.3.1&#x00A0;&#x00A0;<a 
+href="skriptsu118.html#x154-1530003.3.1">Linearität, Produkt- und Kettenregel.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.3.2&#x00A0;&#x00A0;<a 
+href="skriptsu119.html#x155-1540003.3.2">Die Quotientenregel.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.3.3&#x00A0;&#x00A0;<a 
+href="skriptsu120.html#x156-1550003.3.3">Die Ableitung impliziter Funktionen.</a></span>
+<br />&#x00A0;<span class="sectionToc" >3.4&#x00A0;&#x00A0;<a 
+href="skriptse31.html#x157-1560003.4">Die Ableitungen einiger wichtiger Funktionen</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.4.1&#x00A0;&#x00A0;<a 
+href="skriptsu121.html#x158-1570003.4.1">Polynome    und    negativ    ganzzahlige    Potenzen    von
+<!--l. 158--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi></math>.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.4.2&#x00A0;&#x00A0;<a 
+href="skriptsu122.html#x159-1580003.4.2">Die Exponential- und die Winkelfunktionen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.4.3&#x00A0;&#x00A0;<a 
+href="skriptsu123.html#x160-1590003.4.3">Zur Ableitung der Logarithmusfunktion.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.4.4&#x00A0;&#x00A0;<a 
+href="skriptsu124.html#x161-1600003.4.4">Die Umkehrfunktionen der trigonometrischen Funktionen.</a></span>
+<br />&#x00A0;<span class="sectionToc" >3.5&#x00A0;&#x00A0;<a 
+href="skriptse32.html#x162-1610003.5">Die Sätze von Fermat und Rolle. Die Formeln von Cauchy und Lagandre.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.5.1&#x00A0;&#x00A0;<a 
+href="skriptsu125.html#x163-1620003.5.1">Der Satz von Fermat.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.5.2&#x00A0;&#x00A0;<a 
+href="skriptsu126.html#x164-1630003.5.2">Der Satz von Rolle.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.5.3&#x00A0;&#x00A0;<a 
+href="skriptsu127.html#x165-1640003.5.3">Die Formel von Cauchy.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.5.4&#x00A0;&#x00A0;<a 
+href="skriptsu128.html#x166-1650003.5.4">Die Formel von Lagrange.</a></span>
+                                                                                     
+                                                                                     
+<br />&#x00A0;<span class="sectionToc" >3.6&#x00A0;&#x00A0;<a 
+href="skriptse33.html#x167-1660003.6">Der Hauptsatz der Differentialrechnung</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.6.1&#x00A0;&#x00A0;<a 
+href="skriptsu129.html#x168-1670003.6.1">Formulierung des Satzes.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.6.2&#x00A0;&#x00A0;<a 
+href="skriptsu130.html#x169-1680003.6.2">Beweis - Schritt 1. </a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.6.3&#x00A0;&#x00A0;<a 
+href="skriptsu131.html#x170-1690003.6.3">Beweis - Schritt 2.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.6.4&#x00A0;&#x00A0;<a 
+href="skriptsu132.html#x171-1700003.6.4">Beweis - Schritt 3.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.6.5&#x00A0;&#x00A0;<a 
+href="skriptsu133.html#x172-1710003.6.5">Beweis - Schritt 4.</a></span>
+<br />&#x00A0;<span class="sectionToc" >3.7&#x00A0;&#x00A0;<a 
+href="skriptse34.html#x173-1720003.7">Ableitungen höherer Ordnung. Die Formel von Leibniz.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.7.1&#x00A0;&#x00A0;<a 
+href="skriptsu134.html#x174-1730003.7.1">Ableitungen höherer Ordnung.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.7.2&#x00A0;&#x00A0;<a 
+href="skriptsu135.html#x175-1740003.7.2">Der Satz von Leibniz.</a></span>
+<br />&#x00A0;<span class="sectionToc" >3.8&#x00A0;&#x00A0;<a 
+href="skriptse35.html#x176-1750003.8">Der Satz von Taylor</a></span>
+<br />&#x00A0;<span class="sectionToc" >3.9&#x00A0;&#x00A0;<a 
+href="skriptse36.html#x177-1760003.9">Das Differential einer Funktion</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.9.1&#x00A0;&#x00A0;<a 
+href="skriptsu136.html#x178-1770003.9.1">Das Differential erster Ordnung.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.9.2&#x00A0;&#x00A0;<a 
+href="skriptsu137.html#x179-1780003.9.2">Differentiale höherer Ordnung.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.9.3&#x00A0;&#x00A0;<a 
+href="skriptsu138.html#x180-1790003.9.3">Die Invarianz des Differentials erster Ordnung.</a></span>
+<br />&#x00A0;<span class="sectionToc" >3.10&#x00A0;&#x00A0;<a 
+href="skriptse37.html#x181-1800003.10">Monotonie und Extremwerte von Funktionen</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.10.1&#x00A0;&#x00A0;<a 
+href="skriptsu139.html#x182-1810003.10.1">Konstante Funktionen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.10.2&#x00A0;&#x00A0;<a 
+href="skriptsu140.html#x183-1820003.10.2">Monotone Funktionen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.10.3&#x00A0;&#x00A0;<a 
+href="skriptsu141.html#x184-1830003.10.3">Zu den Extremwerten einer Funktion.</a></span>
+<br />&#x00A0;<span class="sectionToc" >3.11&#x00A0;&#x00A0;<a 
+href="skriptse38.html#x185-1840003.11">Konvexe und konkave Funktionen</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.11.1&#x00A0;&#x00A0;<a 
+href="skriptsu142.html#x186-1850003.11.1">Definition und äquivalente Beschreibungen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.11.2&#x00A0;&#x00A0;<a 
+href="skriptsu143.html#x187-1860003.11.2">Differenzierbare konkave und konvexe Funktionen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.11.3&#x00A0;&#x00A0;<a 
+href="skriptsu144.html#x188-1870003.11.3">Wendepunkte von Funktionen.</a></span>
+<br />&#x00A0;<span class="sectionToc" >3.12&#x00A0;&#x00A0;<a 
+href="skriptse39.html#x189-1880003.12">Die    Auflösung    von    Unbestimmtheiten    vom    Typ
+<!--l. 189--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>0</mn><mo 
+class="MathClass-bin">&#x2215;</mo><mn>0</mn></math> und
+<!--l. 189--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&infin;</mi><mo 
+class="MathClass-bin">&#x2215;</mo><mi 
+>&infin;</mi></math></a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.12.1&#x00A0;&#x00A0;<a 
+href="skriptsu145.html#x190-1890003.12.1">Unbestimmtheiten                        vom                        Typ
+<!--l. 190--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>0</mn><mo 
+class="MathClass-bin">&#x2215;</mo><mn>0</mn></math>.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.12.2&#x00A0;&#x00A0;<a 
+href="skriptsu146.html#x191-1900003.12.2">Unbestimmtheiten                        vom                        Typ
+<!--l. 191--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&infin;</mi><mo 
+class="MathClass-bin">&#x2215;</mo><mi 
+>&infin;</mi></math>.</a></span>
+<br />&#x00A0;<span class="sectionToc" >3.13&#x00A0;&#x00A0;<a 
+href="skriptse40.html#x192-1910003.13">Weitere Anwendungen zur Kurvendiskussion</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.13.1&#x00A0;&#x00A0;<a 
+href="skriptsu147.html#x193-1920003.13.1">Die Normale und die Tangente einer Kurve.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.13.2&#x00A0;&#x00A0;<a 
+href="skriptsu148.html#x194-1930003.13.2">Die Differentiation parametrischer Darstellungen von Kurven.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.13.3&#x00A0;&#x00A0;<a 
+href="skriptsu149.html#x195-1940003.13.3">Geradlinige Asymptoten.</a></span>
+                                                                                     
+                                                                                     
+<br />&#x00A0;<span class="sectionToc" >3.14&#x00A0;&#x00A0;<a 
+href="skriptse41.html#x196-1950003.14">Der Satz von Darboux</a></span>
+<br />&#x00A0;<span class="sectionToc" >3.15&#x00A0;&#x00A0;<a 
+href="skriptse42.html#x197-1960003.15">Nullstellenberechnung</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.15.1&#x00A0;&#x00A0;<a 
+href="skriptsu150.html#x198-1970003.15.1">Die Regula falsi.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >3.15.2&#x00A0;&#x00A0;<a 
+href="skriptsu151.html#x199-1980003.15.2">Das Newtonsche Verfahren. </a></span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                     
+                                                                                     
+<!--l. 7581--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptch4.html" >next</a>] [<a 
+href="skriptch2.html" >prev</a>] [<a 
+href="skriptch2.html#tailskriptch2.html" >prev-tail</a>] [<a 
+href="skriptch3.html" >front</a>] [<a 
+href="skript.html#skriptch3.html" >up</a>] </p></div>
+<!--l. 7581--><p class="noindent" ><a 
+ id="tailskriptch3.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptch3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:18 GMT -->
+</html> 

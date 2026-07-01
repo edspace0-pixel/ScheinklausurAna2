@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptch1.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:14 GMT -->
+<head><title>1 Einige Grundbegriffe der Mathematik</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 93--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptch2.html" >next</a>] [<a 
+href="skriptli1.html" >prev</a>] [<a 
+href="skriptli1.html#tailskriptli1.html" >prev-tail</a>] [<a 
+href="#tailskriptch1.html">tail</a>] [<a 
+href="skript.html#skriptch1.html" >up</a>] </p></div>
+<h2 class="chapterHead"><span class="titlemark">1</span>&#x00A0;&#x00A0;<a 
+ id="x3-20001"></a>Einige Grundbegriffe der Mathematik</h2>
+<div class="sectionTOCS">
+&#x00A0;<span class="sectionToc" >1.1&#x00A0;&#x00A0;<a 
+href="skriptse1.html#x4-30001.1">Einige Bezeichnungen aus der Aussagenlogik</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.1.1&#x00A0;&#x00A0;<a 
+href="skriptsu1.html#x5-40001.1.1">Mathematische Aussagen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.1.2&#x00A0;&#x00A0;<a 
+href="skriptsu2.html#x6-50001.1.2">Logische Gesetze. </a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.1.3&#x00A0;&#x00A0;<a 
+href="skriptsu3.html#x7-60001.1.3">Der All- und der Existenzquantor.</a></span>
+<br />&#x00A0;<span class="sectionToc" >1.2&#x00A0;&#x00A0;<a 
+href="skriptse2.html#x8-70001.2">Der Begriff der Menge</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.2.1&#x00A0;&#x00A0;<a 
+href="skriptsu4.html#x9-80001.2.1">Der naive Mengenbegriff . </a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.2.2&#x00A0;&#x00A0;<a 
+href="skriptsu5.html#x10-90001.2.2">Operationen mit Mengen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.2.3&#x00A0;&#x00A0;<a 
+href="skriptsu6.html#x11-100001.2.3">Zur Widersprüchlichkeit des naiven Mengenbegriffes.</a></span>
+<br />&#x00A0;<span class="sectionToc" >1.3&#x00A0;&#x00A0;<a 
+href="skriptse3.html#x12-110001.3">Relationen und Äquivalenzquotienten</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.3.1&#x00A0;&#x00A0;<a 
+href="skriptsu7.html#x13-120001.3.1">Der Begriff der Relation.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.3.2&#x00A0;&#x00A0;<a 
+href="skriptsu8.html#x14-130001.3.2">Äquivalenzrelationen und Äquivalenzklassen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.3.3&#x00A0;&#x00A0;<a 
+href="skriptsu9.html#x15-140001.3.3">Äquivalenzquotienten und Zerlegungen von Mengen.</a></span>
+<br />&#x00A0;<span class="sectionToc" >1.4&#x00A0;&#x00A0;<a 
+href="skriptse4.html#x16-150001.4">Abbildungen und Funktionen</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.4.1&#x00A0;&#x00A0;<a 
+href="skriptsu10.html#x17-160001.4.1">Funktionen als Spezialfall von Relationen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.4.2&#x00A0;&#x00A0;<a 
+href="skriptsu11.html#x18-170001.4.2">Kompositionen von Relationen und Funktionen.</a></span>
+<br />&#x00A0;<span class="sectionToc" >1.5&#x00A0;&#x00A0;<a 
+href="skriptse5.html#x19-180001.5">Geordnete Mengen</a></span>
+<br />&#x00A0;<span class="sectionToc" >1.6&#x00A0;&#x00A0;<a 
+href="skriptse6.html#x20-190001.6">Die natürlichen Zahlen</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.6.1&#x00A0;&#x00A0;<a 
+href="skriptsu12.html#x21-200001.6.1">Axiomensystem von Peano</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.6.2&#x00A0;&#x00A0;<a 
+href="skriptsu13.html#x22-210001.6.2">Einführung    von    Addition    und    Multiplikation    auf
+<!--l. 22--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x2115;</mi></math> </a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.6.3&#x00A0;&#x00A0;<a 
+href="skriptsu14.html#x23-220001.6.3">Einführung         von         Vergleichsrelationen         auf
+<!--l. 23--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x2115;</mi></math></a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.6.4&#x00A0;&#x00A0;<a 
+href="skriptsu15.html#x24-230001.6.4">Herleitung elementarer Eigenschaften von Addition und Multiplikation</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.6.5&#x00A0;&#x00A0;<a 
+href="skriptsu16.html#x25-240001.6.5">Eine Eigenschaft der Vergleichsrelationen auf den natürlichen Zahlen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.6.6&#x00A0;&#x00A0;<a 
+href="skriptsu17.html#x26-250001.6.6">Die ganzen und die rationalen Zahlen. </a></span>
+<br />&#x00A0;<span class="sectionToc" >1.7&#x00A0;&#x00A0;<a 
+href="skriptse7.html#x27-260001.7">Die reellen Zahlen</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.7.1&#x00A0;&#x00A0;<a 
+href="skriptsu18.html#x28-270001.7.1">Der Absolutbetrag rationaler Zahlen. </a></span>
+                                                                                     
+                                                                                     
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.7.2&#x00A0;&#x00A0;<a 
+href="skriptsu19.html#x29-280001.7.2">Folgen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.7.3&#x00A0;&#x00A0;<a 
+href="skriptsu20.html#x30-290001.7.3">Der Grenzwert rationaler Folgen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.7.4&#x00A0;&#x00A0;<a 
+href="skriptsu21.html#x31-300001.7.4">Fundamentalfolgen rationaler Zahlen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.7.5&#x00A0;&#x00A0;<a 
+href="skriptsu22.html#x32-310001.7.5">Die reellen Zahlen.</a></span>
+<br />&#x00A0;<span class="sectionToc" >1.8&#x00A0;&#x00A0;<a 
+href="skriptse8.html#x33-320001.8">Operationen auf den reellen Zahlen</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.8.1&#x00A0;&#x00A0;<a 
+href="skriptsu23.html#x34-330001.8.1">Die Addition der reellen Zahlen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.8.2&#x00A0;&#x00A0;<a 
+href="skriptsu24.html#x35-340001.8.2">Die Multiplikation der reellen Zahlen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.8.3&#x00A0;&#x00A0;<a 
+href="skriptsu25.html#x36-350001.8.3">Die Vergleichsrelationen auf den reellen Zahlen</a></span>
+<br />&#x00A0;<span class="sectionToc" >1.9&#x00A0;&#x00A0;<a 
+href="skriptse9.html#x37-360001.9">Das Axiomensystem der reellen Zahlen</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.9.1&#x00A0;&#x00A0;<a 
+href="skriptsu26.html#x38-370001.9.1">Die                          algebraische                          Struktur:
+<!--l. 38--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x211D;</mi></math>
+ist ein <span 
+class="ptmri8t-x-x-120">K</span><span 
+class="ptmri8t-x-x-120">ö</span><span 
+class="ptmri8t-x-x-120">rper</span>.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.9.2&#x00A0;&#x00A0;<a 
+href="skriptsu27.html#x39-380001.9.2">Die                                                         Ordnungsstruktur:
+<!--l. 39--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x211D;</mi></math>
+ist ein <span 
+class="ptmri8t-x-x-120">vollst</span><span 
+class="ptmri8t-x-x-120">ä</span><span 
+class="ptmri8t-x-x-120">ndig geordneter K</span><span 
+class="ptmri8t-x-x-120">ö</span><span 
+class="ptmri8t-x-x-120">rper</span>.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.9.3&#x00A0;&#x00A0;<a 
+href="skriptsu28.html#x40-390001.9.3">Die         topologische         Struktur:         Die         Menge
+<!--l. 40--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x211D;</mi></math>
+genügt dem <span 
+class="ptmri8t-x-x-120">Intervallschachtelungsaxiom</span> (<span 
+class="ptmri8t-x-x-120">Vollst</span><span 
+class="ptmri8t-x-x-120">ä</span><span 
+class="ptmri8t-x-x-120">ndigkeitsaxiom</span>).</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.9.4&#x00A0;&#x00A0;<a 
+href="skriptsu29.html#x41-400001.9.4">Das                  Axiom                  von                  Eudoxus:
+<!--l. 41--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x211D;</mi></math>
+ist <span 
+class="ptmri8t-x-x-120">archimedisch geordnet</span>.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.9.5&#x00A0;&#x00A0;<a 
+href="skriptsu30.html#x42-410001.9.5">Zur                           Beziehung                           zwischen
+<!--l. 42--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x211A;</mi></math> und
+<!--l. 42--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x211D;</mi></math>.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.9.6&#x00A0;&#x00A0;<a 
+href="skriptsu31.html#x43-420001.9.6">Der Absolutbetrag einer reellen Zahl.</a></span>
+<br />&#x00A0;<span class="sectionToc" >1.10&#x00A0;&#x00A0;<a 
+href="skriptse10.html#x44-430001.10">Die Kardinalzahlen. Abzählbarkeit und Überabzählbarkeit von Mengen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.10.1&#x00A0;&#x00A0;<a 
+href="skriptsu32.html#x45-440001.10.1">Die &#8220;Grösse&#8221; von Mengen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.10.2&#x00A0;&#x00A0;<a 
+href="skriptsu33.html#x46-450001.10.2">Die Kardinalzahlen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.10.3&#x00A0;&#x00A0;<a 
+href="skriptsu34.html#x47-460001.10.3">Vergleichsrelationen zwischen den Kardinalzahlen</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.10.4&#x00A0;&#x00A0;<a 
+href="skriptsu35.html#x48-470001.10.4">Was ist endlich und unendlich?</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.10.5&#x00A0;&#x00A0;<a 
+href="skriptsu36.html#x49-480001.10.5">Finite Kardinalzahlen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.10.6&#x00A0;&#x00A0;<a 
+href="skriptsu37.html#x50-490001.10.6">Transfinite Kardinalzahlen. Abzählbare Mengen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.10.7&#x00A0;&#x00A0;<a 
+href="skriptsu38.html#x51-500001.10.7">Transfinite Kardinalzahlen. überabzählbare Mengen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.10.8&#x00A0;&#x00A0;<a 
+href="skriptsu39.html#x52-510001.10.8">Die Kontinuumshypothese.</a></span>
+                                                                                     
+                                                                                     
+<br />&#x00A0;<span class="sectionToc" >1.11&#x00A0;&#x00A0;<a 
+href="skriptse11.html#x53-520001.11">Die komplexen Zahlen</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.11.1&#x00A0;&#x00A0;<a 
+href="skriptsu40.html#x54-530001.11.1">Der Körper der komplexen Zahlen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.11.2&#x00A0;&#x00A0;<a 
+href="skriptsu41.html#x55-540001.11.2">Reelle und imaginäre Zahlen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.11.3&#x00A0;&#x00A0;<a 
+href="skriptsu42.html#x56-550001.11.3">Wichtige Eigenschaften der komplexen Zahlen.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.11.4&#x00A0;&#x00A0;<a 
+href="skriptsu43.html#x57-560001.11.4">Die Multiplikation komplexer Zahlen in den Polarkoordinaten.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.11.5&#x00A0;&#x00A0;<a 
+href="skriptsu44.html#x58-570001.11.5">Einige elementare Funktionen einer komplexen Veränderlichen.</a></span>
+<br />&#x00A0;<span class="sectionToc" >1.12&#x00A0;&#x00A0;<a 
+href="skriptse12.html#x59-580001.12">Zur Faktorisierung von Polynomen</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.12.1&#x00A0;&#x00A0;<a 
+href="skriptsu45.html#x60-590001.12.1">Polynome und der Hauptsatz der Algebra.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.12.2&#x00A0;&#x00A0;<a 
+href="skriptsu46.html#x61-600001.12.2">Zur Faktorisierung von Polynomen mit komplexen Koeffizienten.</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >1.12.3&#x00A0;&#x00A0;<a 
+href="skriptsu47.html#x62-610001.12.3">Zur Faktorisierung von Polynomen mit reellen Koeffizienten.</a></span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                                                                                     
+                                                                                     
+<!--l. 2205--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptch2.html" >next</a>] [<a 
+href="skriptli1.html" >prev</a>] [<a 
+href="skriptli1.html#tailskriptli1.html" >prev-tail</a>] [<a 
+href="skriptch1.html" >front</a>] [<a 
+href="skript.html#skriptch1.html" >up</a>] </p></div>
+<!--l. 2205--><p class="noindent" ><a 
+ id="tailskriptch1.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptch1.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:14 GMT -->
+</html> 

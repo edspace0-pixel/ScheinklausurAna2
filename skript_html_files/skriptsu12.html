@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu12.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:15 GMT -->
+<head><title>Axiomensystem von Peano</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 748--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu13.html" >next</a>] [<a 
+href="#tailskriptsu12.html">tail</a>] [<a 
+href="skriptse6.html#skriptsu12.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">1.6.1</span>&#x00A0;&#x00A0;<a 
+ id="x21-200001.6.1"></a>Axiomensystem von Peano</h4>
+<!--l. 750--><p class="noindent" >Es gibt unterschiedliche äquivalente Möglichkeiten, die verschiedenen Zahlensysteme einzuführen. So
+kann man z.B. in einem Axiomensystem die gewünschten Eigenschaften postulieren. Für die natürlichen
+Zahlen <!--l. 753--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x2115;</mi></math>
+spielt folgendes Axiomensystem eine besondere Rolle:
+<div class="newtheorem">
+<!--l. 755--><p class="noindent" ><span class="head">
+<a 
+ id="x21-20001r1"></a>
+                                                                                     
+                                                                                     
+<span 
+class="ptmb8t-x-x-120">Definition 1.6.1.</span>  </span>(Axiomensystem von Peano) Eine Menge
+<!--l. 756--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x2115;</mi></math> heißt
+Menge der <span id="textcolor50"><span 
+class="ptmri8t-x-x-120">nat</span><span 
+class="ptmri8t-x-x-120">ü</span><span 
+class="ptmri8t-x-x-120">rlichen Zahlen</span></span>, wenn sie folgende Eigenschaften erfüllt:
+      <ol  class="enumerate1" >
+      <li 
+  class="enumerate" id="x21-20003x1">(P1) <!--l. 760--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>1</mn> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>&#x2115;</mi></math>.
+      (Existenzaxiom: Die Menge der natürlichen Zahlen ist nicht leer.)
+      </li>
+      <li 
+  class="enumerate" id="x21-20005x2">(P2) Zu jeder natürlichen Zahl <!--l. 762--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi></math>
+      gibt es genau eine natürliche Zahl <!--l. 763--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>n</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+></math>,
+      die wir <span id="textcolor51"><span 
+class="ptmri8t-x-x-120">Nachfolger</span></span> von <!--l. 764--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi></math>
+      nennen (Existenz des Nachfolgers).
+      </li>
+      <li 
+  class="enumerate" id="x21-20007x3">(P3) <!--l. 765--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>1</mn></math>
+      ist  nicht  Nachfolger  einer  anderen  natürlichen  Zahl  (Existenz  von  unendlich  vielen
+      natürlichen Zahlen).
+      </li>
+      <li 
+  class="enumerate" id="x21-20009x4">(P4) Aus <!--l. 767--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>n</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>m</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+></math>
+      folgt stets <!--l. 767--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>m</mi></math>
+      (Eindeutigkeit des Vorgängers).
+      </li>
+      <li 
+  class="enumerate" id="x21-20011x5">(P5) Besitzt <!--l. 769--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>&#x2115;</mi></math>
+      die beiden Eigenschaften
+      <!--tex4ht:inline--><!--l. 769--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1"> <mstyle 
+class="mbox"><mtext  >(a)</mtext></mstyle><mspace width="1em" class="quad"/></mtd><mtd 
+class="eqnarray-2">           <mn>1</mn> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>M</mi><mo 
+class="MathClass-punc">,</mo>     </mtd><mtd 
+class="eqnarray-3">   </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mstyle 
+class="mbox"><mtext  >(b)</mtext></mstyle><mspace width="1em" class="quad"/></mtd><mtd 
+class="eqnarray-2">    <msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>M</mi></mrow></msub 
+><mspace width="0.3em" class="thinspace"/><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>n</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>M</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo></mtd><mtd 
+class="eqnarray-3">   </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                                                      </mtr></mtable>
+</math>
+      <!--l. 771--><p class="nopar" >
+      so gilt <!--l. 772--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&#x2115;</mi></math>
+                                                                                     
+                                                                                     
+      (Prinzip der vollständigen Induktion).</li></ol>
+</div>
+<!--l. 775--><p class="noindent" >Man bezeichnet die natürlichen Zahlen nun der Reihe nach durch
+<!--l. 775--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>1</mn></math>,
+<!--l. 776--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mn>1</mn></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo><mo 
+class="MathClass-punc">:</mo> <mn>2</mn></math>,
+<!--l. 776--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mn>2</mn></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo><mo 
+class="MathClass-punc">:</mo> <mn>3</mn></math> usw.
+Nach (P5) werden dabei alle natürlichen Zahlen erfasst.
+<!--l. 779--><p class="noindent" >Folgende Eigenschaften eines Axiomensystems sind für jede axiomatische Einführung von
+Strukturen wesentlich:
+<!--l. 782--><p class="noindent" ><span id="textcolor52"><span 
+class="ptmri8t-x-x-120">Vollst</span><span 
+class="ptmri8t-x-x-120">ä</span><span 
+class="ptmri8t-x-x-120">ndigkeit</span></span>: Die angegebenen Axiome reichen zur vollständigen Charakterisierung (der
+Eigenschaften) des Systems aus.
+<!--l. 786--><p class="noindent" ><span id="textcolor53"><span 
+class="ptmri8t-x-x-120">Unabh</span><span 
+class="ptmri8t-x-x-120">ä</span><span 
+class="ptmri8t-x-x-120">ngigkeit</span></span>: Keines der Axiome lässt sich aus den übrigen herleiten.
+<!--l. 789--><p class="noindent" ><span id="textcolor54"><span 
+class="ptmri8t-x-x-120">Widerspruchsfreiheit</span></span>: Die angegebenen Axiome widersprechen einander nicht.
+<!--l. 792--><p class="noindent" >Das Axiom (P5) erlaubt uns, mit Hilfe der Induktion zu definieren bzw. Sätze
+zu beweisen. Dabei wird zunächst im <span id="textcolor55"><span 
+class="ptmri8t-x-x-120">Induktionsanfang</span></span> (IA) der Beweis für
+<!--l. 794--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn></math> geführt bzw. die Definition für
+<!--l. 794--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn></math> gegeben. Im <span id="textcolor56"><span 
+class="ptmri8t-x-x-120">Induktionsschritt</span></span>
+(IS) wird dann vom Fall <!--l. 796--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi></math>
+ausgehend der Fall <!--l. 796--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>n</mi></mrow><mrow 
+><mi 
+>&prime;</mi></mrow></msup 
+></math>
+bewiesen bzw. definiert
+                                                                                     
+                                                                                     
+<!--l. 800--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu13.html" >next</a>] [<a 
+href="skriptsu12.html" >front</a>] [<a 
+href="skriptse6.html#skriptsu12.html" >up</a>] </p></div>
+<!--l. 800--><p class="noindent" ><a 
+ id="tailskriptsu12.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu12.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:15 GMT -->
+</html> 

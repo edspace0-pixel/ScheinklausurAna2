@@ -1,0 +1,968 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu5.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:15 GMT -->
+<head><title>Operationen mit Mengen.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 374--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu6.html" >next</a>] [<a 
+href="skriptsu4.html" >prev</a>] [<a 
+href="skriptsu4.html#tailskriptsu4.html" >prev-tail</a>] [<a 
+href="#tailskriptsu5.html">tail</a>] [<a 
+href="skriptse2.html#skriptsu5.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">1.2.2</span>&#x00A0;&#x00A0;<a 
+ id="x10-90001.2.2"></a>Operationen mit Mengen.</h4>
+<!--l. 376--><p class="noindent" >Die Menge <!--l. 376--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>B</mi></math> ist eine <span id="textcolor16"><span 
+class="ptmri8t-x-x-120">Teilmenge</span></span>
+oder <span id="textcolor17"><span 
+class="ptmri8t-x-x-120">Untermenge</span></span> von <!--l. 377--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi></math>,
+kurz <!--l. 377--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>B</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>A</mi></math>, falls alle
+Elemente von <!--l. 378--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>B</mi></math> auch
+Elemente von <!--l. 378--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi></math>
+sind. Diese Definition kann man kurz wie folgt schreiben. Falls
+<!--l. 379--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>B</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>A</mi></math> und
+<!--l. 379--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>B</mi><mo 
+class="MathClass-rel">&ne;</mo><mi 
+>A</mi></math> so ist
+<!--l. 380--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>B</mi></math> eine <span id="textcolor18"><span 
+class="ptmri8t-x-x-120">echte</span>
+<span 
+class="ptmri8t-x-x-120">Teilmenge</span></span> von <!--l. 381--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi></math>.
+<div class="newtheorem">
+<!--l. 383--><p class="noindent" ><span class="head">
+<a 
+ id="x10-9001r3"></a>
+<span 
+class="ptmb8t-x-x-120">Problem 1.2.3.</span>  </span>Zeigen Sie, dass
+<div class="math-display"><!--l. 385--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                           <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>A</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>B</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&hArr;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>A</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>B</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&and;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>B</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>A</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 385--><p class="nopar" >
+</div>
+<!--l. 388--><p class="noindent" >Die <span id="textcolor19"><span 
+class="ptmri8t-x-x-120">leere Menge</span></span> <!--l. 388--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&empty;</mi> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>A</mi><mo 
+class="MathClass-rel">|</mo><mi 
+>x</mi><mo 
+class="MathClass-rel">&notin;</mo><mi 
+>A</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow></math> ist eine
+Teilmenge jeder Menge <!--l. 389--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi></math>.
+                                                                                     
+                                                                                     
+<!--l. 391--><p class="noindent" >Für zwei Mengen <!--l. 391--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi></math>
+und <!--l. 391--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>B</mi></math>
+definieren wir die Operationen des <span id="textcolor20"><span 
+class="ptmri8t-x-x-120">Durchschnitts</span></span>, der <span id="textcolor21"><span 
+class="ptmri8t-x-x-120">Vereinigung</span></span> und der <span id="textcolor22"><span 
+class="ptmri8t-x-x-120">Differenz</span></span> wie
+folgt
+<!--tex4ht:inline--><!--l. 393--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1"> <mi 
+>A</mi> <mo 
+class="MathClass-bin">&cap;</mo> <mi 
+>B</mi></mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-punc">:</mo><mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">  <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>x</mi><mo 
+class="MathClass-rel">|</mo><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>A</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&and;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>B</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">,</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mi 
+>A</mi> <mo 
+class="MathClass-bin">&cup;</mo> <mi 
+>B</mi></mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-punc">:</mo><mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">  <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>x</mi><mo 
+class="MathClass-rel">|</mo><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>A</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&or;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>B</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">,</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mi 
+>A</mi> <mo 
+class="MathClass-bin">\</mo> <mi 
+>B</mi></mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-punc">:</mo><mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">  <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>x</mi><mo 
+class="MathClass-rel">|</mo><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>A</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&and;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi><mo 
+class="MathClass-rel">&notin;</mo><mi 
+>B</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">.</mo> </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                                </mtr></mtable>
+</math>
+<!--l. 396--><p class="nopar" >
+Falls <!--l. 397--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi> <mo 
+class="MathClass-bin">&cap;</mo> <mi 
+>B</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&empty;</mi></math>, so nennt
+man die Mengen <!--l. 397--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi></math>
+und <!--l. 397--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>B</mi></math>
+<span 
+class="ptmri8t-x-x-120">disjunkt</span>.
+<div class="newtheorem">
+<!--l. 400--><p class="noindent" ><span class="head">
+<a 
+ id="x10-9003r4"></a>
+<span 
+class="ptmb8t-x-x-120">Problem 1.2.4.</span>  </span>Beweisen Sie die <span 
+class="ptmri8t-x-x-120">Kommutativit</span><span 
+class="ptmri8t-x-x-120">ä</span><span 
+class="ptmri8t-x-x-120">t</span>
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 401--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                           <mi 
+>A</mi> <mo 
+class="MathClass-bin">&cap;</mo> <mi 
+>B</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>B</mi> <mo 
+class="MathClass-bin">&cap;</mo> <mi 
+>A</mi><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>A</mi> <mo 
+class="MathClass-bin">&cup;</mo> <mi 
+>B</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>B</mi> <mo 
+class="MathClass-bin">&cup;</mo> <mi 
+>A</mi><mo 
+class="MathClass-punc">,</mo>
+</mrow></math></div>
+<!--l. 402--><p class="nopar" > die <span 
+class="ptmri8t-x-x-120">Distributivit</span><span 
+class="ptmri8t-x-x-120">ä</span><span 
+class="ptmri8t-x-x-120">t</span>
+<div class="math-display"><!--l. 403--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+         <mi 
+>A</mi> <mo 
+class="MathClass-bin">&cap;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>B</mi> <mo 
+class="MathClass-bin">&cup;</mo> <mi 
+>C</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>A</mi> <mo 
+class="MathClass-bin">&cap;</mo> <mi 
+>B</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&cup;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>A</mi> <mo 
+class="MathClass-bin">&cap;</mo> <mi 
+>C</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>A</mi> <mo 
+class="MathClass-bin">&cup;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>B</mi> <mo 
+class="MathClass-bin">&cap;</mo> <mi 
+>C</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>A</mi> <mo 
+class="MathClass-bin">&cup;</mo> <mi 
+>B</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&cap;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>A</mi> <mo 
+class="MathClass-bin">&cup;</mo> <mi 
+>C</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo>
+</mrow></math></div>
+<!--l. 404--><p class="nopar" > die <span 
+class="ptmri8t-x-x-120">Assoziativit</span><span 
+class="ptmri8t-x-x-120">ä</span><span 
+class="ptmri8t-x-x-120">t</span>
+<div class="math-display"><!--l. 405--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+               <mi 
+>A</mi> <mo 
+class="MathClass-bin">&cap;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>B</mi> <mo 
+class="MathClass-bin">&cap;</mo> <mi 
+>C</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>A</mi> <mo 
+class="MathClass-bin">&cap;</mo> <mi 
+>B</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&cap;</mo> <mi 
+>C</mi><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>A</mi> <mo 
+class="MathClass-bin">&cup;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>B</mi> <mo 
+class="MathClass-bin">&cup;</mo> <mi 
+>C</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>A</mi> <mo 
+class="MathClass-bin">&cup;</mo> <mi 
+>B</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&cup;</mo> <mi 
+>C</mi>
+</mrow></math></div>
+<!--l. 406--><p class="nopar" > sowie die <span 
+class="ptmri8t-x-x-120">Idempotenz</span>
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 407--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                                <mi 
+>A</mi> <mo 
+class="MathClass-bin">&cap;</mo> <mi 
+>A</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>A</mi><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>A</mi> <mo 
+class="MathClass-bin">&cup;</mo> <mi 
+>A</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>A</mi>
+</mrow></math></div>
+<!--l. 408--><p class="nopar" > dieser Operationen.
+</div>
+<!--l. 411--><p class="noindent" >Falls <!--l. 411--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>M</mi></math> so ist die
+Menge <!--l. 411--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+> <mo 
+class="MathClass-rel">=</mo> <mi 
+>M</mi> <mo 
+class="MathClass-bin">\</mo> <mi 
+>A</mi></math> das
+<span id="textcolor23"><span 
+class="ptmri8t-x-x-120">Komplement</span></span> von <!--l. 412--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi></math>
+in <!--l. 412--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>M</mi></math>.
+<div class="newtheorem">
+<!--l. 414--><p class="noindent" ><span class="head">
+<a 
+ id="x10-9004r5"></a>
+<span 
+class="ptmb8t-x-x-120">Problem 1.2.5.</span>  </span>Beweisen Sie das <span id="textcolor24"><span 
+class="ptmri8t-x-x-120">de Morgansche</span></span> <span 
+class="ptmri8t-x-x-120">Gesetz</span>
+<div class="math-display"><!--l. 415--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                 <msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>A</mi> <mo 
+class="MathClass-bin">&cap;</mo> <mi 
+>B</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+> <mo 
+class="MathClass-rel">=</mo> <msubsup><mrow 
+><mi 
+>A</mi></mrow><mrow 
+>
+<mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+> <mo 
+class="MathClass-bin">&cup;</mo> <msubsup><mrow 
+><mi 
+>B</mi></mrow><mrow 
+>
+<mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>A</mi> <mo 
+class="MathClass-bin">&cup;</mo> <mi 
+>B</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+>
+<mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+> <mo 
+class="MathClass-rel">=</mo> <msubsup><mrow 
+><mi 
+>A</mi></mrow><mrow 
+>
+<mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+> <mo 
+class="MathClass-bin">&cap;</mo> <msubsup><mrow 
+><mi 
+>B</mi></mrow><mrow 
+>
+<mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+><mo 
+class="MathClass-punc">,</mo>
+</mrow></math></div>
+<!--l. 416--><p class="nopar" > wobei <!--l. 417--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>M</mi></math>
+und <!--l. 417--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>B</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>M</mi></math>.
+</div>
+                                                                                     
+                                                                                     
+<!--l. 419--><p class="noindent" >Es sei <!--l. 419--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>K</mi></math> in eine beliebige
+Indexmenge. Mit jedem Index <!--l. 419--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&kappa;</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>K</mi></math>
+sei eine Menge <!--l. 420--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>&kappa;</mi></mrow></msub 
+></math> eines
+Mengensystems <!--l. 420--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mrow ><mo 
+class="MathClass-open">{</mo><mrow><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>&kappa;</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">}</mo></mrow></mrow><mrow 
+><mi 
+>&kappa;</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>K</mi></mrow></msub 
+></math>
+verknüpft. Wir definieren
+<div class="math-display"><!--l. 421--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+            <munder class="msub"><mrow 
+><mo mathsize="big" 
+>&#x22C3;</mo>
+  </mrow><mrow 
+><mi 
+>&kappa;</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>K</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>&kappa;</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>x</mi><mo 
+class="MathClass-rel">|</mo><msub><mrow 
+><mo 
+class="MathClass-op">&exist;</mo></mrow><mrow 
+><mi 
+>&kappa;</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>K</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>&kappa;</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><munder class="msub"><mrow 
+><mo mathsize="big" 
+>&#x22C2;</mo>
+  </mrow><mrow 
+><mi 
+>&kappa;</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>K</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>&kappa;</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>x</mi><mo 
+class="MathClass-rel">|</mo><msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>&kappa;</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>K</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>&kappa;</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 422--><p class="nopar" >
+<div class="newtheorem">
+<!--l. 425--><p class="noindent" ><span class="head">
+<a 
+ id="x10-9005r6"></a>
+<span 
+class="ptmb8t-x-x-120">Problem 1.2.6.</span>  </span>Zeigen Sie die Verallgemeinerung des Distributivgesetzes
+<div class="math-display"><!--l. 426--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+        <mi 
+>B</mi> <mo 
+class="MathClass-bin">&cap;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><munder class="msub"><mrow 
+><mo mathsize="big" 
+>&#x22C3;</mo>
+  </mrow><mrow 
+><mi 
+>&kappa;</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>K</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>&kappa;</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo mathsize="big" 
+> &#x22C3;</mo>
+  </mrow><mrow 
+><mi 
+>&kappa;</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>K</mi></mrow></munder 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>B</mi> <mo 
+class="MathClass-bin">&cap;</mo> <msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>&kappa;</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><mi 
+>B</mi> <mo 
+class="MathClass-bin">&cup;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><munder class="msub"><mrow 
+><mo mathsize="big" 
+>&#x22C2;</mo>
+  </mrow><mrow 
+><mi 
+>&kappa;</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>K</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>&kappa;</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo mathsize="big" 
+> &#x22C2;</mo>
+  </mrow><mrow 
+><mi 
+>&kappa;</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>K</mi></mrow></munder 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>B</mi> <mo 
+class="MathClass-bin">&cup;</mo> <msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>&kappa;</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo>
+</mrow></math></div>
+<!--l. 427--><p class="nopar" > und des de Morganschen Gesetzes
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 428--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+            <msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><munder class="msub"><mrow 
+><mo mathsize="big" 
+>&#x22C3;</mo>
+  </mrow><mrow 
+><mi 
+>&kappa;</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>K</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>&kappa;</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo mathsize="big" 
+> &#x22C2;</mo>
+  </mrow><mrow 
+><mi 
+>&kappa;</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>K</mi></mrow></munder 
+><msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>&kappa;</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><munder class="msub"><mrow 
+><mo mathsize="big" 
+>&#x22C2;</mo>
+  </mrow><mrow 
+><mi 
+>&kappa;</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>K</mi></mrow></munder 
+><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>&kappa;</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+> <mo 
+class="MathClass-rel">=</mo><munder class="msub"><mrow 
+><mo mathsize="big" 
+> &#x22C3;</mo>
+  </mrow><mrow 
+><mi 
+>&kappa;</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>K</mi></mrow></munder 
+><msubsup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>&kappa;</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msubsup 
+><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 429--><p class="nopar" >
+</div>
+<!--l. 432--><p class="noindent" >Das  <span id="textcolor25"><span 
+class="ptmri8t-x-x-120">Kreuzprodukt</span></span>  bzw.  das  <span id="textcolor26"><span 
+class="ptmri8t-x-x-120">kartesische  Produkt</span></span>
+<!--l. 433--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi> <mo 
+class="MathClass-bin">&#x00D7;</mo> <mi 
+>B</mi></math> zweier
+Mengen <!--l. 433--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi></math> und
+<!--l. 433--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>B</mi></math> ist die Menge der
+geordneten Paare<span class="footnote-mark"><a 
+href="#fn2x1" id="fn2x1-bk"><sup class="textsuperscript">2</sup></a></span><a 
+ id="x10-9006f2"></a>
+<!--l. 436--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> mit
+<!--l. 436--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>a</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>A</mi></math> und
+<!--l. 436--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>b</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>B</mi></math>. Desweiteren
+setzt man <!--l. 436--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <mi 
+>A</mi> <mo 
+class="MathClass-bin">&#x00D7;</mo> <mi 
+>A</mi></math>,
+<!--l. 437--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mn>3</mn></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+> <mo 
+class="MathClass-bin">&#x00D7;</mo> <mi 
+>A</mi></math> usw. Dann besteht
+<!--l. 437--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msup 
+></math> aus der Menge aller
+geordneten <!--l. 438--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi></math>-Tupel
+<!--l. 438--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-op">&hellip;</mo><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+                                                                                     
+                                                                                     
+<div class="footnotes"><!--l. 436--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn2x1-bk" id="fn2x1">
+<sup class="textsuperscript">2</sup></a></span><span 
+class="ptmr8t-">F</span><span 
+class="ptmr8t-">ü</span><span 
+class="ptmr8t-">r geordnete Paare gilt </span><!--l. 436--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>b</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>b</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mspace width="2.22198pt" class="tmspace"/> <mo 
+class="MathClass-rel">&hArr;</mo><mspace width="2.22198pt" class="tmspace"/><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&and;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>b</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>b</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math><span 
+class="ptmr8t-">.</span></div><!--l. 441--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu6.html" >next</a>]
+[<a 
+href="skriptsu4.html" >prev</a>] [<a 
+href="skriptsu4.html#tailskriptsu4.html" >prev-tail</a>] [<a 
+href="skriptsu5.html" >front</a>] [<a 
+href="skriptse2.html#skriptsu5.html" >up</a>] </p></div>
+<!--l. 441--><p class="noindent" ><a 
+ id="tailskriptsu5.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu5.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:15 GMT -->
+</html> 

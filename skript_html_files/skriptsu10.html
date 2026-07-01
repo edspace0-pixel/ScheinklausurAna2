@@ -1,0 +1,680 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu10.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:15 GMT -->
+<head><title>Funktionen als Spezialfall von Relationen.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 585--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu11.html" >next</a>] [<a 
+href="#tailskriptsu10.html">tail</a>] [<a 
+href="skriptse4.html#skriptsu10.html" >up</a>] </p></div>
+<h4 class="subsectionHead"><span class="titlemark">1.4.1</span>&#x00A0;&#x00A0;<a 
+ id="x17-160001.4.1"></a>Funktionen als Spezialfall von Relationen.</h4>
+<!--l. 587--><p class="noindent" >Eine <span id="textcolor36"><span 
+class="ptmri8t-x-x-120">Funktion</span></span> <!--l. 587--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math>
+zwischen <!--l. 587--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi></math> und
+<!--l. 588--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>B</mi></math> ist eine (nach)eindeutige
+Relation <!--l. 588--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mi 
+>f</mi></mrow></msub 
+></math> zwischen
+den Mengen <!--l. 589--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi></math>
+und <!--l. 589--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>B</mi></math> und man
+schreibt <!--l. 589--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>a</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>b</mi></math> falls
+<!--l. 589--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>a</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&isin;</mo> <msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mi 
+>f</mi></mrow></msub 
+></math>.<span class="footnote-mark"><a 
+href="#fn3x1" id="fn3x1-bk"><sup class="textsuperscript">3</sup></a></span><a 
+ id="x17-16001f3"></a>
+Desweiteren definiert man
+                                                                                     
+                                                                                     
+<!--tex4ht:inline--><!--l. 594--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1">         <mstyle 
+class="mbox"><mtext  >den&#x00A0;&#x00A0;Definitionsbereich</mtext></mstyle></mtd><mtd 
+class="eqnarray-2">  </mtd><mtd 
+class="eqnarray-3">  <mi 
+>D</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-punc">:</mo><mo 
+class="MathClass-rel">=</mo> <mi 
+>V</mi> <mi 
+>b</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mi 
+>f</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mstyle 
+class="mbox"><mtext  >den&#x00A0;&#x00A0;Wertevorrat&#x00A0;&#x00A0;(Wertebereich)</mtext></mstyle></mtd><mtd 
+class="eqnarray-2">  </mtd><mtd 
+class="eqnarray-3">  <mi 
+>N</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-punc">:</mo><mo 
+class="MathClass-rel">=</mo> <mi 
+>N</mi><mi 
+>b</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mi 
+>f</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                </mtr></mtable>
+</math>
+<!--l. 596--><p class="nopar" >
+Es seien <!--l. 597--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math> und
+<!--l. 597--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>g</mi></math> Funktionen
+zwischen <!--l. 597--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi></math>
+und <!--l. 597--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>B</mi></math>.
+Dann gilt
+<div class="math-display"><!--l. 597--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+              <mi 
+>f</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>g</mi><mspace width="1em" class="quad"/> <mo 
+class="MathClass-rel">&hArr;</mo><mspace width="1em" class="quad"/><msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mi 
+>f</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mi 
+>g</mi></mrow></msub 
+><mspace width="1em" class="quad"/> <mo 
+class="MathClass-rel">&hArr;</mo><mspace width="1em" class="quad"/><mi 
+>D</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>D</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>g</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&and;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>a</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>D</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></msub 
+><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>a</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>g</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>a</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 598--><p class="nopar" >
+<!--l. 601--><p class="noindent" >Man nennt <!--l. 601--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math>
+auch eine Funktion
+                                                                                     
+                                                                                     
+<!--tex4ht:inline--><!--l. 601--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1">  <mstyle 
+class="mbox"><mtext  >aus</mtext></mstyle><mspace width="2.66638pt" class="tmspace"/><mi 
+>A</mi><mspace width="2.66638pt" class="tmspace"/><mstyle 
+class="mbox"><mtext  >in</mtext></mstyle><mspace width="2.66638pt" class="tmspace"/><mi 
+>B</mi></mtd><mtd 
+class="eqnarray-2">  <mspace width="1em" class="quad"/><mstyle 
+class="mbox"><mtext  >falls</mtext></mstyle><mspace width="1em" class="quad"/></mtd><mtd 
+class="eqnarray-3">  <mi 
+>D</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>A</mi> <mo 
+class="MathClass-bin">&and;</mo> <mi 
+>W</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>B</mi><mo 
+class="MathClass-punc">,</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mstyle 
+class="mbox"><mtext  >aus</mtext></mstyle><mspace width="2.66638pt" class="tmspace"/><mi 
+>A</mi><mspace width="2.66638pt" class="tmspace"/><mstyle 
+class="mbox"><mtext  >auf&#x00A0;</mtext></mstyle><mspace width="2.66638pt" class="tmspace"/><mi 
+>B</mi></mtd><mtd 
+class="eqnarray-2">  <mspace width="1em" class="quad"/><mstyle 
+class="mbox"><mtext  >falls</mtext></mstyle><mspace width="1em" class="quad"/></mtd><mtd 
+class="eqnarray-3">  <mi 
+>D</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>A</mi> <mo 
+class="MathClass-bin">&and;</mo> <mi 
+>W</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>B</mi><mo 
+class="MathClass-punc">,</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1">  <mstyle 
+class="mbox"><mtext  >von</mtext></mstyle><mspace width="2.66638pt" class="tmspace"/><mi 
+>A</mi><mspace width="2.66638pt" class="tmspace"/><mstyle 
+class="mbox"><mtext  >in</mtext></mstyle><mspace width="2.66638pt" class="tmspace"/><mi 
+>B</mi></mtd><mtd 
+class="eqnarray-2">  <mspace width="1em" class="quad"/><mstyle 
+class="mbox"><mtext  >falls</mtext></mstyle><mspace width="1em" class="quad"/></mtd><mtd 
+class="eqnarray-3">  <mi 
+>D</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>A</mi> <mo 
+class="MathClass-bin">&and;</mo> <mi 
+>W</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>B</mi><mo 
+class="MathClass-punc">,</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mstyle 
+class="mbox"><mtext  >von</mtext></mstyle><mspace width="2.66638pt" class="tmspace"/><mi 
+>A</mi><mspace width="2.66638pt" class="tmspace"/><mstyle 
+class="mbox"><mtext  >auf&#x00A0;</mtext></mstyle><mspace width="2.66638pt" class="tmspace"/><mi 
+>B</mi></mtd><mtd 
+class="eqnarray-2">  <mspace width="1em" class="quad"/><mstyle 
+class="mbox"><mtext  >falls</mtext></mstyle><mspace width="1em" class="quad"/></mtd><mtd 
+class="eqnarray-3">  <mi 
+>D</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>A</mi> <mo 
+class="MathClass-bin">&and;</mo> <mi 
+>W</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>B</mi><mo 
+class="MathClass-punc">.</mo> </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                          </mtr></mtable>
+</math>
+<!--l. 605--><p class="nopar" >
+Die Bezeichnung
+<div class="math-display"><!--l. 606--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                                      <mi 
+>f</mi> <mo 
+class="MathClass-punc">:</mo> <mi 
+>A</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <mi 
+>B</mi>
+</mrow></math></div>
+<!--l. 607--><p class="nopar" > bedeutet, dass <!--l. 608--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math>
+eine Funktion <span 
+class="ptmri8t-x-x-120">von </span><!--l. 608--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi></math>
+<span 
+class="ptmri8t-x-x-120">in </span><!--l. 609--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>B</mi></math> ist. Eine
+solche Funktion <!--l. 609--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi> <mo 
+class="MathClass-punc">:</mo> <mi 
+>A</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <mi 
+>B</mi></math>
+heisst auch
+                                                                                     
+                                                                                     
+<!--tex4ht:inline--><!--l. 609--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1">  <mstyle 
+class="mbox"><mtext  >injektiv</mtext></mstyle></mtd><mtd 
+class="eqnarray-2">  <mstyle 
+class="mbox"><mtext  >falls</mtext></mstyle></mtd><mtd 
+class="eqnarray-3">  <msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mi 
+>f</mi></mrow></msub 
+><mspace width="2.66638pt" class="tmspace"/><mstyle 
+class="mbox"><mtext  >voreindeutig&#x00A0;&#x00A0;ist</mtext></mstyle><mo 
+class="MathClass-punc">,</mo>       </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mstyle 
+class="mbox"><mtext  >surjektiv</mtext></mstyle></mtd><mtd 
+class="eqnarray-2">  <mstyle 
+class="mbox"><mtext  >falls</mtext></mstyle></mtd><mtd 
+class="eqnarray-3">  <mi 
+>W</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>B</mi><mo 
+class="MathClass-punc">,</mo>               </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1">  <mstyle 
+class="mbox"><mtext  >bijektiv</mtext></mstyle></mtd><mtd 
+class="eqnarray-2">  <mstyle 
+class="mbox"><mtext  >falls</mtext></mstyle></mtd><mtd 
+class="eqnarray-3">  <mi 
+>f</mi><mspace width="2.66638pt" class="tmspace"/><mstyle 
+class="mbox"><mtext  >injektiv&#x00A0;&#x00A0;und&#x00A0;&#x00A0;surjektiv&#x00A0;&#x00A0;ist.</mtext></mstyle></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                          </mtr></mtable>
+</math>
+<!--l. 612--><p class="nopar" >
+Es sei <!--l. 613--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi> <mo 
+class="MathClass-punc">:</mo> <mi 
+>A</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <mi 
+>B</mi></math>
+eine bijektive Funktion. Dann ist damit eine <span id="textcolor42"><span 
+class="ptmri8t-x-x-120">inverse</span></span> Funktion
+<!--l. 614--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+> <mo 
+class="MathClass-punc">:</mo> <mi 
+>B</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <mi 
+>A</mi></math> assoziiert, welche durch
+die inverse Relation <!--l. 615--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msubsup 
+></math>
+gegeben ist, d.h.
+<div class="math-display"><!--l. 616--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                               <msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>a</mi><mspace width="1em" class="quad"/> <mo 
+class="MathClass-rel">&hArr;</mo><mspace width="1em" class="quad"/><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>a</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>b</mi><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 617--><p class="nopar" >
+<div class="newtheorem">
+<!--l. 620--><p class="noindent" ><span class="head">
+<a 
+ id="x17-16005r1"></a>
+<span 
+class="ptmb8t-x-x-120">Problem 1.4.1.</span>  </span>Überprüfen                  Sie                  dass                  die                  Inverse
+<!--l. 621--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+></math>
+einer                                                        bijektiven                                                        Funktion
+<!--l. 622--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math>
+selbst bijektiv ist, und dass
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 622--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                                     <msup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+> <mo 
+class="MathClass-rel">=</mo> <mi 
+>f</mi>
+</mrow></math></div>
+<!--l. 623--><p class="nopar" > gilt.
+</div>
+<!--l. 626--><p class="noindent" >Für <!--l. 626--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi> <mo 
+class="MathClass-punc">:</mo> <mi 
+>A</mi> <mo 
+class="MathClass-rel">&rarr;</mo> <mi 
+>B</mi></math> sowie für
+gegebene <!--l. 626--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>A</mi></math> und
+<!--l. 627--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>B</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>B</mi></math> definiert man das
+<span id="textcolor43"><span 
+class="ptmri8t-x-x-120">Bild</span></span> <!--l. 628--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> und das
+<span id="textcolor44"><span 
+class="ptmri8t-x-x-120">Urbild</span></span> <!--l. 628--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>B</mi></mrow><mrow 
+>
+<mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>dieser
+Mengen wie folgt
+<!--tex4ht:inline--><!--l. 629--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1">   <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-punc">:</mo><mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">  <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>b</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>B</mi><mo 
+class="MathClass-rel">|</mo><msub><mrow 
+><mo 
+class="MathClass-op">&exist;</mo></mrow><mrow 
+><mi 
+>a</mi><mo 
+class="MathClass-rel">&isin;</mo><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow></msub 
+><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>a</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>b</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">,</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>B</mi></mrow><mrow 
+>
+<mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mtd><mtd 
+class="eqnarray-2">  <mo 
+class="MathClass-punc">:</mo><mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">  <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>a</mi> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>A</mi><mo 
+class="MathClass-rel">|</mo><msub><mrow 
+><mo 
+class="MathClass-op">&exist;</mo></mrow><mrow 
+><mi 
+>b</mi><mo 
+class="MathClass-rel">&isin;</mo><msub><mrow 
+><mi 
+>B</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow></msub 
+><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>a</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>b</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">.</mo></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                                              </mtr></mtable>
+</math>
+<!--l. 631--><p class="nopar" >
+Damit ist das Urbild einer Menge selbst dann definiert, wenn die Funktion
+<!--l. 633--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math> nicht injektiv ist und damit
+keine inverse Funktion <!--l. 634--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&minus;</mo><mn>1</mn></mrow></msup 
+></math>
+zu <!--l. 634--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>f</mi></math>
+existiert.
+                                                                                     
+                                                                                     
+                                                                                     
+                                                                                     
+<div class="footnotes"><!--l. 594--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn3x1-bk" id="fn3x1">
+<sup class="textsuperscript">3</sup></a></span><span 
+class="ptmr8t-">Anstelle von Funktion spricht man in konkreten Situationen oft auch von einer </span><span id="textcolor37"><span 
+class="ptmri8t-">Abbildung</span></span><span 
+class="ptmr8t-">, einer </span><span id="textcolor38"><span 
+class="ptmri8t-">Transformation</span></span><span 
+class="ptmr8t-">,</span>
+   <span 
+class="ptmr8t-">einem </span><span id="textcolor39"><span 
+class="ptmri8t-">Morphismus</span></span><span 
+class="ptmr8t-">, einem </span><span id="textcolor40"><span 
+class="ptmri8t-">Operator</span></span> <span 
+class="ptmr8t-">oder einem </span><span id="textcolor41"><span 
+class="ptmri8t-">Funktional</span></span><span 
+class="ptmr8t-">.</span>                                    </div> <!--l. 637--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptsu11.html" >next</a>]
+[<a 
+href="skriptsu10.html" >front</a>] [<a 
+href="skriptse4.html#skriptsu10.html" >up</a>] </p></div>
+<!--l. 637--><p class="noindent" ><a 
+ id="tailskriptsu10.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptsu10.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:15 GMT -->
+</html> 

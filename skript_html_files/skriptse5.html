@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptse5.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:15 GMT -->
+<head><title>Geordnete Mengen</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,mathml,4,fn-in --> 
+<meta name="src" content="skript-2.html"> 
+<meta name="date" content="2013-11-05 22:12:00"> 
+<link rel="stylesheet" type="text/css" href="skript.css"> 
+</head><body 
+>
+<!--l. 709--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptse6.html" >next</a>] [<a 
+href="skriptse4.html" >prev</a>] [<a 
+href="skriptse4.html#tailskriptse4.html" >prev-tail</a>] [<a 
+href="#tailskriptse5.html">tail</a>] [<a 
+href="skriptch1.html#skriptse5.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">1.5</span>&#x00A0;&#x00A0;<a 
+ id="x19-180001.5"></a>Geordnete Mengen</h3>
+<!--l. 711--><p class="noindent" >Es sei <!--l. 711--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi></math> eine
+Menge und <!--l. 711--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>R</mi></math> eine
+Relation in <!--l. 711--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi></math>.
+Dann ist <!--l. 711--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>R</mi></math> eine
+<span id="textcolor46"><span 
+class="ptmri8t-x-x-120">Ordnungsrelation</span></span> in <!--l. 712--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi></math>,
+falls die Eigenschaften
+<!--tex4ht:inline--><!--l. 713--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray-star" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1">                               <msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><mi 
+>a</mi><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>A</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>a</mi> <mo 
+class="MathClass-rel">&#x227A;</mo> <mi 
+>a</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mtd><mtd 
+class="eqnarray-2">  <mspace width="1em" class="quad"/></mtd><mtd 
+class="eqnarray-3">  <mstyle 
+class="mbox"><mtext  >(Reflexivität)</mtext></mstyle><mo 
+class="MathClass-punc">,</mo> </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>A</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x227A;</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&and;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x227A;</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&rArr;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x227A;</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mtd><mtd 
+class="eqnarray-2">  <mspace width="1em" class="quad"/></mtd><mtd 
+class="eqnarray-3">  <mstyle 
+class="mbox"><mtext  >(Transitivität)</mtext></mstyle><mo 
+class="MathClass-punc">,</mo> </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1">   <msub><mrow 
+><mo 
+class="MathClass-op">&forall;</mo></mrow><mrow 
+><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mo 
+class="MathClass-rel">&isin;</mo><mi 
+>A</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x227A;</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&and;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x227A;</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&rArr;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mtd><mtd 
+class="eqnarray-2">  <mspace width="1em" class="quad"/></mtd><mtd 
+class="eqnarray-3">  <mstyle 
+class="mbox"><mtext  >(Antisymmetrie)</mtext></mstyle></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray"></mtext></mtd>                      </mtr></mtable>
+</math>
+<!--l. 716--><p class="nopar" >
+erfüllt sind. Dabei steht <!--l. 717--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x227A;</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math>
+für <!--l. 717--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>R</mi></math>. Man nennt dann
+<!--l. 718--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math> einen <span id="textcolor47"><span 
+class="ptmri8t-x-x-120">Vorg</span><span 
+class="ptmri8t-x-x-120">ä</span><span 
+class="ptmri8t-x-x-120">nger</span></span>
+von <!--l. 719--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math>, sowie
+<!--l. 719--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math> einen <span id="textcolor48"><span 
+class="ptmri8t-x-x-120">Nachfolger</span></span> von
+<!--l. 720--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math>. Die Einheit von Menge
+und Ordnungsrelation <!--l. 720--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>A</mi><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-rel">&#x227A;</mo></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+bezeichnet man als <span id="textcolor49"><span 
+class="ptmri8t-x-x-120">teilweise geordnete</span></span> Menge. Nicht alle Paare
+                                                                                     
+                                                                                     
+<!--l. 722--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math> sind notwendigerweise
+vergleichbar. Eine Teilmenge <!--l. 723--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>T</mi> <mo 
+class="MathClass-rel">&sub;</mo> <mi 
+>A</mi></math>
+heißt geordnet, falls für beliebige <!--l. 723--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>T</mi></math>
+gilt <!--l. 724--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x227A;</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&or;</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x227A;</mo> <msub><mrow 
+><mi 
+>a</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+<div class="newtheorem">
+<!--l. 726--><p class="noindent" ><span class="head">
+<a 
+ id="x19-18002r1"></a>
+<span 
+class="ptmb8t-x-x-120">Example 1.5.1.</span>
+</span><!--l. 727--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x211D;</mi><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-rel">&le;</mo></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+ist eine geordnete Menge.
+</div>
+<!--l. 729--><p class="noindent" >&#x00A0;
+<div class="newtheorem">
+<!--l. 731--><p class="noindent" ><span class="head">
+<a 
+ id="x19-18003r2"></a>
+<span 
+class="ptmb8t-x-x-120">Example 1.5.2.</span>
+</span><!--l. 732--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x2115;</mi><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-rel">&#x227A;</mo></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+mit
+<!--l. 732--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>n</mi> <mo 
+class="MathClass-rel">&#x227A;</mo> <mi 
+>m</mi> <mo 
+class="MathClass-rel">&hArr;</mo> <mi 
+>n</mi><mo 
+class="MathClass-rel">|</mo><mi 
+>m</mi></math>
+ist eine teilweise geordnete Menge.
+</div>
+<!--l. 735--><p class="noindent" >&#x00A0;
+<div class="newtheorem">
+<!--l. 737--><p class="noindent" ><span class="head">
+<a 
+ id="x19-18004r3"></a>
+<span 
+class="ptmb8t-x-x-120">Example 1.5.3.</span>  </span>Die Potenzmenge <!--l. 738--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>A</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mn>2</mn></mrow><mrow 
+><mi 
+>A</mi></mrow></msup 
+></math>
+sei die Menge aller Teilmengen von <!--l. 738--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>A</mi></math>.
+Man            betrachtet            dann            die            teilweise            geordnete            Menge
+<!--l. 739--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>A</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-rel">&#x227A;</mo></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+definiert durch
+                                                                                     
+                                                                                     
+<div class="math-display"><!--l. 740--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mrow 
+>
+                       <msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x227A;</mo> <msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mspace width="1em" class="quad"/> <mo 
+class="MathClass-rel">&hArr;</mo><mspace width="1em" class="quad"/><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&sub;</mo> <msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>M</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&isin;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>A</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</mrow></math></div>
+<!--l. 741--><p class="nopar" >
+</div>
+                                                                                     
+                                                                                     
+<!--l. 745--><div class="crosslinks"><p class="noindent">[<a 
+href="skriptse6.html" >next</a>] [<a 
+href="skriptse4.html" >prev</a>] [<a 
+href="skriptse4.html#tailskriptse4.html" >prev-tail</a>] [<a 
+href="skriptse5.html" >front</a>] [<a 
+href="skriptch1.html#skriptse5.html" >up</a>] </p></div>
+<!--l. 745--><p class="noindent" ><a 
+ id="tailskriptse5.html"></a>  
+</body>
+<!-- Mirrored from pnp.mathematik.uni-stuttgart.de/iadm/Weidl/ana1-13-14/skript/skriptse5.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2026 21:14:15 GMT -->
+</html> 
