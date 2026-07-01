@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Analysis · Differential- &amp; Integralrechnung (Kap. 3–4)</title>
+<title>Übersicht Analysis 2 [S26]</title>
 <!--
   Interaktive Lern-Übersicht zu Kap. 3 (Differentialrechnung) und Kap. 4 (Integralrechnung)
   aus dem Skript "Analysis 1" von T. Weidl (Uni Stuttgart).
@@ -19,6 +19,8 @@
   --accent:#4f46e5;
   --ch3:#2563eb; --ch3-soft:#dbeafe;
   --ch4:#0d9488; --ch4-soft:#ccfbf1;
+  --ch5:#b45309; --ch5-soft:#fef3c7;
+  --ch6:#be185d; --ch6-soft:#fce7f3;
   --root:#334155;
   --ok:#16a34a; --warn:#d97706;
   --shadow:0 1px 2px rgba(15,23,42,.06),0 8px 24px rgba(15,23,42,.08);
@@ -29,6 +31,8 @@
   --accent:#818cf8;
   --ch3:#60a5fa; --ch3-soft:#1e293b;
   --ch4:#2dd4bf; --ch4-soft:#11302d;
+  --ch5:#fbbf24; --ch5-soft:#332410;
+  --ch6:#f472b6; --ch6-soft:#3a1426;
   --root:#cbd5e1;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 28px rgba(0,0,0,.45);
 }
@@ -124,9 +128,12 @@ svg.map.grabbing{cursor:grabbing}
 .node.ch{font-weight:700}
 .node.ch3{background:var(--ch3-soft)} .node.ch3 .badge{background:var(--ch3)}
 .node.ch4{background:var(--ch4-soft)} .node.ch4 .badge{background:var(--ch4)}
+.node.ch5{background:var(--ch5-soft)} .node.ch5 .badge{background:var(--ch5)}
+.node.ch6{background:var(--ch6-soft)} .node.ch6 .badge{background:var(--ch6)}
 .node .done{color:var(--ok)}
 .link{fill:none; stroke:var(--line); stroke-width:2}
 .link.ch3{stroke:var(--ch3)} .link.ch4{stroke:var(--ch4)}
+.link.ch5{stroke:var(--ch5)} .link.ch6{stroke:var(--ch6)}
 
 /* ---------- Card grid (alternative Übersicht) ---------- */
 .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:12px}
@@ -169,6 +176,8 @@ svg.map.grabbing{cursor:grabbing}
 .chhead{margin:0; padding:12px 16px; font-size:15px; color:#fff; display:flex; align-items:center; gap:10px}
 .chhead.ch3{background:linear-gradient(135deg,var(--ch3),#1e40af)}
 .chhead.ch4{background:linear-gradient(135deg,var(--ch4),#0f766e)}
+.chhead.ch5{background:linear-gradient(135deg,#d97706,#92400e)}
+.chhead.ch6{background:linear-gradient(135deg,#db2777,#831843)}
 .chhead .cc{margin-left:auto; font-weight:500; font-size:12px; opacity:.92; white-space:nowrap}
 .seclist{display:flex; flex-direction:column}
 .secrow{display:flex; gap:12px; align-items:flex-start; padding:11px 14px; border-top:1px solid var(--line); text-decoration:none; color:var(--ink)}
@@ -210,6 +219,9 @@ svg.map.grabbing{cursor:grabbing}
 .reftile.i12{background:linear-gradient(135deg,#38bdf8,#0369a1)}
 .reftile.i13{background:linear-gradient(135deg,#c084fc,#9333ea)}
 .reftile.i14{background:linear-gradient(135deg,#818cf8,#4338ca)}
+.reftile.i15{background:linear-gradient(135deg,#fb923c,#c2410c)}
+.reftile.i16{background:linear-gradient(135deg,#94a3b8,#475569)}
+.reftile.i17{background:linear-gradient(135deg,#4ade80,#166534)}
 .example{margin:8px 0;border:1px solid var(--line);border-radius:10px;background:var(--bg);overflow:hidden}
 .example>summary{cursor:pointer;padding:8px 12px;font-size:13px;font-weight:600;color:var(--accent);list-style:none;user-select:none}
 .example>summary::-webkit-details-marker{display:none}
@@ -253,8 +265,8 @@ footer{max-width:1200px;margin:0 auto;padding:14px 18px;color:var(--muted);font-
   <div class="hwrap">
     <div class="brand">
       <div class="logo">∫</div>
-      <div>Analysis · Kap. 3–4
-        <small>Differential- &amp; Integralrechnung · Übersicht fürs Team</small>
+      <div>Analysis · Kap. 3–6
+        <small>Analysis 1 + 2 · Übersicht fürs Team</small>
       </div>
     </div>
     <div class="spacer"></div>
@@ -475,6 +487,64 @@ const CH = [
        ["4.11.1","Beweis des Fundamentalsatzes der Algebra","skriptsu191.html"],
        ["4.11.2","Beweis von Lemma 4.11.1","skriptsu192.html"],
        ["4.11.3","Beweis von Lemma 4.11.2","skriptsu193.html"]]}
+   ]},
+ { id:"5", title:"Reihen und uneigentliche Integrale", key:"ch5",
+   sections:[
+    {id:"5.1",  t:"Uneigentliche Integrale", topics:[
+       ["5.1.1","Integrale über unbeschränkte Intervalle"],
+       ["5.1.2","Integrale mit Randsingularität"],
+       ["5.1.3","U.e. Integrale bzgl. eines inneren Punktes"],
+       ["5.1.4","Der Cauchy-Hauptwert (v.p.)"],
+       ["5.1.5","Cauchy-Kriterium; Linearität"]]},
+    {id:"5.2",  t:"Reihen: Grundbegriffe", topics:[
+       ["5.2.1","Reihen, Partialsummen, Reihenwert"],
+       ["5.2.2","Reihen im Sinne des Hauptwertes"],
+       ["5.2.3","Das Cauchy-Kriterium für Reihen"],
+       ["5.2.4","Notwendiges Kriterium: aₖ → 0"]]},
+    {id:"5.3",  t:"Reihen mit nichtnegativen Summanden", topics:[
+       ["5.3.1","Monotonie der Partialsummen"],
+       ["5.3.2","Das Vergleichskriterium (Majorante/Minorante)"],
+       ["5.3.3","Der Umordnungssatz"],
+       ["5.3.4","Der Umordnungssatz von Riemann"],
+       ["5.3.5","Summen über abzählbare Mengen; Doppelreihen"],
+       ["5.3.6","Produkte von Reihen (Cauchy-Produkt)"]]},
+    {id:"5.4",  t:"Konvergenzkriterien", topics:[
+       ["5.4.1","Quotientenkriterium (d'Alembert)"],
+       ["5.4.2","Wurzelkriterium (Cauchy)"],
+       ["5.4.3","Kriterien in Limesform (limsup/liminf)"],
+       ["5.4.4","Integralkriterium von MacLaurin & Cauchy"]]},
+    {id:"5.5",  t:"Absolute Konvergenz", topics:[
+       ["5.5.1","Absolute Konvergenz von Reihen"],
+       ["5.5.2","Absolute Konvergenz u.e. Integrale"]]},
+    {id:"5.6",  t:"Weitere Konvergenzkriterien; Summierbarkeit", topics:[
+       ["5.6.1","Abelsche (partielle) Summation"],
+       ["5.6.2","Kriterien von Dirichlet, Abel und Leibniz"],
+       ["5.6.3","Cesàro-Summation (arithmetische Mittel)"],
+       ["5.6.4","Poisson-Abel-Summation; Satz von Frobenius"]]}
+   ]},
+ { id:"6", title:"Funktionenfolgen, gleichmäßige Konvergenz, Potenzreihen", key:"ch6",
+   sections:[
+    {id:"6.1",  t:"Punktweise und gleichmäßige Konvergenz", topics:[
+       ["6.1.1","Definitionen; Supremums-Kriterium"],
+       ["6.1.2","Klassische Gegenbeispiele"]]},
+    {id:"6.2",  t:"Der Raum C(X,Y)", topics:[
+       ["6.2.1","Die Supremumsnorm ‖·‖C"],
+       ["6.2.2","Vollständigkeit von C(X,Y)"]]},
+    {id:"6.3",  t:"Vertauschen von limₙ und limₓ", topics:[
+       ["6.3.1","Satz & Beweis (Folgendefinition)"],
+       ["6.3.2","Stetigkeit der Grenzfunktion"]]},
+    {id:"6.4",  t:"Vertauschen von Σ und lim", topics:[
+       ["6.4.1","Gleichmäßige Konvergenz von Funktionenreihen"],
+       ["6.4.2","Majorantenkriterium von Weierstraß (M-Test)"]]},
+    {id:"6.5",  t:"Doppelte Grenzwerte limₓ, limᵧ", topics:[]},
+    {id:"6.6",  t:"Vertauschen von Grenzwert und Integral", topics:[
+       ["6.6.1","Gleichmäßige Konvergenz und ∫ auf [a,b]"],
+       ["6.6.2","Gliedweise Integration von Reihen"]]},
+    {id:"6.7",  t:"Parameterintegrale", topics:[]},
+    {id:"6.9",  t:"Grenzwerte und uneigentliche Integrale", topics:[]},
+    {id:"6.10", t:"Potenzreihen", topics:[
+       ["6.10.1","Konvergenzradius (Cauchy-Hadamard)"],
+       ["6.10.2","Termweise Differentiation & Integration"]]}
    ]}
 ];
 
@@ -505,7 +575,22 @@ const KW = {
  "4.8":["Interpolation","Trapez","Simpson"],
  "4.9":["Bogenlänge","Krümmung","Jordan-Kurve"],
  "4.10":["Fläche","Volumen","Schwerpunkt"],
- "4.11":["Fundamentalsatz der Algebra"]
+ "4.11":["Fundamentalsatz der Algebra"],
+ "5.1":["∫ bis ∞","Singularität","Hauptwert v.p."],
+ "5.2":["Partialsummen","Cauchy-Kriterium","aₖ→0"],
+ "5.3":["Majorante/Minorante","Umordnung","Doppelreihen","Cauchy-Produkt"],
+ "5.4":["Quotient","Wurzel","limsup","Integralkriterium"],
+ "5.5":["absolut ⇒ konvergent"],
+ "5.6":["Abel-Summation","Dirichlet · Leibniz","Cesàro","Frobenius"],
+ "6.1":["punktweise vs. gleichmäßig","sup-Fehler"],
+ "6.2":["Supremumsnorm","vollständig"],
+ "6.3":["lim–lim","Stetigkeit der Grenzfunktion"],
+ "6.4":["Σ und lim","Weierstraß M-Test"],
+ "6.5":["Doppel-Grenzwerte"],
+ "6.6":["lim–∫","gliedweise Integration"],
+ "6.7":["I(x)=∫f(x,y)dy","Stetigkeit"],
+ "6.9":["u.e. Integrale","glm. bzgl. n"],
+ "6.10":["Konvergenzradius","Cauchy-Hadamard","termweise d/dz"]
 };
 
 /* Querschnitt-Index "Nach Typ": Kategorie -> [Themen-ID, Anzeigename].
@@ -608,7 +693,7 @@ function crumbHtml(node){
 }
 function srcLink(file, label){ return file? `<a href="${SRCDIR}${file}" target="_blank" rel="noopener">${label||"Originalseite im Skript ↗"}</a>` : ""; }
 function fileLink(rel, label){ const href="assets/analysis2_sources_for_claude/"+rel.split('/').map(encodeURIComponent).join('/'); return `<a href="${href}" target="_blank" rel="noopener">${label}</a>`; }
-function exBox(inner){ return `<details class="example"><summary>Beispiel — Rechenweg anzeigen</summary><div class="exbody">${inner}</div></details>`; }
+function exBox(inner, title){ return `<details class="example"><summary>${title||"Beispiel — Rechenweg anzeigen"}</summary><div class="exbody">${inner}</div></details>`; }
 
 /* Material: Übungsblätter & Vortragsübungen (Dateien in assets/analysis2_sources_for_claude/) */
 const UEB = {
@@ -650,31 +735,39 @@ function uebHtml(){
 function intHtml(){ return String.raw`
   <div class="twocol">
     <div class="refblock">
-      <h3>Grundintegrale</h3>
+      <h3>Potenzen, Exponential &amp; Co.</h3>
       <table class="reftable">
         <tr><td>\(\displaystyle\int x^{n}\,dx=\frac{x^{n+1}}{n+1}+C\)</td><td class="cond">\(n\neq-1\)</td></tr>
         <tr><td>\(\displaystyle\int \frac{dx}{x}=\ln|x|+C\)</td><td class="cond"></td></tr>
         <tr><td>\(\displaystyle\int e^{x}\,dx=e^{x}+C\)</td><td class="cond"></td></tr>
         <tr><td>\(\displaystyle\int a^{x}\,dx=\frac{a^{x}}{\ln a}+C\)</td><td class="cond">\(a>0,\ a\neq1\)</td></tr>
         <tr><td>\(\displaystyle\int \ln x\,dx=x\ln x-x+C\)</td><td class="cond"></td></tr>
-        <tr><td>\(\displaystyle\int \sin x\,dx=-\cos x+C\)</td><td class="cond"></td></tr>
-        <tr><td>\(\displaystyle\int \cos x\,dx=\sin x+C\)</td><td class="cond"></td></tr>
-        <tr><td>\(\displaystyle\int \tan x\,dx=-\ln|\cos x|+C\)</td><td class="cond"></td></tr>
-        <tr><td>\(\displaystyle\int \frac{dx}{\cos^{2}x}=\tan x+C\)</td><td class="cond"></td></tr>
-        <tr><td>\(\displaystyle\int \frac{dx}{\sin^{2}x}=-\cot x+C\)</td><td class="cond"></td></tr>
-        <tr><td>\(\displaystyle\int \frac{dx}{1+x^{2}}=\arctan x+C\)</td><td class="cond"></td></tr>
-        <tr><td>\(\displaystyle\int \frac{dx}{\sqrt{1-x^{2}}}=\arcsin x+C\)</td><td class="cond"></td></tr>
         <tr><td>\(\displaystyle\int \sinh x\,dx=\cosh x+C\)</td><td class="cond"></td></tr>
         <tr><td>\(\displaystyle\int \cosh x\,dx=\sinh x+C\)</td><td class="cond"></td></tr>
       </table>
-    </div>
-    <div class="refblock">
-      <h3>Mit Konstante \(a\)</h3>
+      <h3 style="margin-top:16px">Auf arctan &amp; arcsin führend</h3>
+      <table class="reftable">
+        <tr><td>\(\displaystyle\int \frac{dx}{1+x^{2}}=\arctan x+C\)</td><td class="cond"></td></tr>
+        <tr><td>\(\displaystyle\int \frac{dx}{\sqrt{1-x^{2}}}=\arcsin x+C\)</td><td class="cond"></td></tr>
+      </table>
+      <h3 style="margin-top:16px">Mit Konstante \(a\)</h3>
       <table class="reftable">
         <tr><td>\(\displaystyle\int \frac{dx}{a^{2}+x^{2}}=\frac{1}{a}\arctan\frac{x}{a}+C\)</td></tr>
         <tr><td>\(\displaystyle\int \frac{dx}{\sqrt{a^{2}-x^{2}}}=\arcsin\frac{x}{a}+C\)</td></tr>
         <tr><td>\(\displaystyle\int \frac{dx}{\sqrt{x^{2}+a^{2}}}=\ln\!\big(x+\sqrt{x^{2}+a^{2}}\big)+C\)</td></tr>
         <tr><td>\(\displaystyle\int \frac{dx}{x^{2}-a^{2}}=\frac{1}{2a}\ln\left|\frac{x-a}{x+a}\right|+C\)</td></tr>
+      </table>
+    </div>
+    <div class="refblock">
+      <h3>Trigonometrisch</h3>
+      <table class="reftable">
+        <tr><td>\(\displaystyle\int \sin x\,dx=-\cos x+C\)</td><td class="cond"></td></tr>
+        <tr><td>\(\displaystyle\int \cos x\,dx=\sin x+C\)</td><td class="cond"></td></tr>
+        <tr><td>\(\displaystyle\int \tan x\,dx=-\ln|\cos x|+C\)</td><td class="cond"></td></tr>
+        <tr><td>\(\displaystyle\int \frac{dx}{\cos^{2}x}=\tan x+C\)</td><td class="cond"></td></tr>
+        <tr><td>\(\displaystyle\int \frac{dx}{\sin^{2}x}=-\cot x+C\)</td><td class="cond"></td></tr>
+        <tr><td>\(\displaystyle\int \frac{dx}{\sin x}=\ln\left|\tan\frac{x}{2}\right|+C\)</td><td class="cond"></td></tr>
+        <tr><td>\(\displaystyle\int \frac{dx}{\cos x}=\ln\left|\tan\Big(\frac{x}{2}+\frac{\pi}{4}\Big)\right|+C\)</td><td class="cond"></td></tr>
       </table>
       <h3 style="margin-top:16px">Beispiele</h3>
       ${exBox(String.raw`<p>Mit \(a=2\):</p>\[\int \frac{dx}{4+x^{2}}=\frac{1}{2}\arctan\frac{x}{2}+C\]`)}
@@ -720,6 +813,45 @@ function subHtml(){ return String.raw`
       <div class="subrule">\(=\frac{1}{a}F(ax+b)+C\)</div>
       ${exBox(String.raw`\[\int e^{3x+1}\,dx=\frac{1}{3}e^{3x+1}+C\]`)}
     </div>
+    <div class="subcard">
+      <div class="subhead">Wurzeln loswerden: \(x=t^{k}\)</div>
+      <div class="subrule">Bei \(\sqrt[n]{x}\)-Termen: \(x=t^{k}\) mit \(k=\) kgV der Wurzelexponenten (z. B. \(\sqrt{x}\) und \(\sqrt[3]{x}\) → \(k=6\)).</div>
+      ${exBox(String.raw`<p>\(\displaystyle\int\frac{dx}{1+\sqrt{x}}\) mit \(t=\sqrt{x}\), also \(x=t^{2},\ dx=2t\,dt\):</p>\[\int\frac{2t}{1+t}\,dt=2\int\Big(1-\frac{1}{1+t}\Big)dt=2t-2\ln(1+t)+C\]<p>(im zweiten Schritt der \(+1{-}1\)-Trick!) Rücksubstitution:</p>\[=2\sqrt{x}-2\ln\big(1+\sqrt{x}\big)+C.\]`)}
+    </div>
+  </div>
+  <div class="refblock" style="margin-top:16px">
+    <h3>Umformungs-Tricks vor dem Integrieren</h3>
+    <div class="subgrid">
+      <div class="subcard">
+        <div class="subhead">Der \(+1{-}1\)-Trick (Grad abbauen)</div>
+        <div class="subrule">Im Zähler den Nenner künstlich erzeugen: \(\dfrac{t}{t+2}=\dfrac{(t+2)-2}{t+2}=1-\dfrac{2}{t+2}\).</div>
+        ${exBox(String.raw`\[\int\frac{t}{t+2}\,dt=\int\Big(1-\frac{2}{t+2}\Big)dt=t-2\ln|t+2|+C\]<p>Gleicher Trick: \(\dfrac{x^{2}}{1+x^{2}}=1-\dfrac{1}{1+x^{2}}\ \Rightarrow\ \displaystyle\int\frac{x^{2}}{1+x^{2}}\,dx=x-\arctan x+C.\)</p>`)}
+      </div>
+      <div class="subcard">
+        <div class="subhead">Quadratische Ergänzung</div>
+        <div class="subrule">\(x^{2}+px+q=\big(x+\tfrac{p}{2}\big)^{2}+q-\tfrac{p^{2}}{4}\) → führt auf die \(a^{2}+u^{2}\)-Integrale (arctan!).</div>
+        ${exBox(String.raw`<p>\(x^{2}+2x+5=(x+1)^{2}+4\):</p>\[\int\frac{dx}{x^{2}+2x+5}=\int\frac{du}{u^{2}+2^{2}}\ \ (u=x+1)\ =\frac{1}{2}\arctan\frac{x+1}{2}+C\]`)}
+      </div>
+      <div class="subcard">
+        <div class="subhead">3. binomische Formel (konjugiert erweitern)</div>
+        <div class="subrule">\(\dfrac{1}{\sqrt{a}+\sqrt{b}}=\dfrac{\sqrt{a}-\sqrt{b}}{a-b}\) — Wurzeln aus dem Nenner schaffen.</div>
+        ${exBox(String.raw`\[\int\frac{dx}{\sqrt{x+1}+\sqrt{x}}=\int\big(\sqrt{x+1}-\sqrt{x}\big)dx=\frac{2}{3}\Big[(x+1)^{3/2}-x^{3/2}\Big]+C\]<p>denn \((\sqrt{x+1}+\sqrt{x})(\sqrt{x+1}-\sqrt{x})=(x+1)-x=1\).</p>`)}
+      </div>
+      <div class="subcard">
+        <div class="subhead">Trig-Potenzen abbauen</div>
+        <div class="subrule">\(\sin^{2},\cos^{2}\) über Doppelwinkel: \(\sin^{2}x=\frac{1-\cos 2x}{2}\), \(\cos^{2}x=\frac{1+\cos 2x}{2}\).</div>
+        ${exBox(String.raw`\[\int\cos^{2}x\,dx=\int\frac{1+\cos 2x}{2}\,dx=\frac{x}{2}+\frac{\sin 2x}{4}+C\]`)}
+      </div>
+    </div>
+  </div>
+  <div class="refblock">
+    <h3>Partielle Integration in der Praxis</h3>
+    <table class="reftable">
+      <tr><td>\(\displaystyle\int u'(x)\,v(x)\,dx=u(x)v(x)-\int u(x)\,v'(x)\,dx\)</td></tr>
+      <tr><td><b>Was ableiten (= \(v\))?</b> Reihenfolge „LIATE": <b>L</b>ogarithmen → <b>I</b>nverse (arcsin, arctan) → <b>A</b>lgebraisch (Polynome) → <b>T</b>rig → <b>E</b>xponential. Was weiter links steht, wird abgeleitet.</td></tr>
+    </table>
+    ${exBox(String.raw`<p><b>Einfach:</b> \(\displaystyle\int x\,e^{x}\,dx\) — Polynom ableiten, \(e^{x}\) integrieren:</p>\[\int x\,e^{x}\,dx=x\,e^{x}-\int 1\cdot e^{x}\,dx=(x-1)\,e^{x}+C\]<p><b>Faktor-1-Trick</b> für \(\ln\): \(\displaystyle\int\ln x\,dx=\int 1\cdot\ln x\,dx=x\ln x-\int x\cdot\frac{1}{x}\,dx=x\ln x-x+C.\)</p>`)}
+    ${exBox(String.raw`<p><b>Doppelt („Phönix"):</b> \(I=\displaystyle\int e^{x}\sin x\,dx\) — zweimal partiell, dann nach \(I\) auflösen:</p>\[I=e^{x}\sin x-\int e^{x}\cos x\,dx=e^{x}\sin x-\Big(e^{x}\cos x+\int e^{x}\sin x\,dx\Big)\]\[\Rightarrow\ I=e^{x}\sin x-e^{x}\cos x-I\ \Rightarrow\ I=\frac{e^{x}}{2}\big(\sin x-\cos x\big)+C\]<p>Das ursprüngliche Integral taucht rechts wieder auf → als Gleichung lösen.</p>`)}
   </div>`; }
 
 function addHtml(){ return String.raw`
@@ -805,8 +937,10 @@ function reihenHtml(){ return String.raw`
     <div class="refblock">
       <h3>Wichtige Reihen</h3>
       <table class="reftable">
-        <tr><td>\(\displaystyle\sum_{k=0}^{n}q^{k}=\frac{1-q^{n+1}}{1-q}\)</td><td class="cond">\(q\neq1\)</td></tr>
-        <tr><td>\(\displaystyle\sum_{k=0}^{\infty}q^{k}=\frac{1}{1-q}\)</td><td class="cond">\(|q|<1\)</td></tr>
+        <tr><td>\(\displaystyle\sum_{k=m}^{n}q^{k}=\frac{q^{m}-q^{n+1}}{1-q}\)</td><td class="cond">\(q\neq1\)</td></tr>
+        <tr><td>\(\displaystyle\sum_{k=m}^{\infty}q^{k}=\frac{q^{m}}{1-q}\)</td><td class="cond">\(|q|<1\)</td></tr>
+        <tr><td>Merke: \(\dfrac{\text{erster Summand}}{1-q}\) — der Start \(m\) steckt nur im Zähler</td><td class="cond"></td></tr>
+        <tr><td>\(\displaystyle\sum_{k=1}^{n}k=\frac{n(n+1)}{2}\)</td><td class="cond">Gauß-Summe</td></tr>
         <tr><td>\(\displaystyle\sum_{k=0}^{\infty}\frac{x^{k}}{k!}=e^{x}\)</td><td class="cond">\(\forall x\)</td></tr>
         <tr><td>\(\displaystyle\sum_{k=0}^{\infty}\frac{(-1)^{k}x^{2k}}{(2k)!}=\cos x\)</td><td class="cond">\(\forall x\)</td></tr>
         <tr><td>\(\displaystyle\sum_{k=0}^{\infty}\frac{(-1)^{k}x^{2k+1}}{(2k+1)!}=\sin x\)</td><td class="cond">\(\forall x\)</td></tr>
@@ -828,6 +962,26 @@ function reihenHtml(){ return String.raw`
       ${exBox(String.raw`<p>Geometrisch, \(q=\tfrac12\):</p>\[\sum_{k=1}^{\infty}\Big(\tfrac{1}{2}\Big)^{k}=\frac{1/2}{1-1/2}=1\]`)}
       ${exBox(String.raw`<p>Quotientenkriterium für \(\sum\frac{x^{k}}{k!}\):</p>\[\left|\frac{a_{k+1}}{a_{k}}\right|=\frac{|x|}{k+1}\to 0<1\quad(k\to\infty)\ \Rightarrow\ \text{konvergent }\forall x\]`)}
     </div>
+  </div>
+  <div class="refblock">
+    <h3>Teleskopreihen</h3>
+    <table class="reftable">
+      <tr><td>\(\displaystyle\sum_{k=1}^{n}\big(b_{k}-b_{k+1}\big)=b_{1}-b_{n+1}\) — die mittleren Terme heben sich alle weg</td></tr>
+      <tr><td>\(\displaystyle\sum_{k=1}^{\infty}\big(b_{k}-b_{k+1}\big)=b_{1}-\lim_{n\to\infty}b_{n+1}\)</td><td class="cond">falls der Limes existiert</td></tr>
+    </table>
+    ${exBox(String.raw`<p>Mit Partialbruch \(\dfrac{1}{k(k+1)}=\dfrac{1}{k}-\dfrac{1}{k+1}\) (also \(b_k=\tfrac1k\)):</p>\[\sum_{k=1}^{n}\frac{1}{k(k+1)}=1-\frac{1}{n+1}\ \longrightarrow\ 1.\]<p>Typisches Muster: Bruch per PBZ in eine Differenz \(b_k-b_{k+1}\) verwandeln.</p>`,"Teleskop-Klassiker")}
+  </div>
+  <div class="refblock">
+    <h3>Fourierreihen &amp; Orthogonalität</h3>
+    <p class="sub">Für \(2\pi\)-periodische Funktionen: \(f\) als Überlagerung von Sinus/Kosinus schreiben.</p>
+    <table class="reftable">
+      <tr><td>\(\displaystyle f(x)\sim\frac{a_0}{2}+\sum_{k=1}^{\infty}\big(a_k\cos kx+b_k\sin kx\big)\)</td></tr>
+      <tr><td>\(\displaystyle a_k=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos kx\,dx,\qquad b_k=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin kx\,dx\)</td></tr>
+      <tr><td><b>Orthogonalität</b> (\(k,m\ge1\)): \(\displaystyle\int_{-\pi}^{\pi}\sin kx\,\sin mx\,dx=\pi\,\delta_{km},\quad \int_{-\pi}^{\pi}\cos kx\,\cos mx\,dx=\pi\,\delta_{km},\quad \int_{-\pi}^{\pi}\sin kx\,\cos mx\,dx=0\)</td></tr>
+      <tr><td>Praktisch: \(f\) gerade \(\Rightarrow b_k=0\); \(f\) ungerade \(\Rightarrow a_k=0\)</td></tr>
+    </table>
+    ${exBox(String.raw`<p>Multipliziere die Reihe mit \(\sin mx\) und integriere über \([-\pi,\pi]\):</p>\[\int_{-\pi}^{\pi}f(x)\sin mx\,dx=\sum_{k}a_k\underbrace{\int\cos kx\sin mx}_{=0}+\sum_{k}b_k\underbrace{\int\sin kx\sin mx}_{=\pi\delta_{km}}=b_m\,\pi.\]<p>Wegen der Orthogonalität überlebt nur der Term \(k=m\) — genau das liefert die Koeffizientenformel. Die Orthogonalität selbst folgt aus Produkt→Summe: \(\sin kx\sin mx=\tfrac12[\cos(k-m)x-\cos(k+m)x]\), und \(\int_{-\pi}^{\pi}\cos(jx)\,dx=0\) für \(j\neq0\).</p>`,"Warum das klappt (Orthogonalität)")}
+    ${exBox(String.raw`<p>\(f(x)=x\) auf \((-\pi,\pi)\) ist ungerade \(\Rightarrow a_k=0\). Für \(b_k\) (partielle Integration):</p>\[b_k=\frac{1}{\pi}\int_{-\pi}^{\pi}x\sin kx\,dx=\frac{2}{\pi}\Big[-\frac{x\cos kx}{k}\Big]_{0}^{\pi}=-\frac{2\cos k\pi}{k}=\frac{2(-1)^{k+1}}{k}\]\[\Rightarrow\ x\sim 2\sum_{k=1}^{\infty}\frac{(-1)^{k+1}}{k}\sin kx.\]`,"Beispiel: Sägezahn f(x) = x")}
   </div>`; }
 
 function grenzHtml(){ return String.raw`
@@ -859,6 +1013,17 @@ function grenzHtml(){ return String.raw`
       ${exBox(String.raw`<p>Über die \(\cos\)-Reihe:</p>\[\frac{1-\cos x}{x^{2}}=\frac{\frac{x^{2}}{2}-\frac{x^{4}}{24}+\cdots}{x^{2}}=\frac{1}{2}-\frac{x^{2}}{24}+\cdots\to\frac{1}{2}\quad(x\to0)\]`)}
       ${exBox(String.raw`<p>Über die \(e^{x}\)-Reihe:</p>\[\frac{e^{x}-1}{x}=\frac{x+\frac{x^{2}}{2}+\cdots}{x}=1+\frac{x}{2}+\cdots\to 1\quad(x\to0)\]`)}
     </div>
+  </div>
+  <div class="refblock">
+    <h3>Häufige Umformungen</h3>
+    <table class="reftable">
+      <tr><td><b>Konjugiert erweitern</b> (3. binomische) bei \(\sqrt{\ }-\sqrt{\ }\)</td></tr>
+      <tr><td><b>Potenz-Trick:</b> \(f(x)^{g(x)}=e^{\,g(x)\ln f(x)}\) — nur den Exponenten untersuchen</td></tr>
+      <tr><td><b>Höchste Potenz ausklammern</b> bei rationalen Ausdrücken</td></tr>
+      <tr><td>\(\Big(1+\dfrac{a_n}{n}\Big)^{n}\to e^{a}\), falls \(a_n\to a\)</td></tr>
+    </table>
+    ${exBox(String.raw`<p><b>Konjugiert erweitern:</b></p>\[\sqrt{n^{2}+n}-n=\frac{(n^{2}+n)-n^{2}}{\sqrt{n^{2}+n}+n}=\frac{n}{\sqrt{n^{2}+n}+n}=\frac{1}{\sqrt{1+\frac1n}+1}\ \longrightarrow\ \frac{1}{2}\]`)}
+    ${exBox(String.raw`<p><b>Potenz-Trick:</b> \(\displaystyle\lim_{x\to0^{+}}x^{x}\):</p>\[x^{x}=e^{x\ln x},\qquad x\ln x\to0\ (x\to0^{+})\ \Rightarrow\ x^{x}\to e^{0}=1\]`)}
   </div>`; }
 
 /* Referenz-Seiten (eigene Ergänzungen, Route #/ref/<key>) */
@@ -890,6 +1055,19 @@ function konvSummenHtml(){ return String.raw`
       ${exBox(String.raw`<p>Wurzel für \(\sum\big(\tfrac{k}{k+1}\big)^{k^{2}}\):</p>\[\sqrt[k]{a_k}=\Big(\frac{k}{k+1}\Big)^{k}=\Big(1+\tfrac{1}{k}\Big)^{-k}\to\frac{1}{e}<1\ \Rightarrow\ \text{konvergent.}\]`)}
       ${exBox(String.raw`<p>Leibniz für \(\sum\frac{(-1)^{k+1}}{k}\):</p><p>\(b_k=\tfrac1k\downarrow0\Rightarrow\) konvergent (bedingt, \(=\ln 2\)); \(\sum\tfrac1k\) selbst divergiert (harmonisch).</p>`)}
     </div>
+  </div>
+  <div class="refblock">
+    <h3>Tricks: typische Majoranten, Minoranten &amp; Umformungen</h3>
+    <table class="reftable">
+      <tr><td><b>Vergleichs-Skala:</b> \(\sum\frac{1}{k^{p}}\) (konv. \(\Leftrightarrow p>1\)), \(\sum q^{k}\) (\(|q|<1\)), \(\sum k^{a}q^{k}\) konv. für \(|q|<1\) (jedes \(a\))</td></tr>
+      <tr><td><b>„Nur höchste Potenzen zählen":</b> \(\dfrac{P(k)}{Q(k)}\sim\dfrac{c}{k^{\deg Q-\deg P}}\) → Grenzwertvergleich mit \(\frac{1}{k^{p}}\)</td></tr>
+      <tr><td><b>Beschränktes wegschätzen:</b> \(|\sin k|,|\cos k|\le1\) → \(\Big|\dfrac{\sin k}{k^{2}}\Big|\le\dfrac{1}{k^{2}}\)</td></tr>
+      <tr><td><b>Logs sind klein:</b> \(\ln k\le C_\varepsilon\,k^{\varepsilon}\) → z. B. \(\dfrac{\ln k}{k^{2}}\le\dfrac{C\,k^{1/2}}{k^{2}}=\dfrac{C}{k^{3/2}}\) (konv.)</td></tr>
+      <tr><td><b>Minoranten für Divergenz:</b> \(\dfrac{1}{\sqrt{k}}\ge\dfrac{1}{k}\); \(\dfrac{k+1}{k^{2}+5}\sim\dfrac{1}{k}\) (div.)</td></tr>
+    </table>
+    ${exBox(String.raw`<p><b>Grenzwertvergleich:</b> \(\displaystyle\sum\frac{2k+3}{k^{3}-k+1}\). Höchste Potenzen: \(\sim\frac{2}{k^{2}}\). Prüfen mit \(b_k=\frac{1}{k^{2}}\):</p>\[\frac{a_k}{b_k}=\frac{(2k+3)k^{2}}{k^{3}-k+1}\longrightarrow 2\in(0,\infty)\ \Rightarrow\ \text{wie }\sum\frac{1}{k^{2}}\ \text{konvergent.}\]`)}
+    ${exBox(String.raw`<p><b>Minorante:</b> \(\displaystyle\sum\frac{1}{\sqrt{k(k+1)}}\). Wegen \(k(k+1)\le (k+1)^{2}\):</p>\[\frac{1}{\sqrt{k(k+1)}}\ge\frac{1}{k+1}\quad\Rightarrow\quad\text{divergent (harmonische Minorante).}\]`)}
+    ${exBox(String.raw`<p><b>Majorante mit Log:</b> \(\displaystyle\sum\frac{\ln k}{k^{2}}\). Ab großem \(k\) ist \(\ln k\le\sqrt{k}\):</p>\[\frac{\ln k}{k^{2}}\le\frac{1}{k^{3/2}}\quad\Rightarrow\quad\text{konvergent }(p=\tfrac32>1).\]`)}
   </div>
   <div class="refblock">
     <h3>Summierbarkeit divergenter Reihen</h3>
@@ -959,6 +1137,16 @@ function potenzreihenHtml(){ return String.raw`
       ${exBox(String.raw`<p>\(\sum \frac{x^{k}}{k}\): \(R=1\), aber der Rand ist verschieden:</p>\[x=-1:\ \sum\frac{(-1)^{k}}{k}\ \text{konv. (Leibniz)};\qquad x=1:\ \sum\frac{1}{k}\ \text{div. (harmonisch)}.\]`)}
       ${exBox(String.raw`<p>Extremfälle:</p>\[\sum k!\,x^{k}:\ R=0\ (\text{nur }x=0);\qquad \sum \frac{x^{k}}{k^{2}}:\ R=1,\ \text{Rand konvergiert }(p=2).\]`)}
     </div>
+  </div>
+  <div class="refblock">
+    <h3>Tricks beim Konvergenzradius</h3>
+    <table class="reftable">
+      <tr><td><b>Lücken-Reihen</b> (nur \(x^{2k}\) o. ä.): Quotienten-Formel versagt (\(a_k=0\) dazwischen) → Wurzelkriterium direkt oder Substitution \(u=x^{2}\).</td></tr>
+      <tr><td><b>Nützliche \(k\)-te Wurzeln:</b> \(\sqrt[k]{k}\to1,\quad \sqrt[k]{k^{a}}\to1,\quad \sqrt[k]{k!}\sim\dfrac{k}{e},\quad \big(1+\tfrac1k\big)^{k}\to e\)</td></tr>
+      <tr><td><b>Substitution:</b> \(\sum a_k x^{2k}=\sum a_k u^{k}\) mit \(u=x^{2}\) → \(R_x=\sqrt{R_u}\)</td></tr>
+    </table>
+    ${exBox(String.raw`<p>\(\displaystyle\sum\frac{x^{2k}}{4^{k}}\): mit \(u=x^{2}\) ist das \(\sum\big(\tfrac{u}{4}\big)^{k}\) — geometrisch, konvergent für \(|u|<4\):</p>\[|x|^{2}<4\ \Longleftrightarrow\ |x|<2\ \Rightarrow\ R=2.\]`)}
+    ${exBox(String.raw`<p>\(\displaystyle\sum\Big(1+\frac1k\Big)^{k^{2}}x^{k}\) (Wurzelkriterium):</p>\[\sqrt[k]{|a_k|}=\Big(1+\frac1k\Big)^{k}\ \longrightarrow\ e\quad\Rightarrow\quad R=\frac{1}{e}.\]`)}
   </div>`; }
 
 function entwickelnHtml(){ return String.raw`
@@ -1045,17 +1233,23 @@ function kurvenHtml(){ return String.raw`
     <div class="refblock">
       <h3>Bogenlänge \(L\)</h3>
       <table class="reftable">
-        <tr><td>Graph \(y=f(x),\ x\in[a,b]\): \(\displaystyle L=\int_a^b\sqrt{1+f'(x)^{2}}\,dx\)</td></tr>
-        <tr><td>Parametrisch \((x(t),y(t))\): \(\displaystyle L=\int_a^b\sqrt{\dot x^{2}+\dot y^{2}}\,dt\)</td></tr>
-        <tr><td>Polar \(r=r(\varphi),\ \varphi\in[\alpha,\beta]\): \(\displaystyle L=\int_\alpha^\beta\sqrt{r^{2}+r'^{2}}\,d\varphi\)</td></tr>
+        <tr><td>Graph \(y=f(x),\ x\in[a,b]\): \(\displaystyle L=\int_a^b\sqrt{1+f'(x)^{2}}\,dx\)
+          ${exBox(String.raw`<p>\(f(x)=\tfrac{2}{3}x^{3/2}\) auf \([0,3]\): \(f'(x)=\sqrt{x}\), also \(\sqrt{1+f'^{2}}=\sqrt{1+x}\):</p>\[L=\int_{0}^{3}\sqrt{1+x}\,dx=\Big[\tfrac{2}{3}(1+x)^{3/2}\Big]_{0}^{3}=\tfrac{2}{3}(8-1)=\tfrac{14}{3}.\]`,"Beispiel: f(x) = ⅔·x^(3/2)")}</td></tr>
+        <tr><td>Parametrisch \((x(t),y(t))\): \(\displaystyle L=\int_a^b\sqrt{\dot x^{2}+\dot y^{2}}\,dt\)
+          ${exBox(String.raw`<p>Kreis \((R\cos t,\ R\sin t)\), \(t\in[0,2\pi]\): \(\dot x=-R\sin t,\ \dot y=R\cos t\):</p>\[L=\int_{0}^{2\pi}\sqrt{R^{2}\sin^{2}t+R^{2}\cos^{2}t}\,dt=\int_{0}^{2\pi}R\,dt=2\pi R.\ \checkmark\]`,"Beispiel: Kreis")}</td></tr>
+        <tr><td>Polar \(r=r(\varphi),\ \varphi\in[\alpha,\beta]\): \(\displaystyle L=\int_\alpha^\beta\sqrt{r^{2}+r'^{2}}\,d\varphi\)
+          ${exBox(String.raw`<p>Logarithmische Spirale \(r=e^{\varphi}\), \(\varphi\in[0,2\pi]\): \(r'=e^{\varphi}\):</p>\[L=\int_{0}^{2\pi}\sqrt{e^{2\varphi}+e^{2\varphi}}\,d\varphi=\sqrt{2}\int_{0}^{2\pi}e^{\varphi}\,d\varphi=\sqrt{2}\,\big(e^{2\pi}-1\big).\]`,"Beispiel: Spirale r = e^φ")}</td></tr>
       </table>
     </div>
     <div class="refblock">
       <h3>Krümmung \(\kappa\)</h3>
       <table class="reftable">
-        <tr><td>Graph \(y=f(x)\): \(\displaystyle \kappa=\frac{|f''|}{\big(1+f'^{2}\big)^{3/2}}\)</td></tr>
-        <tr><td>Parametrisch: \(\displaystyle \kappa=\frac{|\dot x\ddot y-\dot y\ddot x|}{\big(\dot x^{2}+\dot y^{2}\big)^{3/2}}\)</td></tr>
-        <tr><td>Polar \(r(\varphi)\): \(\displaystyle \kappa=\frac{\big|r^{2}+2r'^{2}-r\,r''\big|}{\big(r^{2}+r'^{2}\big)^{3/2}}\)</td></tr>
+        <tr><td>Graph \(y=f(x)\): \(\displaystyle \kappa=\frac{|f''|}{\big(1+f'^{2}\big)^{3/2}}\)
+          ${exBox(String.raw`<p>Parabel \(y=x^{2}\): \(f'=2x,\ f''=2\):</p>\[\kappa(x)=\frac{2}{(1+4x^{2})^{3/2}},\qquad \kappa(0)=2,\ \rho(0)=\tfrac12.\]<p>Im Scheitel am stärksten gekrümmt, außen flacher.</p>`,"Beispiel: Parabel y = x²")}</td></tr>
+        <tr><td>Parametrisch: \(\displaystyle \kappa=\frac{|\dot x\ddot y-\dot y\ddot x|}{\big(\dot x^{2}+\dot y^{2}\big)^{3/2}}\)
+          ${exBox(String.raw`<p>Ellipse \((a\cos t,\ b\sin t)\): \(\dot x=-a\sin t,\ \dot y=b\cos t,\ \ddot x=-a\cos t,\ \ddot y=-b\sin t\):</p>\[\dot x\ddot y-\dot y\ddot x=ab\sin^{2}t+ab\cos^{2}t=ab\ \Rightarrow\ \kappa(t)=\frac{ab}{(a^{2}\sin^{2}t+b^{2}\cos^{2}t)^{3/2}}\]<p>Am Scheitel \(t=0\): \(\kappa=\dfrac{ab}{b^{3}}=\dfrac{a}{b^{2}}\).</p>`,"Beispiel: Ellipse")}</td></tr>
+        <tr><td>Polar \(r(\varphi)\): \(\displaystyle \kappa=\frac{\big|r^{2}+2r'^{2}-r\,r''\big|}{\big(r^{2}+r'^{2}\big)^{3/2}}\)
+          ${exBox(String.raw`<p>Kreis \(r=R\): \(r'=r''=0\):</p>\[\kappa=\frac{|R^{2}+0-0|}{(R^{2})^{3/2}}=\frac{1}{R},\qquad \rho=R.\]<p>Genau der Kreisradius — gutes Kontrollbeispiel. ✓</p>`,"Beispiel: Kreis r = R")}</td></tr>
       </table>
       <p class="sub" style="margin-top:8px">Krümmungsradius \(\rho=\dfrac{1}{\kappa}\).</p>
     </div>
@@ -1071,9 +1265,16 @@ function kurvenHtml(){ return String.raw`
     <p class="sub" style="margin-top:6px">In \(\mathbb R^{2}\) ist \(\mathbf r'\times\mathbf r''=\dot x\ddot y-\dot y\ddot x\) (Skalar) — daraus wird direkt die Parameter-Formel oben.</p>
   </div>
   <div class="refblock">
-    <h3>Beispiele</h3>
-    ${exBox(String.raw`<p>Kreis \(r=R\) (polar), \(r'=0\):</p>\[L=\int_0^{2\pi}\sqrt{R^{2}}\,d\varphi=2\pi R,\qquad \kappa=\frac{|R^{2}+0-0|}{(R^{2})^{3/2}}=\frac{1}{R}.\]<p>Also \(\rho=R\) — genau der Kreisradius. ✓</p>`)}
-    ${exBox(String.raw`<p>Parabel \(y=x^{2}\): \(f'=2x,\ f''=2\).</p>\[\kappa(x)=\frac{2}{(1+4x^{2})^{3/2}};\qquad \kappa(0)=2,\ \rho(0)=\tfrac12.\]<p>Im Scheitel am stärksten gekrümmt, außen zunehmend flacher.</p>`)}
+    <h3>Rektifizierbarkeit — zeigen &amp; widerlegen</h3>
+    <p class="sub">Eine Kurve heißt <b>rektifizierbar</b>, wenn die Längen aller einbeschriebenen Polygonzüge beschränkt sind; das Supremum ist dann die Länge \(L\).</p>
+    <table class="reftable">
+      <tr><td><b>Rektifizierbar zeigen:</b> Parametrisierung \(\varphi\in C^{1}([a,b])\) (oder stückweise \(C^{1}\), oder Lipschitz) \(\Rightarrow\) rektifizierbar mit \(\displaystyle L=\int_a^b\|\varphi'(t)\|\,dt<\infty\).</td></tr>
+      <tr><td><b>Nicht rektifizierbar — Weg 1 (Polygonzug, per Definition):</b> Folge von Stützstellen wählen, deren Polygonlängen \(\to\infty\) — typisch dort, wo die Kurve unendlich oft „hin- und herpendelt".</td></tr>
+      <tr><td><b>Nicht rektifizierbar — Weg 2 (Integral ausschöpfen):</b> Länge ist monoton in der Teilkurve. Ist \(\varphi\) auf \([\varepsilon,b]\) \(C^{1}\), gilt \(L\ge\int_{\varepsilon}^{b}\|\varphi'\|\,dt\). Divergiert das für \(\varepsilon\to a^{+}\) → \(L=\infty\).</td></tr>
+    </table>
+    ${exBox(String.raw`<p><b>Aufgabe:</b> \(f(t)=\big(t\cos\tfrac1t,\ t\sin\tfrac1t\big)\) für \(0<t\le\tfrac1\pi\), \(f(0)=(0,0)\). Zeige: die Kurve ist <b>nicht rektifizierbar</b>.</p>
+<p><b>Weg 2 (Integral):</b> Für \(t>0\) (mit \(u=\tfrac1t\)):</p>\[x'=\cos u+\tfrac1t\sin u,\qquad y'=\sin u-\tfrac1t\cos u\]\[\|f'(t)\|^{2}=1+\frac{1}{t^{2}}\qquad(\text{die Mischterme heben sich weg!})\]<p>\(f\) ist auf \([\varepsilon,\tfrac1\pi]\) glatt, also für jedes \(\varepsilon>0\):</p>\[L\ \ge\ \int_{\varepsilon}^{1/\pi}\sqrt{1+\tfrac{1}{t^{2}}}\,dt\ \ge\ \int_{\varepsilon}^{1/\pi}\frac{dt}{t}\ =\ \ln\frac{1}{\pi}-\ln\varepsilon\ \xrightarrow[\ \varepsilon\to0^{+}\ ]{}\ \infty\]<p>Das Längenintegral divergiert bei \(0\) → \(L=\infty\). ✓ (Wichtig: \(f\) ist in \(0\) nicht diff'bar — deshalb über \([\varepsilon,\tfrac1\pi]\) argumentieren und \(\varepsilon\to0\) schicken, nicht direkt \(\int_0\) hinschreiben.)</p>
+<p><b>Weg 1 (Polygonzug):</b> Bei \(t_k=\tfrac{1}{k\pi}\) ist \(\sin(k\pi)=0,\ \cos(k\pi)=(-1)^{k}\), also \(f(t_k)=\big(\tfrac{(-1)^{k}}{k\pi},\,0\big)\) — die Punkte springen abwechselnd links/rechts vom Ursprung:</p>\[\|f(t_k)-f(t_{k+1})\|=\frac{1}{\pi}\Big(\frac{1}{k}+\frac{1}{k+1}\Big)\ \ge\ \frac{1}{\pi k}\]<p>Der Polygonzug durch \(t_1,\dots,t_n\) hat Länge \(\ge\frac{1}{\pi}\sum_{k=1}^{n-1}\frac1k\to\infty\) (harmonische Reihe) → unbeschränkt → nicht rektifizierbar. ✓</p>`,"Klausur-Beispiel: Spirale t·(cos 1/t, sin 1/t) — beide Wege")}
   </div>`; }
 
 function diffHtml(){ return String.raw`
@@ -1143,15 +1344,165 @@ function diffHtml(){ return String.raw`
     ${exBox(String.raw`<p>\(\displaystyle F(t)=\int_0^{t}(x^2+t)\,dx\) (variable obere Grenze):</p>\[F'(t)=\underbrace{(t^2+t)}_{f(t,t)\cdot 1}+\int_0^{t}\underbrace{1}_{\partial_t(x^2+t)}\,dx=t^2+t+t=t^2+2t.\]<p>Check direkt: \(F(t)=\tfrac{t^3}{3}+t^2\Rightarrow F'(t)=t^2+2t\). ✓</p>`)}
   </div>`; }
 
+function bruecheHtml(){ return String.raw`
+  <p class="sub"><b>Fahrplan:</b> ① Zählergrad \(\ge\) Nennergrad? → erst <b>Polynomdivision</b>. &nbsp;② Nenner <b>faktorisieren</b>. &nbsp;③ <b>Ansatz</b> nach Schema. &nbsp;④ <b>Koeffizienten</b> bestimmen. &nbsp;⑤ Summanden einzeln integrieren.</p>
+  <div class="refblock">
+    <h3>Ansatz-Schemata (Nenner-Faktor → Ansatz)</h3>
+    <table class="reftable">
+      <tr><td>\((x-a)\)</td><td>\(\dfrac{A}{x-a}\)</td></tr>
+      <tr><td>\((x-a)^{k}\)</td><td>\(\dfrac{A_1}{x-a}+\dfrac{A_2}{(x-a)^{2}}+\cdots+\dfrac{A_k}{(x-a)^{k}}\)</td></tr>
+      <tr><td>\(x^{2}+px+q\) irreduzibel</td><td>\(\dfrac{Bx+C}{x^{2}+px+q}\)</td></tr>
+      <tr><td>\((x^{2}+px+q)^{k}\)</td><td>\(\displaystyle\sum_{j=1}^{k}\frac{B_j x+C_j}{(x^{2}+px+q)^{j}}\)</td></tr>
+    </table>
+  </div>
+  <div class="refblock">
+    <h3>Methoden zur Koeffizienten-Bestimmung — je mit Mini-Beispiel</h3>
+    <div class="subgrid">
+      <div class="subcard">
+        <div class="subhead">① Zuhalten („Handauflegen")</div>
+        <div class="subrule">Faktor \((x-a)\) zuhalten, \(x=a\) in den Rest einsetzen. <b>Nur</b> bei einfachen Nullstellen — bei \((x-a)^{k}\) nur für die höchste Potenz \(A_k\), bei quadratischen Faktoren gar nicht.</div>
+        ${exBox(String.raw`<p>\(\dfrac{5x+1}{(x-1)(x+2)}=\dfrac{A}{x-1}+\dfrac{B}{x+2}\)</p><p>\((x-1)\) zuhalten, \(x=1\): \(A=\dfrac{5\cdot1+1}{1+2}=2\). \((x+2)\) zuhalten, \(x=-2\): \(B=\dfrac{-10+1}{-2-1}=3\).</p>\[\Rightarrow\ \frac{5x+1}{(x-1)(x+2)}=\frac{2}{x-1}+\frac{3}{x+2}\]<p>Probe: \(2(x+2)+3(x-1)=5x+1\). ✓</p>`,"Mini-Beispiel")}
+      </div>
+      <div class="subcard">
+        <div class="subhead">② Grenzwert-Trick</div>
+        <div class="subrule">Beide Seiten mit \(x\) multiplizieren, \(x\to\infty\) → eine Zusatzgleichung. Immer möglich — ideal, um fehlende Koeffizienten nachzuziehen.</div>
+        ${exBox(String.raw`<p>\(\dfrac{1}{x(x^{2}+1)}=\dfrac{A}{x}+\dfrac{Bx+C}{x^{2}+1}\) — \(A=1\) per Zuhalten (\(x=0\)). Dann:</p>\[\underbrace{\frac{x}{x(x^{2}+1)}}_{\to\,0}=\underbrace{A+\frac{(Bx+C)x}{x^{2}+1}}_{\to\,A+B}\quad\Rightarrow\quad B=-1.\]<p>Rest (\(x=1\)): \(\tfrac12=1+\tfrac{-1+C}{2}\Rightarrow C=0\). Ergebnis: \(\dfrac{1}{x}-\dfrac{x}{x^{2}+1}\).</p>`,"Mini-Beispiel")}
+      </div>
+      <div class="subcard">
+        <div class="subhead">③ Koeffizientenvergleich</div>
+        <div class="subrule">Auf den Hauptnenner bringen, Potenzen von \(x\) vergleichen. Funktioniert <b>immer</b> — auch bei quadratischen Faktoren — ist aber am aufwendigsten.</div>
+        ${exBox(String.raw`<p>\(\dfrac{3x+5}{(x+1)(x+2)}=\dfrac{A}{x+1}+\dfrac{B}{x+2}\). Hauptnenner:</p>\[3x+5=A(x+2)+B(x+1)=(A+B)\,x+(2A+B)\]<p>Vergleich von \(x^{1}\) und \(x^{0}\):</p>\[A+B=3,\qquad 2A+B=5\ \Rightarrow\ A=2,\ B=1.\]`,"Mini-Beispiel")}
+      </div>
+      <div class="subcard">
+        <div class="subhead">④ Werte einsetzen</div>
+        <div class="subrule">Bequeme \(x\)-Werte in die Hauptnenner-Gleichung einsetzen → kleines lineares Gleichungssystem. Immer möglich.</div>
+        ${exBox(String.raw`<p>\(\dfrac{2x}{(x-1)(x+1)}=\dfrac{A}{x-1}+\dfrac{B}{x+1}\), Hauptnenner-Gleichung \(2x=A(x+1)+B(x-1)\).</p>\[x=0:\ 0=A-B,\qquad x=2:\ 4=3A+B\ \Rightarrow\ A=B=1.\]<p>Ergebnis: \(\dfrac{1}{x-1}+\dfrac{1}{x+1}\).</p>`,"Mini-Beispiel")}
+      </div>
+    </div>
+  </div>
+  <div class="refblock">
+    <h3>Komplette Rechnungen</h3>
+    ${exBox(String.raw`<p>\(\dfrac{1}{x^{2}-1}=\dfrac{1}{(x-1)(x+1)}=\dfrac{A}{x-1}+\dfrac{B}{x+1}\)</p><p><b>Zuhalten:</b> \((x-1)\) zuhalten, \(x=1\): \(A=\dfrac{1}{1+1}=\dfrac12\). \((x+1)\) zuhalten, \(x=-1\): \(B=-\dfrac12\).</p>\[\Rightarrow\ \int\frac{dx}{x^{2}-1}=\frac12\ln\left|\frac{x-1}{x+1}\right|+C\]`,"Beispiel 1 — nur einfache Nullstellen (reines Zuhalten)")}
+    ${exBox(String.raw`<p>\(\dfrac{x+1}{x(x-1)^{2}}=\dfrac{A}{x}+\dfrac{B}{x-1}+\dfrac{C}{(x-1)^{2}}\)</p><p><b>Zuhalten</b> \(x\) (bei \(x=0\)): \(A=\dfrac{0+1}{(0-1)^{2}}=1\).</p><p><b>Zuhalten</b> \((x-1)^{2}\) (bei \(x=1\)): \(C=\dfrac{1+1}{1}=2\). <i>(B so nicht bestimmbar!)</i></p><p><b>Grenzwert-Trick:</b> mit \(x\) multiplizieren, \(x\to\infty\): links \(\to0\), rechts \(\to A+B\) \(\Rightarrow B=-1\).</p><p><b>Probe</b> bei \(x=2\): links \(\frac{3}{2}\); rechts \(\frac12-1+2=\frac32\). ✓</p>`,"Beispiel 2 — mehrfache Nullstelle (Methoden-Mix)")}
+  </div>
+  <div class="refblock">
+    <h3>Bruch-Tricks &amp; praktische Identitäten</h3>
+    <table class="reftable">
+      <tr><td>\(\dfrac{t}{t+2}=1-\dfrac{2}{t+2}\)</td><td class="cond">\(+1{-}1\)-Trick (Zähler ↦ Nenner + Rest)</td></tr>
+      <tr><td>\(\dfrac{1}{ab}=\dfrac{1}{b-a}\Big(\dfrac{1}{a}-\dfrac{1}{b}\Big)\) \((a\neq b)\)</td><td class="cond">Teleskop-Basis</td></tr>
+      <tr><td>\(\dfrac{1}{x(x+1)}=\dfrac{1}{x}-\dfrac{1}{x+1}\)</td><td class="cond">Spezialfall</td></tr>
+      <tr><td>\(\dfrac{1}{\sqrt{a}+\sqrt{b}}=\dfrac{\sqrt{a}-\sqrt{b}}{a-b}\)</td><td class="cond">3. binomische</td></tr>
+      <tr><td>\(\dfrac{a/b}{c/d}=\dfrac{ad}{bc}\)</td><td class="cond">Doppelbruch</td></tr>
+    </table>
+    ${exBox(String.raw`<p><b>Teleskopsumme</b> mit der Identität \(\frac{1}{k(k+1)}=\frac1k-\frac{1}{k+1}\):</p>\[\sum_{k=1}^{n}\frac{1}{k(k+1)}=\Big(1-\frac12\Big)+\Big(\frac12-\frac13\Big)+\cdots+\Big(\frac1n-\frac{1}{n+1}\Big)=1-\frac{1}{n+1}\ \longrightarrow\ 1\]`)}
+  </div>`; }
+
+function funktionswerteHtml(){ return String.raw`
+  <p class="sub">Werte, die man ständig braucht — auswendig können oder in 5 Sekunden am Einheitskreis herleiten.</p>
+  <div class="twocol">
+    <div class="refblock">
+      <h3>Sinus, Kosinus, Tangens</h3>
+      <table class="reftable">
+        <tr><td></td><td>\(0\)</td><td>\(\frac{\pi}{6}\)</td><td>\(\frac{\pi}{4}\)</td><td>\(\frac{\pi}{3}\)</td><td>\(\frac{\pi}{2}\)</td><td>\(\pi\)</td></tr>
+        <tr><td>\(\sin\)</td><td>\(0\)</td><td>\(\frac{1}{2}\)</td><td>\(\frac{\sqrt{2}}{2}\)</td><td>\(\frac{\sqrt{3}}{2}\)</td><td>\(1\)</td><td>\(0\)</td></tr>
+        <tr><td>\(\cos\)</td><td>\(1\)</td><td>\(\frac{\sqrt{3}}{2}\)</td><td>\(\frac{\sqrt{2}}{2}\)</td><td>\(\frac{1}{2}\)</td><td>\(0\)</td><td>\(-1\)</td></tr>
+        <tr><td>\(\tan\)</td><td>\(0\)</td><td>\(\frac{1}{\sqrt{3}}\)</td><td>\(1\)</td><td>\(\sqrt{3}\)</td><td>—</td><td>\(0\)</td></tr>
+      </table>
+      <p class="sub">Merkregel \(\sin\)-Zeile: \(\frac{\sqrt{0}}{2},\frac{\sqrt{1}}{2},\frac{\sqrt{2}}{2},\frac{\sqrt{3}}{2},\frac{\sqrt{4}}{2}\) — und \(\cos\) ist dieselbe Zeile rückwärts.</p>
+      <h3 style="margin-top:14px">Symmetrien &amp; Verschiebungen</h3>
+      <table class="reftable">
+        <tr><td>\(\sin(-x)=-\sin x,\qquad \cos(-x)=\cos x\)</td></tr>
+        <tr><td>\(\sin(\pi-x)=\sin x,\qquad \cos(\pi-x)=-\cos x\)</td></tr>
+        <tr><td>\(\sin\big(x+\tfrac{\pi}{2}\big)=\cos x,\qquad \cos\big(x+\tfrac{\pi}{2}\big)=-\sin x\)</td></tr>
+        <tr><td>\(\sin(k\pi)=0,\quad \cos(k\pi)=(-1)^{k},\quad \sin\big(\tfrac{\pi}{2}+k\pi\big)=(-1)^{k}\)</td></tr>
+        <tr><td>Perioden: \(\sin,\cos\): \(2\pi\); \(\tan\): \(\pi\)</td></tr>
+      </table>
+    </div>
+    <div class="refblock">
+      <h3>Arcus-Funktionen</h3>
+      <table class="reftable">
+        <tr><td>\(\arcsin:\ 0\mapsto0,\ \tfrac12\mapsto\tfrac{\pi}{6},\ \tfrac{\sqrt2}{2}\mapsto\tfrac{\pi}{4},\ \tfrac{\sqrt3}{2}\mapsto\tfrac{\pi}{3},\ 1\mapsto\tfrac{\pi}{2}\)</td></tr>
+        <tr><td>\(\arctan:\ 0\mapsto0,\ \tfrac{1}{\sqrt3}\mapsto\tfrac{\pi}{6},\ 1\mapsto\tfrac{\pi}{4},\ \sqrt3\mapsto\tfrac{\pi}{3}\)</td></tr>
+        <tr><td>\(\arccos x=\tfrac{\pi}{2}-\arcsin x;\quad \arccos1=0,\ \arccos0=\tfrac{\pi}{2},\ \arccos(-1)=\pi\)</td></tr>
+        <tr><td>\(\displaystyle\lim_{x\to\pm\infty}\arctan x=\pm\frac{\pi}{2}\); \(\arcsin,\arctan\) ungerade</td></tr>
+        <tr><td>Wertebereiche: \(\arcsin:[-\tfrac{\pi}{2},\tfrac{\pi}{2}]\), \(\arccos:[0,\pi]\), \(\arctan:(-\tfrac{\pi}{2},\tfrac{\pi}{2})\)</td></tr>
+      </table>
+      <h3 style="margin-top:14px">ln, exp &amp; Sonstiges</h3>
+      <table class="reftable">
+        <tr><td>\(\ln1=0,\quad \ln e=1,\quad \ln(e^{x})=x,\quad e^{\ln x}=x\ (x>0)\)</td></tr>
+        <tr><td>\(\ln\tfrac{1}{x}=-\ln x,\quad \ln(xy)=\ln x+\ln y,\quad \ln(x^{a})=a\ln x\)</td></tr>
+        <tr><td>\(a^{x}=e^{x\ln a}\); \(\ln2\approx0{,}69,\quad e\approx2{,}72\)</td></tr>
+        <tr><td>\(e^{i\pi}=-1,\quad e^{i\pi/2}=i;\quad \sinh0=0,\ \cosh0=1\)</td></tr>
+        <tr><td>\(0!=1;\quad \dbinom{n}{k}=\dfrac{n!}{k!\,(n-k)!}\)</td></tr>
+      </table>
+    </div>
+  </div>`; }
+
+function beweiseHtml(){ return String.raw`
+  <p class="sub">Die Abschätzungen und Tricks, die in fast jedem Analysis-Beweis auftauchen — je mit typischem Einsatz zum Aufklappen.</p>
+  <div class="subgrid">
+    <div class="subcard">
+      <div class="subhead">Dreiecksungleichung</div>
+      <div class="subrule">\(|a+b|\le|a|+|b|\) — auch für Summen \(\big|\sum a_k\big|\le\sum|a_k|\), Integrale \(\big|\int f\big|\le\int|f|\), Normen \(\|x+y\|\le\|x\|+\|y\|\)</div>
+      ${exBox(String.raw`<p>Summenregel für Grenzwerte (\(a_n\to a,\ b_n\to b\)):</p>\[|(a_n+b_n)-(a+b)|\le|a_n-a|+|b_n-b|<\tfrac{\varepsilon}{2}+\tfrac{\varepsilon}{2}=\varepsilon\]`,"Typischer Einsatz")}
+    </div>
+    <div class="subcard">
+      <div class="subhead">Umgekehrte Dreiecksungleichung</div>
+      <div class="subrule">\(\big|\,|a|-|b|\,\big|\le|a-b|\) — Beträge vergleichen, Nenner nach unten abschätzen.</div>
+      ${exBox(String.raw`<p>\(a_n\to a\ \Rightarrow\ |a_n|\to|a|\):</p>\[\big|\,|a_n|-|a|\,\big|\le|a_n-a|\to0.\]<p>Oder Nenner absichern: \(|x-3|\le1\Rightarrow|x|\ge2\Rightarrow\dfrac{1}{|x|}\le\dfrac12\).</p>`,"Typischer Einsatz")}
+    </div>
+    <div class="subcard">
+      <div class="subhead">Cauchy-Schwarz-Ungleichung</div>
+      <div class="subrule">\(|\langle x,y\rangle|\le\|x\|\,\|y\|\); Summen: \(\big(\sum a_kb_k\big)^{2}\le\sum a_k^{2}\cdot\sum b_k^{2}\); Integrale: \(\big(\int fg\big)^{2}\le\int f^{2}\cdot\int g^{2}\)</div>
+      ${exBox(String.raw`<p>Mit \(b_k=1\):</p>\[\Big(\sum_{k=1}^{n}a_k\Big)^{2}\le n\,\sum_{k=1}^{n}a_k^{2}\]<p>— Summe gegen quadratische Summe tauschen; Startpunkt vieler Abschätzungen.</p>`,"Typischer Einsatz")}
+    </div>
+    <div class="subcard">
+      <div class="subhead">Bernoulli-Ungleichung</div>
+      <div class="subrule">\((1+x)^{n}\ge 1+nx\) für \(x\ge-1\)</div>
+      ${exBox(String.raw`<p>\(q^{n}\to\infty\) für \(q>1\): schreibe \(q=1+h\), \(h>0\):</p>\[q^{n}=(1+h)^{n}\ge 1+nh\ \longrightarrow\ \infty.\]`,"Typischer Einsatz")}
+    </div>
+    <div class="subcard">
+      <div class="subhead">AM–GM &amp; Co.</div>
+      <div class="subrule">\(\sqrt{ab}\le\dfrac{a+b}{2}\) (\(a,b\ge0\)); \(ab\le\dfrac{a^{2}+b^{2}}{2}\); \(x+\dfrac1x\ge2\) für \(x>0\)</div>
+      ${exBox(String.raw`<p>Produkt gegen Quadrate tauschen:</p>\[\sum|a_k b_k|\le\frac12\sum a_k^{2}+\frac12\sum b_k^{2}\]<p>— aus einem unhandlichen Produkt werden zwei handliche Summen.</p>`,"Typischer Einsatz")}
+    </div>
+    <div class="subcard">
+      <div class="subhead">Nullergänzung (±-Trick)</div>
+      <div class="subrule">Zwischenterm einschieben und Dreiecksungleichung: \(fg-\tilde f\tilde g=(f-\tilde f)g+\tilde f(g-\tilde g)\)</div>
+      ${exBox(String.raw`<p>Produktregel für Grenzwerte:</p>\[|a_nb_n-ab|=|(a_n-a)b_n+a(b_n-b)|\le|a_n-a|\,|b_n|+|a|\,|b_n-b|\]<p>\(|b_n|\) ist beschränkt (konvergent) → beide Summanden \(\to0\).</p>`,"Typischer Einsatz")}
+    </div>
+    <div class="subcard">
+      <div class="subhead">ε/2-Trick</div>
+      <div class="subrule">Zwei Fehlerquellen? Jede unter \(\varepsilon/2\) drücken, dann \(N=\max(N_1,N_2)\). (Drei Quellen: \(\varepsilon/3\), …)</div>
+      ${exBox(String.raw`<p>Konvergent \(\Rightarrow\) Cauchy: für \(m,n\ge N_{\varepsilon/2}\):</p>\[|a_n-a_m|\le|a_n-a|+|a-a_m|<\tfrac{\varepsilon}{2}+\tfrac{\varepsilon}{2}=\varepsilon.\]`,"Typischer Einsatz")}
+    </div>
+    <div class="subcard">
+      <div class="subhead">Sandwich-Lemma (Einschließung)</div>
+      <div class="subrule">\(a_n\le c_n\le b_n\) und \(a_n,b_n\to L\ \Rightarrow\ c_n\to L\)</div>
+      ${exBox(String.raw`\[-\frac1n\ \le\ \frac{\sin n}{n}\ \le\ \frac1n\qquad\Rightarrow\qquad \frac{\sin n}{n}\to0.\]`,"Typischer Einsatz")}
+    </div>
+    <div class="subcard">
+      <div class="subhead">Standard-Abschätzungen</div>
+      <div class="subrule">\(|\sin x|\le|x|\); \(|\sin x|,|\cos x|\le1\); \(e^{x}\ge1+x\); \(\ln x\le x-1\)</div>
+      ${exBox(String.raw`<p>\(\displaystyle\sum\sin\frac{1}{k^{2}}\) konvergiert absolut:</p>\[\Big|\sin\frac{1}{k^{2}}\Big|\le\frac{1}{k^{2}}\qquad\text{(Majorante, }p=2>1\text{).}\]`,"Typischer Einsatz")}
+    </div>
+  </div>`; }
+
 const REF = {
  integrale: { title:"Standardintegrale", icon:"∫", color:"var(--ch4)",
    note:"Die wichtigsten Grundintegrale. Integrationskonstante + C nicht vergessen.", html: intHtml() },
- substitutionen: { title:"Standard-Substitutionen", icon:"↦", color:"#0891b2",
-   note:"Welche Substitution wann — jeweils mit ausklappbarem Rechenweg.", html: subHtml() },
+ substitutionen: { title:"Substitutionen & Tricks", icon:"↦", color:"#0891b2",
+   note:"Substitutionen, Umformungs-Tricks und partielle Integration — alles mit ausklappbarem Rechenweg.", html: subHtml() },
  additions: { title:"Additionstheoreme", icon:"△", color:"var(--accent)",
    note:"Die wichtigsten trigonometrischen Identitäten.", html: addHtml() },
- reihen: { title:"Standardreihen", icon:"Σ", color:"#7c3aed",
-   note:"Häufige Reihen samt Konvergenzbereich, mit Beispielen.", html: reihenHtml() },
+ funktionswerte: { title:"Wichtige Funktionswerte", icon:"π", color:"#475569",
+   note:"sin/cos/tan-Tabelle, Arcus-Werte, ln/exp — die Dauerbrenner.", html: funktionswerteHtml() },
+ brueche: { title:"Brüche & Partialbruchzerlegung", icon:"⁄", color:"#c2410c",
+   note:"Ansatz-Schemata, Zuhalte- und Grenzwert-Trick, Bruch-Identitäten — mit ausführlichen Beispielen.", html: bruecheHtml() },
+ beweise: { title:"Tricks für Beweise", icon:"≤", color:"#166534",
+   note:"Dreiecksungleichung, Cauchy-Schwarz, ε/2 & Co. — die Abschätzungen, die in jedem Beweis auftauchen.", html: beweiseHtml() },
+ reihen: { title:"Standardreihen & Summen", icon:"Σ", color:"#7c3aed",
+   note:"Häufige Reihen und endliche Summen — geometrisch (beliebiger Start), Gauß, Teleskop, Fourier.", html: reihenHtml() },
  grenzwerte: { title:"Standardgrenzwerte", icon:"lim", color:"#db2777",
    note:"Grenzwerte, die man auswendig können sollte.", html: grenzHtml() },
  konv_summen: { title:"Konvergenzkriterien — Reihen", icon:"∑", color:"#059669",
@@ -1283,15 +1634,18 @@ function renderHome(){
     </section>`;
   }).join("");
   app.innerHTML = `
-    <div class="titlebar"><h1>Alle Themen — Kapitel 3 &amp; 4</h1></div>
+    <div class="titlebar"><h1>Übersicht Analysis 2 [S26]</h1></div>
     <p class="lead">Spring über die <b>Schnellzugriffe</b>, die <b>Typ-Mindmap</b> oder die <b>Kapitel-Liste</b> direkt zum Thema. In jedem Abschnitt wartet dann eine Mindmap mit den Unterthemen.</p>
 
     <h2 class="grp">⚡ Spickzettel</h2>
     <div class="reftiles">
       <a class="reftile i1" href="#/ref/integrale"><span class="ti">∫</span><span>Standardintegrale<small>Grundintegrale + Beispiele</small></span></a>
-      <a class="reftile i5" href="#/ref/substitutionen"><span class="ti">↦</span><span>Standard-Substitutionen<small>mit Rechenweg-Beispielen</small></span></a>
+      <a class="reftile i5" href="#/ref/substitutionen"><span class="ti">↦</span><span>Substitutionen &amp; Tricks<small>Subst. · +1−1 · quad. Ergänzung · part. Int.</small></span></a>
       <a class="reftile i2" href="#/ref/additions"><span class="ti">△</span><span>Additionstheoreme<small>Doppel- &amp; Halbwinkel usw.</small></span></a>
-      <a class="reftile i6" href="#/ref/reihen"><span class="ti">Σ</span><span>Standardreihen<small>Potenzreihen · Konvergenz</small></span></a>
+      <a class="reftile i16" href="#/ref/funktionswerte"><span class="ti">π</span><span>Wichtige Funktionswerte<small>sin/cos/tan · arcsin/arctan · ln</small></span></a>
+      <a class="reftile i15" href="#/ref/brueche"><span class="ti">⁄</span><span>Brüche &amp; Partialbruchzerlegung<small>Zuhalten · Grenzwert-Trick · Identitäten</small></span></a>
+      <a class="reftile i17" href="#/ref/beweise"><span class="ti">≤</span><span>Tricks für Beweise<small>Dreiecks-UG · Cauchy-Schwarz · ε/2</small></span></a>
+      <a class="reftile i6" href="#/ref/reihen"><span class="ti">Σ</span><span>Standardreihen &amp; Summen<small>geometrisch · Gauß · Teleskop · Fourier</small></span></a>
       <a class="reftile i7" href="#/ref/grenzwerte"><span class="ti">lim</span><span>Standardgrenzwerte<small>auswendig können</small></span></a>
       <a class="reftile i8" href="#/ref/konv_summen"><span class="ti">∑</span><span>Konvergenz — Reihen<small>Quotient · Wurzel · Leibniz · Integral</small></span></a>
       <a class="reftile i9" href="#/ref/konv_integrale"><span class="ti">∫</span><span>Konvergenz — Integrale<small>uneigentlich · p-Test · v.p.</small></span></a>
@@ -1320,6 +1674,7 @@ function renderHome(){
 
     <div class="note" style="margin-top:16px">
       <b>Stand:</b> Struktur/Gerüst — Navigation, Mindmaps und Spickzettel stehen; die ausführlichen Erklärungen der Themen folgen.
+      Kap. 3–4 folgen dem Skript, Kap. 5–6 sind aus den Vorlesungs-Tafelbildern (Analysis 2) rekonstruiert.
     </div>`;
 
   const catTree = { id:"types", title:"Nach Typ", kind:"root",
