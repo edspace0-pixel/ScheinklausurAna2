@@ -223,6 +223,9 @@ svg.map.grabbing{cursor:grabbing}
 .reftile.i15{background:linear-gradient(135deg,#fb923c,#c2410c)}
 .reftile.i16{background:linear-gradient(135deg,#94a3b8,#475569)}
 .reftile.i17{background:linear-gradient(135deg,#4ade80,#166534)}
+.reftile.i18{background:linear-gradient(135deg,#60a5fa,#1d4ed8)}
+.reftile.i19{background:linear-gradient(135deg,#67e8f9,#0e7490)}
+.reftile.i20{background:linear-gradient(135deg,#f87171,#b91c1c)}
 .example{margin:8px 0;border:1px solid var(--line);border-radius:10px;background:var(--bg);overflow:hidden}
 .example>summary{cursor:pointer;padding:8px 12px;font-size:13px;font-weight:600;color:var(--accent);list-style:none;user-select:none}
 .example>summary::-webkit-details-marker{display:none}
@@ -725,15 +728,21 @@ function blattCard(b, kind){
   if(b.sol) links.push(fileLink(b.sol,"✅ Lösung"));
   return `<div class="matcard"><div class="mct">${kind} ${b.n}</div><div class="mcl">${links.join("")}</div><div class="mcph">Aufgaben &amp; Themen: folgt</div></div>`;
 }
+/* Prüfungen (Dateien in assets/analysis2_sources_for_claude/Pruefungen/) */
+const PRUEF = [
+ {n:"Scheinklausur · 18.06.2022", sheet:"Pruefungen/Scheinklausur_22_06_18/Scheinklausur_220618.pdf", sol:"Pruefungen/Scheinklausur_22_06_18/Loesung_Scheinklausur_220618.pdf"},
+ {n:"Scheinklausur · 21.07.2022", sheet:"Pruefungen/Scheinklausur_22_07_21/Scheinklausur_220721.pdf", sol:null}
+];
 function uebHtml(){
-  return `
-   <div class="refblock"><h3>Übungsblätter</h3>
-     <div class="matgrid">${UEB.blaetter.map(b=>blattCard(b,"Blatt")).join("")}</div>
-   </div>
-   <div class="refblock"><h3>Vortragsübungen</h3>
-     <div class="matgrid">${UEB.vortrag.map(b=>blattCard(b,"Vortragsübung")).join("")}</div>
-   </div>
-   <div class="note">Aufgaben mit den passenden Themen verknüpfen — kommt in einer späteren Runde.</div>`;
+  return `<div class="matgrid">${UEB.blaetter.map(b=>blattCard(b,"Blatt")).join("")}</div>
+   <div class="note" style="margin-top:14px">Aufgaben mit den passenden Themen verknüpfen — kommt in einer späteren Runde.</div>`;
+}
+function vortragHtml(){
+  return `<div class="matgrid">${UEB.vortrag.map(b=>blattCard(b,"Vortragsübung")).join("")}</div>`;
+}
+function pruefungenHtml(){
+  return `<div class="matgrid">${PRUEF.map(b=>blattCard(b,"")).join("")}</div>
+   <div class="note" style="margin-top:14px">Tipp: unter Klausurbedingungen lösen — die Lösung erst zur Kontrolle öffnen.</div>`;
 }
 function intHtml(){ return String.raw`
   <div class="twocol">
@@ -1533,6 +1542,88 @@ function beweiseHtml(){ return String.raw`
     </div>
   </div>`; }
 
+function saetzeHtml(){ return String.raw`
+  <p class="sub">Die zentralen Definitionen und Sätze — je Feld: die <b>mathematische Definition</b>, darunter zum Aufklappen: <b>in Worten</b>, <b>✓ wie man „erfüllt" zeigt</b> und <b>✗ wie man „verletzt" zeigt</b>.</p>
+  <div class="subgrid">
+    <div class="subcard">
+      <div class="subhead">Stetigkeit (ε-δ &amp; Folgenkriterium)</div>
+      <div class="subrule">\(f:D\to\mathbb R\), \(x_0\in D\). Beide Fassungen sind äquivalent.</div>
+      \[f\ \text{stetig in }x_0\ :\Longleftrightarrow\ \forall\varepsilon>0\ \exists\delta>0\ \forall x\in D:\ |x-x_0|<\delta\ \Rightarrow\ |f(x)-f(x_0)|<\varepsilon\]
+      \[\textbf{Folgenkriterium:}\quad x_n\to x_0\ \Longrightarrow\ f(x_n)\to f(x_0)\quad\text{für jede Folge }(x_n)\subset D\]
+      ${exBox(String.raw`<p>Zu jeder <b>Ziel-Toleranz</b> \(\varepsilon\) um \(f(x_0)\) gibt es eine <b>Start-Toleranz</b> \(\delta\) um \(x_0\): alle \(x\) im \(\delta\)-Fenster landen mit ihren Werten im \(\varepsilon\)-Fenster — kleine Eingabe-Wackler erzeugen kleine Ausgabe-Wackler, kein Sprung. Praxis: <b>Nachweisen</b> per ε-δ (δ konstruieren) oder per „Baukasten" (Summen, Produkte, Quotienten, Verkettungen stetiger Funktionen sind stetig); <b>Widerlegen</b> fast immer per Folgenkriterium — eine einzige böse Folge reicht.</p>`,"In Worten")}
+      ${exBox(String.raw`<p>\(f(x)=x^{2}\) ist stetig in jedem \(x_0\) — \(\delta\) explizit konstruieren:</p>\[|x^{2}-x_0^{2}|=|x-x_0|\cdot|x+x_0|\]<p>Beschränke zuerst \(|x-x_0|<1\): dann \(|x+x_0|\le|x-x_0|+2|x_0|\le 2|x_0|+1\). Wähle also</p>\[\delta=\min\Big(1,\ \frac{\varepsilon}{2|x_0|+1}\Big)\ \Rightarrow\ |x^{2}-x_0^{2}|\le\delta\,\big(2|x_0|+1\big)\le\varepsilon.\ \checkmark\]<p>(Schneller im Alltag: \(x^{2}=x\cdot x\) ist ein Produkt stetiger Funktionen.)</p>`,"✓ So zeigt man: erfüllt")}
+      ${exBox(String.raw`<p>\(f=\operatorname{sgn}\) ist in \(0\) unstetig — <b>Folgenkriterium</b> mit zwei Folgen:</p>\[x_n=\tfrac1n\to0:\ f(x_n)=1\to1,\qquad y_n=-\tfrac1n\to0:\ f(y_n)=-1\to-1\]<p>Zwei Folgen gegen \(x_0=0\), aber die Funktionswerte haben <b>verschiedene Limites</b> (und keiner ist \(f(0)=0\)) \(\Rightarrow\) nicht stetig in \(0\). Merke: schon <b>eine</b> Folge mit \(f(x_n)\not\to f(x_0)\) genügt.</p>`,"✗ So zeigt man: verletzt")}
+    </div>
+    <div class="subcard">
+      <div class="subhead">Riemann-Integrierbarkeit \(f\in R[a,b]\)</div>
+      <div class="subrule">\(f:[a,b]\to\mathbb R\) beschränkt; \(X\) Zerlegung mit Feinheit \(\lambda(X)\), \(\Xi\) Stützstellen.</div>
+      \[f\in R[a,b]\ :\Longleftrightarrow\ \exists\,I\in\mathbb{R}:\ \sigma(f,X,\Xi)=\sum_{k=1}^{n}f(\xi_k)\,\Delta x_k\ \xrightarrow[\ \lambda(X)\to0\ ]{}\ I\]
+      <div class="subrule">für <b>jede</b> Zerlegungsfolge und <b>beliebige</b> Stützstellen; dann \(I=\int_a^b f\). Praktische Kriterien: stetig \(\Rightarrow\) intb.; monoton \(\Rightarrow\) intb.; Lebesgue: beschränkt + stetig bis auf Nullmenge \(\Leftrightarrow\) intb.</div>
+      ${exBox(String.raw`<p>Zerhacke \([a,b]\) beliebig fein und lies die Funktionshöhe an beliebigen Zwischenstellen ab — bilde Rechtecksummen. \(f\) ist integrierbar, wenn <b>alle</b> diese Summen (egal wie zerlegt, egal wo abgelesen) gegen <b>denselben</b> Wert \(I\) streben. Beschränktheit ist Pflicht; im Alltag prüft man nicht die Definition, sondern: stetig? monoton? höchstens „harmlose" Sprungstellen?</p>`,"In Worten")}
+      ${exBox(String.raw`<p>\(f(x)=x^{2}\) auf \([0,1]\): \(f\) ist <b>stetig</b> auf dem kompakten Intervall \(\Rightarrow f\in R[0,1]\) (Satz „stetig ⇒ integrierbar"; Hintergrund: stetig auf Kompaktum \(\Rightarrow\) gleichmäßig stetig \(\Rightarrow\) Ober- und Untersummen rücken zusammen).</p><p>So läuft der Nachweis fast immer: <b>auf ein Kriterium zurückziehen</b>, nicht die Definition prüfen.</p>`,"✓ So zeigt man: erfüllt")}
+      ${exBox(String.raw`<p><b>Dirichlet-Funktion</b> \(f=\mathbf 1_{\mathbb Q}\) auf \([0,1]\) (1 auf rationalen, 0 auf irrationalen Zahlen): jedes noch so kleine Teilintervall enthält beide Sorten Punkte. Wählt man <b>rationale</b> Stützstellen, ist \(\sigma=1\); wählt man <b>irrationale</b>, ist \(\sigma=0\):</p>\[\lim \sigma\ \text{hängt von der Stützstellenwahl ab}\ \Rightarrow\ f\notin R[0,1].\]<p>Verletzt-Nachweis = <b>zwei Ablesearten mit verschiedenen Limites</b> angeben.</p>`,"✗ So zeigt man: verletzt")}
+    </div>
+    <div class="subcard">
+      <div class="subhead">Konvergenz uneigentlicher Integrale</div>
+      <div class="subrule">Voraussetzung: \(f\) ist auf <b>jedem kompakten</b> Intervall \([A,R]\) Riemann-integrierbar (sonst ist \(F(R)\) gar nicht definiert).</div>
+      \[\int_A^{\infty}\!f(x)\,dx\ \text{konvergiert}\ :\Longleftrightarrow\ \lim_{R\to\infty}\ \underbrace{\int_A^{R}\!f(x)\,dx}_{=:F(R)}\ \text{existiert in }\mathbb R\]
+      <div class="subrule">Analog bei Randsingularität: \(\lim_{\varepsilon\to0^{+}}\int_a^{b-\varepsilon}f\).</div>
+      ${exBox(String.raw`<p>Zwei Zutaten: <b>(1)</b> bis zu jeder endlichen Schranke \(R\) muss \(f\) ganz normal integrierbar sein — deshalb „auf jedem kompakten Intervall R-integrierbar". <b>(2)</b> Die Werte \(F(R)\) müssen sich für \(R\to\infty\) auf eine feste Zahl <b>einpendeln</b>. Divergenz heißt: \(F(R)\to\pm\infty\) <i>oder</i> \(F(R)\) oszilliert ohne Limes.</p>`,"In Worten")}
+      ${exBox(String.raw`<p>\(\displaystyle\int_1^{\infty}\frac{dx}{x^{2}}\): \(x^{-2}\) ist stetig auf jedem \([1,R]\) ✓. Dann \(F(R)\) explizit ausrechnen und den Limes bilden:</p>\[F(R)=\int_1^{R}\frac{dx}{x^{2}}=1-\frac{1}{R}\ \xrightarrow[R\to\infty]{}\ 1\]<p>Limes existiert \(\Rightarrow\) konvergent mit Wert \(1\).</p>`,"✓ So zeigt man: erfüllt")}
+      ${exBox(String.raw`<p>\(\displaystyle\int_0^{\infty}\cos x\,dx\): hier ist \(F(R)=\sin R\) — <b>beschränkt, aber ohne Grenzwert</b> (oszilliert ewig zwischen \(-1\) und \(1\)): divergent, obwohl nichts „explodiert"!</p><p>Und \(\displaystyle\int_1^{\infty}\frac{dx}{x}\): \(F(R)=\ln R\to\infty\) — divergent durch Explosion. Verletzt-Nachweis = \(F(R)\) ausrechnen und zeigen: \(\to\infty\) oder zwei Folgen \(R_n\) mit verschiedenen Limites (z. B. \(\sin\) bei \(2\pi n\) vs. \(2\pi n+\tfrac\pi2\)).</p>`,"✗ So zeigt man: verletzt")}
+    </div>
+    <div class="subcard">
+      <div class="subhead">Konvergenz einer Reihe</div>
+      <div class="subrule">Eine Reihe ist per Definition die Folge ihrer Partialsummen.</div>
+      \[\sum_{k=0}^{\infty}a_k=S\ :\Longleftrightarrow\ s_n=\sum_{k=0}^{n}a_k\ \xrightarrow[\ n\to\infty\ ]{}\ S\]
+      ${exBox(String.raw`<p>Hinter jeder Reihe steckt eine gewöhnliche <b>Folge</b>: die Zwischensummen \(s_0,s_1,s_2,\dots\) Konvergiert diese Folge, „ist" die Reihe ihr Grenzwert. Alle Reihen-Kriterien sind letztlich Aussagen über diese Folge.</p>`,"In Worten")}
+      ${exBox(String.raw`<p>Geometrische Reihe \(q=\tfrac12\): Partialsummen <b>explizit</b> hinschreiben und Limes ablesen:</p>\[s_n=\sum_{k=0}^{n}\Big(\tfrac12\Big)^{k}=\frac{1-(\tfrac12)^{n+1}}{1-\tfrac12}=2\Big(1-\tfrac{1}{2^{n+1}}\Big)\ \longrightarrow\ 2.\]`,"✓ So zeigt man: erfüllt")}
+      ${exBox(String.raw`<p>\(\sum(-1)^{k}\): \(s_n=1,0,1,0,\dots\) hat die zwei Häufungswerte \(1\) und \(0\) \(\Rightarrow\) \((s_n)\) divergiert \(\Rightarrow\) Reihe divergent.</p><p>Schneller Standardweg: <b>notwendiges Kriterium</b> — hier \(a_k=(-1)^{k}\not\to0\), fertig.</p>`,"✗ So zeigt man: verletzt")}
+    </div>
+    <div class="subcard">
+      <div class="subhead">Absolute Konvergenz</div>
+      <div class="subrule">Stärker als Konvergenz: erlaubt Umordnen und Produktbildung.</div>
+      \[\sum a_k\ \text{konvergiert absolut}\ :\Longleftrightarrow\ \sum_{k}|a_k|<\infty\qquad(\Rightarrow\ \textstyle\sum a_k\ \text{konvergiert})\]
+      ${exBox(String.raw`<p>Auch wenn man <b>alle Vorzeichen wegwirft</b>, bleibt die Summe endlich. Das ist die „robuste" Konvergenz: jede Umordnung liefert denselben Wert. Nur konvergent, aber nicht absolut („bedingt") heißt: die Vorzeichen-Auslöschung ist essenziell — Umordnen kann dann <i>jeden</i> Wert erzeugen (Riemann!).</p>`,"In Worten")}
+      ${exBox(String.raw`<p>\(\displaystyle\sum\frac{(-1)^{k}}{k^{2}}\): Beträge bilden und ein Kriterium anwenden:</p>\[\sum\Big|\frac{(-1)^{k}}{k^{2}}\Big|=\sum\frac{1}{k^{2}}\ \text{konvergiert }(p=2>1)\ \Rightarrow\ \text{absolut konvergent.}\]`,"✓ So zeigt man: erfüllt")}
+      ${exBox(String.raw`<p>\(\displaystyle\sum\frac{(-1)^{k+1}}{k}\): die Reihe selbst konvergiert (Leibniz, \(=\ln2\)) — aber die Betragsreihe ist die <b>harmonische</b>:</p>\[\sum\Big|\frac{(-1)^{k+1}}{k}\Big|=\sum\frac{1}{k}=\infty\]<p>\(\Rightarrow\) konvergent, aber <b>nicht absolut</b> (nur bedingt). Verletzt-Nachweis = Divergenz der Betragsreihe zeigen.</p>`,"✗ So zeigt man: verletzt")}
+    </div>
+    <div class="subcard">
+      <div class="subhead">Punktweise Konvergenz \(f_n\to f\)</div>
+      <div class="subrule">Funktionenfolge \(f_n:D\to\mathbb R\); jeder Punkt für sich.</div>
+      \[f_n\to f\ \text{punktweise auf }D\ :\Longleftrightarrow\ \forall x\in D:\ \lim_{n\to\infty}f_n(x)=f(x)\]
+      <div class="subrule">Das \(N=N(\varepsilon,x)\) darf von \(x\) abhängen.</div>
+      ${exBox(String.raw`<p>\(x\) <b>festhalten</b>, dann ist \(f_n(x)\) eine gewöhnliche Zahlenfolge — die muss konvergieren, für jedes \(x\) einzeln. Wie schnell, darf von Punkt zu Punkt völlig verschieden sein.</p>`,"In Worten")}
+      ${exBox(String.raw`<p>\(f_n(x)=\frac{x}{n}\) auf \(\mathbb R\): festes \(x\) einsetzen und den Zahlen-Limes bilden:</p>\[\lim_{n\to\infty}\frac{x}{n}=0\quad\text{für jedes feste }x\ \Rightarrow\ f_n\to f\equiv0\ \text{punktweise.}\]`,"✓ So zeigt man: erfüllt")}
+      ${exBox(String.raw`<p>\(f_n(x)=(-1)^{n}x\) auf \(\mathbb R\): für \(x\neq0\) springt \(f_n(x)\) zwischen \(x\) und \(-x\) — die Zahlenfolge hat zwei Häufungswerte, also keinen Limes:</p>\[\Rightarrow\ (f_n)\ \text{konvergiert nicht einmal punktweise.}\]<p>Verletzt-Nachweis = <b>einen</b> Punkt \(x\) angeben, an dem \(f_n(x)\) divergiert.</p>`,"✗ So zeigt man: verletzt")}
+    </div>
+    <div class="subcard">
+      <div class="subhead">Gleichmäßige Konvergenz \(f_n\rightrightarrows f\)</div>
+      <div class="subrule">Ein \(N(\varepsilon)\) für <b>alle</b> \(x\) gleichzeitig — der ganze Graph im \(\varepsilon\)-Schlauch.</div>
+      \[f_n\rightrightarrows f\ \text{auf }D\ :\Longleftrightarrow\ M_n=\sup_{x\in D}\,|f_n(x)-f(x)|\ \xrightarrow[\ n\to\infty\ ]{}\ 0\]
+      ${exBox(String.raw`<p>Nicht jeder Punkt für sich, sondern der <b>schlimmste</b> Punkt zählt: \(M_n\) ist der größte Fehler auf ganz \(D\). Erst wenn selbst der gegen 0 geht, ist die Konvergenz gleichmäßig. Rezept: Grenzfunktion bestimmen → Fehlerfunktion \(|f_n-f|\) → Supremum (ggf. per Ableitung) → \(\to0\)?</p>`,"In Worten")}
+      ${exBox(String.raw`<p>\(f_n(x)=\frac{x}{n}\) auf \([0,1]\) (punktweise Grenzfunktion \(f\equiv0\)):</p>\[M_n=\sup_{x\in[0,1]}\Big|\frac{x}{n}\Big|=\frac{1}{n}\ \longrightarrow\ 0\ \Rightarrow\ \text{gleichmäßig.}\]<p><b>Achtung Bereich:</b> dieselbe Folge auf ganz \(\mathbb R\) hat \(M_n=\infty\) — dort <i>nicht</i> gleichmäßig!</p>`,"✓ So zeigt man: erfüllt")}
+      ${exBox(String.raw`<p>\(f_n(x)=x^{n}\) auf \([0,1]\): Grenzfunktion \(f(x)=0\) für \(x<1\), \(f(1)=1\). Fehler-Supremum:</p>\[M_n=\sup_{0\le x<1}x^{n}=1\ \not\to\ 0\ \Rightarrow\ \text{nur punktweise, nicht gleichmäßig.}\]<p>(Symptom: alle \(f_n\) stetig, Grenzfunktion unstetig — das kann bei gleichmäßiger Konvergenz nie passieren.)</p>`,"✗ So zeigt man: verletzt")}
+    </div>
+    <div class="subcard">
+      <div class="subhead">Cauchy-Folge &amp; Cauchy-Kriterium</div>
+      <div class="subrule">Konvergenz nachweisen, <b>ohne den Grenzwert zu kennen</b>. In \(\mathbb R,\ \mathbb C,\ \mathbb R^{d}\) (vollständig): Cauchy \(\Leftrightarrow\) konvergent.</div>
+      \[(a_n)\ \text{Cauchy}\ :\Longleftrightarrow\ \forall\varepsilon>0\ \exists N\ \forall m,n\ge N:\ |a_n-a_m|<\varepsilon\]
+      <div class="subrule">Für Reihen: \(\Big|\sum_{k=n+1}^{m}a_k\Big|<\varepsilon\) für alle \(m>n\ge N\).</div>
+      ${exBox(String.raw`<p>Die Folgenglieder rücken untereinander beliebig eng zusammen — nicht nur benachbarte, sondern <b>alle ab Index \(N\)</b>. In vollständigen Räumen ist das dasselbe wie Konvergenz; der Vorteil: man braucht keinen Kandidaten für den Limes.</p>`,"In Worten")}
+      ${exBox(String.raw`<p>\(a_n=\frac1n\): für \(m,n\ge N\) beide Glieder abschätzen:</p>\[\Big|\frac1n-\frac1m\Big|\le\frac1n+\frac1m\le\frac{2}{N}<\varepsilon\quad\text{für }N>\tfrac{2}{\varepsilon}\ \Rightarrow\ \text{Cauchy}\ \Rightarrow\ \text{konvergent.}\]`,"✓ So zeigt man: erfüllt")}
+      ${exBox(String.raw`<p>Harmonische Reihe: der <b>Block-Trick</b> — vergleiche \(s_{2n}\) mit \(s_n\):</p>\[s_{2n}-s_n=\sum_{k=n+1}^{2n}\frac1k\ \ge\ n\cdot\frac{1}{2n}=\frac12\quad\text{für jedes }n\]<p>Der Abstand wird <b>nie</b> kleiner als \(\tfrac12\) \(\Rightarrow\) keine Cauchy-Folge \(\Rightarrow\) \(\sum\frac1k\) divergiert. Verletzt-Nachweis = ein festes \(\varepsilon_0\) (hier \(\tfrac12\)) finden, das immer wieder gerissen wird.</p>`,"✗ So zeigt man: verletzt")}
+    </div>
+    <div class="subcard">
+      <div class="subhead">Hauptsatz der Differential- &amp; Integralrechnung</div>
+      <div class="subrule">Voraussetzung: \(f\) <b>stetig</b> auf \([a,b]\).</div>
+      \[F(x)=\int_a^{x}f(t)\,dt\ \Rightarrow\ F'=f\qquad\text{und}\qquad \int_a^{b}f=\Phi(b)-\Phi(a)\ \text{für jede Stammfunktion }\Phi\]
+      ${exBox(String.raw`<p>Integrieren und Ableiten sind Umkehroperationen: die „Flächenfunktion" \(F\) wächst an der Stelle \(x\) genau mit der Rate \(f(x)\). Praktische Folge: bestimmte Integrale berechnet man über <b>irgendeine</b> Stammfunktion — Randwerte einsetzen, fertig.</p>`,"In Worten")}
+      ${exBox(String.raw`<p>\(\displaystyle\int_0^{1}x^{2}\,dx\): Voraussetzung prüfen (\(x^{2}\) stetig ✓), Stammfunktion \(\Phi=\frac{x^{3}}{3}\) angeben (Probe: \(\Phi'=x^{2}\) ✓), Randwerte:</p>\[\int_0^{1}x^{2}\,dx=\frac{1}{3}-0=\frac13.\]`,"✓ So zeigt man: erfüllt")}
+      ${exBox(String.raw`<p><b>Voraussetzung verletzt</b> — \(f=\operatorname{sgn}\) auf \([-1,1]\) (Sprung bei \(0\)):</p>\[F(x)=\int_{-1}^{x}\operatorname{sgn}(t)\,dt=|x|-1\]<p>\(F\) ist stetig, aber bei \(0\) <b>nicht differenzierbar</b> (Knick!) — dort gilt \(F'=f\) nicht. \(F'=f\) gilt nur an <b>Stetigkeitsstellen</b> von \(f\); die Stetigkeit im Satz ist also wesentlich.</p>`,"✗ Wenn die Voraussetzung fehlt")}
+    </div>
+  </div>`; }
+
 const REF = {
  integrale: { title:"Standardintegrale", icon:"∫", color:"var(--ch4)",
    note:"Die wichtigsten Grundintegrale. Integrationskonstante + C nicht vergessen.", html: intHtml() },
@@ -1546,6 +1637,8 @@ const REF = {
    note:"Ansatz-Schemata, Zuhalte- und Grenzwert-Trick, Bruch-Identitäten — mit ausführlichen Beispielen.", html: bruecheHtml() },
  beweise: { title:"Tricks für Beweise", icon:"≤", color:"#166534",
    note:"Dreiecksungleichung, Cauchy-Schwarz, ε/2 & Co. — die Abschätzungen, die in jedem Beweis auftauchen.", html: beweiseHtml() },
+ saetze: { title:"Wichtige Sätze & Definitionen", icon:"§", color:"#1d4ed8",
+   note:"Die zentralen Definitionen — je mit Übersetzung in Worte plus: erfüllt zeigen / verletzt zeigen.", html: saetzeHtml() },
  reihen: { title:"Standardreihen & Summen", icon:"Σ", color:"#7c3aed",
    note:"Häufige Reihen und endliche Summen — geometrisch (beliebiger Start), Gauß, Teleskop, Fourier.", html: reihenHtml() },
  grenzwerte: { title:"Grenzwerte & Landau-Symbole", icon:"lim", color:"#db2777",
@@ -1564,8 +1657,12 @@ const REF = {
    note:"Bogenlänge und Krümmung in kartesischen, parametrischen und Polarkoordinaten.", html: kurvenHtml() },
  diffrechnung: { title:"Differentialrechnung (mehrere Variablen)", icon:"∇", color:"#4338ca",
    note:"Partielle Ableitung, Gradient, Jacobi-/Hesse-Matrix, Nabla-Operator, Fréchet-Ableitung, Leibniz-Regel.", html: diffHtml() },
- uebungen: { title:"Übungsblätter & Vortragsübungen", icon:"📝", color:"#d97706",
-   note:"Alle Übungs- und Vortragsübungsblätter mit Lösungen (sofern vorhanden).", html: uebHtml() }
+ pruefungen: { title:"Prüfungen", icon:"🎓", color:"#b91c1c",
+   note:"Alte Klausuren — Aufgaben und Lösungen als PDF.", html: pruefungenHtml() },
+ vortrag: { title:"Vortragsübungen", icon:"🗣", color:"#0e7490",
+   note:"Die Vortragsübungsblätter mit Lösungen (sofern vorhanden).", html: vortragHtml() },
+ uebungen: { title:"Übungsblätter", icon:"📝", color:"#d97706",
+   note:"Alle Übungsblätter mit Lösungen (sofern vorhanden).", html: uebHtml() }
 };
 
 /* =========================================================================
@@ -1688,6 +1785,7 @@ function renderHome(){
       <a class="reftile i2" href="#/ref/additions"><span class="ti">△</span><span>Additionstheoreme<small>Doppel- &amp; Halbwinkel usw.</small></span></a>
       <a class="reftile i15" href="#/ref/brueche"><span class="ti">⁄</span><span>Brüche &amp; Partialbruchzerlegung<small>Zuhalten · Grenzwert-Trick · Identitäten</small></span></a>
       <a class="reftile i17" href="#/ref/beweise"><span class="ti">≤</span><span>Tricks für Beweise<small>Dreiecks-UG · Cauchy-Schwarz · ε/2</small></span></a>
+      <a class="reftile i18" href="#/ref/saetze"><span class="ti">§</span><span>Wichtige Sätze &amp; Definitionen<small>Definition · in Worten · ✓/✗ zeigen</small></span></a>
       <a class="reftile i1" href="#/ref/integrale"><span class="ti">∫</span><span>Standardintegrale<small>Grundintegrale + Beispiele</small></span></a>
       <a class="reftile i5" href="#/ref/substitutionen"><span class="ti">↦</span><span>Substitutionen &amp; Tricks<small>Subst. · +1−1 · quad. Ergänzung · part. Int.</small></span></a>
       <a class="reftile i9" href="#/ref/konv_integrale"><span class="ti">∫</span><span>Konvergenz — Integrale<small>uneigentlich · p-Test · v.p.</small></span></a>
@@ -1701,9 +1799,11 @@ function renderHome(){
       <a class="reftile i14" href="#/ref/diffrechnung"><span class="ti">∇</span><span>Differentialrechnung<small>partiell · Jacobi/Hesse · ∇ · Fréchet</small></span></a>
     </div>
 
-    <h2 class="grp">📦 Übungen</h2>
+    <h2 class="grp">📦 Übungen &amp; Prüfungen</h2>
     <div class="reftiles">
-      <a class="reftile i3" href="#/ref/uebungen"><span class="ti">📝</span><span>Übungsblätter &amp; Vortragsübungen<small>Blatt 01–15 · mit Lösungen</small></span></a>
+      <a class="reftile i3" href="#/ref/uebungen"><span class="ti">📝</span><span>Übungsblätter<small>Blatt 01–15 · mit Lösungen</small></span></a>
+      <a class="reftile i19" href="#/ref/vortrag"><span class="ti">🗣</span><span>Vortragsübungen<small>Blatt 1–4 · mit Lösungen</small></span></a>
+      <a class="reftile i20" href="#/ref/pruefungen"><span class="ti">🎓</span><span>Prüfungen<small>Scheinklausur · Klausur · Lösungen</small></span></a>
     </div>
 
     <h2 class="grp">🗂️ Schnellzugriff nach Typ</h2>
