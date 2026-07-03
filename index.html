@@ -1508,39 +1508,41 @@ function konvIntegraleHtml(){ return String.raw`
   </div>`; }
 
 function potenzreihenHtml(){ return String.raw`
-  <p class="sub">Potenzreihe \(\displaystyle\sum_{k=0}^{\infty} a_k (x-x_0)^{k}\) um den Entwicklungspunkt \(x_0\).</p>
+  <p class="sub">Potenzreihe \(\displaystyle\sum_{k=0}^{\infty} a_k (x-x_0)^{k}\) um den Entwicklungspunkt \(x_0\) — Beispiele stehen direkt beim jeweiligen Feld.</p>
   <div class="twocol">
     <div class="refblock">
       <h3>Konvergenzradius \(R\)</h3>
       <table class="reftable">
-        <tr><td><b>Cauchy-Hadamard:</b> \(\displaystyle \frac{1}{R}=\limsup_{k}\sqrt[k]{|a_k|}\)<span class="when">Funktioniert <b>immer</b> (limsup existiert stets) — einsetzen bei \(k\)-ten Potenzen und Lücken-Reihen.</span></td></tr>
-        <tr><td><b>Quotienten-Form:</b> \(\displaystyle R=\lim_{k}\left|\frac{a_k}{a_{k+1}}\right|\) (falls existent)<span class="when">Einsetzen bei Fakultäten und einfachen Brüchen — nur wenn (fast) alle \(a_k\neq0\), sonst Wurzel-Form nehmen.</span></td></tr>
-        <tr><td>\(|x-x_0|<R\): absolut konvergent</td><td class="cond">innen</td></tr>
-        <tr><td>\(|x-x_0|>R\): divergent</td><td class="cond">außen</td></tr>
-        <tr><td>\(|x-x_0|=R\): Randverhalten <b>einzeln</b> prüfen</td></tr>
+        <tr><td><b>Cauchy-Hadamard:</b> \(\displaystyle \frac{1}{R}=\limsup_{k}\sqrt[k]{|a_k|}\)<span class="when">Funktioniert <b>immer</b> (limsup existiert stets) — einsetzen bei \(k\)-ten Potenzen und Lücken-Reihen.</span>
+          ${exBox(String.raw`<p>Extremfälle:</p>\[\sum k!\,x^{k}:\ \sqrt[k]{k!}\sim\frac{k}{e}\to\infty\ \Rightarrow\ R=0\ (\text{nur }x=0)\]\[\sum \frac{x^{k}}{k^{2}}:\ \sqrt[k]{k^{-2}}\to1\ \Rightarrow\ R=1,\ \text{und der Rand }|x|=1\text{ konvergiert überall }(p=2).\]`,"Beispiel: Extremfälle R = 0 und Randkonvergenz")}</td></tr>
+        <tr><td><b>Quotienten-Form:</b> \(\displaystyle R=\lim_{k}\left|\frac{a_k}{a_{k+1}}\right|\) (falls existent)<span class="when">Einsetzen bei Fakultäten und einfachen Brüchen — nur wenn (fast) alle \(a_k\neq0\), sonst Wurzel-Form nehmen.</span>
+          ${exBox(String.raw`<p>\(\displaystyle\sum \frac{x^{k}}{k!}\):</p>\[R=\lim_k\left|\frac{a_k}{a_{k+1}}\right|=\lim_k\frac{(k+1)!}{k!}=\lim_k (k+1)=\infty\]<p>— konvergiert in ganz \(\mathbb R\) (bzw. \(\mathbb C\)): das ist \(e^{x}\).</p>`,"Beispiel: e-Reihe, R = ∞")}</td></tr>
+        <tr><td><b>Innen/außen/Rand:</b> \(|x-x_0|<R\): absolut konvergent · \(|x-x_0|>R\): divergent · \(|x-x_0|=R\): <b>jeden Randpunkt einzeln</b> prüfen.
+          ${exBox(String.raw`<p>\(\displaystyle\sum\frac{x^{k}}{k}\): \(R=1\), aber der Rand ist verschieden:</p>\[x=-1:\ \sum\frac{(-1)^{k}}{k}\ \text{konv. (Leibniz)};\qquad x=1:\ \sum\frac{1}{k}\ \text{div. (harmonisch)}.\]`,"Beispiel: Randverhalten ist Einzelfallprüfung")}</td></tr>
       </table>
       <p class="sub" style="margin-top:8px">Konvention: \(\tfrac{1}{0}=\infty,\ \tfrac{1}{\infty}=0\).</p>
     </div>
     <div class="refblock">
-      <h3>Eigenschaften & Beispiele</h3>
+      <h3>Rechnen mit Potenzreihen (im Innern)</h3>
       <table class="reftable">
-        <tr><td>Innerhalb \(\left]x_0-R,\,x_0+R\right[\) darf man <b>gliedweise differenzieren/integrieren</b> (gleicher Radius \(R\)); die Summe ist dort beliebig oft differenzierbar.</td></tr>
+        <tr><td><b>Gliedweise ableiten &amp; integrieren</b> — innerhalb \(\left]x_0-R,\,x_0+R\right[\) erlaubt, mit <b>gleichem</b> Radius \(R\); die Summe ist dort beliebig oft differenzierbar und \(a_k=\frac{S^{(k)}(x_0)}{k!}\).
+          ${exBox(String.raw`<p>Geometrische Reihe ableiten (\(|x|<1\)):</p>\[\frac{d}{dx}\,\frac{1}{1-x}=\frac{d}{dx}\sum_{k=0}^{\infty}x^{k}\ \Rightarrow\ \frac{1}{(1-x)^{2}}=\sum_{k=1}^{\infty}k\,x^{k-1}=\sum_{k=0}^{\infty}(k+1)\,x^{k}\]`,"Beispiel: 1/(1−x)² durch Ableiten")}</td></tr>
+        <tr><td><b>Cauchy-Produkt:</b> für \(|x-x_0|<\min(R_a,R_b)\) gilt\[\Big(\sum_{k=0}^{\infty}a_k(x-x_0)^{k}\Big)\Big(\sum_{\ell=0}^{\infty}b_\ell(x-x_0)^{\ell}\Big)=\sum_{n=0}^{\infty}c_n\,(x-x_0)^{n},\qquad c_n=\sum_{k=0}^{n}a_k\,b_{n-k}\]<span class="when">Einsetzen, wenn man das Produkt zweier bekannter Reihen wieder als Potenzreihe braucht. Zulässig, weil beide im Innern <b>absolut</b> konvergieren (5.3.6); der Radius der Produktreihe ist \(\ge\min(R_a,R_b)\).</span>
+          ${exBox(String.raw`<p>\(\dfrac{1}{(1-x)^{2}}\) als Quadrat der geometrischen Reihe (\(a_k=b_k=1\)):</p>\[c_n=\sum_{k=0}^{n}1\cdot1=n+1\qquad\Rightarrow\qquad \frac{1}{(1-x)^{2}}=\sum_{n=0}^{\infty}(n+1)\,x^{n},\quad|x|<1\]<p>— dasselbe Ergebnis wie oben per Ableiten: zwei Wege, eine Reihe. ✓</p>`,"Rechenbeispiel: (Σxᵏ)² = 1/(1−x)²")}
+          ${exBox(String.raw`<p>\(e^{x}\cdot e^{x}=e^{2x}\) über Koeffizienten (\(a_k=b_k=\frac{1}{k!}\)):</p>\[c_n=\sum_{k=0}^{n}\frac{1}{k!\,(n-k)!}=\frac{1}{n!}\sum_{k=0}^{n}\binom{n}{k}=\frac{2^{n}}{n!}\]<p>(binomischer Lehrsatz) ⇒ \(\sum c_n x^{n}=\sum\frac{(2x)^{n}}{n!}=e^{2x}\). ✓ — das Cauchy-Produkt reproduziert genau die Funktionalgleichung.</p>`,"Rechenbeispiel: eˣ·eˣ = e²ˣ")}</td></tr>
       </table>
-      <h3 style="margin-top:12px">Beispiele</h3>
-      ${exBox(String.raw`<p>\(\sum \frac{x^{k}}{k!}\) (Quotienten-Form):</p>\[R=\lim_k\left|\frac{a_k}{a_{k+1}}\right|=\lim_k (k+1)=\infty\quad(\,=e^{x}\,).\]`)}
-      ${exBox(String.raw`<p>\(\sum \frac{x^{k}}{k}\): \(R=1\), aber der Rand ist verschieden:</p>\[x=-1:\ \sum\frac{(-1)^{k}}{k}\ \text{konv. (Leibniz)};\qquad x=1:\ \sum\frac{1}{k}\ \text{div. (harmonisch)}.\]`)}
-      ${exBox(String.raw`<p>Extremfälle:</p>\[\sum k!\,x^{k}:\ R=0\ (\text{nur }x=0);\qquad \sum \frac{x^{k}}{k^{2}}:\ R=1,\ \text{Rand konvergiert }(p=2).\]`)}
     </div>
   </div>
   <div class="refblock">
     <h3>Tricks beim Konvergenzradius</h3>
     <table class="reftable">
-      <tr><td><b>Lücken-Reihen</b> (nur \(x^{2k}\) o. ä.): Quotienten-Formel versagt (\(a_k=0\) dazwischen) → Wurzelkriterium direkt oder Substitution \(u=x^{2}\).</td></tr>
-      <tr><td><b>Nützliche \(k\)-te Wurzeln:</b> \(\sqrt[k]{k}\to1,\quad \sqrt[k]{k^{a}}\to1,\quad \sqrt[k]{k!}\sim\dfrac{k}{e},\quad \big(1+\tfrac1k\big)^{k}\to e\)</td></tr>
-      <tr><td><b>Substitution:</b> \(\sum a_k x^{2k}=\sum a_k u^{k}\) mit \(u=x^{2}\) → \(R_x=\sqrt{R_u}\)</td></tr>
+      <tr><td><b>Lücken-Reihen</b> (nur \(x^{2k}\) o. ä.): Quotienten-Formel versagt (\(a_k=0\) dazwischen) → Wurzelkriterium direkt auf die Reihe anwenden.
+        ${exBox(String.raw`<p>\(\displaystyle\sum\frac{x^{2k}}{4^{k}}\) — Wurzelkriterium direkt (auf die Glieder als Zahlenreihe):</p>\[\sqrt[k]{\frac{|x|^{2k}}{4^{k}}}=\frac{x^{2}}{4}<1\ \Longleftrightarrow\ |x|<2\ \Rightarrow\ R=2.\]`,"Beispiel: Wurzelkriterium direkt")}</td></tr>
+      <tr><td><b>Nützliche \(k\)-te Wurzeln:</b> \(\sqrt[k]{c^{k}b_k}=c\,\sqrt[k]{b_k}\); und \(\sqrt[k]{k}\to1,\quad \sqrt[k]{k^{a}}\to1,\quad \sqrt[k]{k!}\sim\dfrac{k}{e},\quad \big(1+\tfrac1k\big)^{k}\to e\).
+        ${exBox(String.raw`<p>\(\displaystyle\sum\Big(1+\frac1k\Big)^{k^{2}}x^{k}\) (Wurzelkriterium):</p>\[\sqrt[k]{|a_k|}=\Big(1+\frac1k\Big)^{k}\ \longrightarrow\ e\quad\Rightarrow\quad R=\frac{1}{e}.\]`,"Beispiel: (1+1/k)^(k²) → R = 1/e")}</td></tr>
+      <tr><td><b>Substitution:</b> \(\sum a_k x^{2k}=\sum a_k u^{k}\) mit \(u=x^{2}\) → \(R_x=\sqrt{R_u}\).
+        ${exBox(String.raw`<p>Nochmal \(\displaystyle\sum\frac{x^{2k}}{4^{k}}\), jetzt per Substitution \(u=x^{2}\):</p>\[\sum\Big(\frac{u}{4}\Big)^{k}\ \text{geometrisch, konvergent für }|u|<4\ \Longleftrightarrow\ |x|<2\ \Rightarrow\ R=2\]<p>— gleicher Schluss wie mit dem Wurzelkriterium, oft der schnellere Weg.</p>`,"Beispiel: u = x² — derselbe Radius")}</td></tr>
     </table>
-    ${exBox(String.raw`<p>\(\displaystyle\sum\frac{x^{2k}}{4^{k}}\): mit \(u=x^{2}\) ist das \(\sum\big(\tfrac{u}{4}\big)^{k}\) — geometrisch, konvergent für \(|u|<4\):</p>\[|x|^{2}<4\ \Longleftrightarrow\ |x|<2\ \Rightarrow\ R=2.\]`)}
-    ${exBox(String.raw`<p>\(\displaystyle\sum\Big(1+\frac1k\Big)^{k^{2}}x^{k}\) (Wurzelkriterium):</p>\[\sqrt[k]{|a_k|}=\Big(1+\frac1k\Big)^{k}\ \longrightarrow\ e\quad\Rightarrow\quad R=\frac{1}{e}.\]`)}
   </div>`; }
 
 function entwickelnHtml(){ return String.raw`
