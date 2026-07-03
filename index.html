@@ -241,6 +241,30 @@ svg.map.grabbing{cursor:grabbing}
 .subrule{color:var(--muted);font-size:14px;margin-bottom:6px}
 .when{display:block;font-size:12px;color:var(--muted);margin-top:4px}
 .when::before{content:"→ "}
+.flow{display:flex;flex-direction:column;margin:6px 0}
+.fnode{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 14px;box-shadow:var(--shadow)}
+.fnode .ftit{font-weight:700;display:flex;gap:9px;align-items:baseline}
+.fnode .fnum{background:var(--accent);color:#fff;border-radius:99px;min-width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex:none}
+.fout{display:flex;gap:8px;flex-wrap:wrap;margin-top:7px;font-size:12.5px;align-items:center}
+.fyes{background:#dcfce7;color:#166534;border-radius:8px;padding:2px 9px;font-weight:600}
+.fno{background:#fee2e2;color:#b91c1c;border-radius:8px;padding:2px 9px;font-weight:600}
+.fnext{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:2px 9px;color:var(--muted);font-weight:600}
+.farrow{text-align:center;color:var(--muted);font-size:15px;line-height:1.3;padding:1px 0}
+.rmtrack{display:flex;align-items:flex-start;overflow-x:auto;padding:8px 2px 6px}
+.rmstep{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:92px;flex:none}
+.rmnode{display:flex;flex-direction:column;align-items:center;gap:5px;background:none;border:0;cursor:pointer;padding:0;font:inherit;color:var(--ink)}
+.rmn{width:44px;height:44px;border-radius:50%;background:var(--panel);border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;color:var(--accent);box-shadow:var(--shadow);transition:transform .12s}
+.rmnode:hover .rmn{transform:scale(1.08)}
+.rmnode.on .rmn{background:var(--accent);color:#fff}
+.rmt{font-size:11.5px;font-weight:600;text-align:center;max-width:100px;line-height:1.25}
+.rmlink{flex:none;display:flex;flex-direction:column;align-items:center;margin-top:10px;min-width:56px;padding:0 2px}
+.rml{font-size:10.5px;font-weight:700;white-space:nowrap}
+.rma{font-size:13px;letter-spacing:-1px;line-height:1.1;white-space:nowrap}
+.rmlink.yes{color:#16a34a}.rmlink.no{color:#dc2626}.rmlink.mid{color:var(--muted)}
+.rmexit{font-size:10.5px;font-weight:700;border-radius:8px;padding:1px 7px;white-space:nowrap}
+.rmexit.yes{background:#dcfce7;color:#166534}.rmexit.no{background:#fee2e2;color:#b91c1c}
+.rmhint{font-size:11.5px;color:var(--muted);margin:2px 0 6px}
+.rmpanel{margin-top:2px}
 .node.ch.cat{background:var(--panel); border-color:var(--accent)}
 .link.cat{stroke:var(--accent); opacity:.5}
 
@@ -1260,7 +1284,70 @@ function grenzHtml(){ return String.raw`
 
 /* Referenz-Seiten (eigene Ergänzungen, Route #/ref/<key>) */
 function konvSummenHtml(){ return String.raw`
-  <p class="sub"><b>Fahrplan:</b> ① \(a_k\to0\)? Nein → divergent, fertig. &nbsp;② Struktur erkennen: \(k!\) oder \(q^{k}\) → <b>Quotient</b> · \((\dots)^{k}\) → <b>Wurzel</b> · alternierend → <b>Leibniz</b>. &nbsp;③ Sonst gegen p-Reihe/geometrische Reihe vergleichen (<b>Majorante/Minorante</b>).</p>
+  <div class="refblock">
+    <h3>🧭 Roadmap — Vorgehen Konvergenzanalyse</h3>
+    <div class="roadmap">
+      <div class="rmtrack">
+        <div class="rmstep">
+          <button type="button" class="rmnode" data-rm="rms1"><span class="rmn">1</span><span class="rmt">Nullfolge?</span></button>
+          <span class="rmexit no">nein → ⛔</span>
+        </div>
+        <div class="rmlink yes"><span class="rml">ja</span><span class="rma">━━━▶</span></div>
+        <div class="rmstep">
+          <button type="button" class="rmnode" data-rm="rms2"><span class="rmn">2</span><span class="rmt">Quotient / Wurzel</span></button>
+          <span class="rmexit yes">L &lt; 1 → ✅</span><span class="rmexit no">L &gt; 1 → ⛔</span>
+        </div>
+        <div class="rmlink mid"><span class="rml">L = 1</span><span class="rma">━━━▶</span></div>
+        <div class="rmstep">
+          <button type="button" class="rmnode" data-rm="rms3"><span class="rmn">3</span><span class="rmt">p-Reihen-Vergleich</span></button>
+          <span class="rmexit yes">p &gt; 1 → ✅</span><span class="rmexit no">p ≤ 1 → ⛔</span>
+        </div>
+        <div class="rmlink mid"><span class="rml">passt nicht</span><span class="rma">━━━▶</span></div>
+        <div class="rmstep">
+          <button type="button" class="rmnode" data-rm="rms4"><span class="rmn">4</span><span class="rmt">Integral&shy;kriterium</span></button>
+          <span class="rmexit yes">∫ konv → ✅</span><span class="rmexit no">∫ div → ⛔</span>
+        </div>
+        <div class="rmlink mid"><span class="rml">Vorzeichen?</span><span class="rma">━━━▶</span></div>
+        <div class="rmstep">
+          <button type="button" class="rmnode" data-rm="rms5"><span class="rmn">5</span><span class="rmt">Alternierend?</span></button>
+          <span class="rmexit yes">Leibniz → ✅</span><span class="rmexit no">sonst → ⛔</span>
+        </div>
+      </div>
+      <p class="rmhint">Station anklicken → Details und ✓/✗-Beispiele öffnen sich hier darunter.</p>
+      <div class="rmpanels">
+        <div class="rmpanel fnode" id="rms1" hidden>
+          <div class="ftit"><span class="fnum">1</span><span>Nullfolgen-Test: gilt \(a_k\to0\)?</span></div>
+          <div class="fout"><span class="fno">NEIN → ⛔ divergent, fertig</span><span class="fyes">JA → weiter zu Station 2 (sagt noch nichts!)</span></div>
+          ${exBox(String.raw`<p>\(\displaystyle\sum\frac{k}{k+1}\): \(a_k\to1\neq0\) ⇒ <b>divergent</b> — eine Zeile, Analyse beendet.</p>`,"✓ Test entscheidet: divergent")}
+          ${exBox(String.raw`<p>\(\displaystyle\sum\frac1k\): \(a_k\to0\) ✓ — aber die Reihe ist trotzdem <b>divergent</b> (Station 3/4 zeigt es). Der Test kann nur aussortieren, nie Konvergenz beweisen.</p>`,"✗ Test entscheidet nicht: weiter prüfen")}
+        </div>
+        <div class="rmpanel fnode" id="rms2" hidden>
+          <div class="ftit"><span class="fnum">2</span><span>Struktur-Check: \(k!\) oder \(q^{k}\) drin → <b>Quotientenkriterium</b>; \(a_k=(\dots)^{k}\) → <b>Wurzelkriterium</b>. Grenzwert \(L\) bilden.</span></div>
+          <div class="fout"><span class="fyes">L &lt; 1 → ✅ konvergent (sogar absolut)</span><span class="fno">L &gt; 1 → ⛔ divergent</span><span class="fnext">L = 1 → keine Aussage, Station 3</span></div>
+          ${exBox(String.raw`<p>\(\displaystyle\sum\frac{k^{2}}{2^{k}}\) (Potenz im Nenner → Quotient):</p>\[\frac{a_{k+1}}{a_k}=\frac{(k+1)^{2}}{2k^{2}}\ \longrightarrow\ \frac12<1\ \Rightarrow\ \text{✅ konvergent.}\]`,"✓ Beispiel: L < 1")}
+          ${exBox(String.raw`<p>\(\displaystyle\sum\frac{1}{k^{2}}\): \(\frac{a_{k+1}}{a_k}=\frac{k^{2}}{(k+1)^{2}}\to1\) — <b>keine Aussage</b>, obwohl die Reihe konvergiert. Bei rationalen Ausdrücken in \(k\) ist Station 3 das richtige Werkzeug.</p>`,"✗ Beispiel: L = 1, Kriterium stumm")}
+        </div>
+        <div class="rmpanel fnode" id="rms3" hidden>
+          <div class="ftit"><span class="fnum">3</span><span>Rational in \(k\)? Nur die <b>höchsten Potenzen</b> zählen: \(a_k\sim\frac{c}{k^{p}}\) → Grenzwertvergleich mit der p-Reihe.</span></div>
+          <div class="fout"><span class="fyes">p &gt; 1 → ✅ konvergent</span><span class="fno">p ≤ 1 → ⛔ divergent</span><span class="fnext">passt nicht → Station 4</span></div>
+          ${exBox(String.raw`<p>\(\displaystyle\sum\frac{2k+3}{k^{3}-k+1}\): führend \(\sim\frac{2}{k^{2}}\), Grenzwertvergleich mit \(\frac{1}{k^{2}}\) liefert \(\frac{a_k}{b_k}\to2\in\left]0,+\infty\right[\) ⇒ wie \(\sum k^{-2}\): <b>✅ konvergent</b> (\(p=2>1\)).</p>`,"✓ Beispiel: p = 2 > 1")}
+          ${exBox(String.raw`<p>\(\displaystyle\sum\frac{k+1}{k^{2}+5}\): führend \(\sim\frac1k\) ⇒ wie die harmonische Reihe: <b>⛔ divergent</b> (\(p=1\)).</p>`,"✗ Beispiel: p = 1, harmonisch")}
+        </div>
+        <div class="rmpanel fnode" id="rms4" hidden>
+          <div class="ftit"><span class="fnum">4</span><span>Logarithmen / \(f(k)\) leicht integrierbar? → <b>Integralkriterium</b> (\(f\ge0\) fallend).</span></div>
+          <div class="fout"><span class="fyes">\(\int_1^{+\infty}f\) konv. → ✅</span><span class="fno">\(\int_1^{+\infty}f\) div. → ⛔</span><span class="fnext">Vorzeichenwechsel? → Station 5</span></div>
+          ${exBox(String.raw`<p>\(\displaystyle\sum\frac{1}{k\,(\ln k)^{2}}\):</p>\[\int_2^{+\infty}\frac{dx}{x(\ln x)^{2}}=\Big[-\frac{1}{\ln x}\Big]_2^{+\infty}=\frac{1}{\ln 2}<\infty\ \Rightarrow\ \text{✅ konvergent.}\]`,"✓ Beispiel: Σ 1/(k ln²k)")}
+          ${exBox(String.raw`<p>\(\displaystyle\sum\frac{1}{k\ln k}\):</p>\[\int_2^{+\infty}\frac{dx}{x\ln x}=\ln\ln x\Big|_2^{+\infty}=+\infty\ \Rightarrow\ \text{⛔ divergent}\]<p>— der Unterschied zwischen \(\ln k\) und \((\ln k)^{2}\) im Nenner entscheidet!</p>`,"✗ Beispiel: Σ 1/(k ln k)")}
+        </div>
+        <div class="rmpanel fnode" id="rms5" hidden>
+          <div class="ftit"><span class="fnum">5</span><span>Vorzeichenwechsel: erst <b>absolute</b> Konvergenz testen (\(|a_k|\) durch Stationen 2–4 schicken); scheitert das → <b>Leibniz/Dirichlet</b> (monoton fallende Nullfolge?).</span></div>
+          <div class="fout"><span class="fyes">absolut konv. → ✅ (robust)</span><span class="fyes">Leibniz greift → ✅ (bedingt)</span><span class="fno">nichts greift + \(a_k\not\to0\) → ⛔</span></div>
+          ${exBox(String.raw`<p>\(\displaystyle\sum\frac{(-1)^{k}}{\sqrt k}\): absolut? \(\sum\frac{1}{\sqrt k}\) divergiert (\(p=\tfrac12\)). Leibniz: \(\frac{1}{\sqrt k}\downarrow0\) monoton ⇒ <b>✅ konvergent (bedingt)</b> — Umordnen verboten!</p>`,"✓ Beispiel: Leibniz rettet")}
+          ${exBox(String.raw`<p>\(\displaystyle\sum(-1)^{k}\frac{k}{k+1}\): sieht alternierend aus, aber \(|a_k|\to1\neq0\) ⇒ <b>⛔ divergent</b>. Moral: Station 1 gilt auch für alternierende Reihen — Leibniz braucht zwingend eine <i>Nullfolge</i>.</p>`,"✗ Beispiel: alternierend, aber keine Nullfolge")}
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="twocol">
     <div class="refblock">
       <h3>Basis-Checks &amp; Vergleichskriterien</h3>
@@ -1314,7 +1401,69 @@ function konvSummenHtml(){ return String.raw`
   </div>`; }
 
 function konvIntegraleHtml(){ return String.raw`
-  <p class="sub"><b>Fahrplan:</b> ① Alle kritischen Stellen finden (\(\pm\infty\), Polstellen, Randsingularitäten) und das Integral dort <b>aufspalten</b>. &nbsp;② An jeder kritischen Stelle das Verhalten mit \(x^{-p}\) vergleichen (<b>p-Test</b>). &nbsp;③ Bei Vorzeichenwechseln: absolute Konvergenz. &nbsp;④ Pol im Inneren / symmetrische Grenzen: <b>Hauptwert</b>.</p>
+  <div class="refblock">
+    <h3>🧭 Roadmap — Vorgehen Konvergenzanalyse</h3>
+    <div class="roadmap">
+      <div class="rmtrack">
+        <div class="rmstep">
+          <button type="button" class="rmnode" data-rm="rmi1"><span class="rmn">1</span><span class="rmt">Kritische Stellen</span></button>
+        </div>
+        <div class="rmlink mid"><span class="rml">pro Stelle</span><span class="rma">━━━▶</span></div>
+        <div class="rmstep">
+          <button type="button" class="rmnode" data-rm="rmi2"><span class="rmn">2</span><span class="rmt">Stamm&shy;funktion?</span></button>
+          <span class="rmexit yes">Limes → ✅</span><span class="rmexit no">∞ / oszilliert → ⛔</span>
+        </div>
+        <div class="rmlink mid"><span class="rml">nicht machbar</span><span class="rma">━━━▶</span></div>
+        <div class="rmstep">
+          <button type="button" class="rmnode" data-rm="rmi3"><span class="rmn">3</span><span class="rmt">p-Test</span></button>
+          <span class="rmexit yes">p passt → ✅</span><span class="rmexit no">p passt nicht → ⛔</span>
+        </div>
+        <div class="rmlink mid"><span class="rml">kein xᵖ</span><span class="rma">━━━▶</span></div>
+        <div class="rmstep">
+          <button type="button" class="rmnode" data-rm="rmi4"><span class="rmn">4</span><span class="rmt">Majorante / Minorante</span></button>
+          <span class="rmexit yes">≤ konv → ✅</span><span class="rmexit no">≥ div → ⛔</span>
+        </div>
+        <div class="rmlink mid"><span class="rml">Vorzeichen?</span><span class="rma">━━━▶</span></div>
+        <div class="rmstep">
+          <button type="button" class="rmnode" data-rm="rmi5"><span class="rmn">5</span><span class="rmt">Absolut / v.p.</span></button>
+          <span class="rmexit yes">absolut → ✅</span><span class="rmexit no">nur v.p. → ⛔</span>
+        </div>
+      </div>
+      <p class="rmhint">Station anklicken → Details und ✓/✗-Beispiele öffnen sich hier darunter.</p>
+      <div class="rmpanels">
+        <div class="rmpanel fnode" id="rmi1" hidden>
+          <div class="ftit"><span class="fnum">1</span><span>Alle <b>kritischen Stellen</b> sammeln (\(\pm\infty\), Pole, Randsingularitäten) und dort <b>aufspalten</b> — jedes Teilintegral muss einzeln konvergieren.</span></div>
+          <div class="fout"><span class="fnext">dann: jede kritische Stelle einzeln durch Station 2–5 schicken</span></div>
+          ${exBox(String.raw`<p>\(\displaystyle\int_0^{+\infty}\frac{dx}{\sqrt{x}\,(1+x)}\): kritisch bei \(0\) <b>und</b> \(+\infty\) → bei \(1\) aufspalten. Bei \(0\): \(\sim x^{-1/2}\) konv.; bei \(+\infty\): \(\sim x^{-3/2}\) konv. ⇒ <b>✅ konvergent</b> (Wert \(\pi\)).</p>`,"✓ Beispiel: richtig aufgespalten")}
+          ${exBox(String.raw`<p>Pol übersehen: \(\displaystyle\int_{-1}^{1}\frac{dx}{x^{2}}\) „\(=\big[-\frac1x\big]_{-1}^{1}=-2\)" — <b>Unsinn</b> (Integrand ist positiv!). Der Pol bei \(0\) macht beide Teilintegrale \(=+\infty\) ⇒ <b>⛔ divergent</b>. Erst Stellen suchen, dann rechnen.</p>`,"✗ Beispiel: Pol im Inneren übersehen")}
+        </div>
+        <div class="rmpanel fnode" id="rmi2" hidden>
+          <div class="ftit"><span class="fnum">2</span><span>Stammfunktion leicht? → \(F(R)\) bzw. \(F(\varepsilon)\) <b>direkt ausrechnen</b> und Grenzwert bilden.</span></div>
+          <div class="fout"><span class="fyes">Limes existiert → ✅ (Wert gratis)</span><span class="fno">\(\to\pm\infty\) oder oszilliert → ⛔</span><span class="fnext">keine Stammfunktion → Station 3</span></div>
+          ${exBox(String.raw`<p>\(\displaystyle\int_1^{+\infty}\frac{dx}{x^{2}}\): \(F(R)=1-\frac1R\to1\) ⇒ <b>✅ konvergent mit Wert 1</b> — direkter geht es nicht.</p>`,"✓ Beispiel: F(R) hat Limes")}
+          ${exBox(String.raw`<p>\(\displaystyle\int_0^{+\infty}\cos x\,dx\): \(F(R)=\sin R\) <b>oszilliert</b> ohne Grenzwert ⇒ <b>⛔ divergent</b> — obwohl nichts explodiert. Beide Divergenz-Arten im Blick behalten!</p>`,"✗ Beispiel: F(R) oszilliert")}
+        </div>
+        <div class="rmpanel fnode" id="rmi3" hidden>
+          <div class="ftit"><span class="fnum">3</span><span><b>p-Test:</b> führendes Verhalten \(\sim x^{-p}\) am kritischen Rand bestimmen.</span></div>
+          <div class="fout"><span class="fyes">bei \(+\infty\): p &gt; 1 → ✅ · bei \(0\): p &lt; 1 → ✅</span><span class="fno">sonst → ⛔</span><span class="fnext">kein sauberes \(x^{-p}\) → Station 4</span></div>
+          ${exBox(String.raw`<p>\(\displaystyle\int_1^{+\infty}\frac{dx}{\sqrt{x^{3}+1}}\): führend \(x^{-3/2}\), Grenzwertvergleich \(\frac{f}{g}\to1\) ⇒ wie \(\int x^{-3/2}\): <b>✅ konvergent</b> (\(p=\tfrac32>1\)).</p>`,"✓ Beispiel: p = 3/2 bei ∞")}
+          ${exBox(String.raw`<p>\(\displaystyle\int_0^{1}\frac{dx}{x^{2}}\): am Rand \(0\) ist \(p=2\), aber \(0\) verlangt \(p<1\) ⇒ <b>⛔ divergent</b>. Merkhilfe: \(\infty\) mag große \(p\), \(0\) mag kleine \(p\).</p>`,"✗ Beispiel: p = 2 bei 0")}
+        </div>
+        <div class="rmpanel fnode" id="rmi4" hidden>
+          <div class="ftit"><span class="fnum">4</span><span>Kein Leitverhalten ablesbar? → <b>Majorante</b> (für ✅) / <b>Minorante</b> (für ⛔) / Grenzwertvergleich — Vergleichspartner \(x^{-p}\), \(e^{-x}\).</span></div>
+          <div class="fout"><span class="fyes">Majorante konv. → ✅</span><span class="fno">Minorante div. → ⛔</span><span class="fnext">Vorzeichenwechsel? → Station 5</span></div>
+          ${exBox(String.raw`<p>\(\displaystyle\int_1^{+\infty}e^{-x^{2}}dx\): für \(x\ge1\) ist \(e^{-x^{2}}\le e^{-x}\) und \(\int_1^{+\infty}e^{-x}=e^{-1}\) ⇒ <b>✅ konvergent</b>.</p>`,"✓ Beispiel: e^(−x)-Majorante")}
+          ${exBox(String.raw`<p>\(\displaystyle\int_1^{+\infty}\frac{dx}{\sqrt{x^{2}+1}}\): wegen \(x^{2}+1\le2x^{2}\) ist der Integrand \(\ge\frac{1}{\sqrt2\,x}\) ⇒ harmonische Minorante ⇒ <b>⛔ divergent</b>.</p>`,"✗ Beispiel: 1/x-Minorante")}
+        </div>
+        <div class="rmpanel fnode" id="rmi5" hidden>
+          <div class="ftit"><span class="fnum">5</span><span><b>Vorzeichenwechsel:</b> erst \(\int\|f\|\) testen (absolut ⇒ konvergent); scheitert das → partielle Integration (Typ \(\frac{\sin x}{x}\)). Pol innen + Symmetrie gefragt → <b>v.p.</b> (Achtung: v.p. existiert ≠ konvergent!).</span></div>
+          <div class="fout"><span class="fyes">absolut → ✅</span><span class="fyes">part. Int. zähmt Oszillation → ✅ (bedingt)</span><span class="fno">nur v.p. existiert → ⛔ (als gewöhnliches Integral)</span></div>
+          ${exBox(String.raw`<p>\(\displaystyle\int_1^{+\infty}\frac{\sin x}{x^{2}}dx\): \(\big|\frac{\sin x}{x^{2}}\big|\le\frac{1}{x^{2}}\) ⇒ <b>✅ absolut konvergent</b> — Vorzeichen spielen keine Rolle mehr.</p>`,"✓ Beispiel: absolut via Majorante")}
+          ${exBox(String.raw`<p>\(\displaystyle\int_{-1}^{1}\frac{dx}{x}\): nicht konvergent (beide Teile \(\pm\infty\)) — nur der Hauptwert existiert (\(\mathrm{v.p.}=0\)). Wer hier „\(=0\)" ohne v.p. schreibt, kassiert den Punktabzug: <b>⛔ divergent</b> im gewöhnlichen Sinn.</p>`,"✗ Beispiel: nur v.p., nicht konvergent")}
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="twocol">
     <div class="refblock">
       <h3>Definition (immer über Grenzwerte)</h3>
@@ -1523,70 +1672,72 @@ function kurvenHtml(){ return String.raw`
   </div>`; }
 
 function diffHtml(){ return String.raw`
-  <p class="sub">Differentialrechnung mehrerer Variablen: Ableitungen, Matrizen, der \(\nabla\)-Operator. Bei den anspruchsvolleren Dingen (ab der Leibniz-Regel) je ein Beispiel.</p>
+  <p class="sub">Differentialrechnung mehrerer Variablen — jedes Feld mit ausklappbarem Rechenbeispiel; wo etwas gelten oder scheitern kann, gibt es ✓ und ✗.</p>
   <div class="twocol">
     <div class="refblock">
-      <h3>Partielle Ableitung & Gradient</h3>
+      <h3>Partielle Ableitung &amp; Gradient</h3>
       <table class="reftable">
-        <tr><td><b>Partiell:</b> \(\displaystyle \frac{\partial f}{\partial x_i}=\lim_{h\to0}\frac{f(\dots,x_i+h,\dots)-f}{h}\) — alle anderen Variablen fest halten.</td></tr>
-        <tr><td><b>Gradient:</b> \(\displaystyle \nabla f=\Big(\frac{\partial f}{\partial x_1},\dots,\frac{\partial f}{\partial x_n}\Big)^{\!\top}\)</td><td class="cond">steilster Anstieg, \(\perp\) Niveaumengen</td></tr>
-        <tr><td><b>Richtungsableitung:</b> \(\displaystyle \partial_{\mathbf v}f=\nabla f\cdot\mathbf v\) mit \(\|\mathbf v\|=1\)</td></tr>
-        <tr><td><b>Totales Differential:</b> \(\displaystyle df=\sum_i\frac{\partial f}{\partial x_i}\,dx_i=\nabla f\cdot d\mathbf x\)</td></tr>
-        <tr><td><b>Satz von Schwarz:</b> \(f\in C^2\Rightarrow \dfrac{\partial^2 f}{\partial x_i\partial x_j}=\dfrac{\partial^2 f}{\partial x_j\partial x_i}\)</td></tr>
+        <tr><td><b>Partiell:</b> \(\displaystyle \frac{\partial f}{\partial x_i}=\lim_{h\to0}\frac{f(\dots,x_i+h,\dots)-f}{h}\) — alle anderen Variablen fest halten.
+          ${exBox(String.raw`<p>\(f(x,y)=x^{2}y+\sin(xy)\):</p><p>\(\dfrac{\partial f}{\partial x}\): \(y\) wie eine Konstante behandeln —</p>\[\frac{\partial f}{\partial x}=2xy+y\cos(xy)\]<p>\(\dfrac{\partial f}{\partial y}\): \(x\) festhalten —</p>\[\frac{\partial f}{\partial y}=x^{2}+x\cos(xy)\]<p>(Kettenregel: innere Ableitung von \(xy\) ist einmal \(y\), einmal \(x\).)</p>`,"Beispiel: beide partiellen Ableitungen")}</td></tr>
+        <tr><td><b>Gradient:</b> \(\displaystyle \nabla f=\Big(\frac{\partial f}{\partial x_1},\dots,\frac{\partial f}{\partial x_n}\Big)^{\!\top}\) — Richtung des steilsten Anstiegs, \(\perp\) auf Niveaumengen.
+          ${exBox(String.raw`<p>\(f(x,y)=x^{2}+y^{2}\):</p>\[\nabla f=(2x,\,2y)=2\,(x,y)\]<p>zeigt radial nach außen (steilster Anstieg), steht senkrecht auf den Niveaukreisen \(x^{2}+y^{2}=c\), und \(\|\nabla f\|=2\sqrt{x^{2}+y^{2}}\) ist die Steigungsrate in dieser Richtung.</p>`,"Beispiel: ∇(x²+y²)")}</td></tr>
+        <tr><td><b>Richtungsableitung:</b> \(\displaystyle \partial_{\mathbf v}f=\nabla f\cdot\mathbf v\) mit \(\|\mathbf v\|=1\); maximal in Richtung \(\nabla f\) mit Wert \(\|\nabla f\|\).
+          ${exBox(String.raw`<p>\(f(x,y)=x^{2}+y^{2}\) im Punkt \(P=(1,2)\), Richtung \(\mathbf v=\frac{1}{\sqrt2}(1,1)\):</p>\[\nabla f(P)=(2,4),\qquad \partial_{\mathbf v}f(P)=(2,4)\cdot\tfrac{1}{\sqrt2}(1,1)=\frac{2+4}{\sqrt2}=3\sqrt2\approx4{,}24\]<p>Zum Vergleich: das Maximum über alle Richtungen ist \(\|\nabla f(P)\|=\sqrt{20}\approx4{,}47\) — Richtung \(\mathbf v\) liegt also fast optimal.</p>`,"Beispiel: Richtungsableitung ausrechnen")}</td></tr>
+        <tr><td><b>Totales Differential:</b> \(\displaystyle df=\sum_i\frac{\partial f}{\partial x_i}\,dx_i=\nabla f\cdot d\mathbf x\) — lineare Näherung der Änderung.
+          ${exBox(String.raw`<p>Fehlerfortpflanzung beim Zylindervolumen \(V=\pi r^{2}h\), \(r=2\), \(h=5\), Messfehler \(dr=dh=0{,}1\):</p>\[dV=\frac{\partial V}{\partial r}dr+\frac{\partial V}{\partial h}dh=2\pi rh\,dr+\pi r^{2}\,dh\]\[=2\pi\cdot2\cdot5\cdot0{,}1+\pi\cdot4\cdot0{,}1=2\pi+0{,}4\pi=2{,}4\pi\approx7{,}5\]<p>— der \(r\)-Fehler wiegt hier fünfmal schwerer als der \(h\)-Fehler (Faktor \(2\pi rh\) vs. \(\pi r^2\)).</p>`,"Beispiel: Fehlerfortpflanzung")}</td></tr>
+        <tr><td><b>Satz von Schwarz:</b> \(f\in C^{2}\ \Rightarrow\ \dfrac{\partial^2 f}{\partial x_i\partial x_j}=\dfrac{\partial^2 f}{\partial x_j\partial x_i}\) — gemischte Ableitungen vertauschen.
+          ${exBox(String.raw`<p>\(f(x,y)=x^{2}y^{3}\) ist \(C^{2}\) (Polynom):</p>\[f_x=2xy^{3}\ \Rightarrow\ f_{xy}=6xy^{2},\qquad f_y=3x^{2}y^{2}\ \Rightarrow\ f_{yx}=6xy^{2}\]<p>— gleich, wie versprochen. ✓</p>`,"✓ Beispiel — f ∈ C², Schwarz gilt")}
+          ${exBox(String.raw`<p>Ohne \(C^{2}\) kann Schwarz scheitern — der Klassiker:</p>\[f(x,y)=\frac{xy\,(x^{2}-y^{2})}{x^{2}+y^{2}},\qquad f(0,0)=0\]<p>Auf den Achsen gilt \(f_x(0,y)=\lim_{h\to0}\frac{f(h,y)}{h}=y\cdot\frac{-y^{2}}{y^{2}}=-y\) und analog \(f_y(x,0)=x\). Damit:</p>\[\frac{\partial}{\partial y}f_x(0,0)=-1\ \neq\ +1=\frac{\partial}{\partial x}f_y(0,0)\]<p>Die gemischten Ableitungen sind <b>verschieden</b> — weil \(f_{xy}\) in \((0,0)\) nicht stetig ist (\(f\notin C^{2}\)). Die Voraussetzung ist also wesentlich.</p>`,"✗ Gegenbeispiel — ohne C² vertauscht nichts")}</td></tr>
       </table>
-      ${exBox(String.raw`<p>\(f(x,y)=x^2+y^2\): \(\nabla f=(2x,2y)=2(x,y)\).</p><p>Zeigt radial nach außen (steilster Anstieg) und steht \(\perp\) auf den Kreisen \(x^2+y^2=c\) (Niveaulinien).</p>`)}
     </div>
     <div class="refblock">
-      <h3>Jacobi- & Hesse-Matrix</h3>
+      <h3>Leibniz-Regel (Ableiten unter dem Integral)</h3>
       <table class="reftable">
-        <tr><td><b>Jacobi</b> \(f:\mathbb R^{n}\to\mathbb R^{m}\): \(\displaystyle (Df)_{ij}=\frac{\partial f_i}{\partial x_j}\) (\(m\times n\)). Für \(m=1\): Zeile \(=\nabla f^{\top}\).</td></tr>
-        <tr><td><b>Hesse</b> \(f:\mathbb R^{n}\to\mathbb R\): \(\displaystyle (Hf)_{ij}=\frac{\partial^2 f}{\partial x_i\partial x_j}\) (\(n\times n\), symmetrisch).</td></tr>
-        <tr><td><b>Extrema</b> in \(\nabla f=0\): \(Hf\) pos. definit \(\Rightarrow\) Min, neg. definit \(\Rightarrow\) Max, indefinit \(\Rightarrow\) Sattel.</td></tr>
+        <tr><td><b>Feste Grenzen:</b> \(\displaystyle \frac{d}{dt}\int_a^b f(x,t)\,dx=\int_a^b \frac{\partial f}{\partial t}(x,t)\,dx\)<span class="when">Voraussetzung: \(f\) und \(\partial_t f\) stetig. Einsetzen, wenn das Integral selbst unhandlich ist, \(\partial_t f\) aber einfach.</span>
+          ${exBox(String.raw`<p>\(\displaystyle I(t)=\int_0^{1}\sin(ty)\,dy\). <b>Leibniz:</b></p>\[I'(t)=\int_0^{1}\frac{\partial}{\partial t}\sin(ty)\,dy=\int_0^{1}y\cos(ty)\,dy\]<p><b>Gegencheck</b> — erst integrieren, dann ableiten: \(I(t)=\frac{1-\cos t}{t}\) (für \(t\neq0\)), also</p>\[I'(t)=\frac{t\sin t-(1-\cos t)}{t^{2}}\]<p>Und tatsächlich liefert partielle Integration von \(\int_0^1 y\cos(ty)dy\):</p>\[\Big[\frac{y\sin(ty)}{t}\Big]_0^{1}-\int_0^{1}\frac{\sin(ty)}{t}dy=\frac{\sin t}{t}-\frac{1-\cos t}{t^{2}}\]<p>— derselbe Ausdruck. Beide Wege stimmen überein. ✓</p>`,"Rechenbeispiel: feste Grenzen (mit Gegencheck)")}</td></tr>
+        <tr><td><b>Variable Grenzen:</b> \(\displaystyle \frac{d}{dt}\int_{a(t)}^{b(t)} f(x,t)\,dx=f(b(t),t)\,b'(t)-f(a(t),t)\,a'(t)+\int_{a(t)}^{b(t)}\frac{\partial f}{\partial t}\,dx\)<span class="when">Drei Beiträge: obere Grenze wandert, untere Grenze wandert, Integrand ändert sich.</span>
+          ${exBox(String.raw`<p>\(\displaystyle F(t)=\int_0^{t}(x^{2}+t)\,dx\) — obere Grenze <b>und</b> Integrand hängen von \(t\) ab:</p>\[F'(t)=\underbrace{(t^{2}+t)\cdot 1}_{f(b(t),t)\,b'(t)}\ -\ \underbrace{0}_{a'=0}\ +\ \int_0^{t}\underbrace{1}_{\partial_t(x^{2}+t)}\,dx=t^{2}+t+t=t^{2}+2t\]<p><b>Check</b> direkt: \(F(t)=\frac{t^{3}}{3}+t^{2}\Rightarrow F'(t)=t^{2}+2t\). ✓</p>`,"Rechenbeispiel: variable Grenzen (mit Check)")}</td></tr>
       </table>
-      ${exBox(String.raw`<p><b>Jacobi</b> der Polarkoordinaten \(g(r,\varphi)=(r\cos\varphi,\ r\sin\varphi)\):</p>\[Dg=\begin{pmatrix}\cos\varphi & -r\sin\varphi\\ \sin\varphi & r\cos\varphi\end{pmatrix},\qquad \det Dg=r.\]<p>Genau das \(r\) in \(dx\,dy=r\,dr\,d\varphi\).</p>`)}
-      ${exBox(String.raw`<p><b>Hesse</b> & Extremum für \(f(x,y)=x^2+xy+y^2\): \(\nabla f=(2x+y,\ x+2y)=0\Rightarrow(0,0)\).</p>\[Hf=\begin{pmatrix}2&1\\1&2\end{pmatrix},\quad \det=3>0,\ \operatorname{Spur}=4>0\ \Rightarrow\ \text{pos. definit}\]<p>\(\Rightarrow\) lokales <b>Minimum</b> in \((0,0)\).</p>`)}
+      <p class="sub" style="margin-top:8px">Hintergrund: Stetigkeit von Parameterintegralen und der Tausch \(\lim\)–\(\int\) — siehe Thema <a href="#/6.7">6.7 Parameterintegrale</a>.</p>
     </div>
   </div>
-  <div class="refblock">
-    <h3>Der Nabla-Operator \(\nabla\)</h3>
-    <p class="sub">\(\displaystyle \nabla=\Big(\frac{\partial}{\partial x_1},\dots,\frac{\partial}{\partial x_n}\Big)\) — ein <b>formaler</b> Vektor-Operator, der auf das wirkt, was rechts von ihm steht.</p>
-    <div class="twocol">
-      <div class="refblock">
-        <table class="reftable">
-          <tr><td><b>Gradient</b> (Skalar\(\to\)Vektor): \(\nabla f=\operatorname{grad}f\)</td></tr>
-          <tr><td><b>Divergenz</b> (Vektor\(\to\)Skalar): \(\displaystyle \nabla\cdot\mathbf F=\operatorname{div}\mathbf F=\sum_i\frac{\partial F_i}{\partial x_i}\)</td></tr>
-          <tr><td><b>Rotation</b> (Vektor\(\to\)Vektor, \(\mathbb R^3\)): \(\nabla\times\mathbf F=\operatorname{rot}\mathbf F\)</td></tr>
-          <tr><td><b>Laplace:</b> \(\displaystyle \Delta f=\nabla\cdot\nabla f=\sum_i\frac{\partial^2 f}{\partial x_i^2}\)</td></tr>
-        </table>
-      </div>
-      <div class="refblock">
-        <p class="sub" style="margin-top:0"><b>Worauf achten:</b></p>
-        <table class="reftable">
-          <tr><td>\(\nabla\) ist <i>kein</i> echter Vektor — die Reihenfolge zählt: \(\nabla f\neq f\nabla\) (Letzteres bleibt ein Operator).</td></tr>
-          <tr><td>Die Ergebnisse sind verschiedene Objekte: \(\operatorname{grad},\operatorname{rot}\) liefern Vektoren, \(\operatorname{div}\) einen Skalar.</td></tr>
-          <tr><td>Nützliche Identitäten: \(\nabla\times(\nabla f)=\mathbf 0\) und \(\nabla\cdot(\nabla\times\mathbf F)=0\).</td></tr>
-        </table>
-      </div>
+  <div class="twocol">
+    <div class="refblock">
+      <h3>Jacobi- &amp; Hesse-Matrix</h3>
+      <table class="reftable">
+        <tr><td><b>Jacobi</b> \(f:\mathbb R^{n}\to\mathbb R^{m}\): \(\displaystyle (Df)_{ij}=\frac{\partial f_i}{\partial x_j}\) (\(m\times n\)); für \(m=1\) ist die Zeile \(=\nabla f^{\top}\).
+          ${exBox(String.raw`<p>Polarkoordinaten \(g(r,\varphi)=(r\cos\varphi,\ r\sin\varphi)\):</p>\[Dg=\begin{pmatrix}\cos\varphi & -r\sin\varphi\\ \sin\varphi & r\cos\varphi\end{pmatrix},\qquad \det Dg=r\cos^{2}\varphi+r\sin^{2}\varphi=r\]<p>— genau das \(r\) aus \(dx\,dy=r\,dr\,d\varphi\) bei der Substitution in Doppelintegralen.</p>`,"Rechenbeispiel: Jacobi der Polarkoordinaten")}</td></tr>
+        <tr><td><b>Hesse</b> \(f:\mathbb R^{n}\to\mathbb R\): \(\displaystyle (Hf)_{ij}=\frac{\partial^2 f}{\partial x_i\partial x_j}\) (\(n\times n\), symmetrisch falls \(f\in C^{2}\), Schwarz).
+          ${exBox(String.raw`<p>\(f(x,y)=x^{2}+xy+y^{2}\): alle zweiten Ableitungen sammeln —</p>\[f_{xx}=2,\quad f_{xy}=f_{yx}=1,\quad f_{yy}=2\qquad\Rightarrow\qquad Hf=\begin{pmatrix}2&1\\1&2\end{pmatrix}\]<p>(konstant, weil \(f\) quadratisch ist).</p>`,"Rechenbeispiel: Hesse-Matrix aufstellen")}</td></tr>
+        <tr><td><b>Extrema-Kriterium</b> in kritischen Punkten (\(\nabla f=0\)): \(Hf\) positiv definit \(\Rightarrow\) Minimum, negativ definit \(\Rightarrow\) Maximum, indefinit \(\Rightarrow\) Sattel. (2D-Schnelltest: \(\det Hf>0\) und \(f_{xx}>0\) → Min; \(\det>0,\ f_{xx}<0\) → Max; \(\det<0\) → Sattel.)
+          ${exBox(String.raw`<p>\(f(x,y)=x^{2}+xy+y^{2}\): \(\nabla f=(2x+y,\ x+2y)=0\Rightarrow(0,0)\).</p>\[Hf=\begin{pmatrix}2&1\\1&2\end{pmatrix}:\quad \det=3>0,\ f_{xx}=2>0\ \Rightarrow\ \text{positiv definit}\]<p>⇒ lokales (sogar globales) <b>Minimum</b> in \((0,0)\).</p>`,"✓ Beispiel — Minimum nachweisen")}
+          ${exBox(String.raw`<p>\(f(x,y)=x^{2}-y^{2}\): \(\nabla f=(2x,-2y)=0\Rightarrow(0,0)\).</p>\[Hf=\begin{pmatrix}2&0\\0&-2\end{pmatrix}:\quad \det=-4<0\ \Rightarrow\ \text{indefinit}\]<p>⇒ <b>Sattelpunkt</b>: entlang der \(x\)-Achse Minimum, entlang der \(y\)-Achse Maximum — kein Extremum.</p>`,"✗ Beispiel — Sattel statt Extremum")}</td></tr>
+      </table>
     </div>
-    ${exBox(String.raw`<p>\(\mathbf F(x,y,z)=(-y,\ x,\ 0)\):</p>\[\operatorname{div}\mathbf F=\frac{\partial(-y)}{\partial x}+\frac{\partial x}{\partial y}+0=0,\qquad \operatorname{rot}\mathbf F=\nabla\times\mathbf F=(0,\,0,\,2).\]<p>Divergenzfrei, aber es „rotiert" — ein Wirbel um die \(z\)-Achse.</p>`)}
+    <div class="refblock">
+      <h3>Der Nabla-Operator \(\nabla\)</h3>
+      <p class="sub">\(\displaystyle \nabla=\Big(\frac{\partial}{\partial x_1},\dots,\frac{\partial}{\partial x_n}\Big)\) — ein <b>formaler</b> Vektor-Operator; er wirkt auf das, was rechts von ihm steht.</p>
+      <table class="reftable">
+        <tr><td><b>Gradient</b> (Skalar → Vektor): \(\nabla f=\operatorname{grad}f\)
+          ${exBox(String.raw`\[\nabla(xyz)=\big(yz,\ xz,\ xy\big)\]<p>— je Komponente die anderen Variablen festhalten.</p>`,"Beispiel: grad")}</td></tr>
+        <tr><td><b>Divergenz</b> (Vektor → Skalar): \(\displaystyle \nabla\cdot\mathbf F=\operatorname{div}\mathbf F=\sum_i\frac{\partial F_i}{\partial x_i}\) — Quellstärke.
+          ${exBox(String.raw`<p>\(\mathbf F(x,y,z)=(-y,\ x,\ 0)\) (Wirbelfeld um die \(z\)-Achse):</p>\[\operatorname{div}\mathbf F=\frac{\partial(-y)}{\partial x}+\frac{\partial x}{\partial y}+\frac{\partial 0}{\partial z}=0+0+0=0\]<p>— quellenfrei: es wird nirgends „Flüssigkeit erzeugt", sie rotiert nur.</p>`,"Rechenbeispiel: div")}</td></tr>
+        <tr><td><b>Rotation</b> (Vektor → Vektor, \(\mathbb R^{3}\)): \(\nabla\times\mathbf F=\operatorname{rot}\mathbf F\) — lokale Drehstärke.
+          ${exBox(String.raw`<p>Gleiches \(\mathbf F=(-y,\ x,\ 0)\), komponentenweise:</p>\[\nabla\times\mathbf F=\Big(\underbrace{\partial_y 0-\partial_z x}_{0},\ \underbrace{\partial_z(-y)-\partial_x 0}_{0},\ \underbrace{\partial_x x-\partial_y(-y)}_{1+1}\Big)=(0,0,2)\]<p>— konstante Rotation um die \(z\)-Achse (doppelte Winkelgeschwindigkeit).</p>`,"Rechenbeispiel: rot")}</td></tr>
+        <tr><td><b>Laplace:</b> \(\displaystyle \Delta f=\nabla\cdot\nabla f=\sum_i\frac{\partial^2 f}{\partial x_i^2}\)
+          ${exBox(String.raw`\[\Delta(x^{2}+y^{2})=2+2=4,\qquad \Delta(x^{2}-y^{2})=2-2=0\]<p>\(x^{2}-y^{2}\) ist <b>harmonisch</b> (\(\Delta f=0\)) — die Sattelform krümmt sich in beide Richtungen exakt gegengleich.</p>`,"Rechenbeispiel: Δ")}</td></tr>
+        <tr><td><b>Worauf achten:</b> \(\nabla\) ist <i>kein</i> echter Vektor — Reihenfolge zählt (\(\nabla f\neq f\nabla\)); grad/rot liefern Vektoren, div einen Skalar; nützliche Identitäten: \(\nabla\times(\nabla f)=\mathbf 0\) und \(\nabla\cdot(\nabla\times\mathbf F)=0\).
+          ${exBox(String.raw`<p>Check von \(\nabla\times(\nabla f)=\mathbf 0\) an \(f=xyz\): \(\nabla f=(yz,xz,xy)\),</p>\[\big(\nabla\times\nabla f\big)_3=\partial_x(xz)_{\!y\text{-Komp.}}\dots=\partial_x(xz)-\partial_y(yz)=z-z=0\]<p>(alle drei Komponenten verschwinden analog — Gradientenfelder sind wirbelfrei, weil Schwarz die gemischten Ableitungen vertauscht).</p>`,"Beispiel: Gradientenfelder sind wirbelfrei")}</td></tr>
+      </table>
+    </div>
   </div>
   <div class="refblock">
     <h3>Fréchet-Ableitung</h3>
-    <p class="sub">Verallgemeinert die Ableitung auf normierte Räume \(f:X\to Y\) — die Ableitung ist eine <b>lineare Abbildung</b>.</p>
     <table class="reftable">
-      <tr><td>\(f\) ist in \(x\) <b>Fréchet-differenzierbar</b>, wenn es eine stetige lineare Abbildung \(A=f'(x)\) gibt mit \(\displaystyle \frac{\|f(x+h)-f(x)-Ah\|}{\|h\|}\xrightarrow[h\to0]{}0\).</td></tr>
-      <tr><td>Im \(\mathbb R^n\): \(A=\) Jacobi-Matrix \(Df(x)\).</td></tr>
-      <tr><td><b>Gâteaux</b> (alle Richtungsableitungen existieren) ist schwächer als Fréchet.</td></tr>
+      <tr><td>\(f:X\to Y\) (normierte Räume) heißt in \(x\) <b>Fréchet-differenzierbar</b>, wenn es eine stetige lineare Abbildung \(A=f'(x)\) gibt mit\[\frac{\|f(x+h)-f(x)-Ah\|}{\|h\|}\ \xrightarrow[h\to0]{}\ 0.\]Im \(\mathbb R^{n}\): \(A=\) Jacobi-Matrix \(Df(x)\). <b>Gâteaux</b> (nur Richtungsableitungen) ist echt schwächer.</td></tr>
     </table>
-    ${exBox(String.raw`<p>\(f(x)=\|x\|^2=x^{\top}x\) auf \(\mathbb R^n\):</p>\[f(x+h)-f(x)=2x^{\top}h+\|h\|^2.\]<p>Der lineare Teil ist \(Ah=2x^{\top}h\), der Rest \(\|h\|^2=o(\|h\|)\). Also \(f'(x)=2x^{\top}\), d. h. \(\nabla f=2x\).</p>`)}
-  </div>
-  <div class="refblock">
-    <h3>Leibniz-Regel (Ableiten unter dem Integral)</h3>
-    <table class="reftable">
-      <tr><td>Feste Grenzen: \(\displaystyle \frac{d}{dt}\int_a^b f(x,t)\,dx=\int_a^b \frac{\partial f}{\partial t}(x,t)\,dx\)</td><td class="cond">\(f,\ \partial_t f\) stetig</td></tr>
-      <tr><td>Variable Grenzen: \(\displaystyle \frac{d}{dt}\int_{a(t)}^{b(t)} f(x,t)\,dx=f(b,t)\,b'(t)-f(a,t)\,a'(t)+\int_{a(t)}^{b(t)}\frac{\partial f}{\partial t}\,dx\)</td></tr>
-    </table>
-    ${exBox(String.raw`<p>\(\displaystyle F(t)=\int_0^{t}(x^2+t)\,dx\) (variable obere Grenze):</p>\[F'(t)=\underbrace{(t^2+t)}_{f(t,t)\cdot 1}+\int_0^{t}\underbrace{1}_{\partial_t(x^2+t)}\,dx=t^2+t+t=t^2+2t.\]<p>Check direkt: \(F(t)=\tfrac{t^3}{3}+t^2\Rightarrow F'(t)=t^2+2t\). ✓</p>`)}
+    ${exBox(String.raw`<p>\(f(x)=\|x\|^{2}=x^{\top}x\) auf \(\mathbb R^{n}\): ausmultiplizieren,</p>\[f(x+h)-f(x)=x^{\top}x+2x^{\top}h+h^{\top}h-x^{\top}x=\underbrace{2x^{\top}h}_{\text{linear in }h}+\underbrace{\|h\|^{2}}_{=o(\|h\|)}\]<p>Der lineare Teil ist \(Ah=2x^{\top}h\), der Rest erfüllt \(\frac{\|h\|^{2}}{\|h\|}=\|h\|\to0\). Also <b>Fréchet-differenzierbar</b> mit \(f'(x)=2x^{\top}\), d. h. \(\nabla f=2x\). ✓</p>`,"✓ Beispiel — Fréchet-differenzierbar: ‖x‖²")}
+    ${exBox(String.raw`<p>\(f(x)=\|x\|\) ist in \(x=0\) <b>nicht</b> Fréchet-differenzierbar. Angenommen, es gäbe ein lineares \(A\) mit</p>\[\frac{\big|\,\|h\|-Ah\,\big|}{\|h\|}\to0\qquad\Longleftrightarrow\qquad \frac{Ah}{\|h\|}\to1.\]<p>Ersetze \(h\) durch \(-h\): wegen Linearität \(A(-h)=-Ah\) und \(\|-h\|=\|h\|\) folgt</p>\[\frac{-Ah}{\|h\|}\to1\quad\text{und gleichzeitig}\quad\frac{Ah}{\|h\|}\to1\ \Rightarrow\ 1=-1\ \text{— Widerspruch.}\]<p>Anschaulich: der Kegel \(\|x\|\) hat in der Spitze keine Tangentialebene. (In \(\mathbb R^1\) ist das genau die Nicht-Differenzierbarkeit von \(|x|\) in \(0\).)</p>`,"✗ Gegenbeispiel — ‖x‖ in 0 (Kegelspitze)")}
   </div>`; }
 
 function bruecheHtml(){ return String.raw`
@@ -2176,6 +2327,17 @@ searchEl.addEventListener("keydown",e=>{
 });
 resEl.addEventListener("click",e=>{ const a=e.target.closest("a"); if(a&&a.dataset.i!==undefined){ searchEl.value=""; resEl.classList.remove("show"); } });
 document.addEventListener("click",e=>{ if(!e.target.closest(".search")) resEl.classList.remove("show"); });
+
+/* Roadmap-Interaktion (horizontale Konvergenz-Roadmaps) */
+app.addEventListener("click", e=>{
+  const btn=e.target.closest(".rmnode"); if(!btn) return;
+  const rm=btn.closest(".roadmap"); if(!rm) return;
+  const panel=rm.querySelector("#"+btn.dataset.rm);
+  const wasOpen=panel && !panel.hidden;
+  rm.querySelectorAll(".rmpanel").forEach(p=>p.hidden=true);
+  rm.querySelectorAll(".rmnode").forEach(n=>n.classList.remove("on"));
+  if(panel && !wasOpen){ panel.hidden=false; btn.classList.add("on"); }
+});
 
 /* ---- Start ---- */
 updateProgress();
