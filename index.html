@@ -333,190 +333,472 @@ const CH = [
  { id:"3", title:"Differentialrechnung von Funktionen einer Variablen", key:"ch3",
    sections:[
     {id:"3.1",  t:"Zur Definition der Ableitung", src:"skriptse28.html", topics:[
-       {id:"3.1.1", title:"Die Ableitung einer Funktion", src:"skriptsu111.html", body:{
- kernidee: String.raw`Die Ableitung misst die <b>momentane Änderungsrate</b> — die Steigung der Tangente. Man zoomt in den Graphen hinein, bis er gerade aussieht; diese Steigung ist \(f'(x_0)\).`,
- satz: String.raw`\[f'(x_0)=\lim_{h\to0}\frac{f(x_0+h)-f(x_0)}{h}\]Existiert dieser Grenzwert (endlich), heißt \(f\) in \(x_0\) <b>differenzierbar</b>. Es gilt: differenzierbar \(\Rightarrow\) stetig (aber nicht umgekehrt).`,
- zusammenhang: String.raw`Fundament für alles Weitere: Ableitungsregeln, Monotonie (\(f'>0\)), Extrema (\(f'=0\)), Krümmung (\(f''\)), Taylor. Der Differenzenquotient ist die diskrete Version, die Ableitung sein Grenzwert.`,
- beispiel: String.raw`Für \(f(x)=x^2\):\[\frac{(x+h)^2-x^2}{h}=\frac{2xh+h^2}{h}=2x+h\ \longrightarrow\ 2x\quad(h\to0).\]Also \(f'(x)=2x\).`,
- falle: String.raw`<b>\(|x|\) ist in \(0\) nicht differenzierbar</b> (Knick: links Steigung \(-1\), rechts \(+1\)). Differenzierbarkeit ist echt stärker als Stetigkeit.`
-}},
-       ["3.1.2","Ableitungen in reellen und komplexen Variablen","skriptsu112.html"],
-       ["3.1.2b","Diskussion: reelle vs. komplexe Ableitung","skriptli2.html"],
-       {id:"3.1.3", title:"Geometrische Interpretation der Ableitung", src:"skriptsu113.html", body:{
- kernidee: String.raw`\(f'(x_0)\) ist die <b>Steigung der Tangente</b> in \((x_0,f(x_0))\). Positiv → Graph steigt, negativ → fällt, null → waagrechte Tangente.`,
- satz: String.raw`Tangente an \(f\) in \(x_0\):\[t(x)=f(x_0)+f'(x_0)\,(x-x_0).\]Sie ist die <b>beste lineare Näherung</b> von \(f\) nahe \(x_0\) (Fehler von der Ordnung \(o(x-x_0)\)).`,
- zusammenhang: String.raw`Brücke zu den Landau-Symbolen (3.2) und zum Differential (3.9). Die zweite Ableitung \(f''\) beschreibt die Krümmung (Konvexität, 3.11).`,
- beispiel: String.raw`\(f(x)=\sqrt{x}\) in \(x_0=1\): \(f'(x)=\frac{1}{2\sqrt{x}}\), also \(f'(1)=\tfrac12\). Tangente \(t(x)=1+\tfrac12(x-1)\) liefert die Schätzung \(\sqrt{1{,}1}\approx 1{,}05\).`,
- falle: String.raw`Tangente \(\neq\) Sekante: die Tangente berührt lokal in <i>einem</i> Punkt, die Sekante schneidet <i>zwei</i>. Für \(h\to0\) geht die Sekantensteigung in die Tangentensteigung über.`
-}}]},
+       {id:"3.1.1", title:"Die Ableitung einer Funktion", body:{
+        def: String.raw`\[f'(x_0)=\lim_{h\to0}\frac{f(x_0+h)-f(x_0)}{h}\]Existiert dieser Grenzwert (endlich), heißt \(f\) in \(x_0\) <b>differenzierbar</b>. Es gilt: differenzierbar \(\Rightarrow\) stetig (aber nicht umgekehrt).`,
+        worte: String.raw`<p>Die Ableitung misst die <b>momentane Änderungsrate</b> — die Steigung der Tangente. Man zoomt in den Graphen hinein, bis er gerade aussieht; diese Steigung ist \(f'(x_0)\). Der Differenzenquotient ist die diskrete Version, die Ableitung sein Grenzwert.</p>`,
+        beispiel: String.raw`<p>Für \(f(x)=x^2\):</p>\[\frac{(x+h)^2-x^2}{h}=\frac{2xh+h^2}{h}=2x+h\ \longrightarrow\ 2x\quad(h\to0).\]<p>Also \(f'(x)=2x\).</p>`,
+        plus: String.raw`<p>Fundament für alles Weitere: Ableitungsregeln, Monotonie (\(f'>0\)), Extrema (\(f'=0\)), Krümmung (\(f''\)), Taylor. <b>Klausur-Falle:</b> \(|x|\) ist in \(0\) nicht differenzierbar (Knick: links Steigung \(-1\), rechts \(+1\)) — Differenzierbarkeit ist echt stärker als Stetigkeit.</p>`}},
+       {id:"3.1.2", title:"Ableitungen in reellen und komplexen Variablen", body:{
+        def: String.raw`Für eine vektor-/komplexwertige Funktion \(f:X\to\mathbb K^{n}\) einer <b>reellen</b> Variablen ist die Ableitung <b>komponentenweise</b> erklärt:\[f'(x_0)=\lim_{h\to0}\frac{f(x_0+h)-f(x_0)}{h}=\big(\varphi_1'(x_0),\dots,\varphi_n'(x_0)\big).\]\(f\) ist differenzierbar \(\Leftrightarrow\) jede Komponente \(\varphi_j\) ist es. Für \(f=u+iv:\ \mathbb R\to\mathbb C\): \(f'=u'+iv'\).`,
+        worte: String.raw`<p>\(h\) bleibt <b>reell</b>, nur die Werte dürfen komplex/vektoriell sein. Damit vererben sich alle Regeln komponentenweise — nichts Neues gegenüber dem reellen Fall, solange man <b>nach einer reellen Variablen</b> ableitet.</p>`,
+        beispiel: String.raw`<p>\(f(t)=e^{it}=\cos t+i\sin t\):</p>\[f'(t)=-\sin t+i\cos t=i\,e^{it}.\]<p>Ganz wie erwartet — die vertraute Kettenregel gilt auch komplexwertig.</p>`,
+        plus: String.raw`<p>Scharf trennen: hier ist die <b>Variable reell</b>. Das Ableiten nach einer <b>komplexen</b> Variablen ist etwas völlig anderes (viel stärker) — dazu die Diskussion 3.1.2b.</p>`}},
+       {id:"3.1.2b", title:"Diskussion: reelle vs. komplexe Ableitung", body:{
+        def: String.raw`Zwei grundverschiedene Begriffe: (1) \(f:\mathbb R\to\mathbb C\) nach der <b>reellen</b> Variablen ableiten (harmlos, komponentenweise). (2) \(f:\mathbb C\to\mathbb C\) nach der <b>komplexen</b> Variablen: \(\displaystyle f'(z_0)=\lim_{w\to0}\frac{f(z_0+w)-f(z_0)}{w}\), wobei \(w\in\mathbb C\) aus <b>jeder</b> Richtung kommen darf.`,
+        worte: String.raw`<p>Bei (2) ist der Grenzwert nur dann wohldefiniert, wenn er <b>richtungsunabhängig</b> ist — eine sehr starke Forderung. Das erzwingt die <b>Cauchy-Riemann-Gleichungen</b> \(u_x=v_y,\ u_y=-v_x\); solche Funktionen heißen <b>holomorph</b> und sind automatisch beliebig oft differenzierbar und analytisch.</p>`,
+        erfuellt: String.raw`<p>\(f(z)=z^{2}=(x^{2}-y^{2})+i\,2xy\): \(u_x=2x=v_y\), \(u_y=-2y=-v_x\) ✓ — komplex differenzierbar, \(f'(z)=2z\).</p>`,
+        verletzt: String.raw`<p>\(f(z)=\bar z=x-iy\): \(u_x=1\), aber \(v_y=-1\) ⇒ Cauchy-Riemann verletzt. Als \(\mathbb R^2\to\mathbb R^2\)-Abbildung glatt, aber <b>nirgends</b> komplex differenzierbar — der Differenzenquotient hängt von der Anlaufrichtung ab.</p>`,
+        plus: String.raw`<p>Merksatz: „reell differenzierbar" \(\neq\) „komplex differenzierbar". Der komplexe Begriff ist Thema der Funktionentheorie; in Analysis 2 leiten wir fast immer nach einer <b>reellen</b> Variablen ab.</p>`}},
+       {id:"3.1.3", title:"Geometrische Interpretation der Ableitung", body:{
+        def: String.raw`Tangente an \(f\) in \(x_0\):\[t(x)=f(x_0)+f'(x_0)\,(x-x_0).\]Sie ist die <b>beste lineare Näherung</b> von \(f\) nahe \(x_0\) (Fehler von der Ordnung \(o(x-x_0)\)).`,
+        worte: String.raw`<p>\(f'(x_0)\) ist die <b>Steigung der Tangente</b> in \((x_0,f(x_0))\): positiv → Graph steigt, negativ → fällt, null → waagrechte Tangente. Tangente \(\neq\) Sekante — für \(h\to0\) geht die Sekantensteigung in die Tangentensteigung über.</p>`,
+        beispiel: String.raw`<p>\(f(x)=\sqrt{x}\) in \(x_0=1\): \(f'(x)=\frac{1}{2\sqrt{x}}\), also \(f'(1)=\tfrac12\). Tangente \(t(x)=1+\tfrac12(x-1)\) liefert die Schätzung \(\sqrt{1{,}1}\approx 1{,}05\).</p>`,
+        plus: String.raw`<p>Brücke zu den Landau-Symbolen (3.2) und zum Differential (3.9). Die zweite Ableitung \(f''\) beschreibt die Krümmung (Konvexität, 3.11).</p>`}}]},
     {id:"3.2",  t:"Die Landau-Symbole o und O", src:"skriptse29.html", topics:[
-       ["3.2.1","Definition der Landau-Symbole","skriptsu114.html"],
-       ["3.2.2","Eigenschaften der Landau-Symbole","skriptsu115.html"],
-       ["3.2.3","Beispiele für o und O","skriptsu116.html"],
-       ["3.2.4","Anwendungen der Landau-Symbolik","skriptsu117.html"]]},
+       {id:"3.2.1", title:"Definition der Landau-Symbole", body:{
+        def: String.raw`Für \(x\to x_0\) (mit \(g\neq0\) in der Nähe): <b>groß-O</b>\[f=O(g)\ :\Leftrightarrow\ \exists C,\delta:\ |f(x)|\le C\,|g(x)|\ \text{für }0<|x-x_0|<\delta\quad\Big(\limsup\big|\tfrac fg\big|<\infty\Big),\]<b>klein-o</b> \(\displaystyle f=o(g)\ :\Leftrightarrow\ \lim_{x\to x_0}\frac{f(x)}{g(x)}=0\).`,
+        worte: String.raw`<p>\(O(g)\) = „höchstens von der Größenordnung \(g\)" (Quotient <b>beschränkt</b>); \(o(g)\) = „von <b>kleinerer</b> Größenordnung als \(g\)" (Quotient \(\to0\)). \(o\) ist die schärfere Aussage: \(f=o(g)\Rightarrow f=O(g)\).</p>`,
+        beispiel: String.raw`<p>Bei \(x\to0\): \(x^{2}=o(x)\) (denn \(x^2/x=x\to0\)) und \(x^{2}=O(x)\); dagegen \(x=O(x)\), aber \(x\neq o(x)\).</p>`,
+        plus: String.raw`<p>„\(=\)" ist hier <b>einseitig</b> gemeint (\(f\in O(g)\)), keine Gleichung: aus \(f=O(g)\) und \(h=O(g)\) folgt <b>nicht</b> \(f=h\). Immer die Stelle \(x_0\) mitdenken — dieselbe Relation kann bei \(0\) und bei \(\infty\) verschieden ausfallen.</p>`}},
+       {id:"3.2.2", title:"Eigenschaften der Landau-Symbole", body:{
+        def: String.raw`Rechenregeln (bei festem \(x_0\)): \(o(g)+o(g)=o(g)\); \(O(g)+O(g)=O(g)\); \(o(g)\subset O(g)\); \(f\cdot o(g)=o(fg)\), \(O(f)\cdot O(g)=O(fg)\), \(O(f)\cdot o(g)=o(fg)\); <b>Transitivität</b> \(f=o(g),\,g=o(h)\Rightarrow f=o(h)\); Konstanten schluckbar: \(o(c\,g)=o(g)\).`,
+        worte: String.raw`<p>Man rechnet mit \(o\)/\(O\) wie mit „Fehlertermen", die man laufend absorbiert. Kernbotschaft: das <b>Kleinere verschwindet im Größeren</b>. Diese Regeln machen Taylor-Rechnungen kurz.</p>`,
+        beispiel: String.raw`<p>Bei \(x\to0\): \(\big(x+o(x)\big)\big(1+o(1)\big)=x+o(x)\). Und \(o(x)+O(x^2)=o(x)\), da \(O(x^2)\subset o(x)\).</p>`,
+        plus: String.raw`<p><b>Klausur-Falle:</b> die Regeln gelten nur „von links nach rechts". \(o(x)-o(x)=o(x)\) (nicht \(0\)!) — zwei verschiedene Fehlerterme heben sich nicht auf.</p>`}},
+       {id:"3.2.3", title:"Beispiele für o und O", body:{
+        def: String.raw`Typische Größenordnungen (jeweils bei der genannten Stelle):\[\sin x=O(1),\quad 1-\cos x=O(x^{2}),\quad \ln x=o(x^{\alpha})\ (x\to\infty,\ \alpha>0),\quad x^{\alpha}=o(e^{x})\ (x\to\infty).\]`,
+        worte: String.raw`<p>Merke die Hierarchie bei \(x\to\infty\): \(\ln x\ \ll\ x^{\alpha}\ \ll\ e^{x}\ \ll\ x!\). Logarithmen sind kleiner als jede Potenz, Potenzen kleiner als jede Exponentialfunktion.</p>`,
+        erfuellt: String.raw`<p>\(5x^{2}+3x=O(x^{2})\) bei \(x\to\infty\) (Quotient \(\to5\), beschränkt). Bei \(x\to0\): \(5x^{2}+3x=O(x)\) (führend \(3x\)).</p>`,
+        verletzt: String.raw`<p>\(x^{2}=o(x)\) gilt <b>bei \(0\)</b>, aber <b>nicht bei \(\infty\)</b> (dort \(x^2/x=x\to\infty\)). \(\sin x=O(1)\), aber \(\sin x\neq o(1)\) (kein Limes \(0\)). Größenordnungen sind stellenabhängig!</p>`,
+        plus: String.raw`<p>Weitere Beispiele/Gegenbeispiele mit Herleitung im Spickzettel <a href="#/ref/grenzwerte">Grenzwerte &amp; Landau-Symbole</a>.</p>`}},
+       {id:"3.2.4", title:"Anwendungen der Landau-Symbolik", body:{
+        def: String.raw`Differenzierbarkeit als lineare Näherung mit \(o\)-Fehler:\[f(x_0+h)=f(x_0)+f'(x_0)\,h+o(h)\quad(h\to0).\]Allgemein Taylor mit <b>Peano-Restglied</b>: \(f(x_0+h)=\sum_{k=0}^{n}\frac{f^{(k)}(x_0)}{k!}h^{k}+o(h^{n})\).`,
+        worte: String.raw`<p>Landau-Symbole formalisieren „\(\approx\)": Die Tangente ist die lineare Näherung mit Fehler \(o(h)\), das Taylor-Polynom die Näherung mit Fehler \(o(h^{n})\). So werden Grenzwerte durch <b>Ordnungsvergleich</b> statt l'Hospital lösbar.</p>`,
+        beispiel: String.raw`<p>Mit \(\sin x=x-\frac{x^{3}}{6}+o(x^{3})\), \(\ x-\sin x=\frac{x^{3}}{6}+o(x^{3})\):</p>\[\lim_{x\to0}\frac{x-\sin x}{x^{3}}=\lim_{x\to0}\frac{\frac{x^3}{6}+o(x^3)}{x^3}=\frac16.\]`,
+        plus: String.raw`<p>Vorteil gegenüber l'Hospital: keine mehrfachen Ableitungen von Brüchen, nur Reihen einsetzen und Ordnungen vergleichen. Peano-Restglied \(o(h^n)\) braucht nur \(f^{(n)}(x_0)\) zu existieren (schwächer als Lagrange).</p>`}}]},
     {id:"3.3",  t:"Das Rechnen mit Ableitungen", src:"skriptse30.html", topics:[
-       {id:"3.3.1", title:"Linearität, Produkt- und Kettenregel", src:"skriptsu118.html", body:{
- kernidee: String.raw`Drei Bausteine, mit denen man fast alles ableitet: <b>linear</b> durchziehen, Produkte über die <b>Produktregel</b>, Verkettungen über die <b>Kettenregel</b>.`,
- satz: String.raw`\[(af+bg)'=af'+bg'\]\[(fg)'=f'g+fg'\]\[(f\circ g)'(x)=f'(g(x))\cdot g'(x)\]`,
- zusammenhang: String.raw`Die Kettenregel ist der Motor der Substitution beim Integrieren (4.6) und der impliziten Ableitung (3.3.3). Aus der Produktregel folgt die Leibniz-Formel für höhere Ableitungen (3.7).`,
- beispiel: String.raw`Kette: \(\big(\sin(x^2)\big)'=\cos(x^2)\cdot 2x\). Produkt: \(\big(x^2 e^x\big)'=2xe^x+x^2e^x=(x^2+2x)e^x\).`,
- falle: String.raw`<b>Innere Ableitung nicht vergessen!</b> \((\sin(2x))'=2\cos(2x)\), nicht \(\cos(2x)\). Das ist der häufigste Flüchtigkeitsfehler überhaupt.`
-}},
-       {id:"3.3.2", title:"Die Quotientenregel", src:"skriptsu119.html", body:{
- kernidee: String.raw`Ableitung eines Bruchs \(\frac{f}{g}\). Merkspruch: „<b>NAZ minus ZAN, über N-Quadrat</b>" (Nenner·Abl. Zähler minus Zähler·Abl. Nenner, geteilt durch Nenner-Quadrat).`,
- satz: String.raw`\[\left(\frac{f}{g}\right)'=\frac{f'g-fg'}{g^{2}}\qquad(g\neq0)\]`,
- zusammenhang: String.raw`Folgt aus Produkt- und Kettenregel via \(\frac{f}{g}=f\cdot g^{-1}\). Liefert z. B. \((\tan x)'=\frac{1}{\cos^{2}x}\).`,
- beispiel: String.raw`\[\left(\frac{x}{x^{2}+1}\right)'=\frac{1\cdot(x^{2}+1)-x\cdot 2x}{(x^{2}+1)^{2}}=\frac{1-x^{2}}{(x^{2}+1)^{2}}.\]`,
- falle: String.raw`<b>Reihenfolge im Zähler</b> (\(f'g-fg'\), nicht umgekehrt) — das Vorzeichen ist die typische Falle. Und im Nenner steht \(g^{2}\), nicht \(g\).`
-}},
-       ["3.3.3","Ableitung impliziter Funktionen","skriptsu120.html"]]},
+       {id:"3.3.1", title:"Linearität, Produkt- und Kettenregel", body:{
+        def: String.raw`\[(af+bg)'=af'+bg'\]\[(fg)'=f'g+fg'\]\[(f\circ g)'(x)=f'(g(x))\cdot g'(x)\]`,
+        worte: String.raw`<p>Drei Bausteine, mit denen man fast alles ableitet: <b>linear</b> durchziehen, Produkte über die <b>Produktregel</b>, Verkettungen über die <b>Kettenregel</b>.</p>`,
+        beispiel: String.raw`<p>Kette: \(\big(\sin(x^2)\big)'=\cos(x^2)\cdot 2x\). Produkt: \(\big(x^2 e^x\big)'=2xe^x+x^2e^x=(x^2+2x)e^x\).</p>`,
+        plus: String.raw`<p>Die Kettenregel ist der Motor der Substitution beim Integrieren (4.6) und der impliziten Ableitung (3.3.3); aus der Produktregel folgt die Leibniz-Formel (3.7). <b>Klausur-Falle:</b> innere Ableitung nicht vergessen — \((\sin(2x))'=2\cos(2x)\), nicht \(\cos(2x)\).</p>`}},
+       {id:"3.3.2", title:"Die Quotientenregel", body:{
+        def: String.raw`\[\left(\frac{f}{g}\right)'=\frac{f'g-fg'}{g^{2}}\qquad(g\neq0)\]`,
+        worte: String.raw`<p>Ableitung eines Bruchs \(\frac{f}{g}\). Merkspruch: „<b>NAZ minus ZAN, über N-Quadrat</b>" (Nenner·Abl. Zähler minus Zähler·Abl. Nenner, geteilt durch Nenner-Quadrat). Folgt aus Produkt-/Kettenregel via \(\frac{f}{g}=f\cdot g^{-1}\).</p>`,
+        beispiel: String.raw`\[\left(\frac{x}{x^{2}+1}\right)'=\frac{1\cdot(x^{2}+1)-x\cdot 2x}{(x^{2}+1)^{2}}=\frac{1-x^{2}}{(x^{2}+1)^{2}}.\]`,
+        plus: String.raw`<p>Liefert z. B. \((\tan x)'=\frac{1}{\cos^{2}x}\). <b>Klausur-Falle:</b> Reihenfolge im Zähler (\(f'g-fg'\), nicht umgekehrt) — das Vorzeichen ist die typische Falle; und im Nenner steht \(g^{2}\), nicht \(g\).</p>`}},
+       {id:"3.3.3", title:"Ableitung impliziter Funktionen", body:{
+        def: String.raw`Ist \(y=y(x)\) implizit durch \(F(x,y)=0\) gegeben, so liefert Ableiten nach \(x\) (Ketten-/Produktregel, \(y\) als Funktion von \(x\)) und Auflösen:\[F_x+F_y\,y'=0\ \Rightarrow\ y'=-\frac{F_x}{F_y}\quad(F_y\neq0).\]`,
+        worte: String.raw`<p>Man muss die Gleichung <b>nicht</b> nach \(y\) auflösen. Jeden \(y\)-Term nach der Kettenregel ableiten (\(\frac{d}{dx}y^2=2yy'\)), dann nach \(y'\) auflösen. Praktisch bei Kurven, die kein Funktionsgraph sind.</p>`,
+        beispiel: String.raw`<p>Einheitskreis \(x^{2}+y^{2}=1\): Ableiten \(2x+2yy'=0\), also</p>\[y'=-\frac{x}{y}.\]<p>Im Punkt \((\tfrac{1}{\sqrt2},\tfrac{1}{\sqrt2})\): \(y'=-1\) (Tangentensteigung).</p>`,
+        plus: String.raw`<p><b>Voraussetzung \(F_y\neq0\):</b> an Punkten mit \(F_y=0\) (senkrechte Tangente, z. B. \((\pm1,0)\) am Kreis) versagt die Formel. Systematisch garantiert der Satz über implizite Funktionen die lokale Auflösbarkeit.</p>`}}]},
     {id:"3.4",  t:"Ableitungen einiger wichtiger Funktionen", src:"skriptse31.html", topics:[
-       ["3.4.1","Polynome und ganzzahlige Potenzen","skriptsu121.html"],
-       ["3.4.2","Exponential- und Winkelfunktionen","skriptsu122.html"],
-       ["3.4.3","Ableitung der Logarithmusfunktion","skriptsu123.html"],
-       ["3.4.4","Umkehrfunktionen der trigonometrischen Funktionen","skriptsu124.html"]]},
+       {id:"3.4.1", title:"Polynome und ganzzahlige Potenzen", body:{
+        def: String.raw`Grundregel \(\displaystyle(x^{n})'=n\,x^{n-1}\) für \(n\in\mathbb Z\). Mit Linearität folgt für Polynome\[\Big(\sum_{k=0}^{m}a_k x^{k}\Big)'=\sum_{k=1}^{m}k\,a_k x^{k-1}.\]`,
+        worte: String.raw`<p>Für \(n\in\mathbb N\) per Induktion aus der Produktregel (oder Binomischer Satz im Differenzenquotienten); für negative Exponenten über die Quotientenregel mit \(x^{-n}=1/x^{n}\).</p>`,
+        beispiel: String.raw`\[\big(3x^{4}-\tfrac{2}{x}\big)'=\big(3x^{4}-2x^{-1}\big)'=12x^{3}+2x^{-2}=12x^{3}+\frac{2}{x^{2}}.\]`,
+        plus: String.raw`<p>Gilt sogar für <b>reelle</b> Exponenten \(\alpha\): \((x^{\alpha})'=\alpha x^{\alpha-1}\) (\(x>0\)) — Herleitung über \(x^{\alpha}=e^{\alpha\ln x}\), siehe 3.4.3.</p>`}},
+       {id:"3.4.2", title:"Exponential- und Winkelfunktionen", body:{
+        def: String.raw`\[(e^{x})'=e^{x},\qquad (a^{x})'=a^{x}\ln a\ (a>0),\]\[(\sin x)'=\cos x,\quad (\cos x)'=-\sin x,\quad (\tan x)'=\frac{1}{\cos^{2}x}=1+\tan^{2}x.\]`,
+        worte: String.raw`<p>\(e^{x}\) ist die einzige (bis auf Faktor) Funktion, die ihre eigene Ableitung ist. Sinus/Cosinus rotieren zyklisch ineinander: \(\sin\to\cos\to-\sin\to-\cos\to\sin\) (Periode 4).</p>`,
+        beispiel: String.raw`<p>Mit Kettenregel: \(\big(e^{-x^{2}}\big)'=-2x\,e^{-x^{2}}\), \(\ (\sin^{2}x)'=2\sin x\cos x=\sin 2x\).</p>`,
+        plus: String.raw`<p>Herleitung von \((\sin x)'=\cos x\) über \(\lim_{h\to0}\frac{\sin h}{h}=1\) und \(\lim_{h\to0}\frac{1-\cos h}{h}=0\). Additionstheoreme &amp; Werte: Spickzettel <a href="#/ref/additions">Additionstheoreme</a>.</p>`}},
+       {id:"3.4.3", title:"Ableitung der Logarithmusfunktion", body:{
+        def: String.raw`Über die <b>Umkehrregel</b> \(\big(f^{-1}\big)'(y)=\dfrac{1}{f'\!\big(f^{-1}(y)\big)}\) mit \(f=\exp\):\[(\ln x)'=\frac{1}{x}\ (x>0),\qquad (\log_a x)'=\frac{1}{x\ln a}.\]`,
+        worte: String.raw`<p>Weil \(\exp'=\exp\), ist \((\ln)'(x)=1/\exp(\ln x)=1/x\). Die <b>logarithmische Ableitung</b> \((\ln f)'=f'/f\) ist ein starkes Werkzeug für Produkte/Potenzen.</p>`,
+        beispiel: String.raw`<p><b>Logarithmisches Ableiten</b> von \(f(x)=x^{x}\) (\(x>0\)): \(\ln f=x\ln x\), also \(\frac{f'}{f}=\ln x+1\):</p>\[f'(x)=x^{x}\,(\ln x+1).\]`,
+        plus: String.raw`<p>Damit auch \((x^{\alpha})'\) für reelles \(\alpha\): \(x^{\alpha}=e^{\alpha\ln x}\Rightarrow(x^{\alpha})'=e^{\alpha\ln x}\cdot\frac{\alpha}{x}=\alpha x^{\alpha-1}\).</p>`}},
+       {id:"3.4.4", title:"Umkehrfunktionen der trigonometrischen Funktionen", body:{
+        def: String.raw`Wieder mit der Umkehrregel:\[(\arcsin x)'=\frac{1}{\sqrt{1-x^{2}}},\quad(\arccos x)'=-\frac{1}{\sqrt{1-x^{2}}},\quad(\arctan x)'=\frac{1}{1+x^{2}}.\]`,
+        worte: String.raw`<p>Beispiel Herleitung \(\arcsin\): mit \(y=\arcsin x\), \(\sin y=x\), ist \((\arcsin)'=\frac{1}{\cos y}=\frac{1}{\sqrt{1-\sin^{2}y}}=\frac{1}{\sqrt{1-x^{2}}}\) (Vorzeichen aus \(y\in]-\frac\pi2,\frac\pi2[\), \(\cos y>0\)).</p>`,
+        beispiel: String.raw`<p>Diese liefern die Stammfunktionen \(\int\frac{dx}{\sqrt{1-x^2}}=\arcsin x\) und \(\int\frac{dx}{1+x^2}=\arctan x\) — vgl. Spickzettel <a href="#/ref/integrale">Standardintegrale</a>.</p>`,
+        plus: String.raw`<p><b>Voraussetzung der Umkehrregel:</b> \(f'\!\big(f^{-1}(y)\big)\neq0\). Bei \(x=\pm1\) hat \(\arcsin\) senkrechte Tangenten (Ableitung \(\to\infty\)), weil \(\cos y=0\).</p>`}}]},
     {id:"3.5",  t:"Sätze von Fermat & Rolle; Formeln von Cauchy & Lagrange", src:"skriptse32.html", topics:[
-       {id:"3.5.1", title:"Der Satz von Fermat", src:"skriptsu125.html", body:{
- kernidee: String.raw`An einem <b>inneren Extremum</b> einer differenzierbaren Funktion ist die Tangente waagrecht: \(f'=0\). Das ist die notwendige Bedingung fürs Suchen von Hoch-/Tiefpunkten.`,
- satz: String.raw`Hat \(f\) in einem <i>inneren</i> Punkt \(x_0\) ein lokales Extremum und ist dort differenzierbar, so gilt\[f'(x_0)=0.\]\(x_0\) heißt dann <b>kritischer</b> (stationärer) Punkt.`,
- zusammenhang: String.raw`Startpunkt der ganzen Kette: <b>Fermat \(\Rightarrow\) Rolle \(\Rightarrow\) Mittelwertsatz</b>. Liefert die „Kandidaten" für Extrema (3.10.3).`,
- beispiel: String.raw`\(f(x)=x^{2}\) hat sein Minimum in \(0\), und tatsächlich \(f'(0)=0\). ✓`,
- falle: String.raw`Nur <b>notwendig, nicht hinreichend</b>: \(f(x)=x^{3}\) hat \(f'(0)=0\), aber kein Extremum (Sattelpunkt). Und nur für <b>innere</b> Punkte — am Rand von \([a,b]\) kann ein Extremum ohne \(f'=0\) liegen.`
-}},
-       {id:"3.5.2", title:"Der Satz von Rolle", src:"skriptsu126.html", body:{
- kernidee: String.raw`Wenn eine glatte Kurve bei \(a\) und \(b\) auf <b>gleicher Höhe</b> beginnt und endet, muss sie dazwischen mindestens einmal eine <b>waagrechte Tangente</b> haben.`,
- satz: String.raw`\(f\) stetig auf \([a,b]\), differenzierbar auf \((a,b)\), \(f(a)=f(b)\). Dann gibt es ein \(\xi\in(a,b)\) mit\[f'(\xi)=0.\]`,
- zusammenhang: String.raw`Spezialfall des Mittelwertsatzes (3.5.4) für \(f(a)=f(b)\); bewiesen über Fermat (Extremum im Inneren). Zentrales Werkzeug für Nullstellen-Argumente.`,
- beispiel: String.raw`\(f(x)=x^{2}-x\) auf \([0,1]\): \(f(0)=f(1)=0\). \(f'(x)=2x-1=0\) bei \(\xi=\tfrac12\). ✓`,
- falle: String.raw`<b>Alle drei Voraussetzungen nötig.</b> \(f(x)=|x|\) auf \([-1,1]\) erfüllt \(f(-1)=f(1)\), aber nie \(f'=0\) — weil in \(0\) nicht differenzierbar.`
-}},
-       {id:"3.5.3", title:"Die Formel von Cauchy (verallg. MWS)", src:"skriptsu127.html", body:{
- kernidee: String.raw`Der Mittelwertsatz für <b>zwei Funktionen gleichzeitig</b> — er vergleicht ihre Änderungsraten. Die Grundlage für l'Hospital.`,
- satz: String.raw`\(f,g\) stetig auf \([a,b]\), differenzierbar auf \((a,b)\), \(g'\neq0\). Dann gibt es \(\xi\in(a,b)\) mit\[\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(\xi)}{g'(\xi)}.\]`,
- zusammenhang: String.raw`Mit \(g(x)=x\) wird daraus der gewöhnliche MWS (3.5.4). Direkter Beweismotor der <b>Regel von l'Hospital</b> (3.12).`,
- beispiel: String.raw`Der Quotient der beiden Sekantensteigungen (von \(f\) und \(g\)) wird an einer gemeinsamen Stelle \(\xi\) vom Quotient der Tangentensteigungen getroffen.`,
- falle: String.raw`Es ist <b>nicht</b> „MWS für \(f\) geteilt durch MWS für \(g\)" — das gäbe zwei verschiedene Stellen. Cauchy garantiert <b>ein gemeinsames</b> \(\xi\).`
-}},
-       {id:"3.5.4", title:"Die Formel von Lagrange (MWS)", src:"skriptsu128.html", body:{
- kernidee: String.raw`Zwischen \(a\) und \(b\) gibt es eine Stelle, an der die <b>Tangente parallel zur Sekante</b> ist — die momentane Änderungsrate trifft irgendwo die durchschnittliche.`,
- satz: String.raw`\(f\) stetig auf \([a,b]\), differenzierbar auf \((a,b)\). Dann gibt es \(\xi\in(a,b)\) mit\[f'(\xi)=\frac{f(b)-f(a)}{b-a}.\]`,
- zusammenhang: String.raw`<b>Das Arbeitspferd</b> der Differentialrechnung: liefert Monotonie (\(f'>0\Rightarrow\) streng wachsend, 3.10.2), Konstanz (\(f'\equiv0\Rightarrow f\) konstant), Schranken und das Taylor-Restglied.`,
- beispiel: String.raw`\(f(x)=x^{2}\) auf \([0,2]\): Sekantensteigung \(\frac{4-0}{2-0}=2\). Aus \(f'(\xi)=2\xi=2\) folgt \(\xi=1\). ✓`,
- falle: String.raw`Der Satz sichert die <b>Existenz</b> von \(\xi\), gibt aber <b>keine Formel</b> dafür — man weiß nur, <i>dass</i> es existiert. Voraussetzungen genau einhalten (stetig auf \([a,b]\), differenzierbar auf \((a,b)\)).`
-}}]},
+       {id:"3.5.1", title:"Der Satz von Fermat", body:{
+        def: String.raw`Hat \(f\) in einem <i>inneren</i> Punkt \(x_0\) ein lokales Extremum und ist dort differenzierbar, so gilt\[f'(x_0)=0.\]\(x_0\) heißt dann <b>kritischer</b> (stationärer) Punkt.`,
+        worte: String.raw`<p>An einem <b>inneren Extremum</b> einer differenzierbaren Funktion ist die Tangente waagrecht: \(f'=0\). Das ist die notwendige Bedingung fürs Suchen von Hoch-/Tiefpunkten.</p>`,
+        beispiel: String.raw`<p>\(f(x)=x^{2}\) hat sein Minimum in \(0\), und tatsächlich \(f'(0)=0\). ✓</p>`,
+        plus: String.raw`<p>Startpunkt der ganzen Kette: <b>Fermat \(\Rightarrow\) Rolle \(\Rightarrow\) Mittelwertsatz</b>; liefert die „Kandidaten" für Extrema (3.10.3). <b>Klausur-Falle:</b> nur <b>notwendig, nicht hinreichend</b> (\(x^{3}\) hat \(f'(0)=0\), aber kein Extremum) und nur für <b>innere</b> Punkte — am Rand von \([a,b]\) kann ein Extremum ohne \(f'=0\) liegen.</p>`}},
+       {id:"3.5.2", title:"Der Satz von Rolle", body:{
+        def: String.raw`\(f\) stetig auf \([a,b]\), differenzierbar auf \((a,b)\), \(f(a)=f(b)\). Dann gibt es ein \(\xi\in(a,b)\) mit\[f'(\xi)=0.\]`,
+        worte: String.raw`<p>Wenn eine glatte Kurve bei \(a\) und \(b\) auf <b>gleicher Höhe</b> beginnt und endet, muss sie dazwischen mindestens einmal eine <b>waagrechte Tangente</b> haben.</p>`,
+        beispiel: String.raw`<p>\(f(x)=x^{2}-x\) auf \([0,1]\): \(f(0)=f(1)=0\). \(f'(x)=2x-1=0\) bei \(\xi=\tfrac12\). ✓</p>`,
+        plus: String.raw`<p>Spezialfall des Mittelwertsatzes (3.5.4) für \(f(a)=f(b)\); bewiesen über Fermat. Zentrales Werkzeug für Nullstellen-Argumente. <b>Klausur-Falle:</b> alle drei Voraussetzungen nötig — \(|x|\) auf \([-1,1]\) erfüllt \(f(-1)=f(1)\), aber nie \(f'=0\) (in \(0\) nicht differenzierbar).</p>`}},
+       {id:"3.5.3", title:"Die Formel von Cauchy (verallg. MWS)", body:{
+        def: String.raw`\(f,g\) stetig auf \([a,b]\), differenzierbar auf \((a,b)\), \(g'\neq0\). Dann gibt es \(\xi\in(a,b)\) mit\[\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(\xi)}{g'(\xi)}.\]`,
+        worte: String.raw`<p>Der Mittelwertsatz für <b>zwei Funktionen gleichzeitig</b> — er vergleicht ihre Änderungsraten. Anschaulich: der Quotient der beiden Sekantensteigungen wird an einer <b>gemeinsamen</b> Stelle \(\xi\) vom Quotient der Tangentensteigungen getroffen.</p>`,
+        beispiel: String.raw`<p>Mit \(g(x)=x\) wird daraus der gewöhnliche MWS (3.5.4): \(\frac{f(b)-f(a)}{b-a}=f'(\xi)\).</p>`,
+        plus: String.raw`<p>Direkter Beweismotor der <b>Regel von l'Hospital</b> (3.12). <b>Klausur-Falle:</b> es ist <b>nicht</b> „MWS für \(f\) geteilt durch MWS für \(g\)" (das gäbe zwei Stellen) — Cauchy garantiert <b>ein gemeinsames</b> \(\xi\).</p>`}},
+       {id:"3.5.4", title:"Die Formel von Lagrange (MWS)", body:{
+        def: String.raw`\(f\) stetig auf \([a,b]\), differenzierbar auf \((a,b)\). Dann gibt es \(\xi\in(a,b)\) mit\[f'(\xi)=\frac{f(b)-f(a)}{b-a}.\]`,
+        worte: String.raw`<p>Zwischen \(a\) und \(b\) gibt es eine Stelle, an der die <b>Tangente parallel zur Sekante</b> ist — die momentane Änderungsrate trifft irgendwo die durchschnittliche.</p>`,
+        beispiel: String.raw`<p>\(f(x)=x^{2}\) auf \([0,2]\): Sekantensteigung \(\frac{4-0}{2-0}=2\). Aus \(f'(\xi)=2\xi=2\) folgt \(\xi=1\). ✓</p>`,
+        plus: String.raw`<p><b>Das Arbeitspferd</b> der Differentialrechnung: liefert Monotonie (3.10.2), Konstanz (\(f'\equiv0\Rightarrow f\) konstant), Schranken und das Taylor-Restglied. <b>Klausur-Falle:</b> der Satz sichert die <b>Existenz</b> von \(\xi\), gibt aber <b>keine Formel</b> — Voraussetzungen genau einhalten.</p>`}}]},
     {id:"3.6",  t:"Der Hauptsatz der Differentialrechnung", src:"skriptse33.html", topics:[
-       ["3.6.1","Formulierung des Satzes","skriptsu129.html"],
-       ["3.6.2","Beweis – Schritt 1","skriptsu130.html"],
-       ["3.6.3","Beweis – Schritt 2","skriptsu131.html"],
-       ["3.6.4","Beweis – Schritt 3","skriptsu132.html"],
-       ["3.6.5","Beweis – Schritt 4","skriptsu133.html"]]},
+       {id:"3.6.1", title:"Formulierung des Satzes", body:{
+        def: String.raw`<b>Theorem 3.6.1 (Schrankensatz / Mittelwertungleichung).</b> Sei \(f:X\to\mathbb K^{n}\) stetig in allen \(x\in[a,b]\) und differenzierbar in allen \(x\in\,]a,b[\). Dann\[\big\|f(b)-f(a)\big\|\ \le\ \Big(\sup_{x\in\,]a,b[}\|f'(x)\|\Big)\,(b-a).\]`,
+        worte: String.raw`<p>Für <b>vektor-/komplexwertige</b> \(f\) gibt es <b>kein</b> gemeinsames \(\xi\) mit \(f(b)-f(a)=f'(\xi)(b-a)\) (die Komponenten hätten verschiedene \(\xi\)). Was überlebt, ist die <b>Ungleichung</b>: der Gesamtzuwachs ist durch die maximale Geschwindigkeit \(\times\) Zeit beschränkt.</p>`,
+        erfuellt: String.raw`<p>\(f(t)=(\cos t,\sin t)\) auf \([0,2\pi]\): \(f(2\pi)-f(0)=0\), also linke Seite \(0\le\) rechts. Die Gleichungsform \(f'(\xi)\cdot2\pi=0\) wäre unmöglich (\(\|f'\|\equiv1\)) — genau deshalb nur „\(\le\)".</p>`,
+        verletzt: String.raw`<p>Skalar (\(n=1\)) verschärft sich „\(\le\)" zur <b>Gleichung</b> (Lagrange, 3.5.4): dort existiert das \(\xi\) doch. Der Schrankensatz ist die richtige Verallgemeinerung, sobald \(n\ge2\).</p>`,
+        plus: String.raw`<p>Folgerung: \(f'\equiv0\) auf einem Intervall \(\Rightarrow f\) konstant (auch vektorwertig). Der 4-Schritt-Beweis (3.6.2–3.6.5) führt den Fall \(\mathbb K^{n}\) auf den skalaren MWS zurück.</p>`}},
+       {id:"3.6.2", title:"Beweis – Schritt 1 (Reduktion auf skalar)", body:{
+        def: String.raw`Setze \(c:=f(b)-f(a)\in\mathbb K^{n}\). Ist \(c=0\), ist nichts zu zeigen. Sonst betrachte die <b>reellwertige</b> Hilfsfunktion\[\varphi(x):=\operatorname{Re}\,\langle f(x),\,c\rangle,\qquad \langle u,v\rangle=\sum_j u_j\overline{v_j}.\]`,
+        worte: String.raw`<p>Trick: Man <b>projiziert</b> die vektorwertige Funktion auf die feste Richtung \(c\) des Gesamtzuwachses. Das macht aus \(f:X\to\mathbb K^{n}\) eine skalare Funktion \(\varphi:[a,b]\to\mathbb R\), auf die der gewöhnliche MWS passt.</p>`,
+        beispiel: String.raw`<p>\(\varphi\) erbt die Regularität von \(f\): stetig auf \([a,b]\), differenzierbar auf \(]a,b[\), mit \(\varphi'(x)=\operatorname{Re}\,\langle f'(x),c\rangle\) (Linearität des Skalarprodukts).</p>`,
+        plus: String.raw`<p>Warum \(\operatorname{Re}\langle\cdot,c\rangle\)? Weil so \(\varphi(b)-\varphi(a)=\operatorname{Re}\langle c,c\rangle=\|c\|^{2}\) reell und \(\ge0\) wird — die Brücke zur Norm (Schritt 3).</p>`}},
+       {id:"3.6.3", title:"Beweis – Schritt 2 (skalarer Mittelwertsatz)", body:{
+        def: String.raw`\(\varphi\) erfüllt die Voraussetzungen des <b>Mittelwertsatzes von Lagrange</b> (3.5.4). Also gibt es ein \(\xi\in\,]a,b[\) mit\[\varphi(b)-\varphi(a)=\varphi'(\xi)\,(b-a).\]`,
+        worte: String.raw`<p>Jetzt greift der schon bewiesene <b>skalare</b> Satz: ein einziges \(\xi\) für die eine reelle Funktion \(\varphi\). Genau hier zahlt sich die Reduktion aus Schritt 1 aus.</p>`,
+        beispiel: String.raw`<p>Das \(\xi\) hängt von \(f\), \(a\), \(b\) und der Richtung \(c\) ab — es ist dasselbe \(\xi\), das man für die skalare Projektion bekommt, nicht für \(f\) selbst.</p>`,
+        plus: String.raw`<p>Voraussetzung ist die Differenzierbarkeit auf dem <b>offenen</b> \(]a,b[\) und Stetigkeit auf \([a,b]\) — genau die des Schrankensatzes, an \(\varphi\) vererbt.</p>`}},
+       {id:"3.6.4", title:"Beweis – Schritt 3 (auswerten & Cauchy-Schwarz)", body:{
+        def: String.raw`Die beiden Seiten von Schritt 2 auswerten:\[\varphi(b)-\varphi(a)=\operatorname{Re}\langle c,c\rangle=\|c\|^{2},\qquad |\varphi'(\xi)|=\big|\operatorname{Re}\langle f'(\xi),c\rangle\big|\ \overset{\text{C.-S.}}{\le}\ \|f'(\xi)\|\,\|c\|.\]`,
+        worte: String.raw`<p>Links entsteht die <b>quadrierte Norm</b> \(\|c\|^{2}\) (das war der Sinn der Projektion). Rechts bändigt die <b>Cauchy-Schwarz-Ungleichung</b> das Skalarprodukt durch das Produkt der Normen.</p>`,
+        beispiel: String.raw`<p>Cauchy-Schwarz \(|\langle u,v\rangle|\le\|u\|\|v\|\) ist hier das entscheidende Werkzeug — es übersetzt die Projektion zurück in eine Norm-Abschätzung.</p>`,
+        plus: String.raw`<p>Weitere Beweis-Standardwerkzeuge (Dreiecks-, Cauchy-Schwarz-Ungleichung) im Spickzettel <a href="#/ref/beweise">Tricks für Beweise</a>.</p>`}},
+       {id:"3.6.5", title:"Beweis – Schritt 4 (zusammensetzen)", body:{
+        def: String.raw`Schritte 2 &amp; 3 verketten und durch \(\|c\|>0\) teilen:\[\|c\|^{2}=\varphi'(\xi)(b-a)\le\|f'(\xi)\|\,\|c\|\,(b-a)\le\Big(\sup_{]a,b[}\|f'\|\Big)\|c\|\,(b-a),\]\[\Rightarrow\ \|f(b)-f(a)\|=\|c\|\le\Big(\sup_{]a,b[}\|f'\|\Big)(b-a).\qquad\blacksquare\]`,
+        worte: String.raw`<p>Ein \(\|c\|\) kürzt sich heraus — übrig bleibt genau der Schrankensatz. Der Fall \(c=0\) war in Schritt 1 schon erledigt, also ist die Division erlaubt.</p>`,
+        beispiel: String.raw`<p>Damit ist die vektorwertige Aussage vollständig auf den skalaren MWS zurückgeführt — ohne je ein „vektorielles \(\xi\)" zu brauchen.</p>`,
+        plus: String.raw`<p>Dieselbe Projektions-Idee (auf eine feste Richtung testen, dann Cauchy-Schwarz) trägt viele Abschätzungen in \(\mathbb K^{n}\) und Funktionenräumen.</p>`}}]},
     {id:"3.7",  t:"Höhere Ableitungen; Formel von Leibniz", src:"skriptse34.html", topics:[
-       ["3.7.1","Ableitungen höherer Ordnung","skriptsu134.html"],
-       ["3.7.2","Der Satz von Leibniz","skriptsu135.html"]]},
-    {id:"3.8",  t:"Der Satz von Taylor", src:"skriptse35.html", topics:[]},
+       {id:"3.7.1", title:"Ableitungen höherer Ordnung", body:{
+        def: String.raw`Rekursiv \(f^{(0)}=f\), \(f^{(k)}=\big(f^{(k-1)}\big)'\). \(f\) heißt <b>\(n\)-mal stetig differenzierbar</b> (\(f\in C^{n}\)), wenn \(f^{(n)}\) existiert und stetig ist; \(C^{\infty}\) = beliebig oft differenzierbar. Schreibweise: dritte Ableitung \(f^{(3)}\) (nicht \(f'''\)-Apostrophe zählen).`,
+        worte: String.raw`<p>Ableiten wiederholt anwenden. \(f'\) = Steigung, \(f''\) = Krümmung (Konvexität, 3.11), \(f^{(3)}\) = Änderung der Krümmung usw. Die \(C^{n}\)-Skala misst „Glattheit".</p>`,
+        beispiel: String.raw`<p>\(f(x)=e^{2x}\): \(f^{(n)}(x)=2^{n}e^{2x}\). \(\ f(x)=\sin x\): zyklisch \(f^{(4)}=\sin x\), also \(f^{(n)}(x)=\sin\!\big(x+n\tfrac{\pi}{2}\big)\).</p>`,
+        plus: String.raw`<p>Baustein für Taylor (3.8) und Leibniz (3.7.2). \(C^{n}\subsetneq C^{n-1}\): z. B. ist \(x^{2}\operatorname{sgn}x\in C^{1}\setminus C^{2}\).</p>`}},
+       {id:"3.7.2", title:"Der Satz von Leibniz", body:{
+        def: String.raw`Für \(f,g\in C^{n}\) gilt die <b>Leibniz-Formel</b> (Analogon zum binomischen Satz):\[(f\cdot g)^{(n)}=\sum_{k=0}^{n}\binom{n}{k}\,f^{(k)}\,g^{(n-k)}.\]`,
+        worte: String.raw`<p>Die \(n\)-te Ableitung eines Produkts verteilt sich wie \((a+b)^{n}\) — mit Binomialkoeffizienten \(\binom nk\) und „Ableitungen statt Potenzen". Für \(n=1\) ist es die gewöhnliche Produktregel.</p>`,
+        beispiel: String.raw`<p>\(\big(x^{2}e^{x}\big)^{(n)}\): nur \(k=0,1,2\) überleben (\((x^2)^{(k)}=0\) für \(k\ge3\)):</p>\[=\binom{n}{0}x^{2}e^{x}+\binom{n}{1}2x\,e^{x}+\binom{n}{2}2\,e^{x}=e^{x}\big(x^{2}+2nx+n(n-1)\big).\]`,
+        plus: String.raw`<p><b>Trick:</b> ist ein Faktor ein Polynom vom Grad \(d\), brechen alle Summanden mit \(k>d\) weg — die Summe hat nur \(d+1\) Terme. Ideal, wenn ein Faktor \(e^{x},\sin,\cos\) leicht \(n\)-fach ableitbar ist.</p>`}}]},
+    {id:"3.8",  t:"Der Satz von Taylor", src:"skriptse35.html", topics:[], body:{
+        def: String.raw`<b>Satz von Taylor.</b> Ist \(f\in C^{n}\) auf einer Umgebung von \(x_0\) und \(f^{(n+1)}\) existiert, so\[f(x)=\underbrace{\sum_{k=0}^{n}\frac{f^{(k)}(x_0)}{k!}(x-x_0)^{k}}_{\text{Taylor-Polynom }T_n}+R_n(x),\]mit <b>Lagrange-Restglied</b> \(R_n(x)=\dfrac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\) bzw. <b>Peano</b> \(R_n=o\big((x-x_0)^{n}\big)\).`,
+        worte: String.raw`<p>Das Taylor-Polynom ist die <b>beste polynomiale Näherung</b> vom Grad \(n\): es stimmt in \(x_0\) mit \(f\) bis zur \(n\)-ten Ableitung überein. \(n=1\) ist die Tangente. Das Restglied misst den Fehler exakt.</p>`,
+        beispiel: String.raw`<p>\(e^{x}\) um \(0\): \(T_n(x)=\sum_{k=0}^{n}\frac{x^{k}}{k!}\). Wegen \(|R_n(x)|=\frac{e^{\xi}}{(n+1)!}|x|^{n+1}\to0\) gilt \(e^{x}=\sum_{k\ge0}\frac{x^{k}}{k!}\) auf ganz \(\mathbb R\).</p>`,
+        plus: String.raw`<p>Restglied-Formen (Integral-/Lagrange-/Cauchy) und ihre Herleitung: Kap. 4.7 sowie Spickzettel <a href="#/ref/entwickeln">Funktionen entwickeln</a>. <b>Falle:</b> \(f\in C^{\infty}\) heißt <b>nicht</b>, dass die Taylor-Reihe gegen \(f\) konvergiert (\(e^{-1/x^{2}}\) hat Taylor-Reihe \(\equiv0\)).</p>`}},
     {id:"3.9",  t:"Das Differential einer Funktion", src:"skriptse36.html", topics:[
-       ["3.9.1","Das Differential erster Ordnung","skriptsu136.html"],
-       ["3.9.2","Differentiale höherer Ordnung","skriptsu137.html"],
-       ["3.9.3","Invarianz des Differentials erster Ordnung","skriptsu138.html"]]},
+       {id:"3.9.1", title:"Das Differential erster Ordnung", body:{
+        def: String.raw`Das <b>Differential</b> von \(f\) in \(x_0\) ist die <b>lineare Abbildung</b>\[df(x_0):\ h\ \mapsto\ f'(x_0)\,h,\qquad\text{kurz }\ df=f'(x)\,dx,\]mit \(\Delta f=f(x_0+h)-f(x_0)=f'(x_0)h+o(h)=df(x_0)h+o(h)\).`,
+        worte: String.raw`<p>Das Differential ist der <b>lineare Hauptteil</b> der Änderung — die Tangente als Abbildung. \(df\) ist die <i>exakte</i> Änderung entlang der Tangente, \(\Delta f\) die <i>echte</i> Änderung; sie unterscheiden sich um \(o(h)\).</p>`,
+        beispiel: String.raw`<p><b>Fehlerfortpflanzung:</b> \(A=\pi r^{2}\), \(dA=2\pi r\,dr\). Bei \(r=10\), \(dr=0{,}1\): \(dA=2\pi\cdot10\cdot0{,}1=2\pi\approx6{,}28\) — Näherung für die Flächenänderung.</p>`,
+        plus: String.raw`<p>Grundlage der Substitutionsschreibweise \(\int f(g(x))g'(x)\,dx=\int f(u)\,du\) mit \(u=g(x)\), \(du=g'(x)dx\) (4.6.2) — das „\(du=g'\,dx\)" ist genau ein Differential.</p>`}},
+       {id:"3.9.2", title:"Differentiale höherer Ordnung", body:{
+        def: String.raw`Bei <b>unabhängiger</b> Variable \(x\) (also \(dx\) konstant): \(d^{2}f=f''(x)\,dx^{2}\), allgemein\[d^{n}f=f^{(n)}(x)\,dx^{n}.\]`,
+        worte: String.raw`<p>Man wendet das Differential erneut an, wobei \(dx\) als fester Zuwachs behandelt wird. Daher die Potenz \(dx^{n}=(dx)^{n}\) — nützlich als kompakte Schreibweise (z. B. im Taylor-Differential \(d^{n}f/n!\)).</p>`,
+        beispiel: String.raw`<p>\(f(x)=x^{3}\): \(df=3x^{2}dx\), \(d^{2}f=6x\,dx^{2}\), \(d^{3}f=6\,dx^{3}\), \(d^{4}f=0\).</p>`,
+        plus: String.raw`<p><b>Achtung:</b> die einfache Formel \(d^{n}f=f^{(n)}dx^{n}\) gilt nur, solange \(x\) <b>unabhängig</b> ist. Ist \(x=x(t)\), kommen bei \(n\ge2\) Zusatzterme dazu — genau der Punkt von 3.9.3.</p>`}},
+       {id:"3.9.3", title:"Invarianz des Differentials erster Ordnung", body:{
+        def: String.raw`Das <b>erste</b> Differential ist <b>forminvariant</b>: \(df=f'(u)\,du\) gilt, egal ob \(u\) unabhängige Variable ist oder selbst \(u=u(x)\). Höhere Differentiale sind <b>nicht</b> invariant: für \(u=u(x)\) ist \(d^{2}f=f''(u)\,du^{2}+f'(u)\,d^{2}u\).`,
+        worte: String.raw`<p>Die Schreibweise \(df=f'\,du\) „funktioniert immer" — das ist der tiefere Grund, warum die Substitutionsregel so bequem ist (Kettenregel steckt schon drin). Beim zweiten Differential taucht der Korrekturterm \(f'\,d^{2}u\) auf.</p>`,
+        beispiel: String.raw`<p>\(f=f(u)\), \(u=u(x)\): erstes Differential \(df=f'(u)\,du\) mit \(du=u'(x)\,dx\) — also \(df=f'(u)u'(x)\,dx\), genau die Kettenregel. Form \(f'(u)\,du\) bleibt erhalten.</p>`,
+        plus: String.raw`<p><b>Klausur-Falle:</b> \(d^{2}f=f''\,du^{2}\) gilt <b>nur</b> bei unabhängigem \(u\). Bei verketteten Variablen den Term \(f'(u)\,d^{2}u\) nicht vergessen.</p>`}}]},
     {id:"3.10", t:"Monotonie und Extremwerte von Funktionen", src:"skriptse37.html", topics:[
-       ["3.10.1","Konstante Funktionen","skriptsu139.html"],
-       {id:"3.10.2", title:"Monotone Funktionen", src:"skriptsu140.html", body:{
- kernidee: String.raw`<b>Vorzeichen von \(f'\) = Wachstumsrichtung.</b> \(f'>0\) heißt steigend, \(f'<0\) fallend. Das ist das Monotonie-Kriterium.`,
- satz: String.raw`Auf einem Intervall gilt\[f'\ge0\iff f\ \text{monoton wachsend},\qquad f'>0\Rightarrow f\ \text{streng wachsend}\](analog für fallend). Beweis über den Mittelwertsatz.`,
- zusammenhang: String.raw`Direkte Folge des Mittelwertsatzes (3.5.4). Grundlage der Extremwert-Bestimmung (3.10.3, Vorzeichenwechsel von \(f'\)) und der Kurvendiskussion (3.13).`,
- beispiel: String.raw`\(f(x)=x^{3}\): \(f'(x)=3x^{2}\ge0\) überall \(\Rightarrow\) streng wachsend, obwohl \(f'(0)=0\).`,
- falle: String.raw`\(f'>0\) ist <b>hinreichend, nicht notwendig</b> für streng wachsend (siehe \(x^{3}\)). „Streng wachsend" verträgt einzelne Nullstellen von \(f'\).`
-}},
-       {id:"3.10.3", title:"Extremwerte einer Funktion", src:"skriptsu141.html", body:{
- kernidee: String.raw`Extrema findet man in zwei Schritten: <b>Kandidaten</b> über \(f'=0\) (Fermat), dann <b>entscheiden</b> über den Vorzeichenwechsel von \(f'\) oder das Vorzeichen von \(f''\).`,
- satz: String.raw`Notwendig: \(f'(x_0)=0\). Hinreichend:\[f'(x_0)=0,\ f''(x_0)>0\ \Rightarrow\ \text{lok. Minimum},\]\[f'(x_0)=0,\ f''(x_0)<0\ \Rightarrow\ \text{lok. Maximum}.\]`,
- zusammenhang: String.raw`Kombiniert Fermat (3.5.1), Monotonie (3.10.2) und Krümmung (3.11). Bei \(f''(x_0)=0\) entscheidet der Vorzeichenwechsel von \(f'\) (oder die nächste nicht-verschwindende Ableitung).`,
- beispiel: String.raw`\(f(x)=x^{3}-3x\): \(f'(x)=3x^{2}-3=0\Rightarrow x=\pm1\). Mit \(f''(x)=6x\): \(f''(1)=6>0\) (Min), \(f''(-1)=-6<0\) (Max).`,
- falle: String.raw`\(f''(x_0)=0\) bedeutet <b>nicht</b> automatisch „kein Extremum": \(f(x)=x^{4}\) hat \(f'(0)=f''(0)=0\) und trotzdem ein Minimum. Dann Vorzeichenwechsel von \(f'\) prüfen.`
-}}]},
+       {id:"3.10.1", title:"Konstante Funktionen", body:{
+        def: String.raw`Auf einem <b>Intervall</b> \(I\) gilt\[f'\equiv0\ \text{auf }I\quad\Longleftrightarrow\quad f\ \text{konstant auf }I.\]Folgerung: Haben \(f,g\) auf \(I\) dieselbe Ableitung (\(f'=g'\)), so ist \(f-g\) konstant.`,
+        worte: String.raw`<p>„Keine Steigung nirgends ⇒ flach." Der Beweis ist der Mittelwertsatz: für \(x_1<x_2\) ist \(f(x_2)-f(x_1)=f'(\xi)(x_2-x_1)=0\). Das ist der Grund, warum Stammfunktionen nur bis auf \(+C\) eindeutig sind.</p>`,
+        erfuellt: String.raw`<p>\(f(x)=\arctan x+\arctan\frac1x\) auf \(]0,\infty[\): \(f'(x)=\frac{1}{1+x^2}+\frac{-1/x^2}{1+1/x^2}=0\) ⇒ \(f\) konstant \(=\frac\pi2\).</p>`,
+        verletzt: String.raw`<p><b>Intervall ist wesentlich:</b> auf \(I=]-\infty,0[\,\cup\,]0,\infty[\) hat \(f=\operatorname{sgn}x\) überall \(f'=0\), ist aber <b>nicht</b> konstant — der Definitionsbereich ist nicht zusammenhängend.</p>`,
+        plus: String.raw`<p>Gilt auch vektorwertig (folgt aus dem Schrankensatz 3.6.1: \(\|f(b)-f(a)\|\le\sup\|f'\|\,(b-a)=0\)). Fundament für den Hauptsatz der Integralrechnung (4.3).</p>`}},
+       {id:"3.10.2", title:"Monotone Funktionen", body:{
+        def: String.raw`Auf einem Intervall gilt\[f'\ge0\iff f\ \text{monoton wachsend},\qquad f'>0\Rightarrow f\ \text{streng wachsend}\](analog für fallend). Beweis über den Mittelwertsatz.`,
+        worte: String.raw`<p><b>Vorzeichen von \(f'\) = Wachstumsrichtung.</b> \(f'>0\) heißt steigend, \(f'<0\) fallend. Direkte Folge des Mittelwertsatzes (3.5.4).</p>`,
+        beispiel: String.raw`<p>\(f(x)=x^{3}\): \(f'(x)=3x^{2}\ge0\) überall \(\Rightarrow\) streng wachsend, obwohl \(f'(0)=0\).</p>`,
+        plus: String.raw`<p>Grundlage der Extremwert-Bestimmung (3.10.3, Vorzeichenwechsel von \(f'\)) und der Kurvendiskussion (3.13). <b>Klausur-Falle:</b> \(f'>0\) ist <b>hinreichend, nicht notwendig</b> für streng wachsend (\(x^{3}\)) — „streng wachsend" verträgt einzelne Nullstellen von \(f'\).</p>`}},
+       {id:"3.10.3", title:"Extremwerte einer Funktion", body:{
+        def: String.raw`Notwendig: \(f'(x_0)=0\). Hinreichend:\[f'(x_0)=0,\ f''(x_0)>0\ \Rightarrow\ \text{lok. Minimum},\]\[f'(x_0)=0,\ f''(x_0)<0\ \Rightarrow\ \text{lok. Maximum}.\]`,
+        worte: String.raw`<p>Extrema findet man in zwei Schritten: <b>Kandidaten</b> über \(f'=0\) (Fermat), dann <b>entscheiden</b> über den Vorzeichenwechsel von \(f'\) oder das Vorzeichen von \(f''\). Kombiniert Fermat (3.5.1), Monotonie (3.10.2) und Krümmung (3.11).</p>`,
+        beispiel: String.raw`<p>\(f(x)=x^{3}-3x\): \(f'(x)=3x^{2}-3=0\Rightarrow x=\pm1\). Mit \(f''(x)=6x\): \(f''(1)=6>0\) (Min), \(f''(-1)=-6<0\) (Max).</p>`,
+        plus: String.raw`<p>Bei \(f''(x_0)=0\) entscheidet der Vorzeichenwechsel von \(f'\) (oder die nächste nicht-verschwindende Ableitung). <b>Klausur-Falle:</b> \(f''(x_0)=0\) heißt <b>nicht</b> „kein Extremum" — \(f(x)=x^{4}\) hat \(f'(0)=f''(0)=0\) und trotzdem ein Minimum.</p>`}}]},
     {id:"3.11", t:"Konvexe und konkave Funktionen", src:"skriptse38.html", topics:[
-       ["3.11.1","Definition und äquivalente Beschreibungen","skriptsu142.html"],
-       ["3.11.2","Differenzierbare konvexe/konkave Funktionen","skriptsu143.html"],
-       {id:"3.11.3", title:"Wendepunkte", src:"skriptsu144.html", body:{
- kernidee: String.raw`Ein <b>Wendepunkt</b> ist, wo die Krümmung ihr Vorzeichen wechselt — von Links- auf Rechtskurve (konvex \(\leftrightarrow\) konkav).`,
- satz: String.raw`Notwendig: \(f''(x_0)=0\). Hinreichend: \(f''(x_0)=0\) und \(f''\) wechselt dort das Vorzeichen (z. B. wenn \(f^{(3)}(x_0)\neq0\)).`,
- zusammenhang: String.raw`\(f''\) verhält sich zur Konvexität (3.11) wie \(f'\) zur Monotonie (3.10). Ein Wendepunkt ist ein Extremum von \(f'\) — die steilste/flachste Stelle.`,
- beispiel: String.raw`\(f(x)=x^{3}\): \(f''(x)=6x=0\) bei \(x=0\); \(f''\) wechselt von \(-\) nach \(+\) \(\Rightarrow\) Wendepunkt in \(0\).`,
- falle: String.raw`\(f''(x_0)=0\) allein reicht nicht: \(f(x)=x^{4}\) hat \(f''(0)=0\), aber <b>keinen</b> Wendepunkt (Krümmung wechselt nicht). Der Vorzeichenwechsel ist entscheidend.`
-}}]},
+       {id:"3.11.1", title:"Definition und äquivalente Beschreibungen", body:{
+        def: String.raw`\(f\) heißt <b>konvex</b> auf einem Intervall \(I\), wenn für alle \(x,y\in I\), \(\lambda\in[0,1]\):\[f\big(\lambda x+(1-\lambda)y\big)\ \le\ \lambda f(x)+(1-\lambda)f(y).\]<b>Konkav</b> = „\(\ge\)" (d. h. \(-f\) konvex). Äquivalent: jede <b>Sehne liegt über dem Graphen</b>; die Sekantensteigungen \(\frac{f(y)-f(x)}{y-x}\) wachsen monoton.`,
+        worte: String.raw`<p>Konvex = „nach oben gekrümmt" (Linkskurve), Schüssel-Form. Die Konvexkombination der Funktionswerte überschätzt den Funktionswert der Konvexkombination — anschaulich: die Verbindungsstrecke zweier Graphpunkte liegt oberhalb.</p>`,
+        erfuellt: String.raw`<p>\(f(x)=x^{2}\): \((\lambda x+(1-\lambda)y)^{2}\le\lambda x^{2}+(1-\lambda)y^{2}\) (folgt aus \((x-y)^2\ge0\)) ⇒ konvex. Ebenso \(e^{x}\), \(|x|\).</p>`,
+        verletzt: String.raw`<p>\(f(x)=\sqrt{x}\) auf \([0,\infty[\) ist <b>konkav</b> (Sehne unter dem Graphen): \(\sqrt{\tfrac{x+y}{2}}\ge\tfrac{\sqrt x+\sqrt y}{2}\). \(\ f(x)=x^{3}\) ist auf \(\mathbb R\) <b>weder</b> konvex noch konkav (Wechsel bei \(0\)).</p>`,
+        plus: String.raw`<p><b>Jensen-Ungleichung</b> (verallgemeinert): \(f\big(\sum\lambda_i x_i\big)\le\sum\lambda_i f(x_i)\) für \(\lambda_i\ge0,\sum\lambda_i=1\). Konvexe Funktionen sind im Inneren automatisch stetig.</p>`}},
+       {id:"3.11.2", title:"Differenzierbare konvexe/konkave Funktionen", body:{
+        def: String.raw`Für differenzierbares \(f\) auf \(I\):\[f\ \text{konvex}\iff f'\ \text{monoton wachsend}\ \overset{f\in C^2}{\iff}\ f''\ge0.\]Zudem liegt der Graph <b>über jeder Tangente</b>: \(f(x)\ge f(x_0)+f'(x_0)(x-x_0)\).`,
+        worte: String.raw`<p>Konvexität \(\leftrightarrow\) \(f''\ge0\) ist das Arbeitskriterium (wie Monotonie \(\leftrightarrow\) \(f'\ge0\)). „Krümmung nach oben" = wachsende Steigung. Die Tangenten-Ungleichung macht konvexe Funktionen zum Motor vieler Abschätzungen.</p>`,
+        erfuellt: String.raw`<p>\(f(x)=e^{x}\): \(f''=e^{x}>0\) ⇒ konvex überall. Tangente in \(0\): \(e^{x}\ge1+x\) für alle \(x\) (Bernoulli-artige Standardabschätzung).</p>`,
+        verletzt: String.raw`<p>\(f(x)=\ln x\): \(f''=-1/x^{2}<0\) ⇒ <b>konkav</b>. Daraus \(\ln x\le x-1\) (Tangente in \(1\) liegt oben) — die Basis vieler Entropie-/AM-GM-Ungleichungen.</p>`,
+        plus: String.raw`<p><b>Klausur-Falle:</b> \(f''\ge0\) reicht (nicht \(f''>0\)). \(f''(x_0)=0\) an einzelnen Punkten zerstört Konvexität nicht (\(x^{4}\) ist konvex trotz \(f''(0)=0\)). Standardabschätzungen: Spickzettel <a href="#/ref/beweise">Tricks für Beweise</a>.</p>`}},
+       {id:"3.11.3", title:"Wendepunkte", body:{
+        def: String.raw`Notwendig: \(f''(x_0)=0\). Hinreichend: \(f''(x_0)=0\) und \(f''\) wechselt dort das Vorzeichen (z. B. wenn \(f^{(3)}(x_0)\neq0\)).`,
+        worte: String.raw`<p>Ein <b>Wendepunkt</b> ist, wo die Krümmung ihr Vorzeichen wechselt — von Links- auf Rechtskurve (konvex \(\leftrightarrow\) konkav). \(f''\) verhält sich zur Konvexität (3.11) wie \(f'\) zur Monotonie (3.10); ein Wendepunkt ist ein Extremum von \(f'\).</p>`,
+        beispiel: String.raw`<p>\(f(x)=x^{3}\): \(f''(x)=6x=0\) bei \(x=0\); \(f''\) wechselt von \(-\) nach \(+\) \(\Rightarrow\) Wendepunkt in \(0\).</p>`,
+        plus: String.raw`<p><b>Klausur-Falle:</b> \(f''(x_0)=0\) allein reicht nicht — \(f(x)=x^{4}\) hat \(f''(0)=0\), aber <b>keinen</b> Wendepunkt (Krümmung wechselt nicht). Der Vorzeichenwechsel ist entscheidend.</p>`}}]},
     {id:"3.12", t:"Unbestimmtheiten 0/0 und ∞/∞ (l’Hospital)", src:"skriptse39.html", topics:[
-       {id:"3.12.1", title:"Unbestimmtheiten vom Typ 0/0", src:"skriptsu145.html", body:{
- kernidee: String.raw`Bei \(\frac{0}{0}\) darf man <b>Zähler und Nenner getrennt ableiten</b> und den Grenzwert erneut versuchen — er bleibt gleich (falls der neue existiert). Das ist die Regel von l'Hospital.`,
- satz: String.raw`Ist \(\lim\frac{f}{g}\) vom Typ \(\frac{0}{0}\) und existiert \(\lim\frac{f'}{g'}\), so\[\lim\frac{f(x)}{g(x)}=\lim\frac{f'(x)}{g'(x)}.\]`,
- zusammenhang: String.raw`Bewiesen über den verallgemeinerten Mittelwertsatz von <b>Cauchy</b> (3.5.3). Erklärt viele Standardgrenzwerte (siehe Spickzettel „Grenzwerte").`,
- beispiel: String.raw`\[\lim_{x\to0}\frac{\sin x}{x}=\lim_{x\to0}\frac{\cos x}{1}=1\quad(\text{Typ }0/0).\]`,
- falle: String.raw`<b>Nur bei \(\frac{0}{0}\) oder \(\frac{\infty}{\infty}\) anwenden</b> — vorher den Typ prüfen! Und es ist \(\frac{f'}{g'}\), <b>nicht</b> die Quotientenregel \(\left(\frac{f}{g}\right)'\).`
-}},
-       ["3.12.2","Unbestimmtheiten vom Typ ∞/∞","skriptsu146.html"]]},
+       {id:"3.12.1", title:"Unbestimmtheiten vom Typ 0/0", body:{
+        def: String.raw`Ist \(\lim\frac{f}{g}\) vom Typ \(\frac{0}{0}\) und existiert \(\lim\frac{f'}{g'}\), so\[\lim\frac{f(x)}{g(x)}=\lim\frac{f'(x)}{g'(x)}.\]`,
+        worte: String.raw`<p>Bei \(\frac{0}{0}\) darf man <b>Zähler und Nenner getrennt ableiten</b> und den Grenzwert erneut versuchen — er bleibt gleich (falls der neue existiert). Bewiesen über den verallgemeinerten Mittelwertsatz von <b>Cauchy</b> (3.5.3).</p>`,
+        beispiel: String.raw`\[\lim_{x\to0}\frac{\sin x}{x}=\lim_{x\to0}\frac{\cos x}{1}=1\quad(\text{Typ }0/0).\]`,
+        plus: String.raw`<p>Erklärt viele Standardgrenzwerte (Spickzettel <a href="#/ref/grenzwerte">Grenzwerte</a>). <b>Klausur-Falle:</b> nur bei \(\frac{0}{0}\) oder \(\frac{\infty}{\infty}\) anwenden (vorher Typ prüfen!) — und es ist \(\frac{f'}{g'}\), <b>nicht</b> die Quotientenregel \(\left(\frac{f}{g}\right)'\).</p>`}},
+       {id:"3.12.2", title:"Unbestimmtheiten vom Typ ∞/∞", body:{
+        def: String.raw`Ist \(\lim\frac{f}{g}\) vom Typ \(\frac{\infty}{\infty}\) (\(|f|,|g|\to\infty\)) und existiert \(\lim\frac{f'}{g'}\), so\[\lim\frac{f(x)}{g(x)}=\lim\frac{f'(x)}{g'(x)}\qquad(\text{auch für }x\to\pm\infty).\]`,
+        worte: String.raw`<p>Dieselbe Regel wie bei \(\frac00\), nur für „\(\infty\) gegen \(\infty\)". Andere unbestimmte Typen (\(0\cdot\infty\), \(\infty-\infty\), \(1^{\infty}\), \(0^{0}\), \(\infty^{0}\)) erst <b>umformen</b> auf \(\frac00\) oder \(\frac{\infty}{\infty}\) (Kehrwert bilden bzw. \(f^{g}=e^{g\ln f}\)).</p>`,
+        beispiel: String.raw`<p>\(\displaystyle\lim_{x\to\infty}\frac{\ln x}{x}=\lim_{x\to\infty}\frac{1/x}{1}=0\). Typ \(0\cdot\infty\): \(\lim_{x\to0^{+}}x\ln x=\lim\frac{\ln x}{1/x}=\lim\frac{1/x}{-1/x^{2}}=\lim(-x)=0\).</p>`,
+        plus: String.raw`<p><b>Klausur-Falle:</b> Typ zuerst prüfen — bei \(\frac{c}{\infty}\) (\(c\) endlich) ist der Grenzwert einfach \(0\), l'Hospital ist falsch. Existiert \(\lim\frac{f'}{g'}\) nicht, macht die Regel <b>keine</b> Aussage (nicht „divergent"!). Standardgrenzwerte: <a href="#/ref/grenzwerte">Spickzettel</a>.</p>`}}]},
     {id:"3.13", t:"Weitere Anwendungen zur Kurvendiskussion", src:"skriptse40.html", topics:[
-       ["3.13.1","Normale und Tangente einer Kurve","skriptsu147.html"],
-       ["3.13.2","Differentiation parametrischer Kurven","skriptsu148.html"],
-       ["3.13.3","Geradlinige Asymptoten","skriptsu149.html"]]},
-    {id:"3.14", t:"Der Satz von Darboux", src:"skriptse41.html", topics:[]},
+       {id:"3.13.1", title:"Normale und Tangente einer Kurve", body:{
+        def: String.raw`<b>Tangente</b> in \((x_0,f(x_0))\): \(t(x)=f(x_0)+f'(x_0)(x-x_0)\). Die <b>Normale</b> steht senkrecht dazu, Steigung \(-\dfrac{1}{f'(x_0)}\):\[n(x)=f(x_0)-\frac{1}{f'(x_0)}\,(x-x_0)\qquad(f'(x_0)\neq0).\]`,
+        worte: String.raw`<p>Tangente = beste lineare Näherung; Normale = die dazu senkrechte Gerade (Produkt der Steigungen \(=-1\)). Kernbestandteil jeder Kurvendiskussion.</p>`,
+        beispiel: String.raw`<p>\(f(x)=x^{2}\) in \(x_0=1\): \(f'(1)=2\). Tangente \(t(x)=1+2(x-1)=2x-1\); Normale \(n(x)=1-\tfrac12(x-1)=-\tfrac12 x+\tfrac32\).</p>`,
+        plus: String.raw`<p><b>Sonderfall:</b> ist \(f'(x_0)=0\) (waagrechte Tangente), so ist die Normale <b>senkrecht</b> (\(x=x_0\)). Bogenlänge/Krümmung solcher Kurven: 4.9 &amp; Spickzettel <a href="#/ref/kurven">Kurven</a>.</p>`}},
+       {id:"3.13.2", title:"Differentiation parametrischer Kurven", body:{
+        def: String.raw`Für eine Parameterkurve \(x=x(t),\ y=y(t)\) (mit \(\dot x\neq0\)):\[\frac{dy}{dx}=\frac{\dot y}{\dot x},\qquad \frac{d^{2}y}{dx^{2}}=\frac{\dot x\,\ddot y-\dot y\,\ddot x}{\dot x^{3}}.\]`,
+        worte: String.raw`<p>Steigung = „vertikales Tempo durch horizontales Tempo". Die zweite Ableitung folgt aus \(\frac{d}{dx}=\frac{1}{\dot x}\frac{d}{dt}\), angewendet auf \(\dot y/\dot x\) (Quotientenregel). Wichtig, wenn \(y\) kein Funktionsgraph von \(x\) ist.</p>`,
+        beispiel: String.raw`<p>Zykloide \(x=t-\sin t,\ y=1-\cos t\): \(\dot x=1-\cos t\), \(\dot y=\sin t\), also</p>\[\frac{dy}{dx}=\frac{\sin t}{1-\cos t}=\cot\frac t2.\]`,
+        plus: String.raw`<p><b>Klausur-Falle:</b> \(\frac{d^2y}{dx^2}\neq\frac{\ddot y}{\ddot x}\)! Die Formel mit \(\dot x^{3}\) im Nenner ist zwingend. Bei \(\dot x=0\) (senkrechte Tangente) versagt \(dy/dx\).</p>`}},
+       {id:"3.13.3", title:"Geradlinige Asymptoten", body:{
+        def: String.raw`Eine <b>schiefe/waagrechte Asymptote</b> \(y=mx+b\) für \(x\to\pm\infty\) hat\[m=\lim_{x\to\pm\infty}\frac{f(x)}{x},\qquad b=\lim_{x\to\pm\infty}\big(f(x)-mx\big),\]sofern beide Limites existieren. <b>Senkrechte</b> Asymptote \(x=x_0\), wo \(f(x)\to\pm\infty\) (Pol).`,
+        worte: String.raw`<p>Erst die Steigung \(m\) (Verhältnis \(f/x\)), dann den Achsenabschnitt \(b\) (Rest \(f-mx\)). \(m=0\) gibt eine <b>waagrechte</b> Asymptote. Senkrechte Asymptoten sucht man an den Polstellen.</p>`,
+        beispiel: String.raw`<p>\(f(x)=\dfrac{x^{2}+1}{x}=x+\dfrac1x\): \(m=\lim\frac{x^2+1}{x^2}=1\), \(b=\lim\big(f-x\big)=\lim\frac1x=0\) ⇒ schiefe Asymptote \(y=x\); senkrechte bei \(x=0\).</p>`,
+        plus: String.raw`<p>Bei rationalen Funktionen liefert die <b>Polynomdivision</b> die Asymptote direkt (der ganzzahlige Anteil, vgl. 4.4.1): \(\frac{x^2+1}{x}=x+\frac1x\) — Asymptote ist der Polynomteil \(x\).</p>`}}]},
+    {id:"3.14", t:"Der Satz von Darboux", src:"skriptse41.html", topics:[], body:{
+        def: String.raw`<b>Satz von Darboux (Zwischenwertsatz für Ableitungen).</b> Ist \(f\) auf \([a,b]\) differenzierbar und liegt \(c\) zwischen \(f'(a)\) und \(f'(b)\), so gibt es ein \(\xi\in[a,b]\) mit\[f'(\xi)=c\]— <b>auch wenn \(f'\) nicht stetig ist</b>.`,
+        worte: String.raw`<p>Ableitungen nehmen alle Zwischenwerte an, ganz wie stetige Funktionen — obwohl \(f'\) selbst unstetig sein darf. Folge: eine Ableitung kann <b>keine Sprungstellen</b> haben; ihre Unstetigkeiten sind nur „wilde" Oszillationen.</p>`,
+        beispiel: String.raw`<p>Beweisidee: \(g(x)=f(x)-cx\) hat \(g'(a),g'(b)\) mit verschiedenem Vorzeichen ⇒ inneres Extremum von \(g\) (Weierstraß) ⇒ dort \(g'(\xi)=0\), also \(f'(\xi)=c\) (Fermat, 3.5.1).</p>`,
+        plus: String.raw`<p><b>Konsequenz:</b> \(f=\operatorname{sgn}\) besitzt <b>keine</b> Stammfunktion — eine solche hätte \(\operatorname{sgn}\) als Ableitung, die springt aber (verletzt Darboux). Erklärt 4.3.3.</p>`}},
     {id:"3.15", t:"Nullstellenberechnung", src:"skriptse42.html", topics:[
-       ["3.15.1","Die Regula falsi","skriptsu150.html"],
-       ["3.15.2","Das Newton-Verfahren","skriptsu151.html"]]}
+       {id:"3.15.1", title:"Die Regula falsi", body:{
+        def: String.raw`Iteratives Nullstellenverfahren über <b>Sekanten</b>: aus zwei Näherungen \(x_{n-1},x_n\)\[x_{n+1}=x_n-f(x_n)\,\frac{x_n-x_{n-1}}{f(x_n)-f(x_{n-1})}.\]In der einschließenden Variante behält man ein Intervall \([a,b]\) mit \(f(a)f(b)<0\).`,
+        worte: String.raw`<p>Man ersetzt \(f\) durch die Sekante durch zwei Punkte und nimmt deren Nullstelle als neue Näherung. Die einschließende Form ist <b>robust</b> (Vorzeichenwechsel garantiert eine Nullstelle), aber nur <b>linear</b> konvergent.</p>`,
+        beispiel: String.raw`<p>\(f(x)=x^{2}-2\) auf \([1,2]\): \(f(1)=-1,\ f(2)=2\). Erste Sekanten-Nullstelle \(x=1-(-1)\frac{2-1}{2-(-1)}=1+\tfrac13\approx1{,}333\) (→ \(\sqrt2\approx1{,}414\)).</p>`,
+        plus: String.raw`<p>Braucht <b>keine</b> Ableitung (Vorteil gegenüber Newton), dafür langsamer. Startintervall mit Vorzeichenwechsel per Zwischenwertsatz sichern.</p>`}},
+       {id:"3.15.2", title:"Das Newton-Verfahren", body:{
+        def: String.raw`Tangenten-Iteration: von \(x_n\) aus die Tangenten-Nullstelle nehmen\[x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}.\]Nahe einer <b>einfachen</b> Nullstelle konvergiert es <b>quadratisch</b> (Fehler \(\varepsilon_{n+1}\approx C\varepsilon_n^{2}\), Stellenzahl verdoppelt sich).`,
+        worte: String.raw`<p>Man linearisiert \(f\) in \(x_n\) (Tangente) und löst die lineare Gleichung. Bei gutem Startwert extrem schnell — der Klausur- und Praxis-Klassiker der Nullstellensuche.</p>`,
+        beispiel: String.raw`<p>\(\sqrt2\) via \(f(x)=x^{2}-2\), \(x_{n+1}=x_n-\frac{x_n^{2}-2}{2x_n}=\frac{x_n}{2}+\frac{1}{x_n}\). Start \(x_0=1{,}5\): \(x_1=1{,}41\overline{6}\), \(x_2=1{,}414215\dots\) — schon 5 richtige Stellen.</p>`,
+        plus: String.raw`<p><b>Klausur-Fallen:</b> braucht \(f'(x_n)\neq0\) und einen <b>guten Startwert</b> (sonst Divergenz/Zyklus). Bei <b>mehrfachen</b> Nullstellen nur noch linear. Verwandt: Newton-Verfahren löst \(f'=0\) für Extrema.</p>`}}]}
    ]},
  { id:"4", title:"Integralrechnung in einer Variablen", key:"ch4",
    sections:[
     {id:"4.1",  t:"Das Riemann-Integral; integrierbare Funktionen", src:"skriptse43.html", topics:[
-       ["4.1.1","Grundlegende Definitionen","skriptsu152.html"],
-       ["4.1.2","Stetigkeitsmodul und Integrierbarkeit","skriptsu153.html"],
-       ["4.1.3","Integrierbarkeit stetiger/monotoner Funktionen","skriptsu154.html"],
-       ["4.1.4","Obere und untere Darboux-Summen","skriptsu155.html"],
-       ["4.1.5","Struktur des Raumes ℛ[a,b]","skriptsu156.html"],
-       ["4.1.6","Lebesgue-Kriterium der Integrierbarkeit","skriptsu157.html"]]},
+       {id:"4.1.1", title:"Grundlegende Definitionen", body:{
+        def: String.raw`Eine <b>Zerlegung</b> \(\delta=\{x_k\}_{k=0}^{n}\) von \([a,b]\) ist \(a=x_0<x_1<\cdots<x_n=b\); mit \(\Delta_k=[x_k,x_{k+1}]\), \(\Delta x_k=x_{k+1}-x_k\) und dem <b>Rang</b> \(\lambda(\delta)=\max_k\Delta x_k\). Zu Stützstellen \(\xi_k\in\Delta_k\) heißt \(\displaystyle\Sigma(f;\delta,\xi)=\sum_{k=0}^{n-1}f(\xi_k)\,\Delta x_k\) <b>Riemann-Summe</b>. \(f\) ist <b>Riemann-integrierbar</b> mit \(\displaystyle\int_a^b f=J\), falls \(\displaystyle J=\lim_{\lambda(\delta)\to0}\Sigma(f;\delta,\xi)\), d. h. \(\forall\varepsilon>0\ \exists\Lambda_\varepsilon>0\): \(|J-\Sigma(f;\delta,\xi)|<\varepsilon\) für <b>jede</b> Zerlegung mit \(\lambda(\delta)<\Lambda_\varepsilon\) und <b>jede</b> Wahl der \(\xi_k\).`,
+        worte: String.raw`<p>Die Fläche unter \(f\) wird durch Rechteckstreifen \(f(\xi_k)\Delta x_k\) angenähert. Macht man das feinste Teilstück (den Rang \(\lambda(\delta)\)) klein, muss die Summe — <b>egal wie</b> man teilt und die Stützstellen wählt — gegen denselben Wert \(J\) streben. Diese Unabhängigkeit von der Wahl ist der Kern der Definition.</p>`,
+        beispiel: String.raw`<p>\(f(x)=x\) auf \([0,1]\), äquidistant \(x_k=\tfrac{k}{n}\), \(\xi_k=x_k\):</p>\[\Sigma=\sum_{k=0}^{n-1}\frac{k}{n}\cdot\frac1n=\frac{1}{n^2}\cdot\frac{(n-1)n}{2}\ \xrightarrow[n\to\infty]{}\ \frac12=\int_0^1 x\,dx.\]`,
+        plus: String.raw`<p>Komplex-/vektorwertig: \(f:[a,b]\to\mathbb C\) ist integrierbar \(\Leftrightarrow\) \(\operatorname{Re}f,\operatorname{Im}f\in R[a,b]\); \(f:[a,b]\to\mathbb K^{m}\) \(\Leftrightarrow\) jede Komponente — Integral komponentenweise. \(R[a,b]\) bezeichnet die reellwertigen R-integrierbaren Funktionen. Präzise Definition auch im Spickzettel <a href="#/ref/saetze">Wichtige Sätze</a>.</p>`}},
+       {id:"4.1.2", title:"Stetigkeitsmodul und Integrierbarkeit", body:{
+        def: String.raw`<b>Stetigkeitsmodul:</b> \(\displaystyle\omega_f(h)=\sup\{|f(x)-f(y)|:\ x,y\in[a,b],\ |x-y|\le h\}\). Mit der Schwankung \(\operatorname{osc}_{\Delta_k}f=\sup_{\Delta_k}f-\inf_{\Delta_k}f\) gilt \(\displaystyle O(f,\delta)-U(f,\delta)=\sum_k\operatorname{osc}_{\Delta_k}f\cdot\Delta x_k\le\omega_f(\lambda(\delta))\,(b-a)\). <b>Riemann-Kriterium:</b> \(f\in R[a,b]\ \Leftrightarrow\ \forall\varepsilon>0\ \exists\delta:\ O(f,\delta)-U(f,\delta)<\varepsilon\).`,
+        worte: String.raw`<p>\(\omega_f(h)\) misst, wie stark \(f\) auf Abständen \(\le h\) schwankt. Wird \(\omega_f(h)\to0\) für \(h\to0\) (gleichmäßige Stetigkeit!), so schrumpft die Lücke zwischen Ober- und Untersumme mit dem Rang gegen 0 — und genau das ist Integrierbarkeit.</p>`,
+        erfuellt: String.raw`<p>\(f\) stetig auf \([a,b]\) (kompakt) \(\Rightarrow\) gleichmäßig stetig \(\Rightarrow\) \(\omega_f(h)\to0\). Also \(O-U\le\omega_f(\lambda(\delta))(b-a)\to0\) ⇒ <b>integrierbar</b>.</p>`,
+        verletzt: String.raw`<p>Dirichlet-Funktion \(f=\mathbf 1_{\mathbb Q}\) auf \([0,1]\): auf jedem \(\Delta_k\) ist \(\sup=1,\inf=0\), also \(\omega_f(h)=1\) für alle \(h>0\) und \(O-U=1\not\to0\) ⇒ <b>nicht integrierbar</b>.</p>`,
+        plus: String.raw`<p>\(\omega_f\) liefert sogar eine Fehlerschranke: \(\big|\Sigma-\int\big|\le\omega_f(\lambda(\delta))(b-a)\). Lipschitz-\(f\) (\(\omega_f(h)\le Lh\)) ⇒ Riemann-Summen-Fehler \(=O(\lambda(\delta))\).</p>`}},
+       {id:"4.1.3", title:"Integrierbarkeit stetiger und monotoner Funktionen", body:{
+        def: String.raw`<b>Satz.</b> (i) Jede auf \([a,b]\) <b>stetige</b> Funktion ist Riemann-integrierbar: \(C[a,b]\subset R[a,b]\). (ii) Jede auf \([a,b]\) <b>monotone</b> Funktion ist Riemann-integrierbar — auch mit (abzählbar vielen) Sprüngen.`,
+        worte: String.raw`<p>Zwei bequeme Klassen, die man ohne \(\varepsilon\)-Rechnung als integrierbar erkennt. Stetig ⇒ gleichmäßig stetig ⇒ Modul-Argument (4.1.2). Monoton ⇒ die Sprünge summieren sich teleskopartig.</p>`,
+        beispiel: String.raw`<p><b>Monoton:</b> für wachsendes \(f\) und äquidistante Zerlegung ist</p>\[O(f,\delta)-U(f,\delta)=\sum_k\big(f(x_{k+1})-f(x_k)\big)\frac{b-a}{n}=\frac{b-a}{n}\big(f(b)-f(a)\big)\to0.\]<p>Die Teleskopsumme macht die Schwankung \(\le\frac{b-a}{n}(f(b)-f(a))\).</p>`,
+        plus: String.raw`<p>Auch <b>stückweise stetige</b> Funktionen (endlich viele Sprünge) sind integrierbar. Allgemeinste Aussage: das Lebesgue-Kriterium (4.1.6).</p>`}},
+       {id:"4.1.4", title:"Obere und untere Darboux-Summen", body:{
+        def: String.raw`Mit \(M_k=\sup_{\Delta_k}f\), \(m_k=\inf_{\Delta_k}f\): <b>Obersumme</b> \(\displaystyle O(f,\delta)=\sum_k M_k\Delta x_k\), <b>Untersumme</b> \(\displaystyle U(f,\delta)=\sum_k m_k\Delta x_k\). <b>Oberintegral</b> \(\overline{\int}_a^b f=\inf_\delta O(f,\delta)\), <b>Unterintegral</b> \(\underline{\int}_a^b f=\sup_\delta U(f,\delta)\). Es gilt \(f\in R[a,b]\ \Leftrightarrow\ \overline{\int}_a^b f=\underline{\int}_a^b f\) (\(=\int_a^b f\)).`,
+        worte: String.raw`<p>Statt beliebiger Stützstellen nimmt man das <b>größte</b> bzw. <b>kleinste</b> Rechteck pro Streifen — obere und untere Schranke jeder Riemann-Summe: \(U\le\Sigma\le O\). Verfeinern lässt \(O\) fallen und \(U\) steigen; treffen sie sich, ist \(f\) integrierbar.</p>`,
+        beispiel: String.raw`<p>\(f(x)=x\) auf \([0,1]\), \(n\) gleiche Teile: \(U=\frac1n\sum_{k=0}^{n-1}\frac{k}{n}=\frac{n-1}{2n}\), \(O=\frac1n\sum_{k=1}^{n}\frac{k}{n}=\frac{n+1}{2n}\). Beide \(\to\frac12\), also \(\int_0^1 x\,dx=\frac12\).</p>`,
+        plus: String.raw`<p><b>Verfeinerungs-Monotonie:</b> ist \(\delta'\supset\delta\) (feiner), so \(U(\delta)\le U(\delta')\le O(\delta')\le O(\delta)\). Jede Untersumme ist \(\le\) jeder Obersumme — Grundlage für \(\underline{\int}\le\overline{\int}\).</p>`}},
+       {id:"4.1.5", title:"Struktur des Raumes ℛ[a,b]", body:{
+        def: String.raw`\(R[a,b]\) ist eine <b>Funktionen­algebra</b> und ein <b>Verband</b>: mit \(f,g\in R[a,b]\), \(\alpha,\beta\in\mathbb R\) sind auch \(\alpha f+\beta g\), \(f\cdot g\), \(|f|\), \(\max(f,g)\), \(\min(f,g)\in R[a,b]\). Zudem ist \(R[a,b]\) <b>abgeschlossen unter gleichmäßiger Konvergenz</b>: \(f_n\in R[a,b]\), \(f_n\rightrightarrows f\ \Rightarrow\ f\in R[a,b]\) und \(\int f_n\to\int f\).`,
+        worte: String.raw`<p>„Alles, was man normalerweise mit integrierbaren Funktionen tut, bleibt integrierbar": Linearkombinationen, Produkte, Beträge, Maxima. Wichtig fürs Rechnen — man muss Integrierbarkeit nicht jedes Mal neu prüfen.</p>`,
+        beispiel: String.raw`<p>\(|f|\in R[a,b]\) liefert die zentrale Abschätzung \(\displaystyle\Big|\int_a^b f\Big|\le\int_a^b|f|\le(b-a)\sup_{[a,b]}|f|\).</p><p>Aus \(f,g\in R\) folgt \(fg=\tfrac14\big((f+g)^2-(f-g)^2\big)\in R\) (Quadrate integrierbar).</p>`,
+        plus: String.raw`<p><b>Vorsicht Umkehrung:</b> aus \(|f|\in R\) folgt <b>nicht</b> \(f\in R\) — Gegenbeispiel \(f=\mathbf 1_{\mathbb Q}-\mathbf 1_{\mathbb Q^c}\) ist \(|f|\equiv1\) integrierbar, \(f\) selbst aber nicht.</p>`}},
+       {id:"4.1.6", title:"Lebesgue-Kriterium der Integrierbarkeit", body:{
+        def: String.raw`<b>Satz (Lebesgue).</b> \(f:[a,b]\to\mathbb R\) ist genau dann Riemann-integrierbar, wenn \(f\) <b>beschränkt</b> ist und die Menge ihrer <b>Unstetigkeitsstellen eine Lebesgue-Nullmenge</b> ist (mit Intervallen von Gesamtlänge \(<\varepsilon\) überdeckbar, für jedes \(\varepsilon>0\)).`,
+        worte: String.raw`<p>Das schärfste und bequemste Kriterium: „beschränkt + fast überall stetig". Endlich oder abzählbar viele Sprünge sind eine Nullmenge → integrierbar; „zu viele" Sprünge (überall) → nicht.</p>`,
+        erfuellt: String.raw`<p>\(f(x)=\lfloor 1/x\rfloor\) auf \(]0,1]\) (mit \(f(0):=0\)): beschränkt? nein — aber \(f(x)=\operatorname{sgn}(\sin\frac1x)\) etwa ist beschränkt, unstetig nur an \(x=\frac{1}{k\pi}\) (abzählbar, Nullmenge) ⇒ <b>integrierbar</b>.</p>`,
+        verletzt: String.raw`<p>Dirichlet \(\mathbf 1_{\mathbb Q}\): unstetig in <b>jedem</b> Punkt von \([0,1]\) — das ist keine Nullmenge ⇒ <b>nicht integrierbar</b> (deckt sich mit 4.1.2).</p>`,
+        plus: String.raw`<p>Eine <b>Nullmenge</b> \(N\) erfüllt: \(\forall\varepsilon>0\) gibt es Intervalle \(I_j\) mit \(N\subset\bigcup I_j\) und \(\sum|I_j|<\varepsilon\). Abzählbare Mengen (z. B. \(\mathbb Q\)) sind Nullmengen; \([0,1]\) ist keine.</p>`}}]},
     {id:"4.2",  t:"Linearität, Additivität und Monotonie des Integrals", src:"skriptse44.html", topics:[
-       ["4.2.1","Linearität des Integrals","skriptsu158.html"],
-       ["4.2.2","Additivität bzgl. des Bereichs","skriptsu159.html"],
-       ["4.2.3","Monotonie des Integrals","skriptsu160.html"]]},
+       {id:"4.2.1", title:"Linearität des Integrals", body:{
+        def: String.raw`Für \(f,g\in R[a,b]\) und \(\alpha,\beta\in\mathbb K\) ist \(\alpha f+\beta g\in R[a,b]\) und\[\int_a^b\big(\alpha f(x)+\beta g(x)\big)\,dx=\alpha\int_a^b f(x)\,dx+\beta\int_a^b g(x)\,dx.\]Das Integral ist also ein <b>lineares Funktional</b> \(R[a,b]\to\mathbb K\).`,
+        worte: String.raw`<p>Konstanten darf man vorziehen, Summen auseinanderziehen. Folgt direkt aus der Linearität der Riemann-Summen \(\Sigma(\alpha f+\beta g;\delta,\xi)=\alpha\Sigma(f)+\beta\Sigma(g)\) und dem Grenzübergang.</p>`,
+        beispiel: String.raw`\[\int_0^1\big(3x^2-2e^{x}\big)\,dx=3\int_0^1 x^2\,dx-2\int_0^1 e^{x}\,dx=3\cdot\tfrac13-2(e-1)=3-2e.\]`,
+        plus: String.raw`<p>Achtung: für <b>Produkte</b> gibt es <b>keine</b> solche Regel — \(\int fg\neq\int f\int g\) im Allgemeinen. Für Produkte braucht man partielle Integration (4.6.1).</p>`}},
+       {id:"4.2.2", title:"Additivität bzgl. des Integrationsbereichs", body:{
+        def: String.raw`Für \(a<c<b\) mit \(f\in R[a,b]\) gilt\[\int_a^b f=\int_a^c f+\int_c^b f.\]Mit der Orientierungs­konvention \(\int_a^b f:=-\int_b^a f\) und \(\int_a^a f:=0\) gilt die Formel dann für <b>beliebige</b> Lage von \(a,b,c\).`,
+        worte: String.raw`<p>Die Fläche über \([a,b]\) ist die Summe der Flächen über \([a,c]\) und \([c,b]\). Die Vorzeichenregel \(\int_a^b=-\int_b^a\) macht die Additivität lageunabhängig — praktisch beim Zerlegen an Nullstellen/Polen.</p>`,
+        beispiel: String.raw`<p>\(f(x)=|x|\) auf \([-1,2]\), an \(0\) aufspalten:</p>\[\int_{-1}^{2}|x|\,dx=\int_{-1}^{0}(-x)\,dx+\int_{0}^{2}x\,dx=\tfrac12+2=\tfrac52.\]`,
+        plus: String.raw`<p>Umkehrung nutzbar: mit \(c\) außerhalb \([a,b]\) ist \(\int_a^b=\int_a^c-\int_b^c\). Grundlage für den Hauptsatz \(\int_a^x f\) als Funktion der oberen Grenze (4.3.2).</p>`}},
+       {id:"4.2.3", title:"Monotonie des Integrals", body:{
+        def: String.raw`Für \(f,g\in R[a,b]\) (reellwertig) mit \(f\le g\) auf \([a,b]\) gilt \(\displaystyle\int_a^b f\le\int_a^b g\). Insbesondere: \(f\ge0\Rightarrow\int_a^b f\ge0\), und die <b>Standardabschätzung</b>\[\Big|\int_a^b f\Big|\le\int_a^b|f|\le(b-a)\sup_{[a,b]}|f|.\]`,
+        worte: String.raw`<p>„Größerer Integrand ⇒ größeres Integral." Die Betragsungleichung (eine Art Dreiecksungleichung fürs Integral) ist das Arbeitspferd für <b>jede</b> Integral-Abschätzung.</p>`,
+        beispiel: String.raw`<p>Schranke ohne Rechnung: für \(x\in[0,1]\) ist \(0\le\frac{x}{1+x^2}\le x\), also</p>\[0\le\int_0^1\frac{x}{1+x^2}\,dx\le\int_0^1 x\,dx=\tfrac12.\]<p>(Exakter Wert \(\tfrac12\ln2\approx0{,}347\) — liegt tatsächlich darunter.)</p>`,
+        plus: String.raw`<p><b>Klausur-Falle:</b> Monotonie gilt nur <b>reellwertig</b>. Für komplex-/vektorwertige \(f\) gibt es keine Ordnung — dort bleibt nur \(|\int f|\le\int|f|\).</p>`}}]},
     {id:"4.3",  t:"Newton-Leibniz; Stammfunktionen", src:"skriptse45.html", topics:[
-       ["4.3.1","Die Formel von Newton-Leibniz","skriptsu161.html"],
-       ["4.3.2","Stammfunktion & Hauptsatz der Diff.-/Int.-rechnung","skriptsu162.html"],
-       ["4.3.3","Existenz von Stammfunktionen","skriptsu163.html"]]},
+       {id:"4.3.1", title:"Die Formel von Newton-Leibniz", body:{
+        def: String.raw`Ist \(f\in R[a,b]\) und \(F\) eine <b>Stammfunktion</b> von \(f\) (\(F'=f\) auf \([a,b]\)), so gilt\[\int_a^b f(x)\,dx=F(b)-F(a)=:F\big|_a^b.\]`,
+        worte: String.raw`<p>Integrieren = „Ableiten rückgängig machen": man braucht nur <i>irgendeine</i> Funktion, deren Ableitung \(f\) ist, und wertet sie an den Rändern aus. Das verwandelt Flächenberechnung in Formel-Einsetzen.</p>`,
+        beispiel: String.raw`\[\int_0^{\pi}\sin x\,dx=\big[-\cos x\big]_0^{\pi}=(-\cos\pi)-(-\cos0)=1+1=2.\]`,
+        plus: String.raw`<p>Die Stammfunktion ist bis auf eine additive Konstante eindeutig — die fällt bei \(F(b)-F(a)\) ohnehin heraus. Voraussetzung: \(F'=f\) auf dem <b>ganzen</b> \([a,b]\) (keine Sprungstelle/Pol dazwischen — sonst aufspalten).</p>`}},
+       {id:"4.3.2", title:"Stammfunktion & Hauptsatz der Differential-/Integralrechnung", body:{
+        def: String.raw`<b>Hauptsatz (HDI).</b> Für \(f\in R[a,b]\) ist die <b>Integralfunktion</b> \(\displaystyle F(x)=\int_a^x f(t)\,dt\) stetig auf \([a,b]\). Ist \(f\) in \(x_0\) <b>stetig</b>, so ist \(F\) dort differenzierbar mit\[F'(x_0)=f(x_0).\]Für stetiges \(f\) ist also \(F\) eine Stammfunktion von \(f\).`,
+        worte: String.raw`<p>Die „Fläche bis \(x\)" wächst momentan genau mit der Höhe \(f(x)\). Das verbindet Differenzieren und Integrieren als inverse Operationen — und liefert gleichzeitig die <b>Existenz</b> einer Stammfunktion für jedes stetige \(f\).</p>`,
+        beispiel: String.raw`<p>\(F(x)=\int_0^x e^{-t^2}\,dt\) hat keine elementare Formel, aber \(F'(x)=e^{-x^2}\) nach HDI. Mit Kettenregel: \(\frac{d}{dx}\int_0^{x^2}\!\sin t\,dt=\sin(x^2)\cdot2x\).</p>`,
+        plus: String.raw`<p><b>Klausur-Falle:</b> ist \(f\) in \(x_0\) <b>unstetig</b> (Sprung), so ist \(F\) dort zwar noch stetig, aber i. A. <b>nicht</b> differenzierbar — \(F\) hat einen Knick. Beispiel \(f=\operatorname{sgn}\): \(F(x)=|x|\).</p>`}},
+       {id:"4.3.3", title:"Existenz von Stammfunktionen", body:{
+        def: String.raw`<b>Satz.</b> Jede auf \([a,b]\) <b>stetige</b> Funktion besitzt eine Stammfunktion — nämlich \(F(x)=\int_a^x f\) (HDI). Umgekehrt gilt: nicht jede integrierbare Funktion hat eine Stammfunktion, und nicht jede Funktion mit Stammfunktion ist stetig.`,
+        worte: String.raw`<p>„Stetig ⇒ Stammfunktion existiert" ist die bequeme Richtung. Aber „Stammfunktion existiert" und „integrierbar" sind <b>zwei verschiedene</b> Eigenschaften — beide Implikationen können scheitern.</p>`,
+        erfuellt: String.raw`<p>\(f(x)=\cos x\) stetig ⇒ Stammfunktion \(F(x)=\sin x\); Newton-Leibniz anwendbar.</p>`,
+        verletzt: String.raw`<p><b>Integrierbar, aber keine Stammfunktion:</b> \(f=\operatorname{sgn}\) auf \([-1,1]\) ist integrierbar, hat aber keine Stammfunktion (eine Ableitung erfüllt den Zwischenwertsatz — Satz von Darboux — und darf nicht springen).</p><p><b>Stammfunktion, aber nicht stetig / nicht R-integrierbar:</b> \(F(x)=x^2\sin\frac{1}{x^2}\) ist überall differenzierbar, aber \(F'\) ist bei \(0\) unbeschränkt ⇒ \(F'\notin R[-1,1]\).</p>`,
+        plus: String.raw`<p>Merke die Landschaft: <b>stetig ⊊ Stammfunktion-besitzend</b> und <b>stetig ⊊ integrierbar</b>, aber „Stammfunktion" und „integrierbar" sind unvergleichbar. Ableitungen erfüllen stets den Zwischenwertsatz (Darboux, 3.14).</p>`}}]},
     {id:"4.4",  t:"Integration rationaler Funktionen", src:"skriptse46.html", topics:[
-       ["4.4.1","Polynomdivision mit Rest","skriptsu164.html"],
-       ["4.4.2","Schriftliches Dividieren von Polynomen","skriptsu165.html"],
-       ["4.4.3","Zerlegung des Restterms (Partialbruch)","skriptsu166.html"],
-       ["4.4.4","Berechnung der Koeffizienten A₍ⱼₖ₎","skriptsu167.html"],
-       ["4.4.5","Die Formel von Ostrogradskij","skriptsu168.html"]]},
+       {id:"4.4.1", title:"Polynomdivision mit Rest", body:{
+        def: String.raw`Zu Polynomen \(P,Q\) mit \(Q\neq0\) gibt es <b>eindeutige</b> Polynome \(S\) (Quotient) und \(R\) (Rest) mit\[P=S\cdot Q+R,\qquad \deg R<\deg Q.\]Damit \(\displaystyle\frac{P}{Q}=S+\frac{R}{Q}\) — ein Polynomteil plus ein <b>echt gebrochener</b> Rest.`,
+        worte: String.raw`<p>Erster Pflichtschritt vor jeder Partialbruchzerlegung: solange \(\deg P\ge\deg Q\), wird abdividiert. \(S\) integriert man trivial, nur der echt gebrochene Rest \(R/Q\) braucht PBZ.</p>`,
+        beispiel: String.raw`<p>\(\dfrac{x^3}{x^2+1}\): \(x^3=x\,(x^2+1)-x\), also</p>\[\frac{x^3}{x^2+1}=x-\frac{x}{x^2+1}\ \Rightarrow\ \int\frac{x^3}{x^2+1}\,dx=\frac{x^2}{2}-\frac12\ln(x^2+1)+C.\]`,
+        plus: String.raw`<p><b>Klausur-Falle:</b> PBZ direkt auf einen unecht gebrochenen Bruch anzusetzen führt in die Irre — immer zuerst Grad senken. Techniken im Spickzettel <a href="#/ref/brueche">Brüche &amp; PBZ</a>.</p>`}},
+       {id:"4.4.2", title:"Schriftliches Dividieren von Polynomen", body:{
+        def: String.raw`Der <b>Divisionsalgorithmus</b>: höchsten Term von \(P\) durch höchsten Term von \(Q\) teilen → nächster Term von \(S\); \(S\)-Term \(\times Q\) von \(P\) abziehen; mit dem Rest wiederholen, bis \(\deg(\text{Rest})<\deg Q\).`,
+        worte: String.raw`<p>Genau wie schriftliche Division bei Zahlen, nur mit \(x\)-Potenzen. Fehlende Grade als \(0\cdot x^k\) mitschreiben, sonst verrutschen die Spalten.</p>`,
+        beispiel: String.raw`<p>\((x^3-2x+1):(x-1)\):</p>\[x^3-2x+1=(x-1)(x^2+x-1)+0,\]<p>Rechenweg: \(x^3:x=x^2\), Rest \(x^2-2x\); \(x^2:x=x\), Rest \(-x+1\); \(-x:x=-1\), Rest \(0\). Also \(S=x^2+x-1\).</p>`,
+        plus: String.raw`<p>Bei Division durch \((x-a)\) ist der Rest gerade \(P(a)\) (<b>Horner/Restsatz</b>) — schneller Nullstellen-Check: \(P(a)=0\Leftrightarrow(x-a)\mid P\).</p>`}},
+       {id:"4.4.3", title:"Zerlegung des Restterms (Partialbruchzerlegung)", body:{
+        def: String.raw`Faktorisiere \(Q\) (über \(\mathbb R\)) in Linearfaktoren \((x-a)^{m}\) und irreduzible Quadrate \((x^2+px+q)^{n}\). Dann hat der echt gebrochene Bruch die <b>eindeutige</b> Zerlegung\[\frac{R}{Q}=\sum_{a}\sum_{j=1}^{m}\frac{A_{a,j}}{(x-a)^{j}}+\sum\sum_{k=1}^{n}\frac{B_{k}x+C_{k}}{(x^2+px+q)^{k}}.\]`,
+        worte: String.raw`<p>Jeder Faktor von \(Q\) bekommt seine eigenen Brüche — bei Vielfachheit \(m\) alle Potenzen \(1,\dots,m\). Reelle irreduzible Quadrate tragen einen linearen Zähler \(Bx+C\).</p>`,
+        beispiel: String.raw`\[\frac{1}{x^2-1}=\frac{1}{(x-1)(x+1)}=\frac{1/2}{x-1}-\frac{1/2}{x+1}\ \Rightarrow\ \int=\frac12\ln\Big|\frac{x-1}{x+1}\Big|+C.\]`,
+        plus: String.raw`<p>Jeder Grundbaustein ist integrierbar: \(\frac{1}{x-a}\to\ln\), \(\frac{1}{(x-a)^{j}}\to\) Potenz, \(\frac{Bx+C}{x^2+px+q}\to\ln+\arctan\) (quadratische Ergänzung). Vollständige Ansätze im Spickzettel <a href="#/ref/brueche">Brüche &amp; PBZ</a>.</p>`}},
+       {id:"4.4.4", title:"Berechnung der Koeffizienten", body:{
+        def: String.raw`Die \(A_{a,j}, B_k, C_k\) bestimmt man durch: <b>(1) Koeffizientenvergleich</b> (auf Hauptnenner bringen, Potenzen von \(x\) gleichsetzen); <b>(2) Einsetzen</b> geeigneter \(x\)-Werte (v. a. der Nullstellen); <b>(3) Zuhalte-Methode</b> für einfache Linearfaktoren: \(A_{a,1}=\dfrac{R(a)}{Q'(a)}=\lim_{x\to a}(x-a)\dfrac{R(x)}{Q(x)}\).`,
+        worte: String.raw`<p>Für einfache Pole ist Zuhalten am schnellsten. Höhere Potenzen und quadratische Faktoren löst man per Koeffizientenvergleich oder cleverem Einsetzen.</p>`,
+        beispiel: String.raw`<p>\(\dfrac{5x+1}{(x-1)(x+2)}=\dfrac{A}{x-1}+\dfrac{B}{x+2}\). Zuhalten:</p>\[A=\frac{5\cdot1+1}{1+2}=2,\qquad B=\frac{5(-2)+1}{-2-1}=3.\]`,
+        plus: String.raw`<p>Kontrolle: Zähler wieder zusammensetzen und mit dem Original vergleichen. Mehr Tricks (Grenzwert-Trick, Ableiten für Mehrfachpole) im Spickzettel <a href="#/ref/brueche">Brüche &amp; PBZ</a>.</p>`}},
+       {id:"4.4.5", title:"Die Formel von Ostrogradskij", body:{
+        def: String.raw`Bei <b>mehrfachen</b> Nullstellen trennt Ostrogradskij den rationalen Teil algebraisch ab. Mit \(Q_1=\gcd(Q,Q')\) und \(Q_2=Q/Q_1\) gilt\[\int\frac{P}{Q}\,dx=\frac{P_1}{Q_1}+\int\frac{P_2}{Q_2}\,dx,\]wobei \(P_1,P_2\) Polynome mit \(\deg P_i<\deg Q_i\) sind; das <b>Restintegral hat nur noch einfache Nullstellen</b> (⇒ reiner \(\ln/\arctan\)-Teil).`,
+        worte: String.raw`<p>Spart die mühsame PBZ mit hohen Potenzen: der „algebraische" (gebrochen-rationale) Anteil \(P_1/Q_1\) wird direkt hingeschrieben, das verbleibende Integral ist harmlos. \(P_1,P_2\) findet man durch Ableiten der Ansatzgleichung und Koeffizientenvergleich.</p>`,
+        beispiel: String.raw`<p>\(\displaystyle\int\frac{dx}{(x^2+1)^2}\): Ansatz \(\dfrac{ax+b}{x^2+1}+\int\dfrac{cx+d}{x^2+1}\,dx\) liefert</p>\[\int\frac{dx}{(x^2+1)^2}=\frac{x}{2(x^2+1)}+\frac12\arctan x+C.\]`,
+        plus: String.raw`<p>\(Q_1=\gcd(Q,Q')\) sammelt genau die <b>mehrfachen</b> Faktoren (Vielfachheit um 1 reduziert), \(Q_2\) hat nur noch einfache. Alternative zur klassischen PBZ, besonders bei \((\dots)^{n}\)-Nennern.</p>`}}]},
     {id:"4.5",  t:"Die Mittelwertsätze der Integralrechnung", src:"skriptse47.html", topics:[
-       ["4.5.1","Erster Mittelwertsatz","skriptsu169.html"],
-       ["4.5.2","Zweiter Mittelwertsatz","skriptsu170.html"]]},
+       {id:"4.5.1", title:"Erster Mittelwertsatz", body:{
+        def: String.raw`Sei \(f\in C[a,b]\) und \(g\in R[a,b]\) mit \(g\ge0\) (Gewicht, ohne Vorzeichenwechsel). Dann existiert \(\xi\in[a,b]\) mit\[\int_a^b f(x)\,g(x)\,dx=f(\xi)\int_a^b g(x)\,dx.\]Spezialfall \(g\equiv1\): \(\displaystyle\int_a^b f=f(\xi)\,(b-a)\) — der <b>Integralmittelwert</b> \(\frac{1}{b-a}\int_a^b f\) wird angenommen.`,
+        worte: String.raw`<p>Ein stetiges \(f\) nimmt seinen (gewichteten) Durchschnitt irgendwo als echten Funktionswert an — Zwischenwertsatz fürs Integral. Das \(g\ge0\) darf das Vorzeichen nicht wechseln, sonst funktioniert die Mittelung nicht.</p>`,
+        beispiel: String.raw`<p>\(\int_0^{\pi}\sin x\,dx=2=f(\xi)\cdot\pi\) verlangt \(\sin\xi=\frac{2}{\pi}\), also \(\xi=\arcsin\frac{2}{\pi}\approx0{,}69\in[0,\pi]\) ✓.</p>`,
+        plus: String.raw`<p><b>Klausur-Falle:</b> \(f\) muss <b>stetig</b> sein (für den Zwischenwert) und \(g\) darf das Vorzeichen nicht wechseln. Ohne \(g\ge0\) kann \(f(\xi)\) außerhalb des Wertebereichs landen.</p>`}},
+       {id:"4.5.2", title:"Zweiter Mittelwertsatz", body:{
+        def: String.raw`Sei \(f\) auf \([a,b]\) <b>monoton</b> und \(g\in R[a,b]\). Dann gibt es \(\xi\in[a,b]\) mit\[\int_a^b f(x)g(x)\,dx=f(a)\int_a^{\xi} g(x)\,dx+f(b)\int_{\xi}^{b} g(x)\,dx.\]Ist \(f\ge0\) und monoton fallend, folgt die <b>Bonnet</b>-Form \(\int_a^b fg=f(a)\int_a^{\xi}g\).`,
+        worte: String.raw`<p>Hier trägt die <b>Monotonie</b> von \(f\) (statt Stetigkeit) die Aussage: das Gewicht liegt an den Rändern \(f(a),f(b)\), der Umschaltpunkt \(\xi\) verteilt \(\int g\) dazwischen. Wichtiges Werkzeug für Oszillations-Abschätzungen (z. B. \(\int\frac{\sin x}{x}\)).</p>`,
+        beispiel: String.raw`<p>Abschätzung: für \(0<a<b\) ist \(x\mapsto\frac1x\) monoton fallend, also</p>\[\Big|\int_a^b\frac{\sin x}{x}\,dx\Big|=\Big|\frac1a\int_a^{\xi}\sin x\,dx\Big|\le\frac{2}{a},\]<p>da \(|\int_a^{\xi}\sin x\,dx|\le2\). So zeigt man Konvergenz von \(\int_1^{\infty}\frac{\sin x}{x}dx\).</p>`,
+        plus: String.raw`<p>Der 2. MWS ist der Schlüssel zum <b>Dirichlet-Kriterium</b> (monotone Nullfolge \(\times\) beschränkte Partialsummen) — vgl. Spickzettel <a href="#/ref/konv_integrale">Konvergenz — Integrale</a>.</p>`}}]},
     {id:"4.6",  t:"Partielle Integration und Substitution", src:"skriptse48.html", topics:[
-       ["4.6.1","Partielle Integration","skriptsu171.html"],
-       ["4.6.2","Substitution der Integrationsvariablen","skriptsu172.html"]]},
+       {id:"4.6.1", title:"Partielle Integration", body:{
+        def: String.raw`Für \(u,v\in C^{1}[a,b]\) gilt\[\int_a^b u'(x)\,v(x)\,dx=\big[u(x)v(x)\big]_a^b-\int_a^b u(x)\,v'(x)\,dx.\]Direkte Folge der Produktregel \((uv)'=u'v+uv'\), integriert über \([a,b]\).`,
+        worte: String.raw`<p>Ableitung „von einem Faktor auf den anderen umwälzen". Man wählt \(v\) so, dass \(v'\) einfacher wird (Polynom \(\to\) verschwindet) und \(u'\) sich leicht integrieren lässt. Merkregel LIATE fürs Ableiten.</p>`,
+        beispiel: String.raw`<p>\(v=x\) (ableiten), \(u'=e^{x}\) (integrieren):</p>\[\int_0^1 x\,e^{x}\,dx=\big[x e^{x}\big]_0^1-\int_0^1 e^{x}\,dx=e-(e-1)=1.\]`,
+        plus: String.raw`<p><b>Faktor-1-Trick</b> (\(\int\ln x=\int1\cdot\ln x\)) und der <b>„Phönix"</b> (\(\int e^{x}\sin x\), zweimal partiell und nach dem Integral auflösen) im Spickzettel <a href="#/ref/substitutionen">Substitutionen &amp; Tricks</a>.</p>`}},
+       {id:"4.6.2", title:"Substitution der Integrationsvariablen", body:{
+        def: String.raw`Sei \(\varphi\in C^{1}[\alpha,\beta]\) und \(f\) stetig auf \(\varphi([\alpha,\beta])\). Dann\[\int_{\alpha}^{\beta} f\big(\varphi(t)\big)\,\varphi'(t)\,dt=\int_{\varphi(\alpha)}^{\varphi(\beta)} f(u)\,du.\]Umkehrung der Kettenregel; mit \(u=\varphi(t)\), \(du=\varphi'(t)\,dt\) und <b>mitsubstituierten Grenzen</b>.`,
+        worte: String.raw`<p>„Innere Funktion samt ihrer Ableitung" ersetzen. Bei bestimmten Integralen die Grenzen gleich mit umrechnen — dann entfällt die Rücksubstitution.</p>`,
+        beispiel: String.raw`<p>\(u=x^2+1\), \(du=2x\,dx\); Grenzen \(0\to1\), \(1\to2\):</p>\[\int_0^1\frac{x}{x^2+1}\,dx=\frac12\int_1^{2}\frac{du}{u}=\frac12\ln2.\]`,
+        plus: String.raw`<p><b>Klausur-Falle:</b> bei bestimmten Integralen <b>immer</b> die Grenzen mitsubstituieren (oder am Ende zurücksubstituieren) — häufigster Vorzeichen-/Wert-Fehler. \(\varphi\) sollte auf \([\alpha,\beta]\) \(C^{1}\) sein. Standard-Substitutionen: <a href="#/ref/substitutionen">Spickzettel</a>.</p>`}}]},
     {id:"4.7",  t:"Das Restglied in der Taylor-Formel", src:"skriptse49.html", topics:[
-       ["4.7.1","Restglied – Formulierung und Beweis","skriptsu173.html"],
-       ["4.7.2","Modifikationen der Restgliedformel","skriptsu174.html"],
-       ["4.7.3","Eine Anwendung","skriptsu175.html"]]},
+       {id:"4.7.1", title:"Restglied – Formulierung und Beweis", body:{
+        def: String.raw`Sei \(f\in C^{n+1}[a,b]\), \(x_0\in[a,b]\). Dann gilt die <b>Taylor-Formel</b>\[f(x)=\sum_{k=0}^{n}\frac{f^{(k)}(x_0)}{k!}(x-x_0)^{k}+R_n(x)\]mit dem <b>Restglied in Integralform</b>\[R_n(x)=\frac{1}{n!}\int_{x_0}^{x} f^{(n+1)}(t)\,(x-t)^{n}\,dt.\]`,
+        worte: String.raw`<p>Das Taylor-Polynom nähert \(f\) nahe \(x_0\); \(R_n\) ist der <b>exakte</b> Fehler. Die Integralform ist am stärksten (kein unbekanntes \(\xi\)) und Ausgangspunkt für alle anderen Restgliedformen.</p>`,
+        beispiel: String.raw`<p><b>Beweisidee</b> (Induktion / wiederholte partielle Integration): Start \(f(x)-f(x_0)=\int_{x_0}^{x}f'(t)\,dt\). Partielles Integrieren mit \(v=f'(t)\), \(u'=1\) und geschicktem Stammfunktions-Ansatz \(u=-(x-t)\) erzeugt den nächsten Taylor-Term plus das Integral mit \((x-t)^1\); Iteration liefert \((x-t)^n/n!\).</p>`,
+        plus: String.raw`<p>Klassische Reihen &amp; Restglied-Übersicht im Spickzettel <a href="#/ref/entwickeln">Funktionen entwickeln</a>. Voraussetzung \(f\in C^{n+1}\): eine Ableitung mehr als der höchste Polynomgrad.</p>`}},
+       {id:"4.7.2", title:"Modifikationen der Restgliedformel", body:{
+        def: String.raw`Aus der Integralform folgen mit den Mittelwertsätzen (4.5) für ein \(\xi\) zwischen \(x_0\) und \(x\): <b>Lagrange-Form</b>\[R_n(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1},\]<b>Cauchy-Form</b> \(\displaystyle R_n(x)=\frac{f^{(n+1)}(\xi)}{n!}(x-\xi)^{n}(x-x_0)\).`,
+        worte: String.raw`<p>Die <b>Lagrange-Form</b> ist die Arbeitsform für Fehlerabschätzungen: \(|R_n|\le\frac{M_{n+1}}{(n+1)!}|x-x_0|^{n+1}\) mit \(M_{n+1}=\sup|f^{(n+1)}|\). Sie verallgemeinert den Mittelwertsatz (\(n=0\): \(f(x)-f(x_0)=f'(\xi)(x-x_0)\)).</p>`,
+        beispiel: String.raw`<p><b>\(e^{x}\) ist seine Taylor-Reihe:</b> Lagrange-Restglied bei \(x_0=0\):</p>\[|R_n(x)|=\frac{e^{\xi}}{(n+1)!}|x|^{n+1}\le\frac{e^{|x|}\,|x|^{n+1}}{(n+1)!}\ \xrightarrow[n\to\infty]{}\ 0\quad\forall x,\]<p>da \(\frac{|x|^{n+1}}{(n+1)!}\to0\). Also \(e^{x}=\sum_{k\ge0}\frac{x^k}{k!}\) auf ganz \(\mathbb R\).</p>`,
+        plus: String.raw`<p><b>Klausur-Falle:</b> das \(\xi\) ist <b>nicht</b> explizit bekannt — man schätzt \(f^{(n+1)}\) auf dem ganzen Intervall nach oben ab. \(\xi\) hängt von \(x\) und \(n\) ab.</p>`}},
+       {id:"4.7.3", title:"Eine Anwendung: Integrale abschätzen", body:{
+        def: String.raw`Hat \(f\) keine elementare Stammfunktion, integriert man das <b>Taylor-Polynom</b> und beschränkt den Fehler durch \(\big|\int R_n\big|\le\int|R_n|\):\[\int_{x_0}^{x} f\,dt=\int_{x_0}^{x}\Big(\sum_{k=0}^{n}\frac{f^{(k)}(x_0)}{k!}(t-x_0)^{k}\Big)dt+\int_{x_0}^{x}R_n(t)\,dt.\]`,
+        worte: String.raw`<p>Termweises Integrieren des Polynoms ist trivial; das Restglied liefert eine <b>garantierte Fehlerschranke</b> für den Näherungswert. So werden „unlösbare" Integrale beliebig genau berechenbar.</p>`,
+        beispiel: String.raw`<p>\(\displaystyle\int_0^{1}e^{-t^2}\,dt\) mit \(e^{-t^2}=\sum_{k\ge0}\frac{(-1)^k t^{2k}}{k!}\):</p>\[\int_0^1 e^{-t^2}dt=\sum_{k=0}^{\infty}\frac{(-1)^k}{k!\,(2k+1)}=1-\frac13+\frac{1}{10}-\frac{1}{42}+\cdots\approx0{,}7468.\]<p>Alternierend ⇒ Fehler \(\le\) erster weggelassener Term (z. B. nach \(-\frac1{42}\): Fehler \(<\frac{1}{216}\)).</p>`,
+        plus: String.raw`<p>Dieselbe Idee führt auf die <b>numerischen Quadraturformeln</b> (4.8): dort interpoliert man \(f\) statt zu entwickeln, mit analoger Restglied-Fehlerschranke.</p>`}}]},
     {id:"4.8",  t:"Numerische Integration (Interpolation)", src:"skriptse50.html", topics:[
-       ["4.8.1","Lagrangesche Interpolationsformel","skriptsu176.html"],
-       ["4.8.2","Rechteckformel (P₀)","skriptsu177.html"],
-       ["4.8.3","Trapezformel (P₁)","skriptsu178.html"],
-       ["4.8.4","Simpson-Regel (P₂)","skriptsu179.html"]]},
+       {id:"4.8.1", title:"Lagrangesche Interpolationsformel", body:{
+        def: String.raw`Zu \(n+1\) Stützstellen \(x_0,\dots,x_n\) (paarweise verschieden) gibt es <b>genau ein</b> Polynom \(p\) vom Grad \(\le n\) mit \(p(x_j)=f(x_j)\):\[p(x)=\sum_{j=0}^{n} f(x_j)\,L_j(x),\qquad L_j(x)=\prod_{k\neq j}\frac{x-x_k}{x_j-x_k}.\]<b>Interpolationsfehler:</b> \(\displaystyle f(x)-p(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}\prod_{j=0}^{n}(x-x_j)\).`,
+        worte: String.raw`<p>Die Lagrange-Basispolynome erfüllen \(L_j(x_k)=\delta_{jk}\) — jedes „schaltet" genau an seiner Stützstelle ein. So baut man das eindeutige Interpolationspolynom als gewichtete Summe der Funktionswerte.</p>`,
+        beispiel: String.raw`<p>Durch \((0,1),(1,3),(2,7)\): \(p(x)=1\cdot\frac{(x-1)(x-2)}{2}+3\cdot\frac{x(x-2)}{-1}+7\cdot\frac{x(x-1)}{2}=x^2+x+1\).</p>`,
+        plus: String.raw`<p>Grundlage aller Newton-Cotes-Formeln (4.8.2–4.8.4): \(\int_a^b f\approx\int_a^b p\). Mehr im Spickzettel <a href="#/ref/entwickeln">Funktionen entwickeln</a>.</p>`}},
+       {id:"4.8.2", title:"Rechteckformel (P₀)", body:{
+        def: String.raw`Interpolation durch eine <b>Konstante</b> (Grad 0) am Mittelpunkt \(m=\frac{a+b}{2}\) — die <b>Mittelpunktregel</b>:\[\int_a^b f(x)\,dx\approx (b-a)\,f\!\Big(\frac{a+b}{2}\Big),\qquad \text{Fehler}=\frac{(b-a)^3}{24}f''(\xi).\]`,
+        worte: String.raw`<p>Ein einziges Rechteck mit der Höhe in der Intervallmitte. Erstaunlich gut: exakt für lineare \(f\) (der Fehler hängt an \(f''\)), besser als die naive Randauswertung.</p>`,
+        beispiel: String.raw`<p>\(\int_0^1 x^2\,dx\approx1\cdot f(\tfrac12)=\tfrac14\) (exakt \(\tfrac13\)); Fehler \(=\frac{1}{24}\cdot2=\frac{1}{12}\), passt: \(\tfrac13-\tfrac14=\tfrac1{12}\).</p>`,
+        plus: String.raw`<p>Genauigkeit steigern per <b>zusammengesetzter</b> Regel: \([a,b]\) in \(N\) Teile, Fehler \(=O(N^{-2})\). „Grad 0", aber Genauigkeitsordnung wie die Trapezregel.</p>`}},
+       {id:"4.8.3", title:"Trapezformel (P₁)", body:{
+        def: String.raw`Interpolation durch die <b>Sehne</b> (Grad 1) durch \((a,f(a)),(b,f(b))\):\[\int_a^b f(x)\,dx\approx\frac{b-a}{2}\big(f(a)+f(b)\big),\qquad \text{Fehler}=-\frac{(b-a)^3}{12}f''(\xi).\]`,
+        worte: String.raw`<p>Fläche des Trapezes unter der Verbindungsgeraden. Exakt für lineare \(f\); der Fehler hängt an der Krümmung \(f''\) — bei konvexem \(f\) überschätzt die Trapezregel.</p>`,
+        beispiel: String.raw`<p>\(\int_0^1 x^2\,dx\approx\frac12(0+1)=\frac12\) (exakt \(\tfrac13\)); Fehler \(=-\frac{1}{12}\cdot2=-\frac16\), passt: \(\tfrac13-\tfrac12=-\tfrac16\).</p>`,
+        plus: String.raw`<p>Trapez- <b>überschätzt</b>, Mittelpunkt- <b>unterschätzt</b> (bei \(f''>0\)) um etwa \(2:1\). Ihre gewichtete Kombination \(\frac13\)Mittelpunkt-frei… eigentlich \(\frac{2\cdot\text{Mitte}+\text{Trapez}}{3}\) ergibt Simpson (4.8.4).</p>`}},
+       {id:"4.8.4", title:"Simpson-Regel (P₂)", body:{
+        def: String.raw`Interpolation durch eine <b>Parabel</b> (Grad 2) über \(a,\ m=\frac{a+b}{2},\ b\):\[\int_a^b f\,dx\approx\frac{b-a}{6}\Big(f(a)+4f\big(\tfrac{a+b}{2}\big)+f(b)\Big),\quad \text{Fehler}=-\frac{(b-a)^5}{2880}f^{(4)}(\xi).\]`,
+        worte: String.raw`<p>Die „\(1\,4\,1\)-Regel". Durch die Parabel exakt für Polynome bis Grad 2 — <b>und geschenkt Grad 3</b> (Symmetrie). Der Fehler hängt erst an \(f^{(4)}\), daher deutlich genauer als Trapez/Mittelpunkt.</p>`,
+        beispiel: String.raw`<p>\(\int_0^1 x^2\,dx\approx\frac16\big(0+4\cdot\tfrac14+1\big)=\frac16\cdot2=\frac13\) — <b>exakt</b> (Simpson integriert Grad \(\le3\) fehlerfrei).</p>`,
+        plus: String.raw`<p>Simpson \(=\frac{2\,(\text{Mittelpunkt})+1\,(\text{Trapez})}{3}\). Zusammengesetzt (gerade Teilanzahl) Fehler \(=O(N^{-4})\) — der Klausur-Klassiker unter den Quadraturformeln.</p>`}}]},
     {id:"4.9",  t:"Anwendungen I: Länge und Krümmung einer Kurve", src:"skriptse51.html", topics:[
-       ["4.9.1","Der Begriff der Jordan-Kurve","skriptsu180.html"],
-       ["4.9.2","Bogenlänge einer Jordan-Kurve","skriptsu181.html"],
-       ["4.9.3","Parametrisierung durch die Bogenlänge","skriptsu182.html"],
-       ["4.9.4","Tangential- und Krümmungsvektor","skriptsu183.html"],
-       ["4.9.5","Berechnung des Krümmungsvektors","skriptsu184.html"],
-       ["4.9.6","Krümmung einer Kurve in ℝ³ und ℝ²","skriptsu185.html"]]},
+       {id:"4.9.1", title:"Der Begriff der Jordan-Kurve", body:{
+        def: String.raw`Eine <b>Jordan-Kurve</b> (Jordan-Bogen) ist eine <b>stetige, injektive</b> Abbildung \(\gamma:[a,b]\to\mathbb R^{n}\) (keine Selbstschnitte). <b>Geschlossen</b>, falls \(\gamma(a)=\gamma(b)\) und \(\gamma\) auf \([a,b[\) injektiv ist. Der Bogen heißt <b>rektifizierbar</b>, wenn \(\sup_\delta\sum_k|\gamma(t_{k+1})-\gamma(t_k)|<\infty\) (Supremum über alle Zerlegungen).`,
+        worte: String.raw`<p>„Kurve" = das <b>Bild</b> einer durchlaufenen, überschneidungsfreien Bahn; die Parametrisierung ist nur das „Tempo". Rektifizierbar = mit einbeschriebenen Polygonzügen approximierbare, endliche Länge.</p>`,
+        erfuellt: String.raw`<p>\(\gamma(t)=(\cos t,\sin t)\), \(t\in[0,2\pi[\): stetig, injektiv auf \([0,2\pi[\), \(\gamma(0)=\gamma(2\pi)\) ⇒ geschlossene Jordan-Kurve (Einheitskreis), rektifizierbar (\(C^1\)).</p>`,
+        verletzt: String.raw`<p><b>Nicht Jordan:</b> die „Acht" \(\gamma(t)=(\sin 2t,\sin t)\) schneidet sich im Ursprung (nicht injektiv). <b>Nicht rektifizierbar:</b> \(f(t)=t(\cos\tfrac1t,\sin\tfrac1t)\), \(f(0)=0\) — Polygonzüge über \(t_k=\frac{1}{k\pi}\) liefern die harmonische Reihe \(\to\infty\).</p>`,
+        plus: String.raw`<p>Rektifizierbarkeit zeigen/widerlegen (\(C^1\)/Lipschitz vs. Polygonzug-Folge) im Spickzettel <a href="#/ref/kurven">Kurven · Länge · Krümmung</a>.</p>`}},
+       {id:"4.9.2", title:"Bogenlänge einer Jordan-Kurve", body:{
+        def: String.raw`Die <b>Bogenlänge</b> ist \(\displaystyle L(\gamma)=\sup_\delta\sum_k|\gamma(t_{k+1})-\gamma(t_k)|\). Für \(\gamma\in C^{1}\) gilt\[L(\gamma)=\int_a^b|\gamma'(t)|\,dt=\int_a^b\sqrt{\textstyle\sum_i \gamma_i'(t)^2}\,dt.\]`,
+        worte: String.raw`<p>Länge = Grenzwert einbeschriebener Polygonzüge. Für glatte Kurven wird die Sehnensumme zum Integral über die <b>Geschwindigkeit</b> \(|\gamma'(t)|\) — „Weg = Tempo integriert".</p>`,
+        beispiel: String.raw`<p>Kreis \(\gamma(t)=(r\cos t,r\sin t)\), \(t\in[0,2\pi]\): \(|\gamma'(t)|=r\), also</p>\[L=\int_0^{2\pi} r\,dt=2\pi r.\]<p>Graph \(y=f(x)\): \(L=\int_a^b\sqrt{1+f'(x)^2}\,dx\).</p>`,
+        plus: String.raw`<p><b>Klausur-Falle:</b> die Länge ist <b>parametrisierungs­unabhängig</b> (Substitution ändert sie nicht), das Integral \(\int|\gamma'|\) aber nur bei injektivem Durchlauf gleich der geometrischen Länge — doppelt durchlaufene Bögen zählen doppelt.</p>`}},
+       {id:"4.9.3", title:"Parametrisierung durch die Bogenlänge", body:{
+        def: String.raw`Die <b>Bogenlängenfunktion</b> \(\displaystyle s(t)=\int_a^t|\gamma'(\tau)|\,d\tau\) ist streng wachsend (falls \(\gamma'\neq0\), <b>reguläre</b> Kurve) und umkehrbar. Reparametrisiert man \(\tilde\gamma(s)=\gamma(t(s))\), so gilt \(|\tilde\gamma'(s)|\equiv1\) — <b>Parametrisierung nach der Bogenlänge</b> (Einheitsgeschwindigkeit).`,
+        worte: String.raw`<p>Man wählt als „Zeit" die bereits zurückgelegte Strecke \(s\). Dann läuft man mit konstantem Tempo 1 — das entkoppelt die Geometrie (Krümmung!) vom willkürlichen Durchlauf-Tempo.</p>`,
+        beispiel: String.raw`<p>Kreis: \(s(t)=\int_0^t r\,d\tau=rt\), also \(t=s/r\) und \(\tilde\gamma(s)=(r\cos\frac sr,r\sin\frac sr)\) mit \(|\tilde\gamma'(s)|=1\) ✓.</p>`,
+        plus: String.raw`<p>Voraussetzung <b>Regularität</b> \(\gamma'(t)\neq0\): an „Stillständen" (\(\gamma'=0\), z. B. Spitzen) ist \(s(t)\) nicht streng wachsend und die Bogenlängen-Param. bricht.</p>`}},
+       {id:"4.9.4", title:"Tangential- und Krümmungsvektor", body:{
+        def: String.raw`<b>Einheits-Tangentenvektor</b> \(\displaystyle T=\frac{\gamma'}{|\gamma'|}\). In Bogenlängen-Param. ist \(T(s)=\tilde\gamma'(s)\), und der <b>Krümmungsvektor</b> ist\[\vec\kappa(s)=T'(s)=\tilde\gamma''(s),\qquad \kappa(s)=|\tilde\gamma''(s)|\ (\text{Krümmung}).\]Wegen \(|T|\equiv1\) steht \(\vec\kappa\perp T\) (zeigt zur Hauptnormalen \(N\)).`,
+        worte: String.raw`<p>\(T\) gibt die Richtung, \(\vec\kappa=T'\) misst, wie schnell sich die Richtung dreht — die „Verbiegung" pro Weglänge. Senkrecht zur Bahn, weil ein Einheitsvektor sich nur drehen, nicht strecken kann.</p>`,
+        beispiel: String.raw`<p>Kreis (Bogenlänge): \(\tilde\gamma(s)=r(\cos\frac sr,\sin\frac sr)\), \(\tilde\gamma''(s)=-\frac1r(\cos\frac sr,\sin\frac sr)\), also \(\kappa=\frac1r\) — konstant, Krümmungsradius \(=r\).</p>`,
+        plus: String.raw`<p>\(\vec\kappa=T'/|\gamma'|\) auch ohne Bogenlängen-Param.; \(N=\vec\kappa/\kappa\) Hauptnormale. Der <b>Krümmungsradius</b> ist \(\rho=1/\kappa\).</p>`}},
+       {id:"4.9.5", title:"Berechnung des Krümmungsvektors", body:{
+        def: String.raw`Für eine beliebige reguläre \(C^{2}\)-Parametrisierung (Kettenregel, \(s'=|\gamma'|\)):\[\vec\kappa=\frac{d T}{ds}=\frac{1}{|\gamma'|}\,\frac{d}{dt}\!\left(\frac{\gamma'}{|\gamma'|}\right)=\frac{\gamma''\,|\gamma'|^2-\gamma'\,(\gamma'\!\cdot\gamma'')}{|\gamma'|^{4}}.\]Betrag (in \(\mathbb R^3\)): \(\displaystyle\kappa=\frac{|\gamma'\times\gamma''|}{|\gamma'|^{3}}\).`,
+        worte: String.raw`<p>Man muss <b>nicht</b> erst auf Bogenlänge umparametrisieren: die Formel korrigiert das Tempo direkt. Der \(\gamma'(\gamma'\!\cdot\gamma'')\)-Term zieht den Tangentialanteil ab, sodass nur die Richtungsänderung \(\perp T\) bleibt.</p>`,
+        beispiel: String.raw`<p>Parabel \(\gamma(t)=(t,t^2)\): \(\gamma'=(1,2t)\), \(\gamma''=(0,2)\), \(\gamma'\times\gamma''=2\), \(|\gamma'|=\sqrt{1+4t^2}\):</p>\[\kappa(t)=\frac{2}{(1+4t^2)^{3/2}}\quad(\text{am Scheitel }t=0:\ \kappa=2).\]`,
+        plus: String.raw`<p>Alle Varianten (kartesisch, parametrisch, polar, vektoriell \(\kappa=\frac{\|\mathbf r'\times\mathbf r''\|}{\|\mathbf r'\|^3}\)) mit Beispielen im Spickzettel <a href="#/ref/kurven">Kurven · Länge · Krümmung</a>.</p>`}},
+       {id:"4.9.6", title:"Krümmung einer Kurve in ℝ³ und ℝ²", body:{
+        def: String.raw`<b>Ebene Kurve</b> \(\gamma=(x,y)\) (mit Vorzeichen der Drehrichtung):\[\kappa=\frac{x'y''-y'x''}{\big(x'^2+y'^2\big)^{3/2}},\qquad\text{Graph }y=f(x):\ \kappa=\frac{f''}{\big(1+f'^2\big)^{3/2}}.\]<b>Raumkurve</b> \(\gamma\in\mathbb R^{3}\): \(\displaystyle\kappa=\frac{|\gamma'\times\gamma''|}{|\gamma'|^{3}}\ge0\), zusätzlich <b>Torsion</b> \(\tau=\frac{(\gamma'\times\gamma'')\cdot\gamma'''}{|\gamma'\times\gamma''|^{2}}\).`,
+        worte: String.raw`<p>In der Ebene trägt \(\kappa\) ein <b>Vorzeichen</b> (Links-/Rechtskurve); im Raum ist \(\kappa\ge0\), und die <b>Torsion</b> \(\tau\) misst das Herausdrehen aus der Schmiegebene (Frenet).</p>`,
+        beispiel: String.raw`<p>Schraubenlinie \(\gamma(t)=(a\cos t,a\sin t,bt)\): \(|\gamma'|=\sqrt{a^2+b^2}\),</p>\[\kappa=\frac{a}{a^2+b^2},\qquad \tau=\frac{b}{a^2+b^2}\quad(\text{beide konstant}).\]`,
+        plus: String.raw`<p><b>Klausur-Falle:</b> beim Graphen \(y=f(x)\) ist \(\kappa\) am Extrempunkt \(=|f''|\) (da \(f'=0\)). Wendepunkt \(\Leftrightarrow\) \(\kappa=0\) (Vorzeichenwechsel).</p>`}}]},
     {id:"4.10", t:"Anwendungen II: Fläche, Volumen, Schwerpunkt", src:"skriptse52.html", topics:[
-       ["4.10.1","Flächeninhalt ebener Figuren","skriptsu186.html"],
-       ["4.10.2","Volumen rotationssymmetrischer Körper","skriptsu187.html"],
-       ["4.10.3","Oberflächeninhalt rotationssymmetrischer Körper","skriptsu188.html"],
-       ["4.10.4","Schwerpunkt einer Kurve","skriptsu189.html"],
-       ["4.10.5","Schwerpunkt einer Fläche","skriptsu190.html"]]},
+       {id:"4.10.1", title:"Flächeninhalt ebener Figuren", body:{
+        def: String.raw`Fläche unter \(f\ge0\): \(\displaystyle A=\int_a^b f(x)\,dx\); zwischen zwei Kurven \(f\ge g\): \(A=\int_a^b\big(f-g\big)\,dx\). In <b>Polarkoordinaten</b> (Sektor): \(\displaystyle A=\frac12\int_{\alpha}^{\beta} r(\varphi)^2\,d\varphi\). <b>Leibniz-Sektorformel:</b> \(\displaystyle A=\frac12\oint\big(x\,dy-y\,dx\big)\).`,
+        worte: String.raw`<p>Flächen = Integrale von „Höhen". Bei Bereichen zwischen Kurven immer „oben minus unten"; bei Rundungen ist die Polar-/Sektorformel oft einfacher als kartesisch.</p>`,
+        beispiel: String.raw`<p>Ellipse \(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\) über die Sektorformel (Param. \(x=a\cos t,y=b\sin t\)):</p>\[A=\frac12\int_0^{2\pi}\!\big(x\,\dot y-y\,\dot x\big)\,dt=\frac12\int_0^{2\pi} ab\,dt=\pi ab.\]`,
+        plus: String.raw`<p>Weitere Bogen-/Sektor- und Polarformeln mit Beispielen: Spickzettel <a href="#/ref/kurven">Kurven · Länge · Krümmung</a>.</p>`}},
+       {id:"4.10.2", title:"Volumen rotationssymmetrischer Körper", body:{
+        def: String.raw`Rotation des Graphen \(f\ge0\) um die <b>\(x\)-Achse</b> (Scheiben):\[V=\pi\int_a^b f(x)^2\,dx.\]Rotation um die <b>\(y\)-Achse</b> (Zylinderschalen): \(\displaystyle V=2\pi\int_a^b x\,f(x)\,dx\).`,
+        worte: String.raw`<p>Scheibenmethode: jede dünne Scheibe ist ein Kreis mit Radius \(f(x)\), Fläche \(\pi f(x)^2\). Schalenmethode: dünne Zylinderrohre mit Umfang \(2\pi x\) und Höhe \(f(x)\).</p>`,
+        beispiel: String.raw`<p>Kugel (Radius \(r\)) als Rotation von \(f(x)=\sqrt{r^2-x^2}\) um die \(x\)-Achse:</p>\[V=\pi\int_{-r}^{r}(r^2-x^2)\,dx=\pi\Big[r^2x-\frac{x^3}{3}\Big]_{-r}^{r}=\frac{4}{3}\pi r^3.\]`,
+        plus: String.raw`<p><b>Klausur-Falle:</b> \(f\) <b>quadrieren</b> nicht vergessen (Scheibenfläche \(\sim f^2\)). Rotiert man einen Bereich zwischen \(f\ge g\), so \(V=\pi\int(f^2-g^2)\,dx\) (nicht \((f-g)^2\)!).</p>`}},
+       {id:"4.10.3", title:"Oberflächeninhalt rotationssymmetrischer Körper", body:{
+        def: String.raw`Mantelfläche der Rotation von \(f\ge0\) um die \(x\)-Achse:\[M=2\pi\int_a^b f(x)\,\sqrt{1+f'(x)^2}\,dx=2\pi\int f\,ds.\]`,
+        worte: String.raw`<p>Ein Bogenstück \(ds=\sqrt{1+f'^2}\,dx\) überstreicht bei Rotation einen Kreis vom Umfang \(2\pi f(x)\) — Produkt integrieren. Der Wurzelfaktor ist derselbe wie bei der Bogenlänge (4.9.2), <b>nicht</b> weglassen.</p>`,
+        beispiel: String.raw`<p>Kugeloberfläche, \(f(x)=\sqrt{r^2-x^2}\): \(1+f'^2=\frac{r^2}{r^2-x^2}\), also \(f\sqrt{1+f'^2}=r\):</p>\[M=2\pi\int_{-r}^{r} r\,dx=4\pi r^2.\]`,
+        plus: String.raw`<p>Unterschied zum Volumen: hier steht \(f\cdot\sqrt{1+f'^2}\) (Länge \(\times\) Umfang), beim Volumen \(f^2\) (Fläche). Verwechseln kostet in der Klausur.</p>`}},
+       {id:"4.10.4", title:"Schwerpunkt einer Kurve", body:{
+        def: String.raw`Schwerpunkt (Massenmittelpunkt bei homogener Dichte) eines Bogens, gewichtet mit der Bogenlänge \(ds=|\gamma'|\,dt\):\[\bar x=\frac1L\int x\,ds,\qquad \bar y=\frac1L\int y\,ds,\qquad L=\int ds.\]`,
+        worte: String.raw`<p>„Durchschnittsort" entlang der Kurve — jeder Punkt wird mit seinem Bogenlängen-Anteil gewichtet (nicht mit \(dx\)!). Bei Symmetrie liegt der Schwerpunkt auf der Symmetrieachse.</p>`,
+        beispiel: String.raw`<p>Halbkreisbogen \(x^2+y^2=r^2\), \(y\ge0\), \(L=\pi r\): mit \(x=r\cos t,y=r\sin t\), \(ds=r\,dt\):</p>\[\bar y=\frac{1}{\pi r}\int_0^{\pi} r\sin t\cdot r\,dt=\frac{r}{\pi}\big[-\cos t\big]_0^{\pi}=\frac{2r}{\pi}.\]`,
+        plus: String.raw`<p><b>1. Guldin-Regel (Pappus):</b> Mantelfläche bei Rotation \(=2\pi\,\bar y\cdot L\) — Schwerpunktweg \(\times\) Bogenlänge. Probe oben: \(2\pi\cdot\frac{2r}{\pi}\cdot\pi r=4\pi r^2\) ✓ (Kugel).</p>`}},
+       {id:"4.10.5", title:"Schwerpunkt einer Fläche", body:{
+        def: String.raw`Für die Fläche unter \(f\ge0\) über \([a,b]\) (Inhalt \(A=\int_a^b f\,dx\)):\[\bar x=\frac1A\int_a^b x\,f(x)\,dx,\qquad \bar y=\frac1A\int_a^b\frac{f(x)^2}{2}\,dx.\]`,
+        worte: String.raw`<p>Der Flächenschwerpunkt mittelt über alle Flächenelemente. \(\bar y\) bekommt den Faktor \(\frac12 f^2\), weil jeder vertikale Streifen \([0,f(x)]\) seinen eigenen Mittelpunkt bei \(\frac{f(x)}{2}\) hat.</p>`,
+        beispiel: String.raw`<p>Halbkreisfläche \(y=\sqrt{r^2-x^2}\), \(A=\frac{\pi r^2}{2}\):</p>\[\bar y=\frac{1}{A}\int_{-r}^{r}\frac{r^2-x^2}{2}\,dx=\frac{2}{\pi r^2}\cdot\frac{2r^3}{3}=\frac{4r}{3\pi}.\]`,
+        plus: String.raw`<p><b>2. Guldin-Regel (Pappus):</b> Rotationsvolumen \(=2\pi\,\bar y\cdot A\). Probe: \(2\pi\cdot\frac{4r}{3\pi}\cdot\frac{\pi r^2}{2}=\frac{4}{3}\pi r^3\) ✓ (Kugel).</p>`}}]},
     {id:"4.11", t:"Analytischer Beweis des Fundamentalsatzes der Algebra", src:"skriptse53.html", topics:[
-       ["4.11.1","Beweis des Fundamentalsatzes der Algebra","skriptsu191.html"],
-       ["4.11.2","Beweis von Lemma 4.11.1","skriptsu192.html"],
-       ["4.11.3","Beweis von Lemma 4.11.2","skriptsu193.html"]]}
+       {id:"4.11.1", title:"Beweis des Fundamentalsatzes der Algebra", body:{
+        def: String.raw`<b>Fundamentalsatz der Algebra.</b> Jedes nicht-konstante Polynom \(p(z)=\sum_{k=0}^{n}a_k z^{k}\) (\(a_n\neq0,\ n\ge1\)) über \(\mathbb C\) besitzt mindestens eine Nullstelle in \(\mathbb C\). <b>Beweisidee:</b> \(|p|\) nimmt (Lemma 4.11.1) an einem \(z_*\) ein globales Minimum an; wäre \(p(z_*)\neq0\), so ließe sich \(|p|\) verkleinern (Lemma 4.11.2) — Widerspruch. Also \(p(z_*)=0\).`,
+        worte: String.raw`<p>Ein <b>rein analytischer</b> Beweis (Minimum + „man kommt immer tiefer"), ganz ohne Algebra. Per Induktion folgt: \(p\) zerfällt über \(\mathbb C\) vollständig in \(n\) Linearfaktoren \(a_n\prod(z-z_j)\).</p>`,
+        beispiel: String.raw`<p>Das Zusammenspiel: <b>Lemma 4.11.1</b> liefert die <i>Existenz</i> eines Minimalpunkts \(z_*\) (weil \(|p|\to\infty\) außen), <b>Lemma 4.11.2</b> erzwingt dort \(p(z_*)=0\) (sonst kein Minimum). Beide zusammen ⇒ Nullstelle.</p>`,
+        plus: String.raw`<p>Über \(\mathbb R\) gilt das <b>nicht</b> (\(x^2+1\) hat keine reelle Nullstelle) — die Vollständigkeit <b>und</b> die algebraische Abgeschlossenheit von \(\mathbb C\) sind wesentlich.</p>`}},
+       {id:"4.11.2", title:"Beweis von Lemma 4.11.1 (Existenz des Minimums)", body:{
+        def: String.raw`<b>Lemma 4.11.1.</b> Für nicht-konstantes \(p\) gilt \(|p(z)|\to+\infty\) bei \(|z|\to\infty\); daher nimmt \(|p|\) auf \(\mathbb C\) ein <b>globales Minimum</b> an.`,
+        worte: String.raw`<p>„Weit draußen ist \(|p|\) riesig, also liegt das Minimum in einer beschränkten Scheibe — und dort greift Weierstraß." Koerzivität + Kompaktheit.</p>`,
+        beispiel: String.raw`<p><b>Beweis.</b> Ausklammern des höchsten Terms:</p>\[|p(z)|=|a_n||z|^{n}\Big|1+\tfrac{a_{n-1}}{a_n z}+\cdots+\tfrac{a_0}{a_n z^{n}}\Big|\ge|a_n||z|^{n}\big(1-\varepsilon\big)\to\infty.\]<p>Wähle \(R\) mit \(|p(z)|>|p(0)|\) für \(|z|>R\). Auf der <b>kompakten</b> Scheibe \(\{|z|\le R\}\) nimmt die stetige Funktion \(|p|\) ihr Minimum an (Weierstraß) — es ist global.</p>`,
+        plus: String.raw`<p>Genau hier geht \(n\ge1\) ein: für konstantes \(p\) wäre \(|p|\) nicht koerziv. Das Minimum kann noch \(>0\) sein — dass es \(0\) ist, klärt erst Lemma 4.11.2.</p>`}},
+       {id:"4.11.3", title:"Beweis von Lemma 4.11.2 (d'Alembert)", body:{
+        def: String.raw`<b>Lemma 4.11.2 (d'Alembert).</b> Ist \(p(z_0)\neq0\), so gibt es beliebig nahe bei \(z_0\) Punkte mit \(|p(z)|<|p(z_0)|\) — \(z_0\) ist <b>kein</b> lokales Minimum von \(|p|\).`,
+        worte: String.raw`<p>Solange \(p\) nicht null ist, kann man \(|p|\) durch einen kleinen Schritt in die <b>richtige Richtung</b> stets weiter senken. Der erste nichtlineare Term diktiert diese Richtung.</p>`,
+        beispiel: String.raw`<p><b>Beweis.</b> Entwickle um \(z_0\) (mit \(h\) klein, \(c_m\) erster nicht­verschwindender Koeffizient, \(m\ge1\)):</p>\[p(z_0+h)=p(z_0)+c_m h^{m}+O(h^{m+1}).\]<p>Wähle die Richtung von \(h\) per \(m\)-ter Wurzel so, dass \(c_m h^{m}\) dem Wert \(p(z_0)\) <b>entgegen</b>zeigt. Für kleine \(|h|\):</p>\[|p(z_0+h)|\le|p(z_0)|-|c_m||h|^{m}+O(|h|^{m+1})<|p(z_0)|.\]`,
+        plus: String.raw`<p>Der Schritt „\(m\)-te Wurzel ziehen, um die Gegenrichtung zu treffen" braucht wesentlich \(\mathbb C\) (in \(\mathbb R\) gibt es nicht jede Wurzel). Daher scheitert das Argument reell — passend, denn dort ist der Satz falsch.</p>`}}]}
    ]},
  { id:"5", title:"Reihen und uneigentliche Integrale", key:"ch5",
    sections:[
